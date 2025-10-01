@@ -1,2 +1,2 @@
 # phishingPreventation
-A browser extension designed to filter out phishing emails.
+A website designed to filter out phishing emails.
