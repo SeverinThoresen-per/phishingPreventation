@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: lightblue;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .back-link{
+        position: fixed;   /* fixes it relative to the viewport */
+        top: 10px;         /* distance from the top of the page */
+        right: 10px;       /* distance from the right edge */
+        z-index: 1000;     /* ensures it appears above other content */
+        background: #eee;  /* optional styling */
+        padding: 5px 10px;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+
+      .upload-box {
+        background: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        display: inline-block;
+        flex: 1;
+      }
+      .banner-container{
+        display:flex;
+        gap: 1rem;
+      }
+
+      input[type="file"] {
+        margin: 1rem 0;
+      }
+
+      button {
+        background-color: #cc0000;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #a30000;
+      }
+    </style>
+  </head>
+  <body>
+    <a class = "back-link" href="Index.html">Back to the upload site</a>
+    <div class="upload-box">
+        <h1>Gmail</h1>
+        <img src="pictures/gmail.png" width="900" height="500">
+        <h3>Open the email, click on the three dots in the top right, and click
+            "download email"
+        </h3>
+    </div>
+  </body>
+</html>

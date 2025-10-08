@@ -1,9 +1,87 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: lightblue;
+        text-align: center;
+        padding: 2rem;
+      }
 
-    </head>
-    <body>
-        <h1>Email scanner</h1>
-    </body>
+      .upload-box {
+        background: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        display: inline-block;
+        flex: 1;
+      }
+      .banner-container{
+        display:flex;
+        gap: 1rem;
+      }
+
+      input[type="file"] {
+        margin: 1rem 0;
+      }
+
+      button {
+        background-color: #cc0000;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #a30000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class = "banner-container">
+        <div class="upload-box">
+        <h3>You can download emails as files!</h3>
+        <a href="downloadGuide.html">Learn how</a>
+        <h2>Upload an Exported Email</h2>
+        <p>Select a .eml or .msg file to scan its metadata.</p>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="emailFile" accept=".eml,.msg" required />
+            <br>
+            <button type="submit">Upload & Scan</button>
+        </form>
+
+        <pre id="result"></pre>
+        </div>
+        <div class = "upload-box">
+            <h3>You can also forward the email to [insert email address] and receive
+                a quick reply!
+            </h3>
+        </div>
+    </div>
+  <pre id="result"></pre>
+  <script src="https://cdn.jsdelivr.net/npm/mailsplit@1.4.0"></script>
+  <script type="module">
+  import { simpleParser } from 'https://cdn.skypack.dev/mailparser';
+
+  document.getElementById('emailFile').addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const rawText = await file.text();
+
+      // Use mailparser
+      const parsed = await simpleParser(rawText);
+
+      console.log(parsed);
+      document.getElementById('result').textContent =
+          `From: ${parsed.from.text}\n` +
+          `To: ${parsed.to.text}\n` +
+          `Subject: ${parsed.subject}\n` +
+          `Body: ${parsed.text}`;
+  });
+  </script>
+  </body>
 </html>
