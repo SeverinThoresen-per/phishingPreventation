@@ -1,66 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: lightblue;
-        text-align: center;
-        padding: 2rem;
-      }
-
-      .upload-box {
-        background: white;
-        padding: 1rem;
-        border-radius: 1rem;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        display: inline-block;
-        flex: 1;
-      }
-      .banner-container{
-        display:flex;
-        gap: 1rem;
-      }
-
-      input[type="file"] {
-        margin: 1rem 0;
-      }
-
-      button {
-        background-color: #cc0000;
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: #a30000;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Email Inspector</title>
   </head>
   <body>
-    <div class = "banner-container">
-        <div class="upload-box">
-        <h3>You can download emails as files!</h3>
-        <a href="downloadGuide.html">Learn how</a>
-        <h2>Upload an Exported Email</h2>
-        <p>Select a .eml or .msg file to scan its metadata.</p>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" name="emailFile" accept=".eml,.msg" required />
-            <br>
-            <button type="submit">Upload & Scan</button>
-        </form>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">Email Inspector</div>
+      <div class="top-actions">
+        <a class="top-btn" href="downloadGuide.html">How to export emails</a>
+      </div>
+    </header>
 
-        <pre id="result"></pre>
+    <main class="chat-panel">
+      <div class="chat-window" id="chatWindow" role="log" aria-live="polite">
+        <div class="message assistant centered">
+          <div class="meta">Phishing Detector</div>
+          <div>Hello, give me an email and I will parse its metadata!</div>
         </div>
-        <div class = "upload-box">
-            <h3>You can also forward the email to [insert email address] and receive
-                a quick reply!
-            </h3>
+      </div>
+
+      <section class="forward-card" aria-label="Forward info">
+        <div class="text">You can also forward the email to <strong>fakeemail@ncsu.edu</strong> and receive a quick reply!</div>
+      </section>
+
+      <section class="upload-card" aria-label="Upload email">
+        <div class="meta">Upload email file</div>
+        <div class="upload-row">
+          <label class="file-chooser" for="emailFile">Choose file
+            <input id="emailFile" type="file" name="emailFile" accept=".eml,.msg">
+          </label>
         </div>
-    </div>
+        <div class="hint" style="color:var(--muted);font-size:13px">Accepted: .eml, .msg — upload exported messages for analysis.</div>
+      </section>
+    </main>
+  </div>
+
   <pre id="result"></pre>
   <script src="https://cdn.jsdelivr.net/npm/mailsplit@1.4.0"></script>
   <script type="module">
@@ -71,8 +49,6 @@
       if (!file) return;
 
       const rawText = await file.text();
-
-      // Use mailparser
       const parsed = await simpleParser(rawText);
 
       console.log(parsed);
@@ -82,6 +58,7 @@
           `Subject: ${parsed.subject}\n` +
           `Body: ${parsed.text}`;
   });
+
   </script>
   </body>
 </html>
