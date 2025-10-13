@@ -9,7 +9,7 @@
 }
 
 *{box-sizing:border-box}
-html,body{height:100%;margin:0}
+html,body{height:100%;margin:0;background-color:var(--bg)}
 body{background:linear-gradient(180deg,var(--bg),#071021);color:#e6eef6}
 
 .app{
