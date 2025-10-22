@@ -5,14 +5,14 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api/data', methods=['POST'])
-def receive_data():
+@app.route('/submit_data', methods=['POST'])
+def submit_data():
     data = request.get_json()
-    print("Received:", data)
+    if not data or 'data' not in data:
+        return jsonify({'error': 'Invalid input'}), 400
 
-    return jsonify({
-        "status": data
-    })
+    print(data)
+    return jsonify({'message': 'Received', 'length': len(data["data"])})
 
 @app.route('/')
 def start():

@@ -40,7 +40,6 @@
   </div>
 
   <pre id="result"></pre>
-  <script src="https://cdn.jsdelivr.net/npm/mailsplit@1.4.0"></script>
   <script type="module">
 
     document.getElementById('emailFile').addEventListener('change', async (e) => {
@@ -48,28 +47,25 @@
         if (!file) return;
 
         const rawText = await file.text();
-        //const parsed = await simpleParser(rawText);
-
-        console.log(rawText);
-        sendData(rawText);
+        sendJsonData(rawText);
     });
 
-    async function sendData(metadata) {
-    const payload = {
-      data : metadata
-    };
+    function sendJsonData(metadata) {
+        const dataToSend = {
+            data : metadata
+        };
 
-    const response = await fetch("http://localhost:5001/api/data", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload)
-    });
-
-    const result = await response.json();
-    console.log("Server replied:", result);
-  }
+        fetch('/submit_data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend)
+        })
+        .then(response => response.json())
+        .then(data => console.log('Server response:', data))
+        .catch(error => console.error('Error:', error));
+    }
 
   </script>
   </body>
