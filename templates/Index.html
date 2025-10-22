@@ -42,22 +42,34 @@
   <pre id="result"></pre>
   <script src="https://cdn.jsdelivr.net/npm/mailsplit@1.4.0"></script>
   <script type="module">
-  import { simpleParser } from 'https://cdn.skypack.dev/mailparser';
 
-  document.getElementById('emailFile').addEventListener('change', async (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
+    document.getElementById('emailFile').addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
 
-      const rawText = await file.text();
-      const parsed = await simpleParser(rawText);
+        const rawText = await file.text();
+        //const parsed = await simpleParser(rawText);
 
-      console.log(parsed);
-      document.getElementById('result').textContent =
-          `From: ${parsed.from.text}\n` +
-          `To: ${parsed.to.text}\n` +
-          `Subject: ${parsed.subject}\n` +
-          `Body: ${parsed.text}`;
-  });
+        console.log(rawText);
+        sendData(rawText);
+    });
+
+    async function sendData(metadata) {
+    const payload = {
+      data : metadata
+    };
+
+    const response = await fetch("http://localhost:5001/api/data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const result = await response.json();
+    console.log("Server replied:", result);
+  }
 
   </script>
   </body>
