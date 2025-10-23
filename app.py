@@ -1,18 +1,29 @@
 from flask import Flask, render_template
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)
+UPLOAD_FOLDER = 'uploads'
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-@app.route('/submit_data', methods=['POST'])
-def submit_data():
-    data = request.get_json()
-    if not data or 'data' not in data:
-        return jsonify({'error': 'Invalid input'}), 400
+@app.route('/api/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part in request'}), 400
 
-    print(data)
-    return jsonify({'message': 'Received', 'length': len(data["data"])})
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+    save_path = os.path.join(UPLOAD_FOLDER, file.filename)
+    file.save(save_path)
+    print(f'File saved to {save_path}')
+    return jsonify({
+        'message': 'File uploaded successfully',
+        'filename': file.filename,
+        "path": save_path
+    }), 200
 
 @app.route('/')
 def start():
