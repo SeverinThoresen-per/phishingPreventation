@@ -30,9 +30,9 @@
       <section class="upload-card" aria-label="Upload email">
         <div class="meta">Upload email file</div>
         <div class="upload-row">
-          <label class="file-chooser" for="emailFile">Choose file
-            <input id="emailFile" type="file" name="emailFile" accept=".eml,.msg">
-          </label>
+            <label class="file-chooser" for="fileInput">Choose file
+              <input id="fileInput" type="file" name="fileInput" accept=".eml,.msg">
+            </label>
         </div>
         <div class="hint" style="color:var(--muted);font-size:13px">Accepted: .eml, .msg — upload exported messages for analysis.</div>
       </section>
@@ -42,46 +42,26 @@
 
   <script type="module">
 
-    document.getElementById('emailFile').addEventListener('change', async (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
+  fileInput.addEventListener('change', async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
 
-        console.log('Selected file:', file.name);
+    const formData = new FormData();
+    formData.append('file', file);
 
-        const formData = new FormData();
-        formData.append('file', file);
-        try{
-          const response = await fetch("http://localhost:5001/api/upload", {
-              method: 'POST',
-              body: formData
-          });
-          const result = await response.json();
-          console.log('Server response:', result);
-
-          alert('File uploaded successfully.');
-
-        } catch (error) {
-          console.error('Error uploading file:', error);
-          alert('Error uploading file.');
-        }
+    try {
+    const response = await fetch('/upload', {
+      method: 'POST',
+      body: formData
     });
 
-    function sendJsonData(metadata) {
-        const dataToSend = {
-            data : metadata
-        };
-
-        fetch('/submit_data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(dataToSend)
-        })
-        .then(response => response.json())
-        .then(data => console.log('Server response:', data))
-        .catch(error => console.error('Error:', error));
+      const result = await response.json();
+      console.log('Server response:', result);
+    } catch (err) {
+      console.error('Error uploading file:', err);
     }
+    location.reload();
+  });
 
   </script>
   </body>
