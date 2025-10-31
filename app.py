@@ -10,11 +10,25 @@ import sys, re, email, ipaddress
 from email.headerregistry import AddressHeader
 from email.utils import getaddresses
 from bs4 import BeautifulSoup
+import csv
 
 app = Flask(__name__)
 CORS(app)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+def load_tranco_domains(file_path='top-1m.csv'):
+    domains = set()
+    try:
+        with open(file_path, newline='', encoding='utf-8') as csvfile:
+            reader = csv.reader(csvfile)
+            for row in reader:
+                if len(row) > 1:
+                    domains.add(row[1].strip().lower())
+        print(f"Loaded {len(domains)} domains from Tranco list ")
+    except FileNotFoundError:
+        print(f"ERROR: Could not find {file_path}. ")
+    return domains
 
 @app.route('/upload', methods=['POST'])
 def upload_eml():
