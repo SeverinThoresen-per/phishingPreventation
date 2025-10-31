@@ -10,25 +10,12 @@ import sys, re, email, ipaddress
 from email.headerregistry import AddressHeader
 from email.utils import getaddresses
 from bs4 import BeautifulSoup
-import csv
+from urllib.parse import urlparse
 
 app = Flask(__name__)
 CORS(app)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-
-def load_tranco_domains(file_path='top-1m.csv'):
-    domains = set()
-    try:
-        with open(file_path, newline='', encoding='utf-8') as csvfile:
-            reader = csv.reader(csvfile)
-            for row in reader:
-                if len(row) > 1:
-                    domains.add(row[1].strip().lower())
-        print(f"Loaded {len(domains)} domains from Tranco list ")
-    except FileNotFoundError:
-        print(f"ERROR: Could not find {file_path}. ")
-    return domains
 
 @app.route('/upload', methods=['POST'])
 def upload_eml():
@@ -36,6 +23,7 @@ def upload_eml():
         return "No file part", 400
 
     file = request.files['file']
+    file.save(save_path)
     if file.filename == '':
         return "No selected file", 400
     file_bytes = file.read()
@@ -47,6 +35,7 @@ def upload_eml():
     body = get_body(msg)
     ip = get_ip(msg)
     urls = extract_urls(str(msg))
+    domains = extract_domains(str(msg))
 
     #print(subject)
     #print(sender)
@@ -56,14 +45,12 @@ def upload_eml():
     #print(msg.get("Return-Path"))
     #print(msg.get("Reply-To"))
     #print(msg.get("Date"))
-
     #The information below this barely works
 
     #print(msg.get_all("To", []))
     #print(msg.get_all("CC", []))
 
     save_path = os.path.join(UPLOAD_FOLDER, file.filename)
-    file.save(save_path)
 
     return {
         "subject": subject,
@@ -72,6 +59,7 @@ def upload_eml():
         "body": body,
         "ip" : ip,
         "urls": urls,
+        "domains": domains,
         "return path": msg.get("Return-Path"),
         "reply to": msg.get("Reply-To"),
         "date": msg.get("Date"),
@@ -85,6 +73,7 @@ def get_body(msg):
                 return part.get_payload(decode=True).decode(part.get_content_charset() or 'utf-8')
     else:
         return msg.get_payload(decode=True).decode(msg.get_content_charset() or 'utf-8')
+        
         
     return ""
 
@@ -116,6 +105,22 @@ def extract_urls(text):
     cleaned_urls = set(url.rstrip(".,);:!\"'") for url in urls)
     
     return list(cleaned_urls)
+
+
+def extract_domains(text):
+    if not text:
+        return []
+    url_pattern = re.compile(r'https?://[^\s<>"]+')
+    urls = url_pattern.findall(text)
+    domains = []
+    seen = set()
+    for url in urls:
+        domain = urlparse(url).netloc.rstrip(".,);:!\"'")
+        if domain not in seen:
+            seen.add(domain)
+            domains.append(domain)
+
+    return domains
 
 @app.route('/')
 def start():
