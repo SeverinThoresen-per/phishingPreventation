@@ -11,6 +11,7 @@ from email.headerregistry import AddressHeader
 from email.utils import getaddresses
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
+import csv
 
 app = Flask(__name__)
 CORS(app)
@@ -121,6 +122,23 @@ def extract_domains(text):
             domains.append(domain)
 
     return domains
+
+def load_tranco_domains(file_path='top-1m.csv', limit=10000):
+    domains = set()
+    try:
+        with open(file_path, newline='', encoding='utf-8') as csvfile:
+            reader = csv.reader(csvfile)
+            for i, row in enumerate(reader):
+                if len(row) > 1:
+                    domains.add(row[1].strip().lower())
+                if i + 1 >= limit:  
+                    break
+        print(f"[INFO] Loaded {len(domains)} domains from Tranco list.")
+    except FileNotFoundError:
+        print(f"[ERROR] Could not find {file_path}.")
+    return domains
+
+TRONCO_DOMAINS = load_tranco_domains(limit=10000)
 
 @app.route('/')
 def start():
