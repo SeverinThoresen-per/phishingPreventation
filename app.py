@@ -24,7 +24,6 @@ def upload_eml():
         return "No file part", 400
 
     file = request.files['file']
-    file.save(save_path)
     if file.filename == '':
         return "No selected file", 400
     file_bytes = file.read()
@@ -52,6 +51,7 @@ def upload_eml():
     #print(msg.get_all("CC", []))
 
     save_path = os.path.join(UPLOAD_FOLDER, file.filename)
+    file.save(save_path)
 
     return {
         "subject": subject,
