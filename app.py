@@ -43,10 +43,10 @@ def upload_eml():
     file = request.files['file']
     if file.filename == '':
         return "No selected file", 400
+    
     file_bytes = file.read()
     msg = BytesParser(policy=policy.default).parsebytes(file_bytes)
 
-    suspicious_domains = [d for d in domains if d.lower() not in TRONCO_DOMAINS]
     subject = msg['subject']
     sender = msg['from']
     recipients = msg['to']
@@ -54,6 +54,7 @@ def upload_eml():
     ip = get_ip(msg)
     urls = extract_urls(str(msg))
     domains = extract_domains(str(msg))
+    suspicious_domains = [d for d in domains if d.lower() not in TRONCO_DOMAINS]
 
     #print(subject)
     #print(sender)
