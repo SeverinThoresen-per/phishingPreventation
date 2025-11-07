@@ -18,6 +18,23 @@ CORS(app)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+def load_tranco_domains(file_path='top-1m.csv', limit=10000):
+    domains = set()
+    try:
+        with open(file_path, newline='', encoding='utf-8') as csvfile:
+            reader = csv.reader(csvfile)
+            for i, row in enumerate(reader):
+                if len(row) > 1:
+                    domains.add(row[1].strip().lower())
+                if i + 1 >= limit:  
+                    break
+        print(f"[INFO] Loaded {len(domains)} domains from Tranco list.")
+    except FileNotFoundError:
+        print(f"[ERROR] Could not find {file_path}.")
+    return domains
+
+TRONCO_DOMAINS = load_tranco_domains(limit=10000)
+
 @app.route('/upload', methods=['POST'])
 def upload_eml():
     if 'file' not in request.files:
@@ -29,6 +46,7 @@ def upload_eml():
     file_bytes = file.read()
     msg = BytesParser(policy=policy.default).parsebytes(file_bytes)
 
+    suspicious_domains = [d for d in domains if d.lower() not in TRONCO_DOMAINS]
     subject = msg['subject']
     sender = msg['from']
     recipients = msg['to']
@@ -61,6 +79,7 @@ def upload_eml():
         "ip" : ip,
         "urls": urls,
         "domains": domains,
+        "suspicious_domains": suspicious_domains,
         "return path": msg.get("Return-Path"),
         "reply to": msg.get("Reply-To"),
         "date": msg.get("Date"),
@@ -123,22 +142,7 @@ def extract_domains(text):
 
     return domains
 
-def load_tranco_domains(file_path='top-1m.csv', limit=10000):
-    domains = set()
-    try:
-        with open(file_path, newline='', encoding='utf-8') as csvfile:
-            reader = csv.reader(csvfile)
-            for i, row in enumerate(reader):
-                if len(row) > 1:
-                    domains.add(row[1].strip().lower())
-                if i + 1 >= limit:  
-                    break
-        print(f"[INFO] Loaded {len(domains)} domains from Tranco list.")
-    except FileNotFoundError:
-        print(f"[ERROR] Could not find {file_path}.")
-    return domains
 
-TRONCO_DOMAINS = load_tranco_domains(limit=10000)
 
 @app.route('/')
 def start():
