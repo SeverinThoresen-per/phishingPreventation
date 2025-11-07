@@ -27,6 +27,7 @@ def load_tranco_domains(file_path='top-1m.csv', limit=10000):
                 if len(row) > 1:
                     domains.add(row[1].strip().lower())
                 if i + 1 >= limit:  
+                    csvfile.close()
                     break
         print(f"[INFO] Loaded {len(domains)} domains from Tranco list.")
     except FileNotFoundError:
@@ -69,6 +70,8 @@ def upload_eml():
     #print(msg.get_all("To", []))
     #print(msg.get_all("CC", []))
 
+    print(judge(msg))
+
     save_path = os.path.join(UPLOAD_FOLDER, file.filename)
     file.save(save_path)
 
@@ -85,6 +88,24 @@ def upload_eml():
         "reply to": msg.get("Reply-To"),
         "date": msg.get("Date"),
     }
+
+def judge(msg):
+    redFlags = []
+    for url in extract_domains(str(msg)):
+        if scan_url(url) == True:
+            redFlags.append("Phishing email")
+    if msg.get('from') != msg.get("Return-Path") and msg.get('from') != msg.get("Reply-To"):
+        redFlags.append("Mismatched addresses")
+    return redFlags
+
+def scan_url(url, filepath="recentPhishUrls.csv"):
+    with open(filepath) as f:
+        for line in f:
+            if url in extract_domains(line):
+                f.close()
+                return True
+    f.close()
+    return False
 
 def get_body(msg):
     if msg.is_multipart():
