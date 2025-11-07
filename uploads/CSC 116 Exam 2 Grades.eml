@@ -1,0 +1,263 @@
+Delivered-To: sathores@ncsu.edu
+Received: by 2002:a05:7000:67e3:b0:79c:c141:6fd0 with SMTP id f3csp1143077mas;
+        Thu, 30 Oct 2025 11:29:29 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCU+GSXNCn1WTyPTipKlxhT4+SmwkHOVTUnkTXmBKc+ssbCRyvhzhW+mmVBQ12NiOQ6bymzDAgwI+g==@ncsu.edu
+X-Received: by 2002:a05:690e:154c:20b0:63f:2b69:9a18 with SMTP id 956f58d0204a3-63f92142b26mr346095d50.0.1761848968982;
+        Thu, 30 Oct 2025 11:29:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1761848968; cv=none;
+        d=google.com; s=arc-20240605;
+        b=IQMhWVFCyTjUtgDjRDal+0QfIBvOAvDpfYkweyeOHVttXsDcE9Gjnzmv09CFgfs/mq
+         RLMR1O/G7deC/YQJ6viol45MH8KNv92U4HM5x8mpSj6hiIvwj400ez+dIQmWPfVb7c8E
+         AMETe1vuaTaScGSFzkBwiWYy/0pc48hF5iQmFmx743tPmkluQSs3H0SEPHV7aANs2qdl
+         PoRYC/+KQUezgbSKZ54OL9WHmkPhTpAn4y/3txs4ij0c1HeGDXo0dm3jmPZApal6nW8I
+         XtNipKKI/Ayn5UNe0lBwtkOPcCBEeF1l1vuWR+zyoM72vUPEfIxpqiKQ6CjOxiidywLv
+         1s9A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-archive:list-help:list-post:list-id:mailing-list:precedence
+         :reply-to:mime-version:subject:message-id:cc:to:from:date
+         :dkim-signature;
+        bh=ZVH0W8rqsV8WqYyYieCbt+q2C5+FNY5fF7AJVQx0Q/8=;
+        fh=sAchNE5e3ByQvMSnQ9Y5s6vlCa5srNTZ+JS8wlAhzAQ=;
+        b=WgWaO17AfJxcrhmmkK7lxGrTjc+DR9RUZwQC3ziUZ0W1/P7r1IpLG5nIDYyA5Dr4kc
+         TSDw91rY0DfF/dJ0oTZ4LcCOctB9JClpC70jih64QCx5SOAs0RlNidM41ezKJ+ST5jLd
+         QLyqAJeOn65g8RPRQ5f3O90KSDhzQfifXFmplQ2MI+ljKpL47kcpAwLe47kyoFDwA5LB
+         POZ4glpShP7Ut9CYvyxxXj4gvw98wsQel1hRGiincsOwGv+9i4jS0C2W1Z7cztDUZ+c/
+         51mn+jg0aO58zdsqNVUPvai7XHMFq5qfB6p5+seyIOmO1HIZ/jprYWJfuW9Vshunj5K7
+         rMNQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=google header.b="T/TP+zzi";
+       spf=pass (google.com: domain of csc-116-002-fall-2025-introduction-everyone+bncbd46zkerx4fbbcg5r3eamgqe63u7pca@wolfware.ncsu.edu designates 209.85.220.69 as permitted sender) smtp.mailfrom=csc-116-002-fall-2025-introduction-everyone+bncBD46ZKERX4FBBCG5R3EAMGQE63U7PCA@wolfware.ncsu.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu;
+       dara=neutral header.i=@ncsu.edu
+Return-Path: <csc-116-002-fall-2025-introduction-everyone+bncBD46ZKERX4FBBCG5R3EAMGQE63U7PCA@wolfware.ncsu.edu>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id 956f58d0204a3-63f4cf553e7sor5853461d50.12.2025.10.30.11.29.28
+        for <sathores@ncsu.edu>
+        (Google Transport Security);
+        Thu, 30 Oct 2025 11:29:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of csc-116-002-fall-2025-introduction-everyone+bncbd46zkerx4fbbcg5r3eamgqe63u7pca@wolfware.ncsu.edu designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=google header.b="T/TP+zzi";
+       spf=pass (google.com: domain of csc-116-002-fall-2025-introduction-everyone+bncbd46zkerx4fbbcg5r3eamgqe63u7pca@wolfware.ncsu.edu designates 209.85.220.69 as permitted sender) smtp.mailfrom=csc-116-002-fall-2025-introduction-everyone+bncBD46ZKERX4FBBCG5R3EAMGQE63U7PCA@wolfware.ncsu.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu;
+       dara=neutral header.i=@ncsu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ncsu.edu; s=google; t=1761848968; x=1762453768; darn=ncsu.edu;
+        h=list-archive:list-help:list-post:list-id:mailing-list:precedence
+         :reply-to:x-original-sender:mime-version:subject:message-id:cc:to
+         :from:date:from:to:cc:subject:date:message-id:reply-to;
+        bh=ZVH0W8rqsV8WqYyYieCbt+q2C5+FNY5fF7AJVQx0Q/8=;
+        b=T/TP+zzi8An7XtFrKssAayqDnSMq8IZWLfetgnol2N8PDVV0g3LFMMRE/1GKlUwIqG
+         HbWu9CHAVUFHFAV7PsDlFWml+ZP33rBt/nwCB1ROctSgAACNxZ9f4rKHjZSzX9ifhuK0
+         cCcxWrvu1EDC36JZJ++LGt3V1r6giRgdktaME6HCtMjANCb+aUJvh7ETBbpPKy8pKlOP
+         ZCIbQiIoUOnSojMY1T+j9xGTx++leA+Cwiudth/IwzDF66Ed2ObFc5k5OKk7IZ/p4I4o
+         zMTl5SvJ8MUI0etFerrlcJ7AJPGn+Dq/1bvYo7Wfo6jP1K4r71gaKz1BnvVWV7X1hDH6
+         LWsQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1761848968; x=1762453768;
+        h=list-archive:list-help:list-post:x-spam-checked-in-group:list-id
+         :mailing-list:precedence:reply-to:x-original-sender:mime-version
+         :subject:message-id:cc:to:from:date:x-beenthere:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=ZVH0W8rqsV8WqYyYieCbt+q2C5+FNY5fF7AJVQx0Q/8=;
+        b=RQJMaFq0ajoRhZAWb2DQwBV55aoGhEI9E0rCgGlHsbRtwBjs8XevMjP0gT1hPVOoA4
+         sJeoa5Wiwf5ckeed39oou+vhQ2dL4opSQ1hPi0a7UnUL3Z2WzTYZTUlGhWctkwY9/KQU
+         fT0eHrjeqQz69VmoYV7tq/pcYN9siZDYZv6gnNIfqFnz/yWR+xpnDoZzUK40LfdM/AGx
+         W+O6pMGhn1gO0DD1/OiuQLP/IOLlrTS4NkIKitjuEVgIj1xauT9fXLvEUqq3YZYc5bqt
+         +ueiLKCxYXIdBeJn6odx6lRCrNAVNYkBWFDlt7CoPxazeoKEvf3PLXsQ6p6sQqO+f1sO
+         kDcA==
+X-Forwarded-Encrypted: i=1; AJvYcCUiXjWvjRhTd/WqrdmtmSuNdykvjdpuSfbLTMDHuB6324+MVkIjJ0b1c8N28bVtjyluY2qJTlgfYg==@ncsu.edu
+X-Gm-Message-State: AOJu0YzeSJ4XlXs8VIyhyF+Lwr/sPEm3CvmH+O0Cd6Fp1oAW0586b9eF
+	y+HirS2Am/LYX9guxq/XlhsuZzmoP17zJeLaaoNiUqV1eNi/9kVvzAz19xBRBz/eKbID
+X-Google-Smtp-Source: AGHT+IGAzxnmvW0144IpljBtAO9sA5UM/gRW7BpmN/7rcOxhItXS0TtGj0AvIXStlDcXhNr8iEfn5A==
+X-Received: by 2002:a05:690e:159a:10b0:63c:e0bb:2e97 with SMTP id 956f58d0204a3-63f92271ebemr342507d50.10.1761848968276;
+        Thu, 30 Oct 2025 11:29:28 -0700 (PDT)
+X-BeenThere: csc-116-002-fall-2025-introduction-everyone@wolfware.ncsu.edu; h="Ae8XA+Z5CyFVaQelFs4s4TkMC3foU6TTatmrtyBVZ1b6vhxk5g=="
+Received: by 2002:a53:cac1:0:b0:63e:2bc2:fad1 with SMTP id 956f58d0204a3-63f835b6642ls1114302d50.1.-pod-prod-05-us;
+ Thu, 30 Oct 2025 11:29:27 -0700 (PDT)
+X-Received: by 2002:a05:690e:251a:10b0:636:19c8:278e with SMTP id 956f58d0204a3-63f9223bc79mr359796d50.14.1761848967386;
+        Thu, 30 Oct 2025 11:29:27 -0700 (PDT)
+Date: Thu, 30 Oct 2025 11:29:26 -0700 (PDT)
+From: "'Shuyin Jiao' via CSC 116 (002 & 003) Fall 2025 Introduction to Computing - Java - Everyone" <csc-116-002-fall-2025-introduction-everyone@wolfware.ncsu.edu>
+To: "CSC 116 (002 & 003) Fall 2025 Introduction to Computing - Java - Everyone"
+ <csc-116-002-fall-2025-introduction-everyone@wolfware.ncsu.edu>
+Cc: Shuyin Jiao <sjiao2@ncsu.edu>
+Message-Id: <0d4d7823-0d9b-4fb7-b79c-1c083a4c98ecn@wolfware.ncsu.edu>
+Subject: CSC 116 Exam 2 Grades
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_108240_895052443.1761848966554"
+X-Original-Sender: sjiao2@ncsu.edu
+X-Original-From: Shuyin Jiao <sjiao2@ncsu.edu>
+Reply-To: csc-116-002-fall-2025-introduction-everyone+managers@wolfware.ncsu.edu
+Precedence: list
+Mailing-list: list csc-116-002-fall-2025-introduction-everyone@wolfware.ncsu.edu;
+ contact csc-116-002-fall-2025-introduction-everyone+owners@wolfware.ncsu.edu
+List-ID: <csc-116-002-fall-2025-introduction-everyone.wolfware.ncsu.edu>
+X-Spam-Checked-In-Group: csc-116-002-fall-2025-introduction-everyone@wolfware.ncsu.edu
+X-Google-Group-Id: 166976590409
+List-Post: <https://groups.google.com/a/wolfware.ncsu.edu/group/csc-116-002-fall-2025-introduction-everyone/post>,
+ <mailto:csc-116-002-fall-2025-introduction-everyone@wolfware.ncsu.edu>
+List-Help: <https://support.google.com/a/wolfware.ncsu.edu/bin/topic.py?topic=25838>,
+ <mailto:csc-116-002-fall-2025-introduction-everyone+help@wolfware.ncsu.edu>
+List-Archive: <https://groups.google.com/a/wolfware.ncsu.edu/group/csc-116-002-fall-2025-introduction-everyone/>
+
+------=_Part_108240_895052443.1761848966554
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_108241_1716241404.1761848966554"
+
+------=_Part_108241_1716241404.1761848966554
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Hello All -=20
+
+Exam 2 grades are now posted in Moodle=20
+<https://moodle-courses2527.wolfware.ncsu.edu/course/section.php?id=3D93767=
+>.=20
+This exam has a total of 100 points.
+
+   - *Autograded questions* were graded in Moodle and were worth 50 points.
+   -=20
+  =20
+   *Open-ended questions* were graded in Gradescope and were worth 50=20
+   points.
+  =20
+*Regrade Requests:*
+All regrade requests must be submitted no later than *1 week (11/6)* after=
+=20
+the assignment was returned to you.
+
+   -=20
+  =20
+   *Autograded Questions:* You may submit grade appeals through the Regrade=
+=20
+   Request Form=20
+   <https://docs.google.com/forms/d/e/1FAIpQLScCIhnldsptAaJtqumFVFXgfYEhT1Y=
+wyHgRMPH_NkB6hcKoWg/viewform>
+   .
+   -=20
+  =20
+   *Open-ended Questions (Gradescope=20
+   <https://www.gradescope.com/courses/1083648/assignments/7033657/review_g=
+rades>):* To=20
+   submit a Regrade Request, first click on the question you wish to reques=
+t a=20
+   review for. This will display the rubric for that question and highlight=
+=20
+   the rubric items applied. Once selected, click the *Request Regrade* but=
+ton=20
+   in the bottom action bar. A textbox will appear allowing you to explain=
+=20
+   your request. Note that regrade requests are *per question*, so submit=
+=20
+   one for each question that should be reviewed.
+  =20
+*You will also have an opportunity to improve your Exam 2 grades during the=
+=20
+Final Exam. *The final exam will have three parts:
+
+   -=20
+  =20
+   *Part 1:* Materials from Exam 1 (Labs 1-6)
+   -=20
+  =20
+   *Part 2:* Materials from Exam 2 (Labs 7-12)
+   -=20
+  =20
+   *Part 3:* Labs 13-18 and Software Process
+  =20
+If your score for Part 2 materials is higher than your original Exam 2=20
+grade, I will replace your Exam 2 grade with your Part 2 score.
+
+I appreciate all your hard work on this exam, and I encourage you to review=
+=20
+your results carefully. Please reach out if you have any questions or need=
+=20
+clarification on your grade or the regrade process -- I=E2=80=99m happy to =
+help.
+
+Best,
+
+Dr. Jiao
+
+--
+Shuyin Jiao, Ph.D.
+Associate Teaching Professor
+Department of Computer Science
+North Carolina State University
+https://shuyinjiao.github.io/=20
+[pronouns: she, her, hers]
+
+------=_Part_108241_1716241404.1761848966554
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<p style=3D"margin: 0px 0px 9px; padding: 0px; color: rgb(0, 0, 0);"><font =
+face=3D"Times New Roman" size=3D"2">Hello All -=C2=A0</font></p><p><font fa=
+ce=3D"Times New Roman" size=3D"2">Exam 2 grades are now posted in=C2=A0<a h=
+ref=3D"https://moodle-courses2527.wolfware.ncsu.edu/course/section.php?id=
+=3D93767" target=3D"_blank" rel=3D"nofollow" style=3D"color: rgb(26, 115, 2=
+32);">Moodle</a>. This exam has a total of 100 points.</font></p><ul><li><f=
+ont face=3D"Times New Roman" size=3D"2"><strong>Autograded questions</stron=
+g>=C2=A0were graded in Moodle and were worth 50 points.</font></li><li><p><=
+font face=3D"Times New Roman" size=3D"2"><strong>Open-ended questions</stro=
+ng>=C2=A0were graded in Gradescope and were worth 50 points.</font></p></li=
+></ul><p><font face=3D"Times New Roman" size=3D"2"><strong>Regrade Requests=
+:</strong><br />All regrade requests must be submitted no later than=C2=A0<=
+strong>1 week (11/6)</strong>=C2=A0after the assignment was returned to you=
+.</font></p><ul><li><p><font face=3D"Times New Roman" size=3D"2"><strong>Au=
+tograded Questions:</strong>=C2=A0You may submit grade appeals through the=
+=C2=A0<a href=3D"https://docs.google.com/forms/d/e/1FAIpQLScCIhnldsptAaJtqu=
+mFVFXgfYEhT1YwyHgRMPH_NkB6hcKoWg/viewform" target=3D"_blank" rel=3D"nofollo=
+w" style=3D"color: rgb(26, 115, 232);">Regrade Request Form</a>.</font></p>=
+</li><li><p><font face=3D"Times New Roman" size=3D"2"><strong>Open-ended Qu=
+estions (<a href=3D"https://www.gradescope.com/courses/1083648/assignments/=
+7033657/review_grades" target=3D"_blank" rel=3D"nofollow" style=3D"color: r=
+gb(26, 115, 232);">Gradescope</a>):</strong>=C2=A0To submit a Regrade Reque=
+st, first click on the question you wish to request a review for. This will=
+ display the rubric for that question and highlight the rubric items applie=
+d. Once selected, click the=C2=A0<strong>Request Regrade</strong>=C2=A0butt=
+on in the bottom action bar. A textbox will appear allowing you to explain =
+your request. Note that regrade requests are=C2=A0<strong>per question</str=
+ong>, so submit one for each question that should be reviewed.</font></p></=
+li></ul><p><font face=3D"Times New Roman" size=3D"2"><b style=3D"color: rgb=
+(0, 0, 255);">You will also have an opportunity to improve your Exam 2 grad=
+es during the Final Exam.=C2=A0</b><font color=3D"#000000">The final exam w=
+ill have three parts:</font></font></p><ul><li><p><font face=3D"Times New R=
+oman" size=3D"2"><strong>Part 1:</strong>=C2=A0Materials from Exam 1 (Labs =
+1-6)</font></p></li><li><p><font face=3D"Times New Roman" size=3D"2"><stron=
+g>Part 2:</strong>=C2=A0Materials from Exam 2 (Labs 7-12)</font></p></li><l=
+i><p><font face=3D"Times New Roman" size=3D"2"><strong>Part 3:</strong>=C2=
+=A0Labs 13-18 and Software Process</font></p></li></ul><p><font face=3D"Tim=
+es New Roman" size=3D"2">If your score for Part 2 materials is higher than =
+your original Exam 2 grade, I will replace your Exam 2 grade with your Part=
+ 2 score.</font></p><p style=3D"margin: 0px 0px 9px; padding: 0px; color: r=
+gb(0, 0, 0);"></p><p><font face=3D"Times New Roman" size=3D"2">I appreciate=
+ all your hard work on this exam, and I encourage you to review your result=
+s carefully. Please reach out if you have any questions or need clarificati=
+on on your grade or the regrade process -- I=E2=80=99m happy to help.</font=
+></p><p style=3D"margin: 0px 0px 9px; padding: 0px;"><font size=3D"2" color=
+=3D"#000000" face=3D"Times New Roman">Best,</font></p><p style=3D"margin: 0=
+px 0px 9px; padding: 0px;"><font size=3D"2" color=3D"#000000" face=3D"Times=
+ New Roman">Dr. Jiao</font></p><p style=3D"color: rgb(34, 34, 34); margin: =
+0px 0px 9px; padding: 0px;"><font size=3D"2" face=3D"Times New Roman"><span=
+ style=3D"color: rgb(80, 0, 80);">--</span><br style=3D"color: rgb(80, 0, 8=
+0);" /></font></p><div dir=3D"ltr" style=3D"color: rgb(80, 0, 80);"><div di=
+r=3D"ltr"><div style=3D"color: rgb(136, 136, 136);"><font size=3D"2" face=
+=3D"Times New Roman">Shuyin Jiao, Ph.D.<br />Associate Teaching Professor</=
+font></div><div style=3D"color: rgb(136, 136, 136);"><font size=3D"2" face=
+=3D"Times New Roman">Department of Computer Science</font></div><div style=
+=3D"color: rgb(136, 136, 136);"><font size=3D"2" face=3D"Times New Roman">N=
+orth Carolina State University</font></div><div><font color=3D"#888888" siz=
+e=3D"2" face=3D"Times New Roman"><a href=3D"https://shuyinjiao.github.io/" =
+rel=3D"nofollow" target=3D"_blank" style=3D"color: rgb(17, 85, 204);">https=
+://shuyinjiao.github.io/</a>=C2=A0</font></div><div><font color=3D"#888888"=
+ size=3D"2" face=3D"Times New Roman">[pronouns: she, her, hers]</font></div=
+></div></div>
+------=_Part_108241_1716241404.1761848966554--
+
+------=_Part_108240_895052443.1761848966554--

@@ -70,10 +70,27 @@ def upload_eml():
     #print(msg.get_all("To", []))
     #print(msg.get_all("CC", []))
 
-    print(judge(msg))
+    judgement = judge(msg)
 
-    save_path = os.path.join(UPLOAD_FOLDER, file.filename)
-    file.save(save_path)
+    points = 0
+    if "Phishing email" in judgement:
+        points += 100
+    if "Mismatched addresses" in judgement:
+        points += 5
+    if points >= 100:
+        print("///// Judgement /////")
+        print(judgement)
+        print("Probably phishing")
+        print("/////////////////////")
+    else:
+        print("///// Judgement /////")
+        print(judgement)
+        print("Probably not phishing")
+        print("/////////////////////")
+
+
+    with open(os.path.join(UPLOAD_FOLDER, file.filename), 'wb') as f:
+        f.write(file_bytes)
 
     return {
         "subject": subject,
@@ -91,7 +108,7 @@ def upload_eml():
 
 def judge(msg):
     redFlags = []
-    for url in extract_domains(str(msg)):
+    for url in extract_urls(str(msg)):
         if scan_url(url) == True:
             redFlags.append("Phishing email")
     if msg.get('from') != msg.get("Return-Path") and msg.get('from') != msg.get("Reply-To"):
@@ -101,7 +118,7 @@ def judge(msg):
 def scan_url(url, filepath="recentPhishUrls.csv"):
     with open(filepath) as f:
         for line in f:
-            if url in extract_domains(line):
+            if url[5:] in line:
                 f.close()
                 return True
     f.close()
