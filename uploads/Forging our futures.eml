@@ -1,0 +1,937 @@
+Delivered-To: sathores@ncsu.edu
+Received: by 2002:a05:7000:67e3:b0:79c:c141:6fd0 with SMTP id f3csp1698565mas;
+        Fri, 31 Oct 2025 07:17:08 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHxmcvpeqkx7Y4+rBMGy16O2fAG92soaajn5OSbyEHrQj+zbrq/sY5DZSr6mktTMIP18dSK
+X-Received: by 2002:a05:690c:260a:b0:781:64f:2b6d with SMTP id 00721157ae682-7864720f862mr36870817b3.30.1761920228267;
+        Fri, 31 Oct 2025 07:17:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1761920228; cv=none;
+        d=google.com; s=arc-20240605;
+        b=GTRxCH47uw/d2ncAslsK6Rf0Mm26tqBCZ7kfFPgcRXYSA1jzBmDpZTP9imShypyn6a
+         FJt5WbsIii8ufgTmw/2YDHoImPgNDLos+/m6cmMYMjxRPC6Q6pEqhsoYrpD8+BiuTSXk
+         Kc4/Mgnznb2GPAzmGm28JY5sP84ZA4lqsxx4uAtaWnA0dj3AN9ulBJdsTCtyTw0h8+b0
+         f2G6pyJ2JGxxi/QiruDnn37MV8uUtI1mAz+Vj4JJAQckP5fpAcFhmI9PhI16bd6ZOXwW
+         3tHwYWybLDaFMfVni+7vAhTAZmpx3BPg4XM2THSUOZe4Fh3a/9Cl55t9Sw9FzYULETxO
+         Gl/Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature;
+        bh=57PnF7ZxcJy2oH6rbJ3VHL1ybISVPlg3RBYi82flu5s=;
+        fh=gmRRw2w2O+5o3xayz5QhNkQAJYQmhLlZc62THQ6CB0A=;
+        b=DBdaSxzWJcMs7KhgBG96U+rPSL2yeWOqkshKCyf191eG+czl+zwUGm1nJ7Q8lIByKS
+         yssbHCUr6qAf2eN5pz7jLcOk9bI7jhq+H7oDy+krGqxz1KEd3ij3v8b1572ECiEKFsKd
+         523SWZ+y7qiR7p0NuatMaPQOoiGAYQUgZs563yjOjaDZ3vI2cx7GEdW/iMV/0s96AI7D
+         n9TmpWgVYIviVZYll0aTTajgRmBVeXCzN9CqVcvVZMPfSaVdtJfSNkKkr/26ra6SzJCk
+         nhr0rNFr2QyYaB+IWTi7nYY6ejVvmDGLxwCxj7uLp1DoTRPTxh4ynKsWvsme6IeIFiCm
+         ktyw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=k3 header.b=EhOroigJ;
+       spf=pass (google.com: domain of bounce-mc.us4_8946221.10139292-4c9686d3c5@mail212.suw161.rsgsv.net designates 198.2.175.212 as permitted sender) smtp.mailfrom=bounce-mc.us4_8946221.10139292-4c9686d3c5@mail212.suw161.rsgsv.net;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu
+Return-Path: <bounce-mc.us4_8946221.10139292-4c9686d3c5@mail212.suw161.rsgsv.net>
+Received: from mail212.suw161.rsgsv.net (mail212.suw161.rsgsv.net. [198.2.175.212])
+        by mx.google.com with ESMTPS id 00721157ae682-7864c6d9361si15114517b3.726.2025.10.31.07.17.08
+        for <sathores@ncsu.edu>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 31 Oct 2025 07:17:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-mc.us4_8946221.10139292-4c9686d3c5@mail212.suw161.rsgsv.net designates 198.2.175.212 as permitted sender) client-ip=198.2.175.212;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=k3 header.b=EhOroigJ;
+       spf=pass (google.com: domain of bounce-mc.us4_8946221.10139292-4c9686d3c5@mail212.suw161.rsgsv.net designates 198.2.175.212 as permitted sender) smtp.mailfrom=bounce-mc.us4_8946221.10139292-4c9686d3c5@mail212.suw161.rsgsv.net;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ncsu.edu; s=k3;
+	t=1761919371; x=1762189371; i=newstips@ncsu.edu;
+	bh=57PnF7ZxcJy2oH6rbJ3VHL1ybISVPlg3RBYi82flu5s=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:
+	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:
+	 MIME-Version:CC:Date:Subject:From;
+	b=EhOroigJOXb84xlc4L36Sp9d8Uxkbif+hE8lMe7mowyJKSb/+p9uMoH85aKYA61ix
+	 m6Hxq4jqIt0UYiL12nh+Khwy9P+r2YBLNIMnxUJmPqfyOCvkMiriH0YgjYsfPW2C1d
+	 sfnqxQ8Xb0zYr46XZC+tBCdRngxHEtaE0XoaCSFBwFX+4bbMsuj1K7VXZQ9CZrXu/f
+	 ceNpzu4Z+qO5M2yN0UGiVe0N0XaBTAgv4K+L6uxD62hm1AlMzk/xV7QncK89URrwjF
+	 lQzWp863olGbVLwBVIFrRRbSguyyRdUqoQPt1DAUtWLLmb+HTeFBM+wa8rjbYjOW/W
+	 xIyNJpeN2FLaw==
+Received: from localhost (localhost [127.0.0.1])
+	by mail212.suw161.rsgsv.net (Mailchimp) with ESMTP id 4cyjNq0qGnzR9KY
+	for <sathores@ncsu.edu>; Fri, 31 Oct 2025 14:02:51 +0000 (GMT)
+Subject: =?utf-8?Q?Forging=20our=20futures?=
+From: Chancellor Kevin Howell <newstips@ncsu.edu>
+Reply-To: =?utf-8?Q?Chancellor=20Kevin=20Howell?= <newstips@ncsu.edu>
+To: <sathores@ncsu.edu>
+Date: Fri, 31 Oct 2025 14:00:43 +0000
+Message-ID: <9589a2ddf65e909a3030dcc55.4c9686d3c5.20251031140004.4127200be8.e1305b48@mail212.suw161.rsgsv.net>
+X-Mailer: Mailchimp Mailer - **CID4127200be84c9686d3c5**
+X-Campaign: mailchimp9589a2ddf65e909a3030dcc55.4127200be8
+X-campaignid: mailchimp9589a2ddf65e909a3030dcc55.4127200be8
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=9589a2ddf65e909a3030dcc55&id=4127200be8&e=4c9686d3c5
+X-MC-User: 9589a2ddf65e909a3030dcc55
+Feedback-ID: 8946221:8946221.10139292:us4:mc
+List-ID: 9589a2ddf65e909a3030dcc55mc list <9589a2ddf65e909a3030dcc55.378331.list-id.mcsv.net>
+X-Accounttype: pr
+List-Unsubscribe: <https://ncsu.us4.list-manage.com/unsubscribe?u=9589a2ddf65e909a3030dcc55&id=2df034c2a9&t=h&e=4c9686d3c5&c=4127200be8>, <mailto:unsubscribe-mc.us4_9589a2ddf65e909a3030dcc55.4127200be8-4c9686d3c5@unsubscribe.mailchimpapp.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_174695195"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_174695195
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+Reflecting on my official installation as your chancellor.
+
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=
+ =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=
+ =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=
+ =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C=
+ =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C
+
+https://ncsu.edu?utm_source=3DChancellor%27s+emails+-+students+-+fall+2025=
+&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_05_51_COPY_01&utm_med=
+ium=3Demail&utm_term=3D0_-63aa39bf30-389914305
+
+
+**
+------------------------------------------------------------
+
+Oct. 31=2C 2025
+
+Chancellor Kevin Howell at his installation
+
+Good morning=2C Wolfpack=2C
+
+As we head into the homestretch of Red and White Week (https://redwhitewee=
+k.ncsu.edu/?utm_source=3DChancellor%27s+emails+-+students+-+fall+2025&utm_=
+campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_05_51_COPY_01&utm_medium=
+=3Demail&utm_term=3D0_-63aa39bf30-389914305) =2C I am filled with an=
+ immense sense of gratitude for this place we call home. This week represe=
+nts a time when we greet old friends=2C meet new ones and reflect on what=
+ it truly means to be a part of the Pack.
+
+If you haven=E2=80=99t had the opportunity to participate in the week=E2=
+=80=99s events=2C I encourage you to do so before our annual homecoming ce=
+lebration comes to close this weekend. For faculty and staff on campus tod=
+ay=2C University Human Resources is hosting an employee celebration (https=
+://news.hr.ncsu.edu/red-and-white-fest-an-employee-celebration/?utm_source=
+=3DChancellor%27s+emails+-+students+-+fall+2025&utm_campaign=3D4127200be8-=
+EMAIL_CAMPAIGN_2025_10_30_05_51_COPY_01&utm_medium=3Demail&utm_term=3D0_-6=
+3aa39bf30-389914305) featuring food and games on Central Campus from=
+ 11:30 a.m. to 1:30 p.m.
+
+Yesterday=2C I took my oath of office and was formally installed as NC Sta=
+te=E2=80=99s 15th chancellor. As I reflect on the significance of the day=
+=2C I keep coming back to what led me here. The day I decided to enroll at=
+ NC State as an undergraduate student from Shelby truly changed my life fo=
+rever. Because that=E2=80=99s what this place does =E2=80=94 it changes li=
+ves.
+
+As I shared during my remarks=2C I see a future where NC State is the gold=
+ standard of a 21st-century land-grant university: leading with intention=
+ and curiosity and freely sharing the fruits of our labor. Because progres=
+s means nothing unless it=E2=80=99s shared.
+
+Our shared vision and hope for the future hinges on our ability to unapolo=
+getically pursue groundbreaking research=2C to strengthen the value and re=
+turn on investment of an NC State degree=2C and to build the financial str=
+ength that secures affordability and opportunity for generations yet to co=
+me.
+
+To do all of this=2C we=E2=80=99ll need to be more creative=2C collaborati=
+ve and inventive than we=E2=80=99ve ever been before. We=E2=80=99ll have c=
+hallenges=2C but our ability to Think and Do=2C combined with our mission=
+ to serve the public good=2C will ensure we stay on the right path.
+
+I=E2=80=99m thankful for all you do every day to make this place better=2C=
+ and I=E2=80=99m grateful for your support as we step into what is undoubt=
+edly a bolder and better future.
+
+Go Pack!
+
+Kevin Howell
+Chancellor
+
+
+NC State University
+University Communications
+Campus Box 7508
+Raleigh=2C NC 27695
+USA
+This message was sent to sathores@ncsu.edu
+Unsubscribe (https://ncsu.us4.list-manage.com/unsubscribe?u=3D9589a2ddf65e=
+909a3030dcc55&id=3D2df034c2a9&t=3Db&e=3D4c9686d3c5&c=3D4127200be8) | Privacy=
+ Statement (https://www.ncsu.edu/privacy/?utm_source=3DChancellor%27s+emai=
+ls+-+students+-+fall+2025&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10=
+_30_05_51_COPY_01&utm_medium=3Demail&utm_term=3D0_-63aa39bf30-389914305) | Forward to a Friend (https://us4.forward-to-friend.com/forward?u=3D=
+9589a2ddf65e909a3030dcc55&id=3D4127200be8&e=3D4c9686d3c5) | View in Browser=
+ (https://mailchi.mp/b22c1d33b9d9/forging-our-futures-10139292?e=3D4c9686d3c5)
+
+https://www.facebook.com/ncstate?utm_source=3DChancellor%27s+emails+-+stud=
+ents+-+fall+2025&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_05_51=
+_COPY_01&utm_medium=3Demail&utm_term=3D0_-63aa39bf30-389914305 Faceb=
+ook (https://www.facebook.com/ncstate?utm_source=3DChancellor%27s+emails+-=
++students+-+fall+2025&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_=
+05_51_COPY_01&utm_medium=3Demail&utm_term=3D0_-63aa39bf30-389914305)=
+ http://www.twitter.com/ncstate/?utm_source=3DChancellor%27s+emails+-+stud=
+ents+-+fall+2025&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_05_51=
+_COPY_01&utm_medium=3Demail&utm_term=3D0_-63aa39bf30-389914305 X (ht=
+tp://www.twitter.com/ncstate/?utm_source=3DChancellor%27s+emails+-+student=
+s+-+fall+2025&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_05_51_CO=
+PY_01&utm_medium=3Demail&utm_term=3D0_-63aa39bf30-389914305) http://=
+instagram.com/ncstate?utm_source=3DChancellor%27s+emails+-+students+-+fall=
++2025&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_05_51_COPY_01&ut=
+m_medium=3Demail&utm_term=3D0_-63aa39bf30-389914305 Instagram (http:=
+//instagram.com/ncstate?utm_source=3DChancellor%27s+emails+-+students+-+fa=
+ll+2025&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_05_51_COPY_01&=
+utm_medium=3Demail&utm_term=3D0_-63aa39bf30-389914305) http://www.li=
+nkedin.com/edu/north-carolina-state-university-18786?utm_source=3DChancell=
+or%27s+emails+-+students+-+fall+2025&utm_campaign=3D4127200be8-EMAIL_CAMPA=
+IGN_2025_10_30_05_51_COPY_01&utm_medium=3Demail&utm_term=3D0_-63aa39bf30-389914305 LinkedIn (http://www.linkedin.com/edu/north-carolina-state-=
+university-18786?utm_source=3DChancellor%27s+emails+-+students+-+fall+2025=
+&utm_campaign=3D4127200be8-EMAIL_CAMPAIGN_2025_10_30_05_51_COPY_01&utm_med=
+ium=3Demail&utm_term=3D0_-63aa39bf30-389914305)
+--_----------=_MCPart_174695195
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset=3D"utf-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width=2C initial-scale=
+=3D1">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+
+
+<style type=3D"text/css">
+    @import url('https://fonts.googleapis.com/css?family=3DRoboto:400=2C30=
+0=2C300ita%E2%80%8C%E2%80%8Blic=2C400italic=2C700=2C700italic');
+
+    /* CLIENT-SPECIFIC STYLES */
+    body=2C table=2C td=2C a{-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%;} /* Prevent WebKit and Windows mobile changing default text=
+ sizes */
+    table=2C td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Remove s=
+pacing between tables in Outlook 2007 and up */
+    img{-ms-interpolation-mode: bicubic;} /* Allow smoother rendering of r=
+esized image in Internet Explorer */
+
+    /* RESET STYLES */
+    img{border: 0; height: auto; line-height: 100%; outline: none; text-de=
+coration: none;}
+    body{height: 100% !important; margin: 0 !important; padding: 0 !import=
+ant; width: 100% !important;}
+=09
+=09/* Addresses blue links in Gmail */
+=09.ii a[href] {
+=09   color: #CC0000 !important;
+=09   text-decoration-color: #CC0000 !important;
+=09  }
+
+    /* iOS BLUE LINKS */
+    a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
+
+    strong=2C b {
+      font-weight: 700 !important;
+    }
+
+    .ii a[href] {
+      color: #c00 !important;
+      text-decoration: none !important;
+    }
+
+    .ii p a[href] {
+      text-decoration: underline !important;
+    }
+
+    .gt a {
+      color: #c00 !important;
+      text-decoration: none !important;
+    }
+
+    p=2C ol=2C ul {
+        mso-line-height-rule: exactly;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        margin-bottom: 5px;
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    li { margin-bottom: 5px; }
+
+    body=2C td=2C input=2C textarea=2C select {
+        font-family: 'Roboto'=2C Arial=2C sans-serif !important;
+    }
+
+    .paragraph a {
+      color: #CC0000 !important;
+      text-decoration: underline !important;
+      font-weight: bold !important;
+    }
+
+    p a {
+      color: #CC0000 !important;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    h1 {
+      margin-bottom: 0px;
+    }
+
+    .colored-background a {
+      color: #FFF !important;
+    }
+
+    .colored-block a {
+      text-decoration: none !important;
+    }
+
+    .center {
+        text-align:center;
+    }
+
+    .newsletter-supertitle {
+        margin:0;
+        padding: 0;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 1.4;
+        color: #CC0000;
+        display: block;
+    }
+
+    .newsletter-title {
+        padding:0;
+        margin:0;
+        font-size: 31px;
+        font-weight:bold;
+        line-height: 1.1;
+        color: #000000;
+        text-transform:none;
+    }
+
+    .has-text-align-center {
+      text-align: center;
+    }
+
+    .has-text-align-left {
+      padding-left: 15px !important;
+    }
+
+    /* MOBILE STYLES */
+    @media screen and (max-width: 600px) {
+
+        .text-center-small {
+            text-align: center !important;
+        }
+
+=09    =09.alternate_header_title {
+=09=09      =09padding-left: 15px !important;
+=09    =09}
+
+        .bottom-padding-mobile {
+            margin-bottom: 15px !important;
+        }
+        .top-padding-mobile {
+            margin-top: 15px !important;
+        }
+        .story-padding {
+            padding-left: 0 !important;
+        }
+        .headshot-text-block {
+            color: #000000; font-size: 12px;
+            padding-top: 15px;
+            padding-left:15px;
+        }
+
+        /* ALLOWS FOR FLUID TABLES */
+        .wrapper {
+          width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        /* ADJUSTS LAYOUT OF LOGO IMAGE */
+        .logo {
+            text-align:center;
+        }
+        .logo img {
+          margin: 0 auto !important;
+        }
+
+        /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+        .mobile-hide {
+          display: none !important;
+          width: 0 !important;
+          height: 0 !important;
+          visibility: hidden !important;
+        }
+
+        .img-max {
+          max-width: 100% !important;
+          width: 100% !important;
+          height: auto !important;
+        }
+
+
+        .no-padding {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          padding: 0 !important;
+        }
+
+        .mobile-image-padding {
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+          padding-top: 15px !important;
+          text-align:center !important;
+        }
+
+        .mobile-padding {
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+          text-align:center !important;
+        }
+
+        .mobile-padding a {
+          font-size:20px !important;
+          line-height:24px !important;
+          text-align:center !important;
+
+        }
+
+        a=2C p=2C li {
+          font-size:20px !important;
+          line-height:24px !important;
+
+        }
+
+        .footer a {
+          font-size:12px !important;
+        }
+
+        p.has-text-align-center=2C p.has-text-align-left {
+          font-size:20px !important;
+        }
+
+        .mobile-heading a {
+          font-size:24px !important;
+          text-align:center !important;
+        }
+
+        .mobile-no-padding {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          padding: 0 !important;
+        }
+
+        /* ADJUST BUTTONS ON MOBILE */
+        .mobile-button-container {
+            margin: 0 auto;
+            width: 100% !important;
+        }
+
+        .mobile-full-width-centered {
+            max-width:  100% !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            display: block !important;
+        }
+
+        .article-full-width-centered {
+            max-width:  100% !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            display: block !important;
+        }
+
+        .mobile-no-padding {
+            padding: 0 !important;
+        }
+
+        .mobile-padding-top-15 {
+            padding-top: 15px !important;
+        }
+
+        .mobile-button {
+            padding: 15px 15px 15px 0 !important;
+            border: 0 !important;
+            font-size: 14px !important;
+            display: block !important;
+        }
+
+        #email-container-table {
+            width: 100% !important;
+        }
+        .image-center {
+            margin: 0 auto !important;
+            text-align: center;
+        }
+
+        .footer-left=2C .footer-right {
+        =09 display:block !important;
+            width:100% !important;
+        }
+
+        .footer-right {
+        =09text-align: left;
+            align: left;
+        }
+
+    }
+
+    /* ANDROID CENTER FIX */
+    div[style*=3D"margin: 16px 0;"] { margin: 0 !important; }
+
+    .email-cta-text {
+        text-decoration: none;
+        color: #CC0000;
+        font-size: 22px;
+        line-height: 130%;
+    }
+
+    .email-cta-button {
+        text-decoration: none;
+        background-color: #CC0000;
+        border-color: #CC0000;
+        border-style: solid;
+        border-radius: 0;
+        color: #FFFFFF;
+        font-size: 22px;
+        line-height: 100%;
+        display: inline-block;
+    }
+
+    u + #body a {
+          color: inherit;
+          text-decoration: inherit;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+    }
+
+</style>
+
+</head>
+<body style=3D"margin: 0 !important; padding: 0 !important;" id=3D"body" c=
+lass=3D"premium-template">
+
+<!-- BEGIN PREHEADER TEXT -->
+<div style=3D"display: none;">
+    Reflecting on my official installation as your chancellor.</div>
+
+<!-- Insert &#847;&zwnj;&nbsp; hack after hidden preview text -->
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">
+&zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwn=
+j; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &=
+zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj=
+; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &z=
+wnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;=
+ &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zw=
+nj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;=
+ &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zw=
+nj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;=
+ &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+</div>
+<!-- END PREHEADER TEXT -->
+
+<!-- INSERT FONT STYLING FOR OUTLOOK -->
+<!--[if mso]>
+<style type=3D"text/css">
+body=2C table=2C td {font-family: 'Roboto'=2C Arial=2C Helvetica=2C sans-s=
+erif !important;}
+</style>
+<![endif]-->
+
+
+
+<!--[if (gte mso 9)|(IE)]>
+<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" w=
+idth=3D"600">
+=09<tr>
+=09=09<td align=3D"center" valign=3D"top" width=3D"600">
+<![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" sty=
+le=3D"margin: 0 auto; max-width: 600px; font-family: 'Roboto'=2C Arial=2C=
+ sans-serif !important; font-weight: 300; border-top:1px solid #cccccc; bo=
+rder-left:1px solid #cccccc; border-right:1px solid #cccccc; border-bottom=
+:1px solid #cccccc;" id=3D"email-container-table">
+
+    <tr>
+        <td bgcolor=3D"#ffffff" align=3D"center">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"600">
+            <tr>
+            <td align=3D"center" valign=3D"top" width=3D"600">
+            <![endif]-->
+
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"wrapper" align=3D"center">
+
+              <tr>
+  <td>
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" style=3D"max-width:570px; padding-left: 15px; padding-ri=
+ght: 15px;" class=3D"responsive-table">
+      <tbody>
+        <tr>
+          <td style=3D"text-align:center;">
+<a href=3D"https://ncsu.us4.list-manage.com/track/click?u=3D9589a2ddf65e90=
+9a3030dcc55&id=3D3d929203d3&e=3D4c9686d3c5" target=3D"_blank" style=3D"te=
+xt-decoration:none; border:0; display:block; margin: 0 auto; text-align:ce=
+nter; ">
+<img decoding=3D"async" alt=3D"NC State University" src=3D"https://cdn.ncs=
+u.edu/brand-assets/email-resources/brick-250x120.jpg" width=3D"125" style=
+=3D"outline:0;border:0;text-align:center;">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+
+<tr>
+  <td>
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" style=3D"max-width:570px; padding-left: 15px; padding-ri=
+ght: 15px;" class=3D"responsive-table">
+      <tbody>
+        <tr>
+          <td style=3D"text-align:center; color:#CC0000;">
+            <h1>
+                           </h1>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+
+
+<tr>
+  <td>
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" style=3D"max-width:570px; padding-left: 15px; padding-ri=
+ght: 15px;" class=3D"responsive-table">
+      <tbody>
+        <tr>
+          <td style=3D"text-align: center; font-weight: 300; font-size: 16=
+px; padding-left: 0; color: #333;">
+            <p class=3D"subtitle">
+             Oct. 31=2C 2025            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+
+<tr>
+ <td style=3D"padding-top:20px;font-size: 0;line-height:0;height:0;">&nbsp=
+;</td>
+ </tr>
+
+
+<tr>
+  <td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+  <tbody><tr>
+  <td align=3D"center">
+=09=09  <img decoding=3D"async" alt=3D"Chancellor Kevin Howell at his inst=
+allation" src=3D"https://email.web.ncsu.edu/wp-content/uploads/2025/10/mah=
+4583-scaled.jpg" width=3D"600" border=3D"0" style=3D"display: block; paddi=
+ng-bottom:15px;">
+
+=09  </td>
+  </tr>
+</tbody></table></td></tr>
+
+
+
+<tr>
+  <td>
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" style=3D"padding-left: 15px; padding-right: 15px;" class=
+=3D"responsive-table">
+      <tbody>
+        <tr>
+          <td class=3D"paragraph" style=3D"max-width:540px;font-size: 14px=
+;color:#333333;">
+            <p><span style=3D"font-weight: 400">Good morning=2C Wolfpack=
+=2C</span></p>
+<p><span style=3D"font-weight: 400">As we head into the homestretch of </s=
+pan><a href=3D"https://ncsu.us4.list-manage.com/track/click?u=3D9589a2ddf6=
+5e909a3030dcc55&id=3D283ccb54f0&e=3D4c9686d3c5"><span style=3D"font-weigh=
+t: 400">Red and White Week</span></a><span style=3D"font-weight: 400">=2C=
+ I am filled with an immense sense of gratitude for this place we call hom=
+e. This week represents a time when we greet old friends=2C meet new ones=
+ and reflect on what it truly means to be a part of the Pack. </span></p>
+<p><span style=3D"font-weight: 400">If you haven=E2=80=99t had the opportu=
+nity to participate in the week=E2=80=99s events=2C I encourage you to do=
+ so before our annual homecoming celebration comes to close this weekend.=
+ For faculty and staff on campus today=2C University Human Resources is ho=
+sting an </span><a href=3D"https://ncsu.us4.list-manage.com/track/click?u=
+=3D9589a2ddf65e909a3030dcc55&id=3D19bcfe88a5&e=3D4c9686d3c5"><span style=
+=3D"font-weight: 400">employee celebration</span></a><span style=3D"font-w=
+eight: 400"> featuring food and games on Central Campus from 11:30 a.m. to=
+ 1:30 p.m.</span></p>
+<p><span style=3D"font-weight: 400">Yesterday=2C I took my oath of office=
+ and was formally installed as NC State=E2=80=99s 15th chancellor. As I re=
+flect on the significance of the day=2C I keep coming back to what led me=
+ here. The day I decided to enroll at NC State as an undergraduate student=
+ from Shelby truly changed my life forever. Because that=E2=80=99s what th=
+is place does =E2=80=94 it changes lives.</span></p>
+<p><span style=3D"font-weight: 400">As I shared during my remarks=2C I see=
+ a future where NC State is the gold standard of a 21st-century land-grant=
+ university: leading with intention and curiosity and freely sharing the f=
+ruits of our labor. Because progress means nothing unless it&#8217;s share=
+d. </span></p>
+<p><span style=3D"font-weight: 400">Our shared vision and hope for the fut=
+ure hinges on our ability to unapologetically pursue groundbreaking resear=
+ch=2C to strengthen the value and return on investment of an NC State degr=
+ee=2C and to build the financial strength that secures affordability and o=
+pportunity for generations yet to come.</span></p>
+<p><span style=3D"font-weight: 400">To do all of this=2C we=E2=80=99ll nee=
+d to be more creative=2C collaborative and inventive than we=E2=80=99ve ev=
+er been before. We=E2=80=99ll have challenges=2C but our ability to Think=
+ and Do=2C combined with our mission to serve the public good=2C will ensu=
+re we stay on the right path. </span></p>
+<p><span style=3D"font-weight: 400">I=E2=80=99m thankful for all you do ev=
+ery day to make this place better=2C and I=E2=80=99m grateful for your sup=
+port as we step into what is undoubtedly a bolder and better future. </spa=
+n></p>
+<p><span style=3D"font-weight: 400">Go Pack!</span></p>
+<p><span style=3D"font-weight: 400">Kevin Howell<br>
+</span><span style=3D"font-weight: 400">Chancellor</span></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+
+
+
+    <!-- BEGIN FOOTER -->
+=09=09<tr>
+=09=09<td style=3D"padding-top:30px;font-size: 0;line-height:0;height:0;">=
+&nbsp;</td>
+=09=09</tr>
+    <tr>
+        <td bgcolor=3D"#CC0000" align=3D"center" style=3D"padding-left:15p=
+x; padding-right: 15px;">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"600">
+            <tr>
+            <td align=3D"center" valign=3D"top" width=3D"600">
+            <![endif]-->
+            <!-- UNSUBSCRIBE COPY -->
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" align=3D"center" style=3D"max-width:600px; background-color: #CC0=
+000;" class=3D"responsive-table footer colored-background">
+
+      <tr>
+      <td style=3D"padding-top:15px;font-size: 0;line-height:0;height:0;">=
+&nbsp;</td>
+      </tr>
+
+
+
+
+
+=09=09=09
+
+=09=09=09             <tr>
+                    <td align=3D"center" style=3D"font-size: 12px; line-he=
+ight: 22px; color:#FFF;">
+                                              NC State University
+University Communications
+Campus Box 7508
+Raleigh=2C NC 27695
+USA                        <br>
+                                                                      This=
+ message was sent to sathores@ncsu.edu                        <br>
+                      =09=09=09=09=09                          <a href=3D"=
+https://ncsu.us4.list-manage.com/unsubscribe?u=3D9589a2ddf65e909a3030dcc55=
+&id=3D2df034c2a9&t=3Db&e=3D4c9686d3c5&c=3D4127200be8" style=3D"text-decorati=
+on: underline; word-wrap: break-word;mso-line-height-rule: exactly;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #FFFFFF;font-siz=
+e: 0.9em;">Unsubscribe</a>
+                                                                    | <a h=
+ref=3D"https://ncsu.us4.list-manage.com/track/click?u=3D9589a2ddf65e909a30=
+30dcc55&id=3D4abc1bc748&e=3D4c9686d3c5" target=3D"_blank" style=3D"color:=
+ #FFF; text-decoration: underline;font-size: 0.9em;">Privacy Statement</a>
+=09=09=09=09=09                                                   | <a hre=
+f=3D"https://us4.forward-to-friend.com/forward?u=3D9589a2ddf65e909a3030dcc=
+55&id=3D4127200be8&e=3D4c9686d3c5" style=3D"word-wrap: break-word;mso-line-h=
+eight-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 1=
+00%;color: #FFFFFF;font-size: 0.9em;">Forward to a Friend</a>
+                                                                         =
+  | <a href=3D"https://mailchi.mp/b22c1d33b9d9/forging-our-futures-1013929=
+2?e=3D4c9686d3c5" target=3D"_blank" style=3D"color: #FFF; text-decoration: u=
+nderline;font-size: 0.9em;">View in Browser</a>
+                                                                     </td>
+                </tr>
+
+
+=09=09=09
+
+
+
+
+                                                                <tr>
+                    <td align=3D"center" style=3D"padding-top:5px;">
+                    <center>
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0">
+                            <tbody>
+                                <tr>
+
+
+                                <td width=3D"20" align=3D"left" valign=3D"=
+top">
+                                    <a href=3D"https://ncsu.us4.list-manag=
+e.com/track/click?u=3D9589a2ddf65e909a3030dcc55&id=3Da7fa4b8f7e&e=3D4c9686d3c5" style=3D"text-decoration:none;display:block;height:15px;width:15px;=
+padding-top:2px;"><img decoding=3D"async" alt=3D"" height=3D"15" src=3D"ht=
+tps://cdn.ncsu.edu/brand-assets/email-resources/social-media/Facebook.png"=
+ width=3D"15" align=3D"top"></a>
+                                </td>
+
+                                <td align=3D"left" valign=3D"top" style=3D=
+"padding-right:10px;">
+                                    <a href=3D"https://ncsu.us4.list-manag=
+e.com/track/click?u=3D9589a2ddf65e909a3030dcc55&id=3Dbb467337b7&e=3D4c9686d3c5" style=3D"text-decoration:none;display:block;margin-bottom: 5px;"><s=
+pan style=3D"color: #FFFFFF; font-size: 10.8px; padding:0; line-height: 15=
+px; text-align: left;">Facebook</span></a>
+                                </td>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+                                <td width=3D"20" align=3D"left" valign=3D"=
+top">
+                                    <a href=3D"https://ncsu.us4.list-manag=
+e.com/track/click?u=3D9589a2ddf65e909a3030dcc55&id=3D2136f73046&e=3D4c9686d3c5" style=3D"text-decoration:none;display:block;height:15px;width:15px;=
+padding-top:2px;"><img decoding=3D"async" alt=3D"" height=3D"15" src=3D"ht=
+tps://cdn.ncsu.edu/brand-assets/email-resources/social-media/Twitter.png"=
+ width=3D"15" align=3D"top"></a>
+                                </td>
+
+                                <td align=3D"left" valign=3D"top" style=3D=
+"padding-right:10px;">
+                                    <a href=3D"https://ncsu.us4.list-manag=
+e.com/track/click?u=3D9589a2ddf65e909a3030dcc55&id=3Dadab6bfa59&e=3D4c9686d3c5" style=3D"text-decoration:none;display:block;margin-bottom: 5px;"><s=
+pan style=3D"color: #FFFFFF; font-size: 10.8px; padding:0; line-height: 15=
+px; text-align: left;">X</span></a>
+                                </td>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"20" align=3D"=
+left" valign=3D"top">
+                                    <a href=3D"https://ncsu.us4.list-manag=
+e.com/track/click?u=3D9589a2ddf65e909a3030dcc55&id=3Dc55acebb6b&e=3D4c9686d3c5" style=3D"text-decoration:none;display:block;height:15px;width:15px;=
+padding-top:2px;"><img decoding=3D"async" alt=3D"" height=3D"15" src=3D"ht=
+tps://cdn.ncsu.edu/brand-assets/email-resources/social-media/Instagram.png=
+" width=3D"15" align=3D"top"></a>
+                                </td>
+
+                                <td align=3D"left" valign=3D"top" style=3D=
+"padding-right:10px;">
+                                    <a href=3D"https://ncsu.us4.list-manag=
+e.com/track/click?u=3D9589a2ddf65e909a3030dcc55&id=3D3bc0a56538&e=3D4c9686d3c5" style=3D"text-decoration:none;display:block;margin-bottom: 5px;"><s=
+pan style=3D"color: #FFFFFF; font-size: 10.8px; padding:0; line-height: 15=
+px; text-align: left;">Instagram</span></a>
+                                </td>
+
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"20" align=3D"=
+left" valign=3D"top">
+                                    <a href=3D"https://ncsu.us4.list-manag=
+e.com/track/click?u=3D9589a2ddf65e909a3030dcc55&id=3D6741d0a183&e=3D4c9686d3c5" style=3D"text-decoration:none;display:block;height:15px;width:15px;=
+padding-top:2px;"><img loading=3D"lazy" decoding=3D"async" alt=3D"" height=
+=3D"15" src=3D"https://cdn.ncsu.edu/brand-assets/email-resources/social-me=
+dia/LinkedIn.png" width=3D"15" align=3D"top"></a>
+                                </td>
+
+                                <td align=3D"left" valign=3D"top" style=3D=
+"padding-right:10px;">
+                                    <a href=3D"https://ncsu.us4.list-manag=
+e.com/track/click?u=3D9589a2ddf65e909a3030dcc55&id=3D18372d6a9b&e=3D4c9686d3c5" style=3D"text-decoration:none;display:block;margin-bottom: 5px;"><s=
+pan style=3D"color: #FFFFFF; font-size: 10.8px; padding:0; line-height: 15=
+px; text-align: left;">LinkedIn</span></a>
+                                </td>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+                            </tbody>
+                        </table>
+                    </center>
+                    </td>
+                </tr>
+
+      <tr>
+      <td style=3D"padding-top:15px;font-size: 0;line-height:0;height:0;">=
+&nbsp;</td>
+      </tr>            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+    <!-- END FOOTER -->
+
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+
+</table>
+
+<!--[if (gte mso 9)|(IE)]>
+=09=09</td>
+=09</tr>
+</table>
+<![endif]-->
+<div style=3D"display:none;"><img src=3D"https://ncsu.us4.list-manage.com/=
+track/open.php?u=3D9589a2ddf65e909a3030dcc55&id=3D4127200be8&e=3D4c9686d3c5" height=3D"1" width=3D"1" style=3D"display:none;" alt=3D""></div></body=
+>
+</html>
+--_----------=_MCPart_174695195--

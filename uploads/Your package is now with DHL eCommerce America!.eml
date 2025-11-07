@@ -1,0 +1,2099 @@
+Delivered-To: severinthore@gmail.com
+Received: by 2002:ad5:450d:0:b0:372:8761:e3a with SMTP id c13csp2445729imr;
+        Tue, 28 Oct 2025 20:04:23 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGGvae2nr55osxK3nR00k6XzkM3jZHrxZkFtYzlrzcvTWtC/i3tPYb3IOYZBHpVNZLzM4Sh
+X-Received: by 2002:a05:622a:400f:b0:4e5:8d07:ce80 with SMTP id d75a77b69052e-4ed15c1962cmr20446021cf.41.1761707063049;
+        Tue, 28 Oct 2025 20:04:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1761707063; cv=none;
+        d=google.com; s=arc-20240605;
+        b=a/DYhwEUDCk9sOaWEwDQbAtJduy3bI9CKnsm83AjgsoyhwHTAQyHZRI631c7q6yAbN
+         IwKki+GIY1C3KptJmfZ2ihSY6ehwq3VMKaV/Hks6GbvXdM/XLtq7D6u+DAzdpHft6L3K
+         F724GEdDHutv6yoQrHGzE/1DxfvIHSCKd2JGOMJYsu1nRagOEuZfJTKKRO0KoncpOwz6
+         43bA9YxKikD26u6dP4k07WfPsWBRmtCxEqbDiL5mcTstQ4Qg5lJh/x3QsqxbyRyE9ZEZ
+         nqoDus4J4mqW/8PpFB44Rn0SOrwm6LbdFR8lxWv6KX5KRQE2eTs02hFPQl04/FcyW2gC
+         k+EQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:from-address:from-name:mime-version:subject:message-id
+         :to:from:date:dkim-signature:dkim-filter;
+        bh=FUveQ/2eQkQEPSDp9IyPFpc99FecbN12bGAGl+EAitU=;
+        fh=SqbGIknXvCbzPp9zert1qujjnXjTRXPHJ6RZoNVgSUw=;
+        b=RxYUpYfq25lDI5uYNlZfUE7iQBTiecM6KQOOUch29IABqaNfHV9UpdjuDqyYMcQ4rQ
+         cTmTZdgmPdIvi+FZgF+AJq9SYLMmpENp76bb5fBJOt8fiorDhQryOErxXLlyoc9ms4Mi
+         sxv9BuUozJXBTwP0ajtXJqNt02MiKCvDyokYK3CRgCuygsSaJfQmIUwcXNYyu1brFQA5
+         LoF6c/zEE9Jq4w+I23i9Ka4G9PPIXJzdVVunX/nPZJ4yNxWzsuZUG6RfYKKpO9r7mYyK
+         8ZvzNPbHFenSb4xs3WsieOYN2KQie/CLoYxU9LurhCJS1ogXZYmdyKvDycanAb93r2ZQ
+         bmCg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ebay.com header.s=dkim1k header.b=VK7KTpZp;
+       spf=pass (google.com: domain of ebay@ebay.com designates 66.211.185.149 as permitted sender) smtp.mailfrom=ebay@ebay.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=ebay.com
+Return-Path: <ebay@ebay.com>
+Received: from mxphxpool1046.ebay.com (mxphxpool1046.ebay.com. [66.211.185.149])
+        by mx.google.com with ESMTPS id d75a77b69052e-4eba506325csi34748891cf.236.2025.10.28.20.04.22
+        for <severinthore@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 28 Oct 2025 20:04:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ebay@ebay.com designates 66.211.185.149 as permitted sender) client-ip=66.211.185.149;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ebay.com header.s=dkim1k header.b=VK7KTpZp;
+       spf=pass (google.com: domain of ebay@ebay.com designates 66.211.185.149 as permitted sender) smtp.mailfrom=ebay@ebay.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=ebay.com
+Received: from kirk0cont-7b7bb956d9-tess45-4k9nm ([10.100.111.9])
+	by mxphxpool1046.ebay.com (8.16.1/8.16.1) with ESMTP id 59T34L1i069859
+	for <severinthore@gmail.com>; Tue, 28 Oct 2025 20:04:21 -0700
+DKIM-Filter: OpenDKIM Filter v2.11.0 mxphxpool1046.ebay.com 59T34L1i069859
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ebay.com; s=dkim1k;
+	t=1761707062; bh=FUveQ/2eQkQEPSDp9IyPFpc99FecbN12bGAGl+EAitU=;
+	h=Date:From:To:Subject;
+	b=VK7KTpZp+I2M1brJ5QsOyj0N9eJfdQeNY8xs0dpoxMLAy33LB9+OG2UO79SDYrmqv
+	 mvZSbd2ytlXEm3XxKw8VBoFYG56iRUaEXd74/zO3syFpAVUaZ9N7xYF0nsfGHDAtT6
+	 yBxmxiHP73RBipTHAitblxbwssURq2vWyXMm2dlA=
+Date: Tue, 28 Oct 2025 20:04:21 -0700
+From: eBay <ebay@ebay.com>
+To: severinthore@gmail.com
+Message-ID: <0AA72BBE-92A9ACD7B20-0199A6F4E3CA-00000000034FC4B7@starship>
+Subject: Your package is now with DHL eCommerce America!
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_7162512_1599894240.1761707061829"
+from-name: eBay
+from-address: ebay@ebay.com
+X-eBay-MailTracker: 111011.000.0.0.1116830d9df64ba7a42e430ccac352fe
+Feedback-ID: 28d66c22-d288-47a6-b657-bcb562bd846b:111011:eBayStarship
+
+------=_Part_7162512_1599894240.1761707061829
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<!--28d66c22-d288-47a6-b657-bcb562bd846b_v28-->
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+"><!--|MSMS_CSS|--><style type=3D"text/css">@media screen and (min-width:60=
+0px){.hide{display:none!important;overflow:hidden!important;max-height:0!im=
+portant}.show{display:block!important;max-height:none!important}.hide_mob{d=
+isplay:block!important;overflow:visible!important;max-height:none!important=
+}.floatnone{float:none!important}.floatleft{float:left!important}.floatrigh=
+t{float:right!important}.opacity-1{opacity:1!important}.ellipsis{white-spac=
+e:nowrap!important;overflow:hidden!important;text-overflow:ellipsis}}.blueF=
+ix span,.blueFix span:hover{border-bottom:0 none transparent!important}.blu=
+eFix a{text-decoration:none!important;white-space:nowrap;color:inherit!impo=
+rtant;border-bottom:none!important}</style><style>@media screen and (max-wi=
+dth:600px){.show_mob{display:block!important}.column{display:block !importa=
+nt; width:100% !important;}.calc-width92{width:calc(100% - 92px)!important}=
+.calc-width130{width:calc(100% - 130px)!important}.calc-width-185{width:cal=
+c(100% - 185px)!important}.calc-width{width:calc(100% - 122px)!important}.h=
+ide_mob{display:none!important;overflow:hidden!important;max-height:0!impor=
+tant}.hide_mob_alt{display:none!important;overflow:hidden!important;max-hei=
+ght:0!important}}u+.body .gwfw{width:100%!important;width:100vw!important}<=
+/style><style>.column-top{display:table-header-group!important}.column-bott=
+om{display:table-footer-group!important}</style><!--[if mso]><style type=3D=
+"text/css">body,table,td,h1,h2,h3,h4,h5,p,ul,ol,a,span{font-family:Arial,sa=
+n-serif!important}@font-face{font-family:'Market Sans';mso-generic-font-fam=
+ily:swiss;mso-font-alt:Arial}</style><![endif]--><style>@font-face{font-fam=
+ily:'Market Sans';src:url(https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.=
+0/MarketSans-Regular-WebS.eot);src:url(https://ir.ebaystatic.com/cr/v/c1/ma=
+rket-sans/v1.0/MarketSans-Regular-WebS.eot?#iefix)format('embedded-opentype=
+'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regul=
+ar-WebS.woff2')format('woff2'),url('https://ir.ebaystatic.com/cr/v/c1/marke=
+t-sans/v1.0/MarketSans-Regular-WebS.woff')format('woff'),url('https://ir.eb=
+aystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.ttf')format('=
+truetype'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSa=
+ns-Regular-WebS.svg#MarketSans-Regular-WebS')format('svg');font-weight:norm=
+al;font-style:normal;mso-generic-font-family:swiss;mso-font-alt:'Arial'}@fo=
+nt-face{font-family:'Market Sans';src:url(https://ir.ebaystatic.com/cr/v/c1=
+/market-sans/v1.0/MarketSans-SemiBold-WebS.eot);src:url(https://ir.ebaystat=
+ic.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBold-WebS.eot?#iefix)format(=
+'embedded-opentype'),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.=
+0/MarketSans-SemiBold-WebS.woff2')format('woff2'),url('https://ir.ebaystati=
+c.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBold-WebS.woff')format('woff'=
+),url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-SemiBo=
+ld-WebS.ttf')format('truetype'),url('https://ir.ebaystatic.com/cr/v/c1/mark=
+et-sans/v1.0/MarketSans-SemiBold-WebS.svg#MarketSans-SemiBold-WebS')format(=
+'svg');font-weight:bold;font-style:normal;mso-generic-font-family:swiss;mso=
+-font-alt:'Arial'}[style*=3D'Market Sans']{font-family:'Market Sans',Helvet=
+ica,Arial,sans-serif!important}</style><style>html,body,h1,h2,h3,h4,h5,h6,p=
+{margin:0;padding:0}h1,h2,h3,h4,h5,h6,p,ul,ol,table{font-family:'Market San=
+s',Helvetica,Arial,sans-serif!important}sup{line-height:0;font-size:70%}p a=
+{color:inherit!important;text-decoration:none!important}.footer .legal a{co=
+lor:#003AA5!important;text-decoration:underline!important}p .link{text-deco=
+ration:underline!important}a:-webkit-any-link:focus{outline-offset:0!import=
+ant}a:focus,.focus:focus,.focusRed:focus{outline:3px solid #000!important;m=
+argin:3px}.focus__content:focus{outline:0}</style><style>.button,.button:fo=
+cus{transition:.4s;animation-duration:1.3s;animation-timing-function:ease-i=
+n-out;animation-iteration-count:1}.button:hover,.button:focus{-webkit-borde=
+r-radius:24px!important;border-radius:24px!important;padding:9px 24px 9px 2=
+4px!important}.button{transition:.4s}.button-color-B1:hover,.button-color-B=
+1:focus{background:#C5E5FB!important;box-shadow:inset 0 0 0 25px #C5E5FB;co=
+lor:#121258!important}.button-color-B1-inverted:hover,.button-color-B1-inve=
+rted:focus{background:#121258!important;box-shadow:inset 0 0 0 25px #121258=
+;color:#C5E5FB!important}.button-color-B4:hover,.button-color-B4:focus{back=
+ground:#3665F3!important;box-shadow:inset 0 0 0 25px #3665F3;color:#FFFFFE!=
+important}.button-color-B4-inverted:hover,.button-color-B4-inverted:focus{b=
+ackground:#FFFFFE!important;box-shadow:inset 0 0 0 25px #FFFFFE;color:#3665=
+F3!important}.button-color-B4_ALT:hover,.button-color-B4_ALT:focus{backgrou=
+nd:#FFFFFE!important;box-shadow:inset 0 0 0 25px #FFFFFE;color:#3665F3!impo=
+rtant}.button-color-B4_ALT-inverted:hover,.button-color-B4_ALT-inverted:foc=
+us{background:#3665F3!important;box-shadow:inset 0 0 0 25px #3665F3;color:#=
+FFFFFE!important}.button-color-N0:hover,.button-color-N0:focus{background:#=
+FFFFFE!important;box-shadow:inset 0 0 0 25px #FFFFFE;color:#191919!importan=
+t}.button-color-N0-inverted:hover,.button-color-N0-inverted:focus{backgroun=
+d:#191919!important;box-shadow:inset 0 0 0 25px #191919;color:#FFFFFE!impor=
+tant}.button-color-N1:hover,.button-color-N1:focus{background:#F7F7F7!impor=
+tant;box-shadow:inset 0 0 0 25px #F7F7F7;color:#191919!important}.button-co=
+lor-N1-inverted:hover,.button-color-N1-inverted:focus{background:#191919!im=
+portant;box-shadow:inset 0 0 0 25px #191919;color:#F7F7F7!important}.button=
+-color-N2:hover,.button-color-N2:focus{background:#E5E5E5!important;box-sha=
+dow:inset 0 0 0 25px #E5E5E5;color:#191919!important}.button-color-N2-inver=
+ted:hover,.button-color-N2-inverted:focus{background:#191919!important;box-=
+shadow:inset 0 0 0 25px #191919;color:#E5E5E5!important}.button-color-N6:ho=
+ver,.button-color-N6:focus{background:#363636!important;box-shadow:inset 0 =
+0 0 25px #363636;color:#FFFFFE!important}.button-color-N6-inverted:hover,.b=
+utton-color-N6-inverted:focus{background:#FFFFFE!important;box-shadow:inset=
+ 0 0 0 25px #FFFFFE;color:#363636!important}.button-color-N7:hover,.button-=
+color-N7:focus{background:#191919!important;box-shadow:inset 0 0 0 25px #19=
+1919;color:#FFFFFE!important}.button-color-N7-inverted:hover,.button-color-=
+N7-inverted:focus{background:#FFFFFE!important;box-shadow:inset 0 0 0 25px =
+#FFFFFE;color:#191919!important}.button-text-color-N1{color:#F7F7F7!importa=
+nt}.button-text-color-N1:hover,.button-text-color-N1:focus{background:#F7F7=
+F7!important;box-shadow:inset 0 0 0 25px #F7F7F7}.pl6{padding-left:6px!impo=
+rtant}.pr8{padding-right:8px!important}.border-box{box-sizing:border-box!im=
+portant}</style><style>@media screen and (min-width:600px){.w-auto,.col-aut=
+o,.col-auto-column{width:auto!important}.w-100pc,.col-100pc,.width-100pc-co=
+lumn,.width-100pc-24px-column{width:100%!important}.w124{width:124px!import=
+ant}.w181{width:181px!important}.w183{width:183px!important}.w132{width:100=
+%!important;max-width:132px!important}.w179{width:100%!important;max-width:=
+179px!important}.w130,.col-130px{max-width:130px!important}.w568{width:568p=
+x!important}.ml0{margin-left:0!important}.mr0{margin-right:0!important}.mr8=
+,.mx8{margin-right:8px!important}.ml8,.mx8{margin-left:8px!important}.mt5{m=
+argin-top:5px!important}.mt12{margin-top:12px!important}.col-568px,.col-1-c=
+olumn{width:568px!important}.col-1-gutter,.col-2-gutter{width:16px!importan=
+t}.col-2-column,.col-276px{width:276px!important}.col-400px{width:400px!imp=
+ortant}.col-206px{width:206px!important}.col-142px{width:142px!important}.c=
+ol-82px{width:82px!important}.col-121px{width:121px!important}.col-128px{wi=
+dth:128px!important}.col-163px{width:163px!important}.col-164px{width:164px=
+!important}.col-178px{width:178px!important}.col-179px{width:179px!importan=
+t}.col-183px{width:183px!important}.col-184px{width:184px!important}.col-22=
+4px{width:224px!important}.col-238px{width:238px!important}.col-248px{width=
+:248px!important}.col-252px{width:252px!important}.col-257px{width:257px!im=
+portant}.col-265px{width:265px!important}.col-268px{width:268px!important}.=
+col-272px{width:272px!important}.col-275px{width:275px!important}.col-295px=
+{width:295px!important}.col-303px{width:303px!important}.col-315px{width: 3=
+15px !important}.col-328px{width:328px!important}.col-330px{width:330px!imp=
+ortant}.col-373px{width:373px!important}.col-369px{width:369px!important}.c=
+ol-398px{width:398px!important}.col-520px{width:520px!important}.col-436px{=
+width:436px!important}.col-474px{width:474px!important}.col-383px{width:383=
+px!important}.col-292px{width:292px!important}.col-185px{width:185px!import=
+ant}.col-158px{width:158px!important}.mw-400{max-width: 400px !important}}<=
+/style><style>@media screen and (min-width:600px){.w122Fix{float:left!impor=
+tant;width:100%!important;max-width:122px!important}.col-157px{width:157px!=
+important}.col-138px{width:138px!important}.col-130px{width:130px!important=
+}.col-126px{width:126px!important}.col-112px{width:112px!important}.gutter-=
+0{width:0!important}.col-title-column{width:436px!important}.col-title-gutt=
+er{width:24px!important}.col-terms-column{width:520px!important}.col-terms-=
+gutter{width:24px!important}.col-2alt-column{width:248px!important}.col-2al=
+t-gutter{width:24px!important}.col-3-column{width:157px!important}.col-3-gu=
+tter{width:24px!important}.col-3-column2{width:158px!important}.col-4-colum=
+n{width:112px!important}.col-4-gutter{width:24px!important}.col-4alt-column=
+{width:142px!important}.col-4alt-gutter{width:24px!important}.w104{width:10=
+4px!important}.w242{width:242px!important}.w220{width:220px!important}.w276=
+{width:276px!important}.w200{width:200px!important}.w148{width:148px!import=
+ant}.w140{width:140px!important}.width-383-column{width:383px!important}.wi=
+dth-383-gutter{width:0!important}.width-185-column{width:185px!important}.w=
+idth-185-gutter{width:0!important}.width-488-column{width:488px!important}.=
+width-488-gutter{width:0!important}.width-80-column{width:80px!important}.w=
+idth-80-gutter{width:0!important}.width-300-column{width:300px!important}.w=
+idth-300-gutter{width:0!important}.width-146-column{width:146px!important}.=
+width-146-gutter{width:0!important}.width-130-gutter{width:16px!important}.=
+width-130-column{width:130px!important}.width-138-column{width:138px!import=
+ant}.width-138-gutter{width:0!important}.width-100pc-gutter{width:16px!impo=
+rtant}.width-100pc-24px-gutter{width:24px!important}.width-auto-gutter{widt=
+h:24px!important}.col-179px-column{width:179px!important}.gutter-15px{width=
+:15px!important}.gutter-16px{width:16px!important}.gutter-24px{width:24px!i=
+mportant}.gutter-32px{width:32px!important}.floatnone{float:none!important}=
+}</style><style>@media screen and (min-width:600px){.vspace-16{line-height:=
+16px!important}.h16,.vspace-16{height:16px!important}.vspace-32{line-height=
+:32px!important}.h32,.vspace-32{height:32px!important}.h100{min-height:100p=
+x!important}.h258{height:258px!important}.h280{height:280px!important}.h336=
+{height:336px!important}.h148{height:148px!important}.h348{height:348px!imp=
+ortant}.alignleft{text-align:left!important}.aligncenter{text-align:center!=
+important}.alignright{text-align:right!important}.p0{padding:0!important}.p=
+l0,.px0{padding-left:0!important}.pr0,.px0{padding-right:0!important}.px16{=
+padding-left:14px!important}.px16{padding-right:16px!important}.pr14,.px14{=
+padding-right:14px!important}.pl14,.px14{padding-left:12px!important}.pl16{=
+padding-left:16px!important}.pr16{padding-right:16px!important}.pl8{padding=
+-left:8px!important}.pl24{padding-left:24px!important}.pb6{padding-bottom:6=
+px!important}.pb8{padding-bottom:8px!important}.pb32{padding-bottom:32px!im=
+portant}.pb42{padding-bottom:42px!important}.pb18{padding-bottom:18px!impor=
+tant}.pb14{padding-bottom:14px!important}.pb4,.py4 {padding-bottom:4px!impo=
+rtant}.pt4,.py4 {padding-top:4px!important}.pt0{padding-top:0px!important}.=
+pt8{padding-top:8px!important}.pt14{padding-top:14px!important}.pt16{paddin=
+g-top:16px!important}.mt0,.my0{margin-top:0!important}.mb0,.my0{margin-bott=
+om:0!important}.mr4,.mx4{margin-right:4px!important}.ml4,.mx4{margin-left:4=
+px!important}.mt4,.my4{margin-top:4px!important}.mb4,.my4{margin-bottom:4px=
+!important}.mb3,.my3{margin-bottom:3px!important}.mb8,.my8{margin-bottom:8p=
+x!important}.w122{width:122px!important;min-width:122px!important}.w122Fix{=
+float:left!important;width:100%!important;max-width:122px!important}.mt8,.m=
+y8{margin-top:8px!important}.mt16,.my16{margin-top:16px!important}.mb16,.my=
+16{margin-bottom:16px!important}.mt18,.my18{margin-top:18px!important}.mb18=
+,.my18{margin-bottom:18px!important}.mt20,.my20{margin-top:20px!important}.=
+mb20,.my20{margin-bottom:20px!important}.mt24,.my24{margin-top:24px!importa=
+nt}.mb24,.my24{margin-bottom:24px!important}.mt26,.my26{margin-top:26px!imp=
+ortant}.mb26,.my26{margin-bottom:26px!important}.mt32,.my32{margin-top:32px=
+!important}.mb32,.my32{margin-bottom:32px!important}.mr16,.mx12{margin-righ=
+t:12px!important}.mr16,.mx16{margin-right:16px!important}.sp8{line-height:8=
+px!important; height:8px!important; font-size:8px!important}.ml12,.mx12{mar=
+gin-left:12px!important}.ml13{margin-left: 13px!important}.ml16,.mx16{margi=
+n-left:16px!important}.mr24,.mx24{margin-right:24px!important}.ml24,.mx24{m=
+argin-left:24px!important}.mr27,.mx27{margin-right:27px!important}.ml27,.mx=
+27{margin-left:27px!important}.mr28,.mx28{margin-right:28px!important}.ml28=
+,.mx28{margin-left:28px!important}.mx0{margin-left:0!important;margin-right=
+:0!important}.m0{margin:0!important}.ml0{margin-left:0!important}.mb0{margi=
+n-bottom:0!important}.mb4{margin-bottom:4px!important}.mb8{margin-bottom:8p=
+x!important}.mb2{margin-bottom:2px!important}.pr24{padding-right:24px!impor=
+tant}.mb12{margin-bottom:12px!important}.mr22{margin-right:22px!important}.=
+row{display:table!important}.col{display:table-cell!important;vertical-alig=
+n:top!important}.br-reset{border-radius:0!important}.br-topleft,.br-top,.br=
+-left{border-top-left-radius:16px!important}.br-topright,.br-top,.br-right{=
+border-top-right-radius:16px!important}.br-bottomleft,.br-bottom,.br-left{b=
+order-bottom-left-radius:16px!important}.br-bottomright,.br-bottom,.br-righ=
+t{border-bottom-right-radius:16px!important}.fs14{font-size:14px!important;=
+line-height:20px!important}.fs16 {font-size: 16px!important;line-height: 24=
+px!important}.fs46{font-size:46px!important;line-height:52px!important}.fs7=
+2{font-size:72px!important;line-height:82px!important}.fs92{font-size:92px!=
+important;line-height:118px!important}.border-box{box-sizing:content-box!im=
+portant}.content-box{box-sizing:content-box!important}.table{display:table!=
+important}.tbody{display:table-row-group!important}.tr{display:table-row!im=
+portant}.td{display:table-cell!important}.d-inline{display:inline!important=
+}}</style><style>@media screen and (min-width:600px){.Giant3{font-size:46px=
+!important;line-height:52px!important}.Giant2{font-size:36px!important;line=
+-height:46px!important}.Giant1{font-size:30px!important;line-height:40px!im=
+portant}.spacer1px{line-height:1px!important;font-size:1px!important;height=
+:1px!important}.Large3{font-size:28px!important;line-height:38px!important}=
+.Large2{font-size:24px!important;line-height:32px!important}.Large1{font-si=
+ze:20px!important;line-height:28px!important}.Medium{font-size:16px!importa=
+nt;line-height:24px!important}.Regular{font-size:14px!important;line-height=
+:20px!important}.Small{font-size:12px!important;line-height:16px!important}=
+}</style><style>@media(prefers-color-scheme:dark){.generic,.dark-bg,.gwfw{b=
+ackground-color:#171717!important}.boder-N2{border-color:#393939!important}=
+.prodLink{color: #4D93FC!important}.button-color-B4_ALT{background-color:#5=
+192FF!important;color:#171717!important;border:1px solid #5192FF!important}=
+.button-color-B4_ALT:hover,.button-color-B4_ALT:focus{background:transparen=
+t!important;box-shadow:inset 0 0 0 25px #171717;color:#5192FF!important}.bu=
+tton-color-B4_ALT-inverted{background-color:transparent!important;color:#51=
+92FF!important;border:1px solid #5192FF!important}.button-color-B4_ALT-inve=
+rted:hover,.button-color-B4_ALT-inverted:focus{background:#5192FF!important=
+;box-shadow:inset 0 0 0 25px #5192FF;color:#171717!important}.button-color-=
+N0{background-color:#FFFFFE!important;color:#191919!important;border:1px so=
+lid #FFFFFE!important}.button-color-N0:hover,.button-color-N0:focus{backgro=
+und:#191919!important;box-shadow:inset 0 0 0 25px #191919;color:#FFFFFE!imp=
+ortant}.button-color-N0-inverted{background-color:#191919!important;color:#=
+FFFFFE!important;border:1px solid #FFFFFE!important}.button-color-N0-invert=
+ed:hover,.button-color-N0-inverted:focus{background:#FFFFFE!important;box-s=
+hadow:inset 0 0 0 25px #FFFFFE;color:#191919!important}.button-color-N1{bac=
+kground-color:#F7F7F7!important;color:#191919!important;border:1px solid #F=
+7F7F7!important}.button-color-N1:hover,.button-color-N1:focus{background:#1=
+91919!important;box-shadow:inset 0 0 0 25px #191919;color:#F7F7F7!important=
+}.button-color-N1-inverted{background-color:#191919!important;color:#F7F7F7=
+!important;border:1px solid #F7F7F7!important}.button-color-N1-inverted:hov=
+er,.button-color-N1-inverted:focus{background:#F7F7F7!important;box-shadow:=
+inset 0 0 0 25px #F7F7F7;color:#191919!important}.button-color-N2{backgroun=
+d-color:#E5E5E5!important;color:#191919!important;border:1px solid #E5E5E5!=
+important}.button-color-N2:hover,.button-color-N2:focus{background:#191919!=
+important;box-shadow:inset 0 0 0 25px #191919;color:#E5E5E5!important}.butt=
+on-color-N2-inverted{background-color:#191919!important;color:#E5E5E5!impor=
+tant;border:1px solid #E5E5E5!important}.button-color-N2-inverted:hover,.bu=
+tton-color-N2-inverted:focus{background:#E5E5E5!important;box-shadow:inset =
+0 0 0 25px #E5E5E5;color:#191919!important}.button-text-color-N1{color:#212=
+121!important}.button-text-color-N1:hover,.button-text-color-N1:focus{backg=
+round:#212121!important;box-shadow:inset 0 0 0 25px #212121}a:focus,.focus:=
+focus{outline:3px solid #FFF!important;margin:3px}img,.whiteText{color:#DCD=
+CDC!important}.dark-hr{color:#393939!important;border-color:#393939!importa=
+nt}.dark-N6{color:#ABABAB!important}.dark-N5{color:#9C9C9C!important}.dark-=
+N1{background-color:#212121!important}.dark-191919{color:#DCDCDC!important}=
+.dark-363636{color:#ABABAB!important}.dark-no-border{border:0!important}.da=
+rk-border-414141{border-color:#363636!important}.dark-image{display:block!i=
+mportant;width:auto!important;overflow:visible!important;float:none!importa=
+nt;max-height:auto!important;max-width:auto!important;line-height:auto!impo=
+rtant;margin-top:0!important;visibility:inherit!important}.dark-signal-B4{b=
+order-color:#5192FF!important;color:#5192FF!important}.inline{display:inlin=
+e-block!important}.light-image,img.light-image{display:none!important}.foot=
+er .legal a{color:#4D93FC!important;text-decoration:underline!important}.fo=
+oter a{color:#DCDCDC!important}.footer p{color:#ABABAB!important}}</style><=
+style>[data-ogsb] .button-color-N0{border:1px solid #FFFFFE!important}[data=
+-ogsb] .button-color-N0-inverted{border:1px solid #FFFFFE!important}[data-o=
+gsb] .button-color-N1{border:1px solid #F7F7F7!important}[data-ogsb] .butto=
+n-color-N1-inverted{border:1px solid #F7F7F7!important}[data-ogsb] .button-=
+color-N2{border:1px solid #E5E5E5!important}[data-ogsb] .button-color-N2-in=
+verted{border:1px solid #E5E5E5!important}[data-ogsb] .button-text-color-N1=
+{color:#212121!important}[data-ogsb] .dark-border-414141{border-color:#3636=
+36!important}[data-ogsb] .dark-image{display:block!important;width:auto!imp=
+ortant;overflow:visible!important;float:none!important;max-height:inherit!i=
+mportant;max-width:inherit!important;line-height:auto!important;margin-top:=
+0!important;visibility:inherit!important}[data-ogsb] .inline{display:inline=
+-block!important}[data-ogsb] .light-image,[data-ogsb] img.light-image{displ=
+ay:none!important}[data-ogsb] .blueFix span,[data-ogsb] .blueFix span:hover=
+{border-bottom:0 none transparent!important}[data-ogsb] .blueFix a{text-dec=
+oration:none!important;white-space:nowrap;color:inherit!important;border-bo=
+ttom:none!important}</style><!--[if mso]><style type=3D"text/css">.button,.=
+button:focus,.seedButton,.seedButton:focus{transition:.4s;animation-duratio=
+n:1.3s;animation-timing-function:ease-in-out;animation-iteration-count:1}.b=
+utton:hover,.button:focus{-webkit-border-radius:24px!important;border-radiu=
+s:24px!important;padding:10px 24px 10px 24px!important}.seedButton:hover,.s=
+eedButton:focus{-webkit-border-radius:24px!important;border-radius:24px!imp=
+ortant;padding:9px 24px 9px 24px!important}.button,.seedButton{transition:.=
+4s}a:link,span.MsoHyperlink{mso-style-priority:99;color:inherit;underline:i=
+nherit}a:visited,span.MsoHyperlinkFollowed{mso-style-priority:99;color:inhe=
+rit;underline:inherit}ul{margin-left:25px!important}</style><![endif]--><!-=
+-[if mso]><style type=3D"text/css">ol{margin:0!important}li{margin-left:24p=
+x!important}li.firstListItem{margin-top:0!important}li.lastListItem{margin-=
+bottom:0!important}</style><![endif]--><style>@media(prefers-color-scheme:l=
+ight){.dark-image-hide{display:none!important}}#MessageViewBody .samsungHid=
+e{display:none!important;width:0!important;height:0!important}</style><styl=
+e>:root{color-scheme:light dark;supported-color-schemes:light dark}</style>=
+<!--|MSME_CSS_89b6a3c8-5056-4d1a-a881-8d586661074a_45_MF|-->
+  </head>
+  <body yahoo=3D"fix">
+    <!--76345ec9-ba9c-4d49-8f85-e6d7b9f4d26f_START--><!--|MSMS_gh|-->
+<div role=3D"article" aria-roledescription=3D"email" aria-label=3D"eBay New=
+sletter" lang=3D"en-US" dir=3D"ltr" style=3D"font-family:'Market Sans',Helv=
+etica,Arial,sans-serif;" class=3D"gwfw">
+<!--[if true]>
+<table role=3D"presentation" style=3D"width:600px" align=3D"center">
+<tr>
+<td>
+<![endif]-->
+<div style=3D"max-width:600px; margin:0 auto">
+<div style=3D"display:none;" class=3D"preheaderMod">
+Check for more details inside.
+<div style=3D"display:none;">
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;=
+&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#8=
+47;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;=
+&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zw=
+nj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;=
+&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nb=
+sp;
+</div>
+</div>
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"background:#FFFFFF;" class=3D"m=
+gh-N1-IMAGE_FRAME-2023_OS_Header_Transactional_Generic">
+<tr>
+<td valign=3D"top">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;max-width:600px;background:#FFFFFF; =
+margin:0 auto;" class=3D"mgh-N1-IMAGE_FRAME-2023_OS_Header_Transactional_Ge=
+neric">
+<div style=3D"display:table-cell;">
+<!--<![endif]-->
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">
+<tr>
+<td align=3D"left" width=3D"79" valign=3D"middle" style=3D"padding:24px 16p=
+x 0px 16px;" class=3D"logo">
+<a href=3D"https://www.ebay.com?mkevt=3D1&mkpid=3D0&emsid=3De111011.m176360=
+.l147884&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=
+=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=
+=3D111011" style=3D"color:#9C9C9C;text-decoration:none;display:block;" clas=
+s=3D"focus">
+<span class=3D"focus__content" tabindex=3D"-1">
+<img src=3D"https://secureir.ebaystatic.com/cr/mscdn/2da6a871d3ba2f07594cec=
+7f55bcf6ed/Logo_Legacy_2x.png" alt=3D"eBay logo" width=3D"79" style=3D"disp=
+lay:block;">
+</span>
+</a>
+<img src=3D"https://www.ebayadservices.com/marketingtracking/v1/impression?=
+mkevt=3D4&siteId=3D0&mkpid=3D0&emsid=3De111011&mkcid=3D7&ch=3Dosgood&euid=
+=3D1116830d9df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=
+=3D-1%7E1&crd=3D20251028200421&segname=3D111011" alt=3D"" aria-hidden=3D"tr=
+ue" role=3D"presentation" style=3D"border:0; height:1px; display:block; lin=
+e-height:1px;float:left;" width=3D"1" height=3D"1" border=3D"0" />
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<style type=3D"text/css">
+.preheaderMod, .preheaderMod div { color: #111820 !important; display: none=
+; }
+.mgh-N1-IMAGE_FRAME-2023_OS_Header_Transactional_Generic .logo a:focus {out=
+line: 3px solid #000000 !important;padding: 0px !important;}
+@media (prefers-color-scheme:dark) {
+.mgh-N1-IMAGE_FRAME-2023_OS_Header_Transactional_Generic{background:#171717=
+!important;}
+.mgh-N1-IMAGE_FRAME-2023_OS_Header_Transactional_Generic .logo a:focus {out=
+line: 3px solid #FFFFFF !important;padding: 0px !important;}
+}
+</style>
+<!--|MSME_gh_76345ec9-ba9c-4d49-8f85-e6d7b9f4d26f_9_3.0_MF_2023-OS-Header-T=
+ransactional-Generic_N1|-->=20
+    <!--76345ec9-ba9c-4d49-8f85-e6d7b9f4d26f_END-->
+    <!--0e66a55f-97cc-43ae-aa4f-2535c44d37da_START--><!--|MSMS_h|-->
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"background:#FFFFFF;width:100%;"=
+ class=3D"mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1">
+<tr>
+<td valign=3D"top" style=3D"mso-padding-alt:24px 16px 24px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;max-width:600px;background:#FFFFFF; =
+margin:0 auto;" class=3D"mh-N1-transactionalGeneric-2025_OD_Hero_Transactio=
+nal_Generic_1">
+<div style=3D"display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"margin:24px 16px 24px 16px;" class=3D" ">
+<!--<![endif]-->
+<h1 style=3D"margin: 0px 0px 0px 0px; line-height: 40px; font-size: 30px; f=
+ont-weight: bold; color:#191919;letter-spacing: -0.02em;" class=3D"sticker =
+">
+Hi Severin, your package is now with DHL eCommerce America!
+</h1>
+<div style=3D"margin:16px 0 0 0;">
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%" class=3D"">
+<!--<![endif]-->
+<!--[if true]>
+<table width=3D"100%" role=3D"presentation" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+<tr>
+<td>
+<table align=3D"left" role=3D"presentation" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+<tr>
+<td valign=3D"top" style=3D"padding:0 16px 0 0;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table-row-group" class=3D"col">
+<!--<![endif]-->
+<div align=3D"left" style=3D"margin:0px 0px 9px 0px;mso-margin-bottom:32px;=
+mso-margin-right-alt:0;line-height:0;" class=3D"mb0 mr16">
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" style=3D"display:inline-table;width:100%;" class=3D"">
+<tr>
+<td height=3D"21" style=3D"font-size:1px;line-height:1px;padding:0;" align=
+=3D"left">
+<a class=3D"button cta col-276px " href=3D"https://www.ebay.com/vod/FetchOr=
+derDetails?itemId=3D306412265360&transactionId=3D10076107879402&mkevt=3D1&m=
+kpid=3D0&emsid=3De111011.m176361.l152615&mkcid=3D7&ch=3Dosgood&euid=3D11168=
+30d9df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&=
+crd=3D20251028200421&segname=3D111011" target=3D"_blank" rel=3D"noopener" s=
+tyle=3D"background-color:#0968F6; font-size: 14px; line-height:20px; font-f=
+amily: 'Market Sans',Helvetica,Arial,sans-serif; font-weight:bold; text-dec=
+oration: none; padding: 9px 24px 9px 24px; color: #FFFFFF; border: 1px soli=
+d #0968F6;border-radius: 24px; display: inline-block; mso-padding-alt: 0;te=
+xt-align:center;width:100%;box-sizing:border-box;">
+<!--[if mso]>
+<i style=3D"letter-spacing: 24px; mso-font-width: -100%; mso-text-raise: 20=
+pt;">&nbsp;</i>
+<![endif]-->
+<span style=3D"mso-text-raise: 10pt;">
+Track package
+</span>
+<!--[if mso]>
+<i style=3D"letter-spacing: 24px; mso-font-width: -100%;">&nbsp;</i>
+<![endif]-->
+</a>
+</td>
+</tr>
+</table>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<td valign=3D"top" style=3D"padding:0 1px 0 0;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table-row-group" class=3D"col">
+<!--<![endif]-->
+<div align=3D"left" style=3D"font-size:1px;line-height:1px;padding:0;" clas=
+s=3D"mb0 ">
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" style=3D"display:inline-table;width:100%;" class=3D"">
+<tr>
+<td height=3D"21" style=3D"font-size:1px;line-height:1px;padding:0;" align=
+=3D"left">
+<a class=3D"button secondaryCta col-276px " href=3D"https://www.ebay.com/de=
+als?mkevt=3D1&mkpid=3D0&emsid=3De111011.m176361.l153066&mkcid=3D7&ch=3Dosgo=
+od&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0=
+&osub=3D-1%7E1&crd=3D20251028200421&segname=3D111011" target=3D"_blank" rel=
+=3D"noopener" style=3D"background-color:#FFFFFF; font-size: 14px; line-heig=
+ht:20px; font-family: 'Market Sans',Helvetica,Arial,sans-serif; font-weight=
+:normal; text-decoration: none; padding: 9px 24px 9px 24px; color: #0968F6;=
+ border: 1px solid #0968F6;border-radius: 24px; display: inline-block; mso-=
+padding-alt: 0;text-align:center;width:100%;box-sizing:border-box;">
+<!--[if mso]>
+<i style=3D"letter-spacing: 24px; mso-font-width: -100%; mso-text-raise: 20=
+pt;">&nbsp;</i>
+<![endif]-->
+<span style=3D"mso-text-raise: 10pt;">
+Browse deals
+</span>
+<!--[if mso]>
+<i style=3D"letter-spacing: 24px; mso-font-width: -100%;">&nbsp;</i>
+<![endif]-->
+</a>
+</td>
+</tr>
+</table>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<style type=3D"text/css">
+.mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .cta:hover=
+, .mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .cta:foc=
+us { background: #FFFFFF!important; color: #0968F6!important; border: 1px s=
+olid #0968F6!important}
+.mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .secondary=
+Cta:hover, .mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1=
+ .secondaryCta:focus { background: #0968F6!important; color: #FFFFFF!import=
+ant; border: 1px solid #0968F6!important}
+@media (prefers-color-scheme:dark) {
+.mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1{background=
+:#171717!important;}
+.mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .sticker,.=
+mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .sticker a{=
+color:#DCDCDC!important;}
+.mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .cta:hover=
+, .mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .cta:foc=
+us { background: #171717!important; color: #4D93FC!important; border: 1px s=
+olid #4D93FC!important}
+.mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .cta { bac=
+kground: #4D93FC!important; color: #171717!important; border: 1px solid #4D=
+93FC!important}
+.mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .secondary=
+Cta:hover, .mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1=
+ .secondaryCta:focus { background: #4D93FC!important; color: #171717!import=
+ant; border: 1px solid #4D93FC!important}
+.mh-N1-transactionalGeneric-2025_OD_Hero_Transactional_Generic_1 .secondary=
+Cta { background: #171717!important; color: #4D93FC!important; border: 1px =
+solid #4D93FC!important}
+}
+</style>
+<!--|MSME_h_0e66a55f-97cc-43ae-aa4f-2535c44d37da_15_5.0_MF_2025-OD-Hero-Tra=
+nsactional-Generic-1_N1|-->=20
+    <!--0e66a55f-97cc-43ae-aa4f-2535c44d37da_END-->
+    <!--a4b2cb1e-0290-411a-a303-18963235edd7_START--><!--|MSMS_si|-->
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"background:#FFFFFF;width:100%;"=
+ class=3D"msi-N1-ORDER_DELIVERY-none"><tr><td valign=3D"top" style=3D"mso-p=
+adding-alt:0 16px 32px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;max-width:600px;background:#FFFFFF; =
+margin:0 auto 24px;" class=3D"msi-N1-ORDER_DELIVERY-none mb0">
+<div style=3D"display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"margin:0 16px 0 16px;" class=3D"mb32">
+<!--<![endif]-->
+<div style=3D"margin:0px 0px 8px 0px;" class=3D"mb16">
+<a href=3D"https://www.ebay.com/itm/306412265360?mkevt=3D1&mkpid=3D0&emsid=
+=3De111011.m144671.l197929&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42=
+e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028=
+200421&segname=3D111011" target=3D"_blank" style=3D"line-height:24px;font-s=
+ize:16px;color:#0968F6;font-weight:400;padding:0px 0px 8px 0px;text-decorat=
+ion: underline;" class=3D"title"><span style=3D"word-break:break-all;white-=
+space:normal;">Dell Latitude 5420 14" i5-1145G7 16GB Ram 256GB SSD Windows =
+11 Pro Laptop Touch</span>
+</a>
+</div>
+<!--[if !true]><!-->
+<div style=3D"border-radius:16px;" class=3D"row">
+<!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" role=3D"presentation" width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"all:unset;opacity:0;">
+<tr>
+<![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"179" valign=3D"top" bgcolor=3D"" style=3D"widt=
+h:179px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:50%;float:left;vertical-align:top!importa=
+nt;" class=3D"col col-179px floatnone">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<div style=3D"margin:0 0 8px 0;padding:0 8px 0 0;" class=3D"img px0 mb0">
+<a href=3D"https://www.ebay.com/itm/306412265360?mkevt=3D1&mkpid=3D0&emsid=
+=3De111011.m144671.l197928&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42=
+e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028=
+200421&segname=3D111011" target=3D"_blank" rel=3D"noopener" class=3D"img" s=
+tyle=3D"font-size:14px;line-height:20px;font-family:'Market Sans',Helvetica=
+,Arial,sans-serif;font-weight:bold;text-decoration:none;mso-padding-alt:0;d=
+isplay:block;">
+<img width=3D"179" style=3D"width:100%;line-height:20px;font-size:14px;colo=
+r:#171717;display:block;display:block;border-radius:16px;background:#F7F7F7=
+;;" src=3D"https://svcs.ebay.com/imageser/v1/image/render?placement-type=3D=
+render&tag=3De39b85b8-e89a-4702-a049-1d8b08c9946b&imgWidth=3D448&imgHeight=
+=3D448&length=3D448&imageUrl=3Dhttps%3A%2F%2Fi.ebayimg.com%2F00%2Fs%2FOTM5W=
+DE1MDA%3D%2Fz%2Fi64AAeSwh9JogXSn%2F%24_57.JPG%3Fset_id%3D880000500F&backgro=
+und=3Dtransparent" alt=3D"" tabindex=3D"-1">
+</a>
+</div>
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td width=3D"16">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:none;" class=3D"col gutter-16px">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"373" valign=3D"top" bgcolor=3D"" style=3D"widt=
+h:373px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:50%;float:left;vertical-align:top!importa=
+nt;" class=3D"show col-373px floatnone">
+<div style=3D"display:table-cell;padding:0;" class=3D"show">
+<!--<![endif]-->
+<div style=3D"margin:0;">
+<table width=3D"100%" role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">
+<tr>
+<td class=3D"w124" width=3D"140" align=3D"left" style=3D"width:140px;vertic=
+al-align:top;" valign=3D"top">
+<h4 style=3D"margin:0 0 4px 0;line-height:22px;font-size:14px;color:#707070=
+;font-weight:400" class=3D"labelValueLabel ">
+Item ID:
+</h4>
+<p style=3D"margin:0 0 8px 0;line-height:22px;font-size:14px;color:#191919;=
+font-weight:normal;display:none;" class=3D"labelValueValue show_mob">
+<span class=3D"blueFix hide">306412265360</span>
+</p>
+</td>
+<td class=3D"hide_mob" align=3D"left" style=3D"vertical-align:bottom;" vali=
+gn=3D"bottom">
+<p style=3D"margin:0;line-height:22px;font-size:14px;color:#191919;font-wei=
+ght:normal;" class=3D"labelValueValue ">
+<span class=3D"blueFix">306412265360</span>
+</p>
+</td>
+</tr>
+<tr>
+<td class=3D"w124" width=3D"140" align=3D"left" style=3D"width:140px;vertic=
+al-align:top;" valign=3D"top">
+<h4 style=3D"margin:0 0 4px 0;line-height:22px;font-size:14px;color:#707070=
+;font-weight:400" class=3D"labelValueLabel ">
+Order number:
+</h4>
+<p style=3D"margin:0 0 8px 0;line-height:22px;font-size:14px;color:#191919;=
+font-weight:normal;display:none;" class=3D"labelValueValue show_mob">
+<span class=3D"blueFix hide">02-13768-99140</span>
+</p>
+</td>
+<td class=3D"hide_mob" align=3D"left" style=3D"vertical-align:bottom;" vali=
+gn=3D"bottom">
+<p style=3D"margin:0;line-height:22px;font-size:14px;color:#191919;font-wei=
+ght:normal;" class=3D"labelValueValue ">
+<span class=3D"blueFix">02-13768-99140</span>
+</p>
+</td>
+</tr>
+<tr>
+<td class=3D"w124" width=3D"140" align=3D"left" style=3D"width:140px;vertic=
+al-align:top;" valign=3D"top">
+<h4 style=3D"margin:0 0 4px 0;line-height:22px;font-size:14px;color:#707070=
+;font-weight:400" class=3D"labelValueLabel mb0">
+Seller:
+</h4>
+<p style=3D"margin:0 0 8px 0;line-height:22px;font-size:14px;color:#191919;=
+font-weight:normal;display:none;" class=3D"labelValueValue show_mob">
+<span class=3D"blueFix hide"><style type=3D"text/css">.msi-N1-ORDER_DELIVER=
+Y-none_labelValueValue_l0,.msi-N1-ORDER_DELIVERY-none_labelValueValue_l0 sp=
+an{color:#191919!important;text-decoration: underline!important;}@media(pre=
+fers-color-scheme:dark){.msi-N1-ORDER_DELIVERY-none_labelValueValue_l0,.msi=
+-N1-ORDER_DELIVERY-none_labelValueValue_l0 span{color:#DCDCDC!important;}}<=
+/style><a href=3D"https://www.ebay.com/ulk/usr/hawk_line?mkevt=3D1&mkpid=3D=
+0&emsid=3De111011.m144671.l183740&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df6=
+4ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D2=
+0251028200421&segname=3D111011" style=3D"text-decoration:underline!importan=
+t;font-weight:inherit!important;color:#191919!important;" class=3D"focus ms=
+i-N1-ORDER_DELIVERY-none_labelValueValue_l0"><span class=3D"focus__content"=
+ tabindex=3D"-1"><!--[if mso]><font color=3D"#191919"><![endif]--><style ty=
+pe=3D"text/css">.linkStyledText, .linkStyledText span, span.linkStyledText =
+{ color: #0968F6!important; }
+@media(prefers-color-scheme: dark) {
+.linkStyledText, .linkStyledText span, span.linkStyledText { color: #4D93FC=
+!important; }
+}
+</style><span class=3D"linkStyledText" style=3D"color:#0968F6;text-decorati=
+on: underline!important;"><!--[if mso]><font color=3D"#0968F6"><![endif]-->=
+hawk_line<!--[if mso]></font><![endif]--></span><!--[if mso]></font><![endi=
+f]--></span></a></span>
+</p>
+</td>
+<td class=3D"hide_mob" align=3D"left" style=3D"vertical-align:bottom;" vali=
+gn=3D"bottom">
+<p style=3D"margin:0;line-height:22px;font-size:14px;color:#191919;font-wei=
+ght:normal;" class=3D"labelValueValue ">
+<span class=3D"blueFix"><style type=3D"text/css">.msi-N1-ORDER_DELIVERY-non=
+e_labelValueValue_l0,.msi-N1-ORDER_DELIVERY-none_labelValueValue_l0 span{co=
+lor:#191919!important;text-decoration: underline!important;}@media(prefers-=
+color-scheme:dark){.msi-N1-ORDER_DELIVERY-none_labelValueValue_l0,.msi-N1-O=
+RDER_DELIVERY-none_labelValueValue_l0 span{color:#DCDCDC!important;}}</styl=
+e><a href=3D"https://www.ebay.com/ulk/usr/hawk_line?mkevt=3D1&mkpid=3D0&ems=
+id=3De111011.m144671.l183740&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a=
+42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D202510=
+28200421&segname=3D111011" style=3D"text-decoration:underline!important;fon=
+t-weight:inherit!important;color:#191919!important;" class=3D"focus msi-N1-=
+ORDER_DELIVERY-none_labelValueValue_l0"><span class=3D"focus__content" tabi=
+ndex=3D"-1"><!--[if mso]><font color=3D"#191919"><![endif]--><style type=3D=
+"text/css">.linkStyledText, .linkStyledText span, span.linkStyledText { col=
+or: #0968F6!important; }
+@media(prefers-color-scheme: dark) {
+.linkStyledText, .linkStyledText span, span.linkStyledText { color: #4D93FC=
+!important; }
+}
+</style><span class=3D"linkStyledText" style=3D"color:#0968F6;text-decorati=
+on: underline!important;"><!--[if mso]><font color=3D"#0968F6"><![endif]-->=
+hawk_line<!--[if mso]></font><![endif]--></span><!--[if mso]></font><![endi=
+f]--></span></a></span>
+</p>
+</td>
+</tr>
+</table>
+</div>
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;float:left;border-radius:16px;vertic=
+al-align:top!important;" class=3D"show col-373px">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<div style=3D"margin:0 0 16px 0;" class=3D"mt8">
+<p style=3D"margin:0;line-height:20px;font-size:14px;color:#191919;text-dec=
+oration:underline;" class=3D"badge">
+<img width=3D"24" height=3D"24" style=3D"width:24px;height:24px;line-height=
+:20px;font-size:14px;color:#191919;vertical-align:middle;padding-right:4px;=
+" class=3D"badge" src=3D"https://i.ebayimg.com/00/s/MjRYMjQ=3D/z/BH4AAeSwO3=
+xokxUq/$_0.PNG?set_id=3D800000088000500F" alt=3D"eBay Money Back Guarantee"=
+ tabindex=3D"-1"><a href=3D"https://pages.ebay.com/ebay-money-back-guarante=
+e/?mkevt=3D1&mkpid=3D0&emsid=3De111011.m144671.l184498&mkcid=3D7&ch=3Dosgoo=
+d&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&=
+osub=3D-1%7E1&crd=3D20251028200421&segname=3D111011" target=3D"_blank" styl=
+e=3D"color:#191919;text-decoration: underline!important;mso-padding-alt:0;"=
+ class=3D"badge">eBay Money Back Guarantee</a>
+</p>
+</div>
+<!--[if true]>
+<table width=3D"100%" role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" style=3D"display:inline-table;">
+<tr>
+<![endif]-->
+<!--[if true]>
+<td height=3D"21" style=3D"font-size:1px;line-height:1px;padding:0;width:50=
+%;" align=3D"left">
+<![endif]-->
+<a href=3D"https://www.ebay.com/vod/FetchOrderDetails?itemId=3D306412265360=
+&transactionId=3D10076107879402&mkevt=3D1&mkpid=3D0&emsid=3De111011.m144671=
+.l190079&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=
+=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=
+=3D111011" target=3D"_blank" rel=3D"noopener" class=3D"seedButton seedButto=
+n_0 button col-128px mb0 floatleft col-373px YahooBtn" style=3D"background-=
+color:#0968F6;font-size:14px;line-height:20px;font-family:'Market Sans',Hel=
+vetica,Arial,sans-serif;font-weight:bold;text-decoration:none;padding:9px 2=
+4px 9px 24px;color:#FFFFFF;border:1px solid #0968F6;border-radius:24px;disp=
+lay:inline-block;text-align:center;mso-padding-alt:0;text-align:center;widt=
+h:100%;box-sizing:border-box;"
+>
+<!--[if mso]>
+<v:rect href=3D"https://www.ebay.com/vod/FetchOrderDetails?itemId=3D3064122=
+65360&transactionId=3D10076107879402&mkevt=3D1&mkpid=3D0&emsid=3De111011.m1=
+44671.l190079&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe=
+&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segnam=
+e=3D111011" stroked=3D"false" style=3D"width:176px;height:38px;">
+<v:fill opacity=3D"0%" color=3D"white"/>
+<v:textbox inset=3D"0,0,0,0">
+<p style=3D"font-size:14px;line-height:20px;color:#FFFFFF;font-family:'Mark=
+et Sans',Helvetica,Arial,sans-serif;text-align:center;">
+<i style=3D"letter-spacing:1px;mso-font-width:-100%;mso-text-raise:20pt;">&=
+nbsp;</i>
+<![endif]-->
+<span style=3D"mso-text-raise:11pt;">
+Track package
+</span>
+<!--[if mso]>
+<i style=3D"letter-spacing:1px;mso-font-width:-100%;">&nbsp;</i>
+</p>
+</v:textbox>
+</v:rect>
+<![endif]-->
+</a>
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<style type=3D"text/css">
+.msi-N1-ORDER_DELIVERY-none .seedButton_0:hover span {
+color: #0968F6 !important;
+}
+.msi-N1-ORDER_DELIVERY-none .seedButton_0:hover {
+background-color: #FFFFFF !important;
+box-shadow: inset 0 0 0 25px #FFFFFF;
+border-color: #0968F6 !important;
+}
+@media (prefers-color-scheme:dark) {
+.msi-N1-ORDER_DELIVERY-none .img img{background:#212121!important;}
+.msi-N1-ORDER_DELIVERY-none .seedButton_0 span {
+color: #171717 !important;
+}
+.msi-N1-ORDER_DELIVERY-none .seedButton_0:hover span {
+color: #4D93FC !important;
+}
+.msi-N1-ORDER_DELIVERY-none .seedButton_0 {
+background: #4D93FC !important;
+border-color: #4D93FC !important;
+}
+.msi-N1-ORDER_DELIVERY-none .seedButton_0:hover {
+background-color: #171717 !important;
+box-shadow: inset 0 0 0 25px #171717;
+border-color: #4D93FC !important;
+}
+.msi-N1-ORDER_DELIVERY-none{background:#171717!important;}
+.msi-N1-ORDER_DELIVERY-none .title{color:#4D93FC!important;}
+.msi-N1-ORDER_DELIVERY-none .labelValueLabel{color:#9C9C9C!important;}
+.msi-N1-ORDER_DELIVERY-none .labelValueValue{color:#DCDCDC!important;}
+.msi-N1-ORDER_DELIVERY-none .description{color:#9C9C9C!important;}
+.msi-N1-ORDER_DELIVERY-none .badge{color:#DCDCDC!important;}
+}
+</style>
+<style>
+@media screen and (max-width:600px) {
+.& .YahooBtn {
+width: 85% !important;
+}
+}
+</style>
+<!--|MSME_si_a4b2cb1e-0290-411a-a303-18963235edd7_210_3.0_MF__N1|-->=20
+    <!--a4b2cb1e-0290-411a-a303-18963235edd7_END-->
+    <!--dc4e016c-04de-413a-ad96-0d92ef6f29ce_START-->=20
+    <!--dc4e016c-04de-413a-ad96-0d92ef6f29ce_END-->
+    <!--ec669c26-7ad2-4b05-b827-4ebbeaff8808_START-->=20
+    <!--ec669c26-7ad2-4b05-b827-4ebbeaff8808_END-->
+    <!--6c076fca-d4e8-421d-a7e8-35ecaad5fc05_START--><!--|MSMS_it|-->
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"background:#FFFFFF;" class=3D"m=
+it-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1"><tr><td valign=3D"top" style=
+=3D"mso-padding-alt:0 16px 32px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;max-width:600px;background:#FFFFFF;m=
+argin:0 auto;" class=3D"mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1">
+<div style=3D"display:table-cell;">
+<!--<![endif]-->
+<!--|MSMS_t|-->
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"all:unset;opacity:0;background:#FFFFFF;" class=
+=3D"mt-N1-default-2022_Espresso_ItemTiles_Title_1">
+<tr>
+<![endif]-->
+<!--[if false]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"margin:0;background:#FFFFFF;border-radius:16px;" class=3D"mt-=
+N1-default-2022_Espresso_ItemTiles_Title_1 row w-100pc">
+<!--<![endif]-->
+<!--[if true]>
+<td width=3D"16" bgcolor=3D"#FFFFFF" class=3D"dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:none;" class=3D"dmBackground col-1-gutter col">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;background:#FFFFFF;vertical-align:to=
+p!important;" class=3D"dmBackground col col-1-column w-100pc">
+<!--<![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"568" valign=3D"top" bgcolor=3D"#FFFFFF" class=
+=3D"dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<!--[if true]>
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"600" style=3D"width:600px;">
+<tr>
+<td valign=3D"top" style=3D"padding: 0 16px 24px 16px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"margin:0 16px 24px 16px;" class=3D"mx0 ">
+<!--<![endif]-->
+<div style=3D"margin:0 0 0px 0;">
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"100%">
+<tbody><tr>
+<td width=3D"100%" style=3D"width:100%;padding-right:0px;">
+<h2 style=3D"margin:0;line-height:32px;font-size:24px;color:#191919;" class=
+=3D"mx0 t_title">
+Sponsored items to complement your purchase
+</h2>
+</td>
+</tr></tbody>
+</table>
+</div>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+<td width=3D"16" bgcolor=3D"#FFFFFF" class=3D"dmBackground">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:none;" class=3D"dmBackground col-1-gutter col">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--|MSME_t_ec669c26-7ad2-4b05-b827-4ebbeaff8808_17_1.0_MF_2022-Espresso-It=
+emTiles-Title-1_N1|-->
+<!--[if !true]><!--><div style=3D"margin:0 16px 24px 16px" class=3D"mb32"><=
+!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"border-radius:16px;" class=3D"row">
+<!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" role=3D"presentation" width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"all:unset;opacity:0;">
+<tr>
+<![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"568" valign=3D"top" bgcolor=3D""style=3D"width=
+:568px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;vertical-align:top!important;" class=
+=3D"col col-1-column">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"border-radius:16px;display:block;clear:both;" class=3D"row">
+<!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" role=3D"presentation" width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"all:unset;opacity:0; ">
+<tr>
+<![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"130" valign=3D"top" bgcolor=3D"" style=3D"widt=
+h:130px;" class=3D"item_0">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:50%;float:left;vertical-align:top!importa=
+nt;" class=3D"col width-130-column floatnone item_0">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"margin:0 4px 24px 0;"class=3D"mx0 mb0">
+<!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" width=3D"100%" role=3D"presentation" align=3D"center"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"mso-padding-alt:0 0 24px 0;">
+<![endif]-->
+<div style=3D"margin:0 0 8px 0;" class=3D"resizedImg">
+<a href=3D"https://www.ebay.com/itm/336021265813?_trkparms=3Ditmf%3D1%26aid=
+%3D1110018%26rkt%3D4%26mech%3D3%26algv%3DCompByCatKnnTrueCompListing%26pmt%=
+3D1%26amclksrc%3DITM%26sd%3D306412265360%26sid%3DAQAKAAAAEKw%2BT6dq3I1Djgr%=
+2Ff7iZuWs%3D%26itm%3D336021265813%26noa%3D0%26plcampt%3D0%3A12348839014%26a=
+lgo%3DHOMESPLICE.COMPLISTINGS%26brand%3DUnbranded%26asc%3D20250710015634%26=
+ao%3D1%26rk%3D1%26pid%3D102834%26b%3D1%26mehot%3Dnone%26lsid%3D0%26meid%3Dd=
+955e3d1724b48a6a568dd18eef1ccbe%26pg%3D3707833&_trksid=3Dp3707833.c102834.m=
+3766&itmprp=3Dcksum%3A336021265813d955e3d1724b48a6a568dd18eef1ccbe%7Cenc%3A=
+AQAKAAABAKORMURLrvIreWP9jGTnj5Q8tclaA993jIiAttmqgGYteBY%252FSrtiDX6jRQpzCgG=
+FYHC41QepqXB8Iyo6mexU4PdZMqI%252FcviKC848quUCQuxLPYfftYyUhTR5JnzUGtoXnKNRDx=
+bWAw%252FGylX9dElSt2O13S%252BoSxq8pKZUKOwS4XC2ayy1PJFVa6sVIH8Y%252BsCZnjysl=
+PMVmc2kvhj4bqr0TLt2MdHxMvEqoAhnaj8hf7ex3S6XhGgndbTsgDhreyx8uoBHg0QkWzOqtxJT=
+KSeb9knGsByhklUiWYzlZswTqjcAMi9QPWma4WhuBO7JUY8Ovg68eGGkEGGne1bW4N0xJXI%253=
+D%7Campid%3APL_CLK%7Cclp%3A3707833&mkevt=3D1&mkpid=3D0&emsid=3De111011.m176=
+079.l183839&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&b=
+u=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=
+=3D111011" target=3D"_blank" rel=3D"noopener" style=3D"display:inline-block=
+;font-size:14px;line-height:20px;font-family:'Market Sans',Helvetica,Arial,=
+sans-serif;font-weight:bold;text-decoration:none;mso-padding-alt:0;"
+>
+<img width=3D"130" style=3D"width:100%;border-radius:16px;line-height:20px;=
+font-size:14px;color:#3665F3;display:block;background:#F7F7F7;" src=3D"http=
+s://svcs.ebay.com/imageser/v1/image/render?placement-type=3Drender&tag=3De3=
+9b85b8-e89a-4702-a049-1d8b08c9946b&imgWidth=3D150&imgHeight=3D150&length=3D=
+150&imageUrl=3Dhttps%3A%2F%2Fi.ebayimg.com%2F00%2Fs%2FODAwWDgwMA%3D%3D%2Fz%=
+2Ft6oAAOSwa~ZoNHvz%2F%24_12.JPG%3Fset_id%3D880000500F&background=3Dtranspar=
+ent" alt=3D"">
+</a>
+</div>
+<table width=3D"100%" align=3D"left" role=3D"presentation" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"display:table;" class=3D"">
+<tr>
+<td align=3D"left" style=3D"font-size:1px;line-height:1px;padding:0 0 20px =
+0;">
+</td>
+</tr>
+</table>
+<a href=3D"https://www.ebay.com/itm/336021265813?_trkparms=3Ditmf%3D1%26aid=
+%3D1110018%26rkt%3D4%26mech%3D3%26algv%3DCompByCatKnnTrueCompListing%26pmt%=
+3D1%26amclksrc%3DITM%26sd%3D306412265360%26sid%3DAQAKAAAAEKw%2BT6dq3I1Djgr%=
+2Ff7iZuWs%3D%26itm%3D336021265813%26noa%3D0%26plcampt%3D0%3A12348839014%26a=
+lgo%3DHOMESPLICE.COMPLISTINGS%26brand%3DUnbranded%26asc%3D20250710015634%26=
+ao%3D1%26rk%3D1%26pid%3D102834%26b%3D1%26mehot%3Dnone%26lsid%3D0%26meid%3Dd=
+955e3d1724b48a6a568dd18eef1ccbe%26pg%3D3707833&_trksid=3Dp3707833.c102834.m=
+3766&itmprp=3Dcksum%3A336021265813d955e3d1724b48a6a568dd18eef1ccbe%7Cenc%3A=
+AQAKAAABAKORMURLrvIreWP9jGTnj5Q8tclaA993jIiAttmqgGYteBY%252FSrtiDX6jRQpzCgG=
+FYHC41QepqXB8Iyo6mexU4PdZMqI%252FcviKC848quUCQuxLPYfftYyUhTR5JnzUGtoXnKNRDx=
+bWAw%252FGylX9dElSt2O13S%252BoSxq8pKZUKOwS4XC2ayy1PJFVa6sVIH8Y%252BsCZnjysl=
+PMVmc2kvhj4bqr0TLt2MdHxMvEqoAhnaj8hf7ex3S6XhGgndbTsgDhreyx8uoBHg0QkWzOqtxJT=
+KSeb9knGsByhklUiWYzlZswTqjcAMi9QPWma4WhuBO7JUY8Ovg68eGGkEGGne1bW4N0xJXI%253=
+D%7Campid%3APL_CLK%7Cclp%3A3707833&mkevt=3D1&mkpid=3D0&emsid=3De111011.m176=
+079.l183838&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&b=
+u=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=
+=3D111011" target=3D"_blank" rel=3D"noopener" style=3D"display:inline-block=
+;mso-padding-alt:0;color:#3665F3;font-weight:normal!important;text-decorati=
+on:none!important;font-style:normal!important;" class=3D"title"
+>
+<h3 style=3D"margin:0 0 6px 0;line-height:22px;font-size:14px;color:#3665F3=
+;font-weight:normal!important;text-decoration:none!important;font-style:nor=
+mal!important;" class=3D"title">
+65W USB C Laptop Charger=E2=80=A6
+</h3>
+</a>
+<p style=3D"margin:0 0 6px 0;line-height:24px;font-size:16px;color:#191919;=
+font-weight:700;" class=3D"price">
+$11.99&nbsp;
+</p>
+<p style=3D"margin:0 0 3px 0;line-height:20px;font-size:14px;color:#191919;=
+" class=3D"additionalSignalMiddle">
+Or Best Offer
+</p>
+<p style=3D"margin:0 0 6px 0;line-height:20px;font-size:14px;color:#191919;=
+" class=3D"additionalSignalMiddle">
+Free shipping
+</p>
+<!--[if true]>
+</td>
+</tr>
+</table>
+&#32;
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td width=3D"16" bgcolor=3D"#FFFFFF" class=3D"divider">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:none;" class=3D"col col-1-gutter divider">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"130" valign=3D"top" bgcolor=3D"" style=3D"widt=
+h:130px;" class=3D"item_1">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:50%;float:left;vertical-align:top!importa=
+nt;" class=3D"col width-130-column floatnone item_1">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"margin:0 0 24px 4px;"class=3D"mx0 mb0">
+<!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" width=3D"100%" role=3D"presentation" align=3D"center"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"mso-padding-alt:0 0 24px 0;">
+<![endif]-->
+<div style=3D"margin:0 0 8px 0;" class=3D"resizedImg">
+<a href=3D"https://www.ebay.com/itm/357769558039?_trkparms=3Ditmf%3D1%26aid=
+%3D1110018%26rkt%3D4%26mech%3D3%26algv%3DCompByCatKnnTrueCompListing%26pmt%=
+3D1%26amclksrc%3DITM%26sd%3D306412265360%26sid%3DAQAKAAAAEA2CgM%2B5NFTP%2Bi=
+hOUOxoMmY%3D%26itm%3D357769558039%26noa%3D0%26plcampt%3D0%3A19971351018%26a=
+lgo%3DHOMESPLICE.COMPLISTINGS%26brand%3DDell%26asc%3D20250710015634%26ao%3D=
+1%26rk%3D2%26pid%3D102834%26b%3D1%26mehot%3Dnone%26lsid%3D3%26meid%3Dd955e3=
+d1724b48a6a568dd18eef1ccbe%26pg%3D3707833&_trksid=3Dp3707833.c102834.m3766&=
+itmprp=3Dcksum%3A357769558039d955e3d1724b48a6a568dd18eef1ccbe%7Cenc%3AAQAKA=
+AABAKORMURLrvIreWP9jGTnj5Q8tclaA993jIiAttmqgGYte9tAKSIbIz7Y%252B9m33q6OAduD=
+4MIVofzOuWknRX5ckg0WTsCsVegy4QRovqZmiadOPM5Vqzz2DCXxILes9caGsoo5Q9AgOrz%252=
+FRopB52dpvMDls%252FgCr1U%252BeQM5Jq6nhm2fjo%252BymSEggAfbV8qw5hjXYpFvvKowJD=
+wInbJeo39DrDSbY0rMzrHBmB4e%252FgKIfvJHZ%252FGi7nh23aAM4wWGtpewK9pKPFCH1C%25=
+2FxA7T099ZgO%252BVGtNNcTLe6kl1jgINND%252FjIyWXNbwHlQ2zQDl58cnPd45z3r0MbGtwh=
+SBwreiZEkkk%253D%7Campid%3APL_CLK%7Cclp%3A3707833&mkevt=3D1&mkpid=3D0&emsid=
+=3De111011.m176079.l183839&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42=
+e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028=
+200421&segname=3D111011" target=3D"_blank" rel=3D"noopener" style=3D"displa=
+y:inline-block;font-size:14px;line-height:20px;font-family:'Market Sans',He=
+lvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;mso-padding-=
+alt:0;"
+>
+<img width=3D"130" style=3D"width:100%;border-radius:16px;line-height:20px;=
+font-size:14px;color:#3665F3;display:block;background:#F7F7F7;" src=3D"http=
+s://svcs.ebay.com/imageser/v1/image/render?placement-type=3Drender&tag=3De3=
+9b85b8-e89a-4702-a049-1d8b08c9946b&imgWidth=3D150&imgHeight=3D150&length=3D=
+150&imageUrl=3Dhttps%3A%2F%2Fi.ebayimg.com%2F00%2Fs%2FMTYwMFgxNjAw%2Fz%2FmC=
+kAAeSwkIFo8rU6%2F%24_57.JPG%3Fset_id%3D880000500F&background=3Dtransparent"=
+ alt=3D"">
+</a>
+</div>
+<table width=3D"100%" align=3D"left" role=3D"presentation" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0">
+<tr>
+<td align=3D"left" style=3D"font-size:1px;line-height:1px;padding:0 0 4px 0=
+;">
+<table align=3D"left" role=3D"presentation" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" class=3D"pill_RED">
+<tr>
+<td align=3D"left" style=3D"font-size:1px;line-height:1px;padding:2px 7px 0=
+ 7px;mso-padding-bottom-alt:2px;border:1px solid #D50B0B;border-radius:16px=
+;">
+<p style=3D"margin:0;padding:0;line-height:12px;font-size:10px;color:#D50B0=
+B;font-weight:bold;">
+LAST ONE
+</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<a href=3D"https://www.ebay.com/itm/357769558039?_trkparms=3Ditmf%3D1%26aid=
+%3D1110018%26rkt%3D4%26mech%3D3%26algv%3DCompByCatKnnTrueCompListing%26pmt%=
+3D1%26amclksrc%3DITM%26sd%3D306412265360%26sid%3DAQAKAAAAEA2CgM%2B5NFTP%2Bi=
+hOUOxoMmY%3D%26itm%3D357769558039%26noa%3D0%26plcampt%3D0%3A19971351018%26a=
+lgo%3DHOMESPLICE.COMPLISTINGS%26brand%3DDell%26asc%3D20250710015634%26ao%3D=
+1%26rk%3D2%26pid%3D102834%26b%3D1%26mehot%3Dnone%26lsid%3D3%26meid%3Dd955e3=
+d1724b48a6a568dd18eef1ccbe%26pg%3D3707833&_trksid=3Dp3707833.c102834.m3766&=
+itmprp=3Dcksum%3A357769558039d955e3d1724b48a6a568dd18eef1ccbe%7Cenc%3AAQAKA=
+AABAKORMURLrvIreWP9jGTnj5Q8tclaA993jIiAttmqgGYte9tAKSIbIz7Y%252B9m33q6OAduD=
+4MIVofzOuWknRX5ckg0WTsCsVegy4QRovqZmiadOPM5Vqzz2DCXxILes9caGsoo5Q9AgOrz%252=
+FRopB52dpvMDls%252FgCr1U%252BeQM5Jq6nhm2fjo%252BymSEggAfbV8qw5hjXYpFvvKowJD=
+wInbJeo39DrDSbY0rMzrHBmB4e%252FgKIfvJHZ%252FGi7nh23aAM4wWGtpewK9pKPFCH1C%25=
+2FxA7T099ZgO%252BVGtNNcTLe6kl1jgINND%252FjIyWXNbwHlQ2zQDl58cnPd45z3r0MbGtwh=
+SBwreiZEkkk%253D%7Campid%3APL_CLK%7Cclp%3A3707833&mkevt=3D1&mkpid=3D0&emsid=
+=3De111011.m176079.l183838&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42=
+e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028=
+200421&segname=3D111011" target=3D"_blank" rel=3D"noopener" style=3D"displa=
+y:inline-block;mso-padding-alt:0;color:#3665F3;font-weight:normal!important=
+;text-decoration:none!important;font-style:normal!important;" class=3D"titl=
+e"
+>
+<h3 style=3D"margin:0 0 6px 0;line-height:22px;font-size:14px;color:#3665F3=
+;font-weight:normal!important;text-decoration:none!important;font-style:nor=
+mal!important;" class=3D"title">
+Dell Latitude 5420 LED L=E2=80=A6
+</h3>
+</a>
+<p style=3D"margin:0 0 6px 0;line-height:24px;font-size:16px;color:#191919;=
+font-weight:700;" class=3D"price">
+$10.60&nbsp;
+</p>
+<p style=3D"margin:0 0 3px 0;line-height:20px;font-size:14px;color:#191919;=
+" class=3D"additionalSignalMiddle">
+Or Best Offer
+</p>
+<p style=3D"margin:0 0 6px 0;line-height:20px;font-size:14px;color:#191919;=
+" class=3D"additionalSignalMiddle">
+Free shipping
+</p>
+<!--[if true]>
+</td>
+</tr>
+</table>
+&#32;
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td width=3D"16" bgcolor=3D"#FFFFFF" class=3D"divider">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:block;clear:both;" class=3D"col col-1-gutter divider"=
+>
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"130" valign=3D"top" bgcolor=3D"" style=3D"widt=
+h:130px;" class=3D"item_2">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:50%;float:left;vertical-align:top!importa=
+nt;" class=3D"col width-130-column floatnone item_2">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"margin:0 4px 0px 0;"class=3D"mx0 ">
+<!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" width=3D"100%" role=3D"presentation" align=3D"center"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"mso-padding-alt:0 0 24px 0;">
+<![endif]-->
+<div style=3D"margin:0 0 8px 0;" class=3D"resizedImg">
+<a href=3D"https://www.ebay.com/itm/305181695820?_trkparms=3Ditmf%3D1%26aid=
+%3D1110018%26rkt%3D4%26mech%3D3%26algv%3DCompByCatKnnTrueCompListing%26pmt%=
+3D1%26amclksrc%3DITM%26sd%3D306412265360%26sid%3DAQAKAAAAEDTyuMIId3mbYz%2Br=
+fQuvl7w%3D%26itm%3D305181695820%26noa%3D0%26plcampt%3D0%3A11184571017%26alg=
+o%3DHOMESPLICE.COMPLISTINGS%26brand%3DDell%26asc%3D20250710015634%26ao%3D1%=
+26rk%3D3%26pid%3D102834%26b%3D1%26mehot%3Dnone%26lsid%3D0%26meid%3Dd955e3d1=
+724b48a6a568dd18eef1ccbe%26pg%3D3707833&_trksid=3Dp3707833.c102834.m3766&it=
+mprp=3Dcksum%3A305181695820d955e3d1724b48a6a568dd18eef1ccbe%7Cenc%3AAQAKAAA=
+BAKORMURLrvIreWP9jGTnj5Q8tclaA993jIiAttmqgGYtJ%252FdHKzQHjPgiyLK8pUFOkpVUXB=
+75ubmxYC%252BoFLqblLMa29%252BI1kf%252BRZ0d4Tf914pdDF%252FR6QlcQEvCNPK1%252B=
+9tq%252BCDtTH6iu4YZXnRODMSbZA5zQcMzU4CwB6vtmWca%252FLXOyptGsgQ4zHUdutOFb4a0=
+k6GgGYeNFoEfWCv3MSrTtKqFA8dOjLTmVBt43Gg0V%252Fmxfuz0FwWd0zJbUwXMfcqm4Id%252=
+B7Fyrp9MKxtfashISsfysjH3xH7oJj0zGX82VGtpdcs8orUa2uW51DIzxXykXreenVXdI0Roc%2=
+52FYyDhNP2C3w%253D%7Campid%3APL_CLK%7Cclp%3A3707833&mkevt=3D1&mkpid=3D0&ems=
+id=3De111011.m176079.l183839&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a=
+42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D202510=
+28200421&segname=3D111011" target=3D"_blank" rel=3D"noopener" style=3D"disp=
+lay:inline-block;font-size:14px;line-height:20px;font-family:'Market Sans',=
+Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;mso-paddin=
+g-alt:0;"
+>
+<img width=3D"130" style=3D"width:100%;border-radius:16px;line-height:20px;=
+font-size:14px;color:#3665F3;display:block;background:#F7F7F7;" src=3D"http=
+s://svcs.ebay.com/imageser/v1/image/render?placement-type=3Drender&tag=3De3=
+9b85b8-e89a-4702-a049-1d8b08c9946b&imgWidth=3D150&imgHeight=3D150&length=3D=
+150&imageUrl=3Dhttps%3A%2F%2Fi.ebayimg.com%2F00%2Fs%2FMTYwMFgxNjAw%2Fz%2FGV=
+4AAeSwvEpokfm6%2F%24_57.JPG%3Fset_id%3D880000500F&background=3Dtransparent"=
+ alt=3D"">
+</a>
+</div>
+<table width=3D"100%" align=3D"left" role=3D"presentation" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"display:none;" class=3D"show">
+<tr>
+<td align=3D"left" style=3D"font-size:1px;line-height:1px;padding:0 0 20px =
+0;">
+</td>
+</tr>
+</table>
+<a href=3D"https://www.ebay.com/itm/305181695820?_trkparms=3Ditmf%3D1%26aid=
+%3D1110018%26rkt%3D4%26mech%3D3%26algv%3DCompByCatKnnTrueCompListing%26pmt%=
+3D1%26amclksrc%3DITM%26sd%3D306412265360%26sid%3DAQAKAAAAEDTyuMIId3mbYz%2Br=
+fQuvl7w%3D%26itm%3D305181695820%26noa%3D0%26plcampt%3D0%3A11184571017%26alg=
+o%3DHOMESPLICE.COMPLISTINGS%26brand%3DDell%26asc%3D20250710015634%26ao%3D1%=
+26rk%3D3%26pid%3D102834%26b%3D1%26mehot%3Dnone%26lsid%3D0%26meid%3Dd955e3d1=
+724b48a6a568dd18eef1ccbe%26pg%3D3707833&_trksid=3Dp3707833.c102834.m3766&it=
+mprp=3Dcksum%3A305181695820d955e3d1724b48a6a568dd18eef1ccbe%7Cenc%3AAQAKAAA=
+BAKORMURLrvIreWP9jGTnj5Q8tclaA993jIiAttmqgGYtJ%252FdHKzQHjPgiyLK8pUFOkpVUXB=
+75ubmxYC%252BoFLqblLMa29%252BI1kf%252BRZ0d4Tf914pdDF%252FR6QlcQEvCNPK1%252B=
+9tq%252BCDtTH6iu4YZXnRODMSbZA5zQcMzU4CwB6vtmWca%252FLXOyptGsgQ4zHUdutOFb4a0=
+k6GgGYeNFoEfWCv3MSrTtKqFA8dOjLTmVBt43Gg0V%252Fmxfuz0FwWd0zJbUwXMfcqm4Id%252=
+B7Fyrp9MKxtfashISsfysjH3xH7oJj0zGX82VGtpdcs8orUa2uW51DIzxXykXreenVXdI0Roc%2=
+52FYyDhNP2C3w%253D%7Campid%3APL_CLK%7Cclp%3A3707833&mkevt=3D1&mkpid=3D0&ems=
+id=3De111011.m176079.l183838&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a=
+42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D202510=
+28200421&segname=3D111011" target=3D"_blank" rel=3D"noopener" style=3D"disp=
+lay:inline-block;mso-padding-alt:0;color:#3665F3;font-weight:normal!importa=
+nt;text-decoration:none!important;font-style:normal!important;" class=3D"ti=
+tle"
+>
+<h3 style=3D"margin:0 0 6px 0;line-height:22px;font-size:14px;color:#3665F3=
+;font-weight:normal!important;text-decoration:none!important;font-style:nor=
+mal!important;" class=3D"title">
+Dell USB-C Dock Station=E2=80=A6
+</h3>
+</a>
+<p style=3D"margin:0 0 6px 0;line-height:24px;font-size:16px;color:#191919;=
+font-weight:700;" class=3D"price">
+$29.23&nbsp;
+<span style=3D"font-size: 12px;line-height:16px; color:#707070;font-weight:=
+normal;" class=3D"discount">
+<span style=3D"text-decoration:line-through;">
+$34.39&nbsp;
+</span>
+</span>
+</p>
+<p style=3D"margin:0 0 3px 0;line-height:20px;font-size:14px;color:#191919;=
+" class=3D"additionalSignalMiddle">
+Or Best Offer
+</p>
+<p style=3D"margin:0 0 6px 0;line-height:20px;font-size:14px;color:#191919;=
+" class=3D"additionalSignalMiddle">
+Free shipping
+</p>
+<!--[if true]>
+</td>
+</tr>
+</table>
+&#32;
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td width=3D"16" bgcolor=3D"#FFFFFF" class=3D"divider">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:none;" class=3D"col col-1-gutter divider">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"130" valign=3D"top" bgcolor=3D"" style=3D"widt=
+h:130px;" class=3D"item_3">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:50%;float:left;vertical-align:top!importa=
+nt;" class=3D"col width-130-column floatnone item_3">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"margin:0 0 0px 4px;"class=3D"mx0 ">
+<!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" width=3D"100%" role=3D"presentation" align=3D"center"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"mso-padding-alt:0 0 24px 0;">
+<![endif]-->
+<div style=3D"margin:0 0 8px 0;" class=3D"resizedImg">
+<a href=3D"https://www.ebay.com/itm/167881061406?_trkparms=3Ditmf%3D1%26aid=
+%3D1110018%26rkt%3D4%26mech%3D3%26algv%3DCompByCatKnnTrueCompListing%26pmt%=
+3D1%26amclksrc%3DITM%26sd%3D306412265360%26sid%3DAQAKAAAAEJaNecCFjqmOvBxj%2=
+BDnYz%2Fw%3D%26itm%3D167881061406%26noa%3D0%26plcampt%3D0%3A152162492019%26=
+algo%3DHOMESPLICE.COMPLISTINGS%26brand%3DLaCie%26asc%3D20250710015634%26ao%=
+3D1%26rk%3D4%26pid%3D102834%26b%3D1%26mehot%3Dnone%26lsid%3D0%26meid%3Dd955=
+e3d1724b48a6a568dd18eef1ccbe%26pg%3D3707833&_trksid=3Dp3707833.c102834.m376=
+6&itmprp=3Dcksum%3A167881061406d955e3d1724b48a6a568dd18eef1ccbe%7Cenc%3AAQA=
+KAAABAKORMURLrvIreWP9jGTnj5Q8tclaA993jIiAttmqgGYt0Yl2GeN28DpaXG3cteAQ2VfA9t=
+k%252FjoOCjOfqhIydIzrW6kFUsIs9mq%252BeWRHHe6s5%252Fd7nBb3aCnIysYw1pF2nT8Vci=
+uAJjo7MM4QFZlXxtn8p89A7hUW2icFtU3eKL9lpDr%252BgTUlC%252BVTm%252FcqDVK5%252F=
+XbB6sSDe8%252F4EERuQ4Ci3NBzTkiHqpRkJovjwR7seMkoepWtDHO8fWcM%252FJyvkTXucflW=
+N7XYdZ2NSgEDxPZkFaQTmbRWQeC%252BSMYgEQL6xEAWHdcqqntGSmAQ3DHPu1d%252F7xaksjO=
+vgC4k%252FIBc9kcv7FqU%253D%7Campid%3APL_CLK%7Cclp%3A3707833&mkevt=3D1&mkpid=
+=3D0&emsid=3De111011.m176079.l183839&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9=
+df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=
+=3D20251028200421&segname=3D111011" target=3D"_blank" rel=3D"noopener" styl=
+e=3D"display:inline-block;font-size:14px;line-height:20px;font-family:'Mark=
+et Sans',Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;m=
+so-padding-alt:0;"
+>
+<img width=3D"130" style=3D"width:100%;border-radius:16px;line-height:20px;=
+font-size:14px;color:#3665F3;display:block;background:#F7F7F7;" src=3D"http=
+s://svcs.ebay.com/imageser/v1/image/render?placement-type=3Drender&tag=3De3=
+9b85b8-e89a-4702-a049-1d8b08c9946b&imgWidth=3D150&imgHeight=3D150&length=3D=
+150&imageUrl=3Dhttps%3A%2F%2Fi.ebayimg.com%2F00%2Fs%2FMTYwMFgxMjAw%2Fz%2Fvw=
+QAAeSwhf9o-wFL%2F%24_1.JPG%3Fset_id%3D8800005007&background=3Dtransparent" =
+alt=3D"">
+</a>
+</div>
+<table width=3D"100%" align=3D"left" role=3D"presentation" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"display:none;" class=3D"show">
+<tr>
+<td align=3D"left" style=3D"font-size:1px;line-height:1px;padding:0 0 20px =
+0;">
+</td>
+</tr>
+</table>
+<a href=3D"https://www.ebay.com/itm/167881061406?_trkparms=3Ditmf%3D1%26aid=
+%3D1110018%26rkt%3D4%26mech%3D3%26algv%3DCompByCatKnnTrueCompListing%26pmt%=
+3D1%26amclksrc%3DITM%26sd%3D306412265360%26sid%3DAQAKAAAAEJaNecCFjqmOvBxj%2=
+BDnYz%2Fw%3D%26itm%3D167881061406%26noa%3D0%26plcampt%3D0%3A152162492019%26=
+algo%3DHOMESPLICE.COMPLISTINGS%26brand%3DLaCie%26asc%3D20250710015634%26ao%=
+3D1%26rk%3D4%26pid%3D102834%26b%3D1%26mehot%3Dnone%26lsid%3D0%26meid%3Dd955=
+e3d1724b48a6a568dd18eef1ccbe%26pg%3D3707833&_trksid=3Dp3707833.c102834.m376=
+6&itmprp=3Dcksum%3A167881061406d955e3d1724b48a6a568dd18eef1ccbe%7Cenc%3AAQA=
+KAAABAKORMURLrvIreWP9jGTnj5Q8tclaA993jIiAttmqgGYt0Yl2GeN28DpaXG3cteAQ2VfA9t=
+k%252FjoOCjOfqhIydIzrW6kFUsIs9mq%252BeWRHHe6s5%252Fd7nBb3aCnIysYw1pF2nT8Vci=
+uAJjo7MM4QFZlXxtn8p89A7hUW2icFtU3eKL9lpDr%252BgTUlC%252BVTm%252FcqDVK5%252F=
+XbB6sSDe8%252F4EERuQ4Ci3NBzTkiHqpRkJovjwR7seMkoepWtDHO8fWcM%252FJyvkTXucflW=
+N7XYdZ2NSgEDxPZkFaQTmbRWQeC%252BSMYgEQL6xEAWHdcqqntGSmAQ3DHPu1d%252F7xaksjO=
+vgC4k%252FIBc9kcv7FqU%253D%7Campid%3APL_CLK%7Cclp%3A3707833&mkevt=3D1&mkpid=
+=3D0&emsid=3De111011.m176079.l183838&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9=
+df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=
+=3D20251028200421&segname=3D111011" target=3D"_blank" rel=3D"noopener" styl=
+e=3D"display:inline-block;mso-padding-alt:0;color:#3665F3;font-weight:norma=
+l!important;text-decoration:none!important;font-style:normal!important;" cl=
+ass=3D"title"
+>
+<h3 style=3D"margin:0 0 6px 0;line-height:22px;font-size:14px;color:#3665F3=
+;font-weight:normal!important;text-decoration:none!important;font-style:nor=
+mal!important;" class=3D"title">
+LaCie Rugged 5TB Portabl=E2=80=A6
+</h3>
+</a>
+<p style=3D"margin:0 0 6px 0;line-height:24px;font-size:16px;color:#191919;=
+font-weight:700;" class=3D"price">
+$98.00&nbsp;
+</p>
+<p style=3D"margin:0 0 6px 0;line-height:20px;font-size:14px;color:#191919;=
+" class=3D"additionalSignalMiddle">
+Or Best Offer
+</p>
+<!--[if true]>
+</td>
+</tr>
+</table>
+&#32;
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]--><!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!-->
+</div><!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<style type=3D"text/css">
+@media (prefers-color-scheme:dark) {
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1{background:#171717!important=
+;}
+.mt-N1-default-2022_Espresso_ItemTiles_Title_1, .mt-N1-default-2022_Espress=
+o_ItemTiles_Title_1 .dmBackground{background-color:#171717!important;}
+.mt-N1-default-2022_Espresso_ItemTiles_Title_1 .t_title, .mt-N1-default-202=
+2_Espresso_ItemTiles_Title_1 .t_title a{color:#DCDCDC!important;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .rowClass{background:#171717=
+!important;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .resizedImg img{background:#=
+212121!important;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .title{color:#5192FF!importa=
+nt;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .price{color:#DCDCDC!importa=
+nt;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .additionalSignalMiddle{colo=
+r:#DCDCDC!important;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .divider{background:#171717!=
+important;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .pill_RED td{border:1px soli=
+d #FF5C5C!important;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .pill_RED p{color:#FF5C5C!im=
+portant;}
+.mit-N1-4_ITEM-2022_Espresso_ItemTiles_Title_1 .discount{color:#9C9C9C!impo=
+rtant;}
+}
+</style>
+<!--|MSME_it_ec669c26-7ad2-4b05-b827-4ebbeaff8808_17_2.0_MF_2022-Espresso-I=
+temTiles-Title-1_N1|-->
+=20
+    <!--6c076fca-d4e8-421d-a7e8-35ecaad5fc05_END-->
+    <!--bb23f0a1-47d8-4e90-a434-b5507b48920d_START--><!--|MSMS_os|-->
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"background:#FFFFFF;width:100%;"=
+ class=3D"mos-N1-CONTAINER-none"><tr><td valign=3D"top" style=3D"mso-paddin=
+g-alt:0px 32px 24px 32px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;max-width:600px;background:#FFFFFF; =
+margin:0 auto;" class=3D"mos-N1-CONTAINER-none">
+<div style=3D"display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!--><div style=3D"margin:0px 16px 0px 16px"><!--<![endif]--=
+>
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"background:#F7F7F7;width:100%;"=
+ class=3D"mos-N1-CONTAINER-none component"><tr><td valign=3D"top" style=3D"=
+mso-padding-alt:24px 24px 24px 24px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;max-width:600px;background:#F7F7F7;m=
+argin:0 auto;border-radius:16px;" class=3D"mos-N1-CONTAINER-none component"=
+>
+<div style=3D"display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!--><div style=3D"margin:24px 24px 24px 24px"><!--<![endif]=
+-->
+<!--[if !true]><!-->
+<div style=3D" border-radius: 16px;" class=3D"row ">
+<!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" role=3D"presentation" width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"all:unset;opacity:0; "><tr>
+<![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"252" valign=3D"top" bgcolor=3D"" style=3D"widt=
+h:252px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;vertical-align:top!important;" class=
+=3D"col col-252px">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<h3 style=3D"margin:0 0 2px 0;line-height:20px;font-size:14px;color:#414141=
+;font-weight:400;" class=3D"itemKey">
+Delivered to:
+</h3>
+<p style=3D"margin:0 0 24px 0;mso-margin-bottom-alt:0 0 18px;line-height:20=
+px;font-size:14px;color:#191919;font-weight:normal;text-decoration:none;" c=
+lass=3D"itemValue mb0">
+Dr Pineapple<br>165 Amberjack Dr<br>Hendersonville, 28792-7223 NC<br>United=
+ States
+</p>
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td width=3D"16">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:none;" class=3D"col gutter-16px">
+<!--[if true]>&#160;<![endif]-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td height=3D"100%" width=3D"252" valign=3D"top" bgcolor=3D"" style=3D"widt=
+h:252px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;vertical-align:top!important;" class=
+=3D"col col-252px">
+<div style=3D"display:table-cell;" class=3D"show">
+<!--<![endif]-->
+<h3 style=3D"margin:0 0 2px 0;line-height:20px;font-size:14px;color:#414141=
+;font-weight:400;" class=3D"itemKey">
+Estimated delivery:
+</h3>
+<p style=3D"margin:0 0 24px 0;mso-margin-bottom-alt:0 0 18px;line-height:20=
+px;font-size:14px;color:#191919;font-weight:normal;text-decoration:none;" c=
+lass=3D"itemValue">
+Sun, Nov 02
+</p>
+<h3 style=3D"margin:0 0 2px 0;line-height:20px;font-size:14px;color:#414141=
+;font-weight:400;" class=3D"itemKey">
+Carrier:
+</h3>
+<p style=3D"margin:0;mso-margin-bottom-alt:0 0 18px;line-height:20px;font-s=
+ize:14px;color:#191919;font-weight:normal;text-decoration:none;" class=3D"i=
+temValue">
+DHL eCommerce America
+</p>
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+</tr></table>
+<![endif]-->
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<div style=3D"line-height:24px;height:24px;mso-line-height-alt:32px;" class=
+=3D"vspace-32"> </div>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<style type=3D"text/css">
+@media (prefers-color-scheme:dark) {
+.mos-N1-CONTAINER-none{background:#171717!important;}
+.mos-N1-CONTAINER-none.component{background:#212121!important;}
+.mos-N1-CONTAINER-none .itemKey{color:#9C9C9C!important;}
+.mos-N1-CONTAINER-none .itemValue, .mos-N1-CONTAINER-none .itemValue a, .mo=
+s-N1-CONTAINER-none .itemValue a span{color:#DCDCDC!important;}
+}
+</style>
+<!--|MSME_os_bb23f0a1-47d8-4e90-a434-b5507b48920d_8_2.0_MF__N1|-->=20
+    <!--bb23f0a1-47d8-4e90-a434-b5507b48920d_END-->
+    <!--9930033c-1977-43cc-b953-dcd272dca39c_START-->
+
+
+
+
+   =20
+   =20
+   =20
+   =20
+   =20
+
+
+
+<!--|MSMS_s|-->
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"background:#FFFFFF;width:100%;"=
+ class=3D"ms-N1-RATING-none"><tr><td valign=3D"top" style=3D"mso-padding-al=
+t:0 16px 24px 16px">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table;width:100%;max-width:600px;background:#FFFFFF; =
+margin:0 auto;" class=3D"ms-N1-RATING-none">
+<div style=3D"display:table-cell;">
+<!--<![endif]-->
+<!--[if !true]><!--><div style=3D"margin:0 16px 24px 16px" class=3D"mb32"><=
+!--<![endif]-->
+<!--[if true]>
+<table align=3D"left" width=3D"100%" role=3D"presentation" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0"><tr><td style=3D"mso-padding-alt:0 0 32px =
+0;">
+<![endif]-->
+<!--[if !true]><!--><div style=3D"margin:0 0 24px 0;" class=3D"mb32"><!--<!=
+[endif]-->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" alig=
+n=3D"center" role=3D"presentation">
+<tbody><tr>
+<td height=3D"1" class=3D"dark-hr" style=3D"font-size:1px; line-height:1px;=
+ border-top: 1px solid #E5E5E5;" align=3D"center"></td>
+</tr>
+</tbody></table>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<p style=3D"margin:0 0 4px;line-height:24px;font-size:16px;color:#191919;fo=
+nt-weight:700;mso-line-height-alt:30px; mso-line-height-rule:exactly;" clas=
+s=3D"title mb2">
+<span >How useful is this email?</span><br>
+<a href=3D"https://www.ebay.com/srv/survey/a/crm.buyer_post_txn?_0=3D1&ctx_=
+template=3DFS&ctx_seg=3DGeneric&mkevt=3D1&mkpid=3D0&emsid=3De111011.m177239=
+.l197728&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=
+=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=
+=3D111011" target=3D"_blank" style=3D"display:inline-block;"><img src=3D"ht=
+tps://secureir.ebaystatic.com/cr/mscdn/325d8d418c07309dd4f51e740be0a30a/175=
+4589597761_0.43076509932416074_star-bzg2K.png" width=3D"16" height=3D"16" a=
+lt=3D"" style=3D"display:inline-block;vertical-align:bottom;"></a><span sty=
+le=3D"margin-right:4px;"></span><!--[if mso]><i style=3D"letter-spacing: 4p=
+x; mso-font-width: -100%; mso-text-raise: 20pt;">&nbsp;</i><![endif]--><a h=
+ref=3D"https://www.ebay.com/srv/survey/a/crm.buyer_post_txn?_0=3D2&ctx_temp=
+late=3DFS&ctx_seg=3DGeneric&mkevt=3D1&mkpid=3D0&emsid=3De111011.m177239.l19=
+7728&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D454=
+98391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=3D11101=
+1" target=3D"_blank" style=3D"display:inline-block;"><img src=3D"https://se=
+cureir.ebaystatic.com/cr/mscdn/325d8d418c07309dd4f51e740be0a30a/17545895977=
+61_0.43076509932416074_star-bzg2K.png" width=3D"16" height=3D"16" alt=3D"" =
+style=3D"display:inline-block;vertical-align:bottom;"></a><span style=3D"ma=
+rgin-right:4px;"></span><!--[if mso]><i style=3D"letter-spacing: 4px; mso-f=
+ont-width: -100%; mso-text-raise: 20pt;">&nbsp;</i><![endif]--><a href=3D"h=
+ttps://www.ebay.com/srv/survey/a/crm.buyer_post_txn?_0=3D3&ctx_template=3DF=
+S&ctx_seg=3DGeneric&mkevt=3D1&mkpid=3D0&emsid=3De111011.m177239.l197728&mkc=
+id=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D45498391202=
+&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=3D111011" targe=
+t=3D"_blank" style=3D"display:inline-block;"><img src=3D"https://secureir.e=
+baystatic.com/cr/mscdn/325d8d418c07309dd4f51e740be0a30a/1754589597761_0.430=
+76509932416074_star-bzg2K.png" width=3D"16" height=3D"16" alt=3D"" style=3D=
+"display:inline-block;vertical-align:bottom;"></a><span style=3D"margin-rig=
+ht:4px;"></span><!--[if mso]><i style=3D"letter-spacing: 4px; mso-font-widt=
+h: -100%; mso-text-raise: 20pt;">&nbsp;</i><![endif]--><a href=3D"https://w=
+ww.ebay.com/srv/survey/a/crm.buyer_post_txn?_0=3D4&ctx_template=3DFS&ctx_se=
+g=3DGeneric&mkevt=3D1&mkpid=3D0&emsid=3De111011.m177239.l197728&mkcid=3D7&c=
+h=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0=
+&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=3D111011" target=3D"_bl=
+ank" style=3D"display:inline-block;"><img src=3D"https://secureir.ebaystati=
+c.com/cr/mscdn/325d8d418c07309dd4f51e740be0a30a/1754589597761_0.43076509932=
+416074_star-bzg2K.png" width=3D"16" height=3D"16" alt=3D"" style=3D"display=
+:inline-block;vertical-align:bottom;"></a><span style=3D"margin-right:4px;"=
+></span><!--[if mso]><i style=3D"letter-spacing: 4px; mso-font-width: -100%=
+; mso-text-raise: 20pt;">&nbsp;</i><![endif]--><a href=3D"https://www.ebay.=
+com/srv/survey/a/crm.buyer_post_txn?_0=3D5&ctx_template=3DFS&ctx_seg=3DGene=
+ric&mkevt=3D1&mkpid=3D0&emsid=3De111011.m177239.l197728&mkcid=3D7&ch=3Dosgo=
+od&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0=
+&osub=3D-1%7E1&crd=3D20251028200421&segname=3D111011" target=3D"_blank" sty=
+le=3D"display:inline-block;"><img src=3D"https://secureir.ebaystatic.com/cr=
+/mscdn/325d8d418c07309dd4f51e740be0a30a/1754589597761_0.43076509932416074_s=
+tar-bzg2K.png" width=3D"16" height=3D"16" alt=3D"" style=3D"display:inline-=
+block;vertical-align:bottom;"></a><span style=3D"margin-right:4px;"></span>=
+<!--[if mso]><i style=3D"letter-spacing: 4px; mso-font-width: -100%; mso-te=
+xt-raise: 20pt;">&nbsp;</i><![endif]-->
+</p>
+<!--[if !true]><!--></div><!--<![endif]-->
+<!--[if !true]><!-->
+</div>
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<style type=3D"text/css">
+@media (prefers-color-scheme:dark) {
+.ms-N1-RATING-none {background-color:#171717!important;}
+.ms-N1-RATING-none .dark-hr {color:#393939!important;border-color:#393939!i=
+mportant;}
+.ms-N1-RATING-none .title {color: #DCDCDC !important;}
+}
+</style>
+<!--|MSME_s_9930033c-1977-43cc-b953-dcd272dca39c_4_2.0_MF__N1|-->=20
+    <!--9930033c-1977-43cc-b953-dcd272dca39c_END-->
+    <!--01a5f264-80c4-4976-8d00-fd02af4db286_START--><!--|MSMS_gf|-->
+<!--[if true]>
+<table role=3D"presentation" style=3D"width:600px" align=3D"center" bgcolor=
+=3D"#F7F7F7" class=3D"footer dark-N1 mgf"><tr><td>
+<![endif]-->
+<div class=3D"footer dark-N1 mgf" style=3D"max-width:600px;margin:0 auto;ba=
+ckground-color:#F7F7F7">
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" style=3D"all:unset;opacity:0;ma=
+rgin-left:16px;margin-right:16px;">
+<tr>
+<![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<div style=3D"display:table;width:100%;">
+<!--[if true]>
+<td width=3D"50%" style=3D"padding-top:40px;margin-bottom:35px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table-cell;width:50%;padding:40px 16px 35px 16px">
+<!--<![endif]-->
+<a href=3D"https://www.ebay.com/ulk/start/shop?mkevt=3D1&mkpid=3D0&emsid=3D=
+e111011.m1852.l149990&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430c=
+cac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D2025102820042=
+1&segname=3D111011&mkevt=3D1&mkpid=3D0&emsid=3De111011.m1852.l149990&mkcid=
+=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D45498391202&e=
+xe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=3D111011" style=
+=3D"display:inline-block;"><img src=3D"https://secureir.ebaystatic.com/cr/m=
+scdn/009a368c51d9e697acc4c9c13f9bc5d6/EBAY-LOGO-YUmcg.png" width=3D"79" hei=
+ght=3D"32" alt=3D"eBay Logo"></a>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+<!--[if true]>
+<td width=3D"50%" align=3D"right" style=3D"padding-top:40px;padding-right:3=
+1px;margin-bottom:35px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table-cell;width:50%;padding-right:31px;" align=3D"ri=
+ght">
+<!--<![endif]-->
+<a href=3D"https://www.ebayadservices.com/marketingtracking/v1/redirect?mpr=
+e=3Dhttps%3A%2F%2Fwww.instagram.com%2Febay%2F&mkevt=3D1&mkpid=3D0&emsid=3De=
+111011.m5219.l9644&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac=
+352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&s=
+egname=3D111011" style=3D"display:inline-block;"><img src=3D"https://secure=
+ir.ebaystatic.com/cr/mscdn/0d78f2625790856d7f6ec35d2e4cbfc6/instagram-qoyCT=
+.png" width=3D"22" height=3D"22" alt=3D"instagram" ></a>
+<span style=3D"display:inline-block;width:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;</span>
+<a href=3D"https://www.ebayadservices.com/marketingtracking/v1/redirect?mpr=
+e=3Dhttps%3A%2F%2Fwww.facebook.com%2Febay&mkevt=3D1&mkpid=3D0&emsid=3De1110=
+11.m5219.l9641&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352f=
+e&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segna=
+me=3D111011" style=3D"display:inline-block;"><img src=3D"https://secureir.e=
+baystatic.com/cr/mscdn/3dd925153b74fae9863918b7750d0183/facebook-3Zomx.png"=
+ width=3D"22" height=3D"22" alt=3D"facebook" ></a>
+<span style=3D"display:inline-block;width:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;</span>
+<a href=3D"https://www.ebayadservices.com/marketingtracking/v1/redirect?mpr=
+e=3Dhttps%3A%2F%2Ftwitter.com%2Febay&mkevt=3D1&mkpid=3D0&emsid=3De111011.m5=
+219.l9642&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=
+=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=
+=3D111011" style=3D"display:inline-block;"><img src=3D"https://secureir.eba=
+ystatic.com/cr/mscdn/71f381c19932bec76c1d64c961e12e74/X-icon-lightmode.png"=
+ width=3D"22" height=3D"22" alt=3D"X" ></a>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+</div>
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+<!--[if true]>
+<table role=3D"presentation" width=3D"100%" style=3D"all:unset;opacity:0;">
+<tr>
+<![endif]-->
+<!--[if false]></td></tr></table><![endif]-->
+<div style=3D"display:table;width:100%;">
+<!--[if true]>
+<td width=3D"50%" style=3D"padding:0px 16px 48px 16px;">
+<![endif]-->
+<!--[if !true]><!-->
+<div style=3D"display:table-cell;width:100%;padding:0px 16px 48px 16px;">
+<!--<![endif]-->
+<a href=3D"https://ebay.onelink.me/TAsm/79qdt1lp?mkevt=3D1&mkpid=3D0&emsid=
+=3De111011.m1852.l3872&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430=
+ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D202510282004=
+21&segname=3D111011" style=3D"display:inline-block;" class=3D"focusRed"><im=
+g src=3D"https://secureir.ebaystatic.com/cr/mscdn/05f55229ddf28e288c1b24f2b=
+077a224/apple-store-gvKsT.png" width=3D"135" height=3D"40" alt=3D"App Store=
+"></a>
+<span width=3D"16">&nbsp;</span>
+<a href=3D"https://ebay.onelink.me/TAsm/79qdt1lp?mkevt=3D1&mkpid=3D0&emsid=
+=3De111011.m1852.l3871&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430=
+ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D202510282004=
+21&segname=3D111011" style=3D"display:inline-block;" class=3D"focusRed"><im=
+g src=3D"https://secureir.ebaystatic.com/cr/mscdn/cf962b9d55eebd75dcc4496a7=
+b45f7e5/google-play-store-SSe2S.png" width=3D"135" height=3D"40" alt=3D"Pla=
+y Store"></a>
+<br>
+<p style=3D"font-size:12px;line-height:22px;color:#414141;font-weight:400;m=
+argin-top:24px;display:inline-block;width:100%;">
+Email Reference ID: [#1116830d9df64ba7a42e430ccac352fe]
+</p>
+<p style=3D"font-size:12px;line-height:22px;color:#414141;font-weight:400;m=
+argin-top:8px;display:inline-block;width:100%;">
+Update your <a href=3D"https://www.ebay.com/settings/emailPrefs?mkevt=3D1&m=
+kpid=3D0&emsid=3De111011.m1852.l1141&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9=
+df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=
+=3D20251028200421&segname=3D111011" id=3D"footerEmailPreferencesLink" style=
+=3D"color:#111820;text-decoration:underline!important;" class=3D"focus focu=
+s3">email preferences</a>, <a href=3D"https://marketing.ebay.com/unsubscrib=
+e/home?token=3DAQALAAAAkMvNzC1dTWeazUMXxW6otgPTbipcx2xv1Z4JHEqt38BW60rMuldi=
+wha6eyXV5n-jF_wxjjT8TrEX8gaGoOPaEghO0m0srFG4umBtosnsl4jhquDBSrIyTwtR1fKYyrb=
+7RVDCQr882u67JXkZie9q-sVbMPvO7g9te5R97FfViCHHFMV0UCuumH1f2_wL1H2NGg&mkevt=
+=3D1&mkpid=3D0&emsid=3De111011&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba=
+7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D2025=
+1028200421&segname=3D111011&mkevt=3D1&mkpid=3D0&emsid=3De111011.m1852.l1142=
+&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D4549839=
+1202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=3D111011" i=
+d=3D"footerUnsubscribeLink" style=3D"color:#111820;text-decoration:underlin=
+e!important;" class=3D"focus focus3">unsubscribe</a> or learn about <a href=
+=3D"https://pages.ebay.com/help/account/protecting-account.html?mkevt=3D1&m=
+kpid=3D0&emsid=3De111011.m1852.l3167&mkcid=3D7&ch=3Dosgood&euid=3D1116830d9=
+df64ba7a42e430ccac352fe&bu=3D45498391202&exe=3D0&ext=3D0&osub=3D-1%7E1&crd=
+=3D20251028200421&segname=3D111011" id=3D"footerAccountProtectionLink" styl=
+e=3D"color:#111820;text-decoration:underline!important;" class=3D"focus foc=
+us3">account protection</a>.<br>If you have a question, <a href=3D"https://=
+www.ebay.com/help/home?mkevt=3D1&mkpid=3D0&emsid=3De111011.m1852.l6369&mkci=
+d=3D7&ch=3Dosgood&euid=3D1116830d9df64ba7a42e430ccac352fe&bu=3D45498391202&=
+exe=3D0&ext=3D0&osub=3D-1%7E1&crd=3D20251028200421&segname=3D111011" id=3D"=
+footerContactUsLink" style=3D"color:#111820;text-decoration:underline!impor=
+tant;" class=3D"focus focus3">contact us</a>.
+</p>
+<p style=3D"font-size:12px;line-height:22px;color:#414141;font-weight:400;m=
+argin-top:8px;display:inline-block;width:100%;">
+eBay I&zwnj;nc., 2&zwnj;025 H&zwnj;amilton A&zwnj;venue, S&zwnj;an J&zwnj;o=
+se, C&zwnj;A 9&zwnj;5125, U&zwnj;nited S&zwnj;tates
+</p>
+<p style=3D"font-size:12px;line-height:22px;color:#414141;font-weight:400;m=
+argin-top:8px;display:inline-block;width:100%;">
+&copy; 1995-2025 eBay Inc. or its affiliates
+</p>
+<!--[if !true]><!-->
+</div>
+<!--<![endif]-->
+<!--[if true]>
+</td>
+<![endif]-->
+</div>
+<!--[if true]>
+</tr>
+</table>
+<![endif]-->
+</div>
+<!--[if true]>
+</td></tr></table>
+<![endif]-->
+<!--|MSME_gf_01a5f264-80c4-4976-8d00-fd02af4db286_46_2.0_MF__N1|-->
+<!--|MST_28d66c22-d288-47a6-b657-bcb562bd846b_28_SITE_111011|-->=20
+    <!--01a5f264-80c4-4976-8d00-fd02af4db286_END-->
+  </body>
+</html>
+
+------=_Part_7162512_1599894240.1761707061829--
