@@ -12,6 +12,7 @@ from email.utils import getaddresses
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import csv
+import dkim
 
 app = Flask(__name__)
 CORS(app)
@@ -70,13 +71,19 @@ def upload_eml():
     #print(msg.get_all("To", []))
     #print(msg.get_all("CC", []))
 
-    judgement = judge(msg)
+    judgement = judge(msg, file_bytes)
 
     points = 0
     if "Phishing email" in judgement:
         points += 100
     if "Mismatched addresses" in judgement:
-        points += 5
+        points += 10
+    if "Failed spf" in judgement:
+        points += 30
+    if "Failed dmarc" in judgement:
+        points += 30
+    if "Failed dkim" in judgement:
+        points += 30
     if points >= 100:
         print("///// Judgement /////")
         print(judgement)
@@ -87,6 +94,8 @@ def upload_eml():
         print(judgement)
         print("Probably not phishing")
         print("/////////////////////")
+
+    print(msg.get("Authentication-Results", ""))
 
 
     with open(os.path.join(UPLOAD_FOLDER, file.filename), 'wb') as f:
@@ -106,13 +115,19 @@ def upload_eml():
         "date": msg.get("Date"),
     }
 
-def judge(msg):
+def judge(msg, bytes):
     redFlags = []
     for url in extract_urls(str(msg)):
         if scan_url(url) == True:
             redFlags.append("Phishing email")
     if msg.get('from') != msg.get("Return-Path") and msg.get('from') != msg.get("Reply-To"):
         redFlags.append("Mismatched addresses")
+    if "spf=fail" in msg.get("Authentication-Results", ""):
+        redFlags.append("Failed spf")
+    if "dmarc=fail" in msg.get("Authentication-Results", ""):
+        redFlags.append("Failed dmarc")
+    if "dkim=fail" in msg.get("Authentication-Results", "") or dkim.verify(bytes) == False:
+        redFlags.append("Failed dkim")
     return redFlags
 
 def scan_url(url, filepath="recentPhishUrls.csv"):
