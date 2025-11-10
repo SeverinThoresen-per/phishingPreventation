@@ -2,3 +2,4 @@ Flask==3.0.3
 gunicorn==23.0.0
 flask-cors==6.0.1
 beautifulsoup4==4.14.2
+dkimpy==1.0.7
