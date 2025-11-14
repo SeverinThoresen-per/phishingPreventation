@@ -84,6 +84,8 @@ def upload_eml():
         points += 30
     if "Failed dkim" in judgement:
         points += 30
+    if len(suspicious_domains) > 0:
+        points += 20 + (10 * len(suspicious_domains))
     if points >= 100:
         print("///// Judgement /////")
         print(judgement)
