@@ -1,0 +1,150 @@
+Delivered-To: augpow99@gmail.com
+Received: by 2002:a05:7000:a39d:b0:79c:a6d4:4138 with SMTP id jg29csp1634385mab;
+        Fri, 14 Nov 2025 07:27:11 -0800 (PST)
+X-Received: by 2002:a05:6402:358c:b0:643:ab7:2e7b with SMTP id 4fb4d7f45d1cf-64350d1b721mr3014085a12.0.1763134031650;
+        Fri, 14 Nov 2025 07:27:11 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763134031; cv=none;
+        d=google.com; s=arc-20240605;
+        b=lA1wegvTwY98IebfurxRUi8Mz7liGKRBHiALK1QSMtFf+6ccS7SCBRohw22F4T1gXJ
+         fcCsqatXSD8aTm4uMVTyaIB/YG0238hy/Lrl4mBmiJdwG6GwEFdvA08VbR9t1qSBJN8X
+         3Cw9l6qXSYgxNHBOZMxP1sPHZVbT3Pp1h3XfhTpabIDqNb9Te8AaJG7uh31YTFmcHSIX
+         GSMr9mAJJLXPUPEMQ49nXjK299oF6+i0Jcq50mxgaaArgX9FHodAfMG0xsTJcWm+1XVf
+         m5P90m54p2nK7gNxetvp/jXLm+IJxQcMM979k43WnYdgai4OtctLn4+idxq/JlMGcl8V
+         8ruQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=7dOp10O0YycO5Q/DXhHrL5PvTL2+aC0zp7QiIn12+WA=;
+        fh=wTXWsXlMut0+30zAqhewquajIw03IY0FjxDUvRtthK0=;
+        b=KWR9J7lSwuD4LSjv+8YHch1YkKC/ur5JSAqfW1IIlUmJl1qm1J1QLSjRxJThYj7G+Y
+         SjB4UsJ+JM8v0LGX0qf2cqyn1AxzSchuzHtFV+Y8GJkspa0pklnkDQ8oacLXtaMhcf5T
+         tZ8RMZ6rkFcB0f2wwgAU7N06RJkvI7+T5Q/KGyn20BztA0HdiXIesk3hXDh/ozF/Yfkq
+         497SXHjyxMeK/UQgONSZmLrS9+Y3QWDzmioIIEkopq1yNv7Ghvcy5eRiRL8EW/+ojSHT
+         hCghJ7g3iYH8G1TTUKNuTpBg5XFA0h67AMLZv8twwYGiRcADEJv5Pgt0xnb+Ee1SvO4L
+         vghg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MLVuUp5i;
+       spf=pass (google.com: domain of 1hitskillburst@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=1hitskillburst@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <1hitskillburst@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 4fb4d7f45d1cf-6433a4c4d39sor1798033a12.7.2025.11.14.07.27.11
+        for <augpow99@gmail.com>
+        (Google Transport Security);
+        Fri, 14 Nov 2025 07:27:11 -0800 (PST)
+Received-SPF: pass (google.com: domain of 1hitskillburst@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=MLVuUp5i;
+       spf=pass (google.com: domain of 1hitskillburst@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=1hitskillburst@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1763134030; x=1763738830; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=7dOp10O0YycO5Q/DXhHrL5PvTL2+aC0zp7QiIn12+WA=;
+        b=MLVuUp5iDSNiaMJh/pBcxe4dGuRnpN2m9F/Ve/FK/lny+rbDRaIz1XLUOO2ZxDaL61
+         PmQVGQQ7iufa9MOJZZ1IDH0ksEXl002rf3wHIq29ylFVjwkyyY0XiR1lJ2NQfx7tPXl2
+         TG3RsuwF/yQDo+DKYj1hxaAhTNkPzEIGU7NjGMqqW34lOW45Da0aS7WSKT6GzacuBYDH
+         kzd9MQlS5Jd+re7MUhQQsxwD2XGjyIpYgVlm/5RbWFvgfD8M/9ofQ1xzhScGfk5Z2H8f
+         MQiXeadD9cKswbxAf7NE/RN6d/va+cbIIXp+fZWAz2V2DJdoEIhhShj3xorDTAZDYPNr
+         AxdQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763134030; x=1763738830;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=7dOp10O0YycO5Q/DXhHrL5PvTL2+aC0zp7QiIn12+WA=;
+        b=NbJBc9fk8iLBjule1tPXQdpiIUiL2KUyFmJo8qHD58KeNFQ8YYgMplrbc/OhS3RuoK
+         zem4nxJOMlz3ZeNU2sFIZNudtYzy9hli94jc6AWeJhsKxz4pxwLjruf1+os0F3MncosV
+         NrxcahA2yq7EAdcz2zIeu44f32POWkFPYy25ZzrUWCmM+LStyJNPjbYlIcntNnYaLplf
+         O6xUmbfVxaKczbift2sauZ3F7bN6LbSBM2gFkDh8ko35csDqYoAc36BKdWeCycq7w9Lp
+         Z4NnOldReUQDYPrsBqJ8f8Fd+arX6VyRYEzf1JvGrhZCd5+K19fxfUdn3q2ja7OB3p7V
+         v6Tw==
+X-Gm-Message-State: AOJu0Yz18gaDTsw/WLhu6aAWO6R3hFQEuHOw582ARvQwoL3RqMfDH7Wi
+	d8Ge6CooXDYdKWnFm3d2ojuwB5eQIBL7xMEPNOQxXAmK+95bAQBpplK0QDkq2BoDm9KWMo8oEdO
+	k9MND2RGGAcxkwmq9PpBinxHpJgWk16QEOw==
+X-Gm-Gg: ASbGnctPVsDqA2Zvg/Cb5mIX1revoHfMi2ZuGFHSraW7nEJbH1WNSCLY9YzhFgq0Q81
+	SfEoSIg+Y0RQ+xIbDus1KKGbAZZVvWxgodzAAZod6ZHTpBjIpTNrdME8LCBLk8a++De/T4uarZ+
+	ZZEaLXH2/FbMEXBxyQ9MK93qFic//WN29wKdAO/Cpfq961coEKw7CZ+9aWZcsTA7iCKH7V8kQbK
+	3okMJa1uSZWd83mG30716crBOyCia3XPQhYIh4klYptTUa/H3CnI+LFHqIi
+X-Google-Smtp-Source: AGHT+IFckKcl/2gDkP39vRjgCc6EzOdw4ZF6Gg7AOTa1A2PtZxtX3woRFyOLwwA7S83iOv1OhalBmVR2VFtzeCsorh4=
+X-Received: by 2002:a05:6402:234c:b0:641:27d8:ec4c with SMTP id
+ 4fb4d7f45d1cf-64350e06ef6mr3372637a12.16.1763134030403; Fri, 14 Nov 2025
+ 07:27:10 -0800 (PST)
+MIME-Version: 1.0
+References: <010781180422293039d9ee-c69a3509-5c85-481d-822e-ba65c204e1ba-000000@ghnbjrfdbxdkd.uk>
+In-Reply-To: <010781180422293039d9ee-c69a3509-5c85-481d-822e-ba65c204e1ba-000000@ghnbjrfdbxdkd.uk>
+From: thomas temp <1hitskillburst@gmail.com>
+Date: Fri, 14 Nov 2025 10:26:58 -0500
+X-Gm-Features: AWmQ_bm9tcTEafSoXZ0NAFHqG3rmQzxn4-wfZrJxpq3g9ozWx77oZk-E9xd0QGM
+Message-ID: <CAKjF==K_CxRnT9oHL3Y+XnpkuMK3W4nhLMQyLANzHjBoEc0k3w@mail.gmail.com>
+Subject: Fwd: You've been choseeeen!
+To: "augpow99@gmail.com" <augpow99@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000092dd0c06438fa1a3"
+
+--00000000000092dd0c06438fa1a3
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Kohls Surprise <pnloybrzecnrs_uqvszfpd@ghnbjrfdbxdkd.uk>
+Date: Wed, Feb 8, 2023 at 12:04=E2=80=AFPM
+Subject: You've been choseeeen!
+To: <1hitskillburst@gmail.com>
+
+
+*Your Name Came-Up For a Ninja Air-Fryer R-eward!*
+<http://ghnbjrfdbxdkd.uk/rd/c12707JOOfM420860ScEp215729cPW29083OsDn195>
+Unsubscribe
+<http://ghnbjrfdbxdkd.uk/rd/u12707Cyhhq420860vQMy215729Uno29083goEf195>
+
+--00000000000092dd0c06438fa1a3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div><br></div><div><br><div class=3D"gmail_quote gmail_quote_container"><d=
+iv dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ---------<=
+br>From: <strong class=3D"gmail_sendername" dir=3D"auto">Kohls Surprise</st=
+rong> <span dir=3D"auto">&lt;<a href=3D"mailto:pnloybrzecnrs_uqvszfpd@ghnbj=
+rfdbxdkd.uk">pnloybrzecnrs_uqvszfpd@ghnbjrfdbxdkd.uk</a>&gt;</span><br>Date=
+: Wed, Feb 8, 2023 at 12:04=E2=80=AFPM<br>Subject: You&#39;ve been choseeee=
+n!<br>To:  &lt;<a href=3D"mailto:1hitskillburst@gmail.com">1hitskillburst@g=
+mail.com</a>&gt;<br></div><br><br>
+
+
+
+<table style=3D"margin-left:auto;margin-right:auto">
+<tbody>
+<tr>
+<td>
+</td>
+</tr>
+<tr><td style=3D"text-align:center">
+<center><img src=3D"http://ghnbjrfdbxdkd.uk/track/o12707uqyta420860LItw2157=
+29sDo29083mSlb195" width=3D"1px" height=3D"1px">
+<h3 style=3D"text-align:center"><a href=3D"http://ghnbjrfdbxdkd.uk/rd/c1270=
+7JOOfM420860ScEp215729cPW29083OsDn195" target=3D"_blank"><strong><span styl=
+e=3D"font-size:24px"><u><span>Your Name Came-Up For a Ninja Air-Fryer R-ewa=
+rd!</span></u></span></strong></a></h3>
+<img src=3D"http://ghnbjrfdbxdkd.uk/img/vkUMUbA9nYk48l4f" alt=3D"" usemap=
+=3D"#m_-9102638973140510869_dfgdrfgdrgfdzfggfs">
+<map name=3D"m_-9102638973140510869_dfgdrfgdrgfdzfggfs">
+<area coords=3D"800,0,0,1293,767,1300,793,1301,567,334,748,1220" shape=3D"r=
+ect" href=3D"http://ghnbjrfdbxdkd.uk/rd/c12707JOOfM420860ScEp215729cPW29083=
+OsDn195" target=3D"_blank">
+</map>
+<br>
+<a style=3D"text-align:center;font-size:9px" href=3D"http://ghnbjrfdbxdkd.u=
+k/rd/u12707Cyhhq420860vQMy215729Uno29083goEf195" target=3D"_blank">Unsubscr=
+ibe</a>
+</center></td></tr>
+
+</tbody>
+</table>
+<p style=3D"text-align:center"> </p>
+</div></div>
+
+--00000000000092dd0c06438fa1a3--

@@ -89,11 +89,13 @@ def upload_eml():
     if points >= 100:
         print("///// Judgement /////")
         print(judgement)
+        print("Score:", points)
         print("Probably phishing")
         print("/////////////////////")
     else:
         print("///// Judgement /////")
         print(judgement)
+        print("Score:", points)
         print("Probably not phishing")
         print("/////////////////////")
 
