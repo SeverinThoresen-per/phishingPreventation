@@ -1,0 +1,137 @@
+MIME-Version: 1.0
+Message-ID: <677E99D5CE9997BCAC0CAC09DD1B863183E8DA58@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: SaraShackleton
+From: "Brent" <Hendry>
+Return-Path: Hendry
+Content-Type: multipart/alternative;
+	 boundary="------------000204060807010505030000"
+Subject: Re_ FX Issues
+Date: Mon, 16 Oct 2000 20:39:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000204060807010505030000
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+----- Forwarded by Brent Hendry/NA/Enron on 10/16/2000 11:41 AM -----
+
+	Janine Juggins@ECT
+	10/12/2000 08:36 AM
+	=09
+		 To: Dale Neuner/HOU/ECT@ECT
+		 cc: Amita Gosalia/LON/ECT@ECT, Justin Boyd/LON/ECT@ECT, Brent=20
+Hendry/NA/Enron@Enron, Sara Shackleton/HOU/ECT@ECT, William=20
+Stuart/HOU/ECT@ECT, Jeff Blumenthal/HOU/ECT@ECT, Shane Dallmann/LON/ECT@ECT,=
+=20
+Jason Althaus/Corp/Enron@Enron, Mark Dilworth/LON/ECT@ECT, Sheri=20
+Thomas/HOU/ECT@ECT, Jennifer deBoisblanc Denny/HOU/ECT@ECT, Robert B=20
+Cass/HOU/ECT@ECT, Melba Lozano/HOU/ECT@ECT
+		 Subject: Re: FX Issues
+
+Tax:
+The Enron entity executing the FX transaction as principal is ENA.=20
+
+However, note that for tax/legal the FX desk in London is run by Enron Europ=
+e=20
+Finance & Trading Limited ("EEFT") as agent for ENA. Our position is that EN=
+A=20
+does not have a place of business in London. Therefore all the transactions=20
+managed by the London FX desk are arranged by EEFT as agent for ENA.
+
+Because of this there is a need to identify which FX desk arranged the=20
+transaction and a possible solution to this is to have separate logins and=20
+logoffs for each FX desk during their hours of responsibility. This would=20
+enable transaction reports to be run which identify those transactions which=
+=20
+took place during the period for which each FX desk was responsible for=20
+managing the FX positions.=20
+
+Regards
+Janine
+
+
+
+
+Dale Neuner
+11/10/2000 22:31
+To: Amita Gosalia/LON/ECT@ECT, Justin Boyd/LON/ECT@ECT, Brent=20
+Hendry/NA/Enron@Enron, Sara Shackleton/HOU/ECT@ECT, William=20
+Stuart/HOU/ECT@ECT, Jeff Blumenthal/HOU/ECT@ECT, Shane Dallmann/LON/ECT@ECT,=
+=20
+Jason Althaus/Corp/Enron@Enron, Mark Dilworth/LON/ECT@ECT, Janine=20
+Juggins/LON/ECT@ECT
+cc: Sheri Thomas/HOU/ECT@ECT, Jennifer deBoisblanc Denny/HOU/ECT@ECT, Robert=
+=20
+B Cass/HOU/ECT@ECT, Melba Lozano/HOU/ECT@ECT=20
+
+Subject: FX Issues
+
+
+This e-mail is admittedly long, so I have classified the issues:
+
+Legal/Tax Issue:
+
+I have been told by the FX group here in Houston that London traders are abl=
+e=20
+to act on the behalf of the US FX Desk because the transactions they do are=20
+for hedging purposes only (no proprietary trading). For example, the FX=20
+transactions that are done by Trena McFarland in London are done on the=20
+behalf of our Houston office, so Houston books the transaction, manages the=20
+risk, and writes the Confirmation in the name of ENA.
+
+This being the case, (i) can we apply the same logic on the internal FX=20
+transactions that will be managed by both the US and UK traders and have the=
+=20
+transacting entity as ENA (ii) if we do does it gives us the necessary tax=20
+relief, or (iii) should we stick the Metals structure where the transactions=
+=20
+are offered by Enron North America, acting through it's agent, Enron Europe=20
+Finance and Trading Limited. While this may be an Internal Only Product Type=
+=20
+today, what effect, if any, would the choice of trading entities have on our=
+=20
+ability to offer these Products externally.
+
+Technology Issue:
+
+David - Stuart has explained to me that the US FX Desk now views these=20
+currency exchange products as financial products. This is contrary to=20
+previous discussions where we felt that any currency exchange involving an=20
+Index would be considered financial, while any 'strict exchange' would be=20
+considered a physical transaction. The change is based on conversations=20
+Stuart has had with the Metals traders wherein they would like to see this=20
+exchange product as a financial product. If we accept this logic, (i) do I=20
+need to create a Deal Type for 'Par Forward Swap' for the first FX Index=20
+Product Type that we did as well as a 'Forward Swap' for these transactions,=
+=20
+or is it acceptable to leave these both as swaps, and (ii) regardless of the=
+=20
+Deal Type classification discussed in (i), I will need to create a new=20
+Product Type for the 'strict exchange' - either as a physical or financial=20
+product. Additionally, if I set this up as Financial Product, I have the=20
+Index attribute in the template to contend with, because there is no Index;=20
+and if I set this up as a Physical Product, I have the Location attribute to=
+=20
+contend with, because there is no Location. Naturally we can put something=20
+cheesy in to fill the gap since it's internal, but if we ever decide to go=20
+external we will need a new template - and from experience with the PJM Powe=
+r=20
+(Weather Desk) Product Type, templates requires an 'and if' statement are=20
+hard to develop.
+
+Dale
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000204060807010505030000--

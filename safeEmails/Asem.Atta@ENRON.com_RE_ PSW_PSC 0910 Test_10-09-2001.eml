@@ -1,0 +1,93 @@
+MIME-Version: 1.0
+Message-ID: <DEA520C9C9690958BF0194D29197B34A6D0FB0D2@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Semperger" <Cara>, "Poston" <David>
+To: "Bentley" <Corry>, "Smith" <Will>
+From: Asem.Atta@ENRON.com
+Return-Path: Asem.Atta@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------040405010701050203080008"
+Subject: RE_ PSW_PSC 0910 Test
+Date: Mon, 10 Sep 2001 22:55:23 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040405010701050203080008
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Corry,
+
+	As per Will, the understanding was that deals with transmissions were far a=
+nd few in between and were currently being manually routed, and this was not=
+ a feature to be expected with the current version of Preschedule Workspace =
+and so it will not route currently.
+
+	Issue with Deal Scheduling not showing the correct 'physical route' status =
+has been addressed and is currently being worked on and will be released wit=
+hin the next day or two. The "Edit Strip Information" bug has been forwarded=
+ also.
+=09
+	Able to recreate the 'Edit' bug and fixed, a new version will roll out by a=
+fternoon containing the fix.=20
+
+	In regards to the West paths showing up when EAST criteria was selected, th=
+is issue was found out to be related to a database modification that was mad=
+e to include the REGION code to all transactions. Creating the REGION field,=
+ NON-NULLABLE requirement, in the database required a default value to be in=
+serted and 'EAST' was chosen; hence transactions which were for the WEST des=
+k without an initial region fell into this particular problem.  The erroneou=
+s data within the PATH SCHEDULE CONFIRMATIONS has been deleted and all new c=
+onfirmed paths will now correctly be displayed since our applications correc=
+tly state the REGION information associated with each USER.
+
+	I will update everyone upon a new version of Preschedule Workspace being mo=
+ved to Stage
+
+thanks
+Asem
+x31700
+
+
+ -----Original Message-----
+From: 	Bentley, Corry =20
+Sent:	Monday, September 10, 2001 12:02 PM
+To:	Smith, Will
+Cc:	Semperger, Cara; Atta, Asem
+Subject:	PSW/PSC 0910 Test
+
+Will,
+I found about the same issues we had already discussed while running the PSW=
+/PSC.
+
+I ran the sheet for 6/19 since there were no "West" paths in the confirmatio=
+ns (I still see the West paths when "View: East Trading Desk" is checked).
+
+Most of the paths "routed" in Deal Scheduling except for a deal that contain=
+ed transmission with the correct Enpower number provided (Error: Capability =
+not supported: Cannot route transmission deals)
+The "Routing Detail" in Deal Scheduling did not contain a check mark for "Ph=
+ysical Route" on any of the physical paths.
+Also, in scheduling, the "Edit Strip Information" does not contain the Path =
+or comments in the Deal Scheduling Comments section as before.
+
+The physical path that did not route in scheduling also did not go the the P=
+ath Confirmations.
+
+
+Also, I found that when I chose "Edit" on the Pre-Schedule Workspace, it cre=
+ated a New Workspace.  It also occurred twice when the mouse cursor passed b=
+y the word "edit" without physically clicking on it.
+
+That's about it for today,
+Corry
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040405010701050203080008--

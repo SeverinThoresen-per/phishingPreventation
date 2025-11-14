@@ -1,0 +1,66 @@
+MIME-Version: 1.0
+Message-ID: <97668BF79BFA2632168676281776CA9BDFD9044D@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: RobertAnderson
+From: "Cooper" <Richey>
+Return-Path: Richey
+Content-Type: multipart/alternative;
+	 boundary="------------060602030204020304070207"
+Subject: Re_ New Production Web Server
+Date: Tue, 15 May 2001 09:49:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060602030204020304070207
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Bob,
+
+sounds good, but the page you sent me doesn't work, maybe i need a cookie or=
+ it's only temporary.  what are the=20
+basic specs?
+
+	-c
+
+
+
+From:	Robert Anderson/ENRON@enronXgate on 05/14/2001 11:35 AM CDT
+To:	Cooper Richey/CAL/ECT@ECT
+cc:	=20
+Subject:	New Production Web Server
+
+Cooper -
+
+I thought that you might be interested in an update to our web server activi=
+ties...
+
+Our plan (at this point) is to purchase a new production server and keep the=
+ existing system as the development server and file server.
+
+This is what we are looking at:
+http://www.directpluspro.compaq.com/printconfig.asp?oi=3DE9CED&dcpqsid=3D1DM=
+LAVWF98S92G2N00AKHB60TV7UA5HF&BEID=3D19701
+
+We are planning to purchase two of these (identical of course). We plan to h=
+ave one mirror the other so the we can balance the load, and also so that (i=
+n the event of a problem) one can function independent of the other... the i=
+dea the we can literally shut one down without the web site going down is ex=
+citing... also, being able to upgrade by simply slapping in a new "pizza box=
+" is quite intriguing...
+
+Any comments that you might have are more than welcome.
+
+Bob
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060602030204020304070207--

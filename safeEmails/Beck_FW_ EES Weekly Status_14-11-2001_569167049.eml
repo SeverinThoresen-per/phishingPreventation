@@ -1,0 +1,92 @@
+MIME-Version: 1.0
+Message-ID: <12DD7241390F08718882DCDB59BB3F93E08F6581@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: Apollo, Beth
+From: Beck
+Return-Path: Beck
+Content-Type: multipart/alternative;
+	 boundary="------------070503040605060108030605"
+Subject: FW_ EES Weekly Status
+Date: Wed, 14 Nov 2001 01:51:01 +0200
+
+This is a multi-part message in MIME format.
+
+--------------070503040605060108030605
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+SInce your name was not on the original list, I am forwarding this to you. =20
+
+Molly's comment that "many lack the clear understanding ..." in the third pa=
+ragraph below - to whom does this apply and do you agree with her?  --Sally=20
+
+ -----Original Message-----
+From: 	Harris, Molly =20
+Sent:	Tuesday, November  13, 2001 9:54 AM
+To:	Bradford, William S.; Vasan, Sue; Slaughter, Chris; Mihalik, Teresa; Hol=
+zer, Erich; Power, Keith E.; Furey, Denise; Brackett, Debbie R.
+Cc:	Mills, Scott; Beck, Sally; Stubbs, Shelly; Albrecht, Kristin; Scribner, =
+James
+Subject:	RE: EES Weekly Status
+
+Bill
+
+This problem is stemming from the volume in Mass Market as you know.  As a r=
+esult, significantly more new transactions are being booked to "New Counterp=
+art"  than can be cleaned up from historical deals.  As Credit has been emph=
+asizing for some months now, this is not acceptable for this business, is no=
+t maintainable (proof in the attached report) and IT resources are required =
+to automate current manual processes.
+
+Global Counterparty is testing their new process to automate the set up of n=
+ew counterparts in GCP such that the GCP ID may also be returned to EES in c=
+onjunction with our credit response prior to booking (expected delivery next=
+ Monday0.   However, the risk system batch process specifically for RPS must=
+ be enhanced to automatically create the counterpart and accept the GCP ID. =
+ Efforts are finally underway to this end and are expected to be tested with=
+in the week.  Then, downstream processing through to billing may benefit.
+
+Many lack the clear understanding that it has taken not only GCP to set up t=
+he counterpart in Global Counterpart but also Deal Capture to establish and =
+map the counterpart in RPS and RGS (both have been manual procesess, the lat=
+ter severly under resourced). =20
+
+Once this is implemented, EES has over 20,000 Mass Market transactions execu=
+ted now, so efforts need to continue to clean up this backlog.  More importa=
+ntly, three companies have already filed bankruptcy.  We must complete these=
+ efforts to manage the portfolio and respond to these events.
+
+Regards
+Molly
+
+ -----Original Message-----
+From: 	Bradford, William S. =20
+Sent:	Monday, November 12, 2001 3:33 PM
+To:	Vasan, Sue; Harris, Molly; Slaughter, Chris; Mihalik, Teresa; Holzer, Er=
+ich; Power, Keith E.; Furey, Denise; Brackett, Debbie R.
+Cc:	Mills, Scott; Beck, Sally; Stubbs, Shelly
+Subject:	RE: EES Weekly Status
+
+This is totally unacceptable.  Is there any focus on cleaning this up?
+
+ -----Original Message-----
+From: 	Vasan, Sue =20
+Sent:	Monday, November 12, 2001 3:31 PM
+To:	Harris, Molly; Slaughter, Chris; Mihalik, Teresa; Holzer, Erich; Power, =
+Keith E.; Furey, Denise; Brackett, Debbie R.; Bradford, William S.
+Subject:	EES Weekly Status
+
+Big jump in the number of New Counterparties.  Up by 5,420 new counterpartie=
+s.
+
+ << File: EES Cpty Stats.xls >>=20
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------070503040605060108030605--

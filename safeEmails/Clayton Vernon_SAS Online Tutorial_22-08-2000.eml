@@ -1,0 +1,55 @@
+MIME-Version: 1.0
+Message-ID: <81817EB7C1E0E4FB886CBC7FD3F77AC04EBF525D@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: "Vince J" <Kaminski>, "Stinson" <Gibner>, "Vasant" <Shanbhogue>, "Grant" <Masson>, "Zimin" <Lu>
+From: "Clayton" <Vernon>
+Return-Path: Vernon
+Content-Type: multipart/alternative;
+	 boundary="------------060506070108030808070701"
+Subject: SAS Online Tutorial
+Date: Tue, 22 Aug 2000 00:12:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060506070108030808070701
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Hi-
+
+We have access to the SAS Online Tutorial for the next 30 days. Point your=20
+browser to=20
+
+http://www2.sas.com/onlinetutor_v8prod/welcome.htm
+
+and use the username "enron" and password "enron" to enter.
+
+The way this product works is designed for a single user (it sets a "cookie"=
+=20
+allowing you to "resume" your place in the tutorial when you re-enter.)=20
+
+Since several of us may use it, we'll need to work around this, each of us=20
+remembering where we were before and recreating any sample data sets, etc=20
+necessary for the lesson in progress.
+
+Clayton
+
+PS The module EIS/OLAP will be a part of our installation next month, but is=
+=20
+not currently available
+
+PPS Please remember to use your local browser to browse the SAS Online=20
+Documentation. Invoking a browser on the Unix server is inefficient.
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060506070108030808070701--

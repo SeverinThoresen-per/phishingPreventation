@@ -1,0 +1,80 @@
+MIME-Version: 1.0
+Message-ID: <EBB91846D6FCB288A610D7B27D3EDB65E6021197@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: Blair, Lynn, January, Steven
+To: Powell, Don, Ratliff, Dale
+From: Blair
+Return-Path: Blair
+Content-Type: multipart/alternative;
+	 boundary="------------080608060507010002040407"
+Subject: RE_ Gas Control Morning Report
+Date: Wed, 18 Jul 2001 08:22:20 +0200
+
+This is a multi-part message in MIME format.
+
+--------------080608060507010002040407
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+	Dale, what is the timing for adding this information.  Also are you
+	or John setting up the meeting to discuss the accounting imbalance
+	info?  Thanks. Lynn
+
+ -----Original Message-----
+From: 	Powell, Don =20
+Sent:	Tuesday, July 17, 2001 1:59 PM
+To:	Blair, Lynn; Ratliff, Dale; Trevino, Linda; Thompson, Rodney; Bodnar, Mi=
+chael
+Subject:	Gas Control Morning Report
+
+Mike and I met today and have completed creation and testing of the database=
+ processes to breakup storage as follows.  Dale's team can implement these c=
+hanges when ever they desire.  Please call Mike or I with questions.
+
+Service			Database / Excel Procedure
+Net FDD			No Change
+Packet				ETSMorningReportPacket (date)
+PNR				ETSMorningReportPNR (date)
+Total Net FDD/IDD Storage	Sum three items above
+Peak				ETSMorningReportPeak (date)
+Pack				ETSMorningReportPack (date)=09
+Unanticipated Swing		No Change
+
+
+
+ -----Original Message-----
+From: 	Bodnar, Michael =20
+Sent:	Monday, July 16, 2001 11:08 AM
+To:	Powell, Don; Thompson, Rodney
+Cc:	Blair, Lynn; Ratliff, Dale; Trevino, Linda
+Subject:	Gas Control Morning Report
+
+Don,
+Last week we talked about the Net IDD number displayed on the referenced rep=
+ort and the benefits of displaying the Net PNR activity separately from Net =
+Packet activity. As a follow-up to that conversation I was able to confirm t=
+hat the Service Sub Type in CMS was used to differentiate PNR contracts from=
+ Packets agreements in TMS.
+PNR has No Contract "Service Sub Type"
+Packets have a Service Sub Type of "A" (Seasonal), "B" (Backdraft) or "U" (O=
+ther). The Packet activity can be combined and reported as one number.=20
+In addition, I have asked Contracts to establish Service Sub Types of Tradit=
+ional, Non Traditional, and Storage for Service Type: SBA Pack/Draft so that=
+ Pack & Draft activity can be reported separately from the other activity. I=
+t is my  recommendation that the SBA line on the subject report be changed t=
+o report Peak activity (Service Type: SBA Winter Peaking) separately from Tr=
+aditional Pack/Draft. The Non Traditional and Storage Pack/Draft should be u=
+sed in calculating the Unanticipated Swing but should not be displayed on th=
+e report.
+If you have any questions or would like to discuss further, please call me  =
+  =20
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------080608060507010002040407--

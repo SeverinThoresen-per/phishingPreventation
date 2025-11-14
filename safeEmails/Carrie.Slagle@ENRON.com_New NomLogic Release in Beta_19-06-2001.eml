@@ -1,0 +1,44 @@
+MIME-Version: 1.0
+Message-ID: <3406D2F25336B8888984EE49573FB22B1172B13A@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: "Allwein" <Robert>, "Homco" <Meredith>
+From: Carrie.Slagle@ENRON.com
+Return-Path: Carrie.Slagle@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------040202000503080808060804"
+Subject: New NomLogic Release in Beta
+Date: Tue, 19 Jun 2001 03:24:20 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040202000503080808060804
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+A quick update. . .based on some good feedback and further beta testing, we =
+implemented a few enhancements and bug fixes last night.  When you log-in to=
+ NomLogic, look out for these NEW and IMPROVED features and fixes-
+
+1.  Total volumes per counterparty-fixed total on tool tip.
+2.  Duplicate deal issues-re-released desk 2 desk deals, adding meters mid-d=
+eal date range.
+3.  Uneditable meter changed to editable-fixed.
+4.  Subtotaling on shared data-created on tool tips
+5.  Desk 2 Desk-adjusted counterparty names
+6.  Negative volume bug-fixed
+
+You may not have been aware of many of these bugs, but we wanted to keep you=
+ informed.
+
+Thanks, and keep the good feedback coming!
+Carrie
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040202000503080808060804--

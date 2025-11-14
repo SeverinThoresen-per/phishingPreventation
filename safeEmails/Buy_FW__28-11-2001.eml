@@ -1,0 +1,86 @@
+MIME-Version: 1.0
+Message-ID: <38DC600B8E74C596DF835DAFE2F2602D0D7DA143@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: Port, David
+From: Buy
+Return-Path: Buy
+Content-Type: multipart/alternative;
+	 boundary="------------000507050801070708010800"
+Subject: FW_
+Date: Wed, 28 Nov 2001 03:51:07 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000507050801070708010800
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+This is what you are talking about?  Rick
+
+ -----Original Message-----
+From: 	Lavorato, John =20
+Sent:	Tuesday, November 27, 2001 12:02 PM
+To:	Buy, Rick
+Cc:	Whalley, Greg
+Subject:	FW:=20
+
+we bought 15000 contracts and our VAR didn't fall.  Something is wrong with =
+the model
+
+ -----Original Message-----
+From: 	Port, David =20
+Sent:	Tuesday, November 27, 2001 11:56 AM
+To:	Beck, Sally
+Cc:	Lavorato, John
+Subject:	FW:=20
+
+FYI - this is out there as a possible reason why Americas VaR did not come d=
+own to within limits as we expected.
+In the absence of a fix it looks as though we have another VaR violation.
+
+ -----Original Message-----
+From: 	Hayden, Frank =20
+Sent:	Tuesday, November 27, 2001 11:36 AM
+To:	Port, David
+Subject:	FW:=20
+
+
+
+ -----Original Message-----
+From: 	Hayden, Frank =20
+Sent:	Tuesday, November 27, 2001 8:12 AM
+To:	Reeves, Kathy
+Cc:	Gossett, Jeffrey C.; Davenport, Lacrecia; Khanna, Bharat; Victorio, Tom
+Subject:=09
+
+Kathy,
+It looks like the Canadian positions didn't hit VAR last night.  Can you re-=
+check?
+Also, I understand Zufferli bot a ton of NG and I thought he was short? (Why=
+ is system showing he is long?)
+
+Frank
+
+EFF_DT	PORTFOLIO_ID	COMMODITY_CD	SumOfDELTA_POSITION=09
+11/23/2001	J_ZUFFERLI	NG	8241559.1328=09
+11/26/2001	J_ZUFFERLI	NG	8568832.813=09
+
+
+EFF_DT	PORTFOLIO_ID	COMMODITY_CD	SumOfDELTA_POSITION=09
+11/23/2001	CANADA-PWR-BU	NG	8298324.949=09
+11/26/2001	CANADA-PWR-BU	NG	8691997.5495=09
+
+EFF_DT	PORTFOLIO_ID	COMMODITY_CD	SumOfDELTA_POSITION=09
+11/23/2001	CANADA_PWR_GAS	NG	8298324.949=09
+11/26/2001	CANADA_PWR_GAS	NG	8691997.5495=09
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000507050801070708010800--

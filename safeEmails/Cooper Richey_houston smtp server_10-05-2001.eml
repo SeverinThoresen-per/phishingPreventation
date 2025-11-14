@@ -1,0 +1,74 @@
+MIME-Version: 1.0
+Message-ID: <2ACD2AB9243A16886FA2FE8D44420A4F250DACD3@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: "Tim" <Heizenrader>, "Maria Van" <Houten>
+From: "Cooper" <Richey>
+Return-Path: Richey
+Content-Type: multipart/alternative;
+	 boundary="------------000804060506030806000203"
+Subject: houston smtp server
+Date: Thu, 10 May 2001 06:03:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000804060506030806000203
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+
+I'm getting some error messages when I try to use the Houston mail server to=
+ send out automated messages - it=20
+seems like 'external' messages are getting rejected (messages going to my en=
+ron.com account work fine.) =20
+
+the error message i get back is below.
+
+Are you seeing any similar problems?
+
+
+
+---------------------- Forwarded by Cooper Richey/CAL/ECT on 05/09/2001 07:5=
+6 AM ---------------------------
+
+Delivery Failure Report
+
+Your document:	CG4=09
+was not delivered to:	4035123312@telusone.telus.com=09
+because:	551 Recipient Not Local=09
+
+
+What should you do?
+You can resend the undeliverable document to the recipients listed above by =
+choosing the Resend button or the Resend command on the Actions menu. =20
+Once you have resent the document you may delete this Delivery Failure Repor=
+t.
+If resending the document is not successful you will receive a new failure r=
+eport
+Unless you receive other Delivery Failure Reports, the document was successf=
+ully delivered to all other recipients.
+
+
+ENE-MTA01/Enron, ENE-MTA01/Enron, ENE-NS03/Enron, ECTHOU-LNHUB1/ECT, ECTCAL-=
+LN1/ECT
+
+________________________
+
+
+To:	undisclosed-recipients:;
+cc:=09
+From:	Cooper.Richey@enron.com
+Date:	05/09/2001 08:17:18 AM EST
+Subject:	CG4
+
+
+CG4 BELOW THRESHOLD=20
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000804060506030806000203--

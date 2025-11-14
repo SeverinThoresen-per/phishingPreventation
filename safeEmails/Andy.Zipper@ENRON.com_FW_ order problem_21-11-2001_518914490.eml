@@ -1,0 +1,65 @@
+MIME-Version: 1.0
+Message-ID: <FA70CA14B86686C95BC25F1EEE7DC05398837FE4@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: SchwiegerJim
+From: Andy.Zipper@ENRON.com
+Return-Path: Andy.Zipper@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------020301050101010307000102"
+Subject: FW_ order problem
+Date: Wed, 21 Nov 2001 23:09:12 +0200
+
+This is a multi-part message in MIME format.
+
+--------------020301050101010307000102
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+FYI
+
+ -----Original Message-----
+From: 	Webb, Jay =20
+Sent:	Wednesday, November 21, 2001 2:05 PM
+To:	Zipper, Andy
+Subject:	RE: order problem
+
+Hi Andy,
+
+When it was decided that we would accept multi-day orders, we pointed out to=
+ Lavo and John that we do system maintenance for an hour every Friday night.=
+  Their position was anytime we take the system down for any reason, planned=
+ or un-planned, we should kill all orders to prevent someone from being unab=
+le to cancel an order while the system was down and then having it fill befo=
+re he can get to it.
+
+We actually have a plan in place to make this much better.  Effectively, we =
+will have dual sites.  The second site will be used both for disaster recove=
+ry, as well as a convenient way to manage code releases without an outage.  =
+Unfortunately, purchasing the hardware for this has been put on hold given t=
+he present circumstances.
+
+--jay
+
+ -----Original Message-----
+From: 	Zipper, Andy =20
+Sent:	Wednesday, November 21, 2001 1:51 PM
+To:	Webb, Jay
+Subject:	order problem
+
+Jay,
+
+Have received comments that when multi day limit orders are placed, they are=
+ not alive after a friday night. I think this might have to do with orders g=
+etting wiped out duirng maintenance but I wanted to alert you to this.
+
+AZ
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------020301050101010307000102--

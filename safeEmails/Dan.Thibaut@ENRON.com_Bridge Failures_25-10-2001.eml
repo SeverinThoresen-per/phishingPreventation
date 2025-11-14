@@ -1,0 +1,66 @@
+MIME-Version: 1.0
+Message-ID: <76601C24AB1E2486DD1B7078255E1383650752C9@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: McLaughlinJr.Errol
+To: "Rivera" <Oscar>, "Moorer" <Torrey>
+From: Dan.Thibaut@ENRON.com
+Return-Path: Dan.Thibaut@ENRON.com
+Subject: Bridge Failures
+Date: Thu, 25 Oct 2001 20:16:25 +0200
+Content-Type: multipart/mixed;
+	 boundary="------------070500050808030208050203"
+
+This is a multi-part message in MIME format.
+
+--------------070500050808030208050203
+Content-Type: multipart/alternative;
+	 boundary="------------080200010205070000060303"
+
+This is a multi-part message in MIME format.
+
+--------------080200010205070000060303
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+FYI - YE0702.1 Failed to bridge second leg of straddle (put option) into TAG=
+G.
+
+Leg 1 was duplicated and changed to a put.
+
+Dan Thibaut
+Risk Management
+(713) 345-3193
+EB 3256c
+=20
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------080200010205070000060303--
+
+--------------070500050808030208050203
+Content-Type: text/x-vcard; name="Daniel Thibaut (E-mail).vcf"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	 filename="Daniel Thibaut (E-mail).vcf"
+
+BEGIN:VCARD
+VERSION:2.1
+N:Thibaut;Danny
+FN:Thibaut, Danny
+ORG:ENRON NET WORKS LLC(CNEN);ENW-ENERGY OPS EAST GAS TEAM
+TITLE:SPEC RISK MGMT GAS
+TEL;WORK;VOICE:713-345-3193
+ADR;WORK:;EB1417D;1400 SMITH  ;HOUSTON;TX;77002
+LABEL;WORK;ENCODING=3DQUOTED-PRINTABLE:EB1417D=3D0D=3D0A1400 SMITH  =3D0D=3D=
+0AHOUSTON, TX 77002
+EMAIL;PREF;INTERNET:Daniel.Thibaut@ENRON.com
+REV:20010424T140710Z
+END:VCARD
+
+--------------070500050808030208050203--

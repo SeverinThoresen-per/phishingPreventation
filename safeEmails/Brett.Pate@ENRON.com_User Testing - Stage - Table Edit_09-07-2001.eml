@@ -1,0 +1,78 @@
+MIME-Version: 1.0
+Message-ID: <CE7B883B10CB5D1F0F35D3B3B356E684ADDB8371@Felienne-Pro>
+X-Priority: 3 (Normal)
+Content-Type: multipart/alternative;
+	 boundary="------------070703050203020204040400"
+Cc: MartinKarenY
+To: "Bentley" <Corry>, "Semperger" <Cara>
+From: Brett.Pate@ENRON.com
+Return-Path: Brett.Pate@ENRON.com
+Subject: User Testing - Stage - Table Edit
+Date: Mon, 09 Jul 2001 21:58:16 +0200
+
+This is a multi-part message in MIME format.
+
+--------------070703050203020204040400
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"; format="flowed"
+
+Corry, Cara,
+
+There is a new version of Table Edit in Stage, ver. 1.0.0.33, which Counterp=
+arty Extensions and Aliases have been added to it.  Bill informed me that yo=
+u two were the best candidates to look at this for user testing.  Please let=
+ me know how it looks, and if you have any questions.  Be sure to verify the=
+ version number.
+
+Thanks,
+
+Brett Pate
+Enpower QA
+
+ -----Original Message-----
+From: 	Crooks, William =20
+Sent:	Monday, July 09, 2001 12:35 PM
+To:	Martin, Karen Y; Pate, Brett
+Subject:	FW: New Version of Table Edit
+
+QA:
+
+	Let's move this to Stage and then contact Melissa regarding the Legal Entit=
+y Rule tab (she's best to test that.)  Corry and Cara can test the Couterpar=
+ty Extensions & Aliases - just let them know that this is critical to Presch=
+edule Workspace.
+
+Regards,
+Bill x53492
+
+ -----Original Message-----
+From: 	Venkataswami, Vishwanatha =20
+Sent:	Monday, July 09, 2001 12:24 PM
+To:	Pate, Brett; Martin, Karen Y
+Cc:	Smith, Will; Luu, Duong; Crooks, William
+Subject:	New Version of Table Edit
+
+
+
+QA Team,
+
+New Version of Tabledit.Exe 1.0.0.33 is moved to P:\PowerSys\Stage. Followin=
+g tabs are added to this
+=B7	Counterparty Extensions & Aliases
+=B7	Legal Entity Rule=20
+
+If you have any questions please do let me know,
+
+Thanks,
+Vish=20
+X 53209
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------070703050203020204040400--

@@ -1,0 +1,116 @@
+MIME-Version: 1.0
+Message-ID: <1D0169DB7AD411257117538C8D788C71204F5A58@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: RodNelson
+From: "Carol St" <Clair>
+Return-Path: Clair
+Subject: ISDA Schedule
+Date: Fri, 26 May 2000 02:41:00 +0200
+Content-Type: multipart/mixed;
+	 boundary="------------030500040107060101030003"
+
+This is a multi-part message in MIME format.
+
+--------------030500040107060101030003
+Content-Type: multipart/alternative;
+	 boundary="------------040201070000030800050400"
+
+This is a multi-part message in MIME format.
+
+--------------040201070000030800050400
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Carol St. Clair
+EB 3892
+713-853-3989 (Phone)
+713-646-3393 (Fax)
+----- Forwarded by Carol St Clair/HOU/ECT on 05/25/2000 05:41 PM -----
+
+	steven.kessler@db.com
+	05/25/2000 05:10 PM
+		=20
+		 To: Carol.St.Clair@enron.com
+		 cc:=20
+		 Subject: ISDA Schedule
+
+
+
+
+Hi Carol:
+
+Enclosed is redlined version of ISDA Schedule and CSA, marked against the
+July 7, 1999 version (please note that open items I left as is unless
+otherwise indicated).
+
+Also note that the Indemnifiable Tax clause is a head office policy
+issue--DB's position is that, in cross-border transactions, the Payee may
+not be in a position to learn of a Tax imposed due to a Change in Tax Law
+in the Payor's jurisdiction which is based upon the Payee's connection with
+the Payor's jurisdiction, no matter how tenuous that connection.  In such a
+situation, the Tax would not be an IndemnifiableTax and therefore would not
+be grossed-up.  Further, although such a change would be a Tax Event and
+therefore the Payee could terminate the Agreement upon learning of the Tax,
+the Payee, because of its inability to learn of the tax law change might
+not be able to terminate in a  timely manner and would be precluded from
+choosing not to enter into the Transaction. The worse-case scenario would
+be a Transaction entered into shortly prior to the Change in Tax Law, in
+which case the Tax would not be grossed-up because it is not an
+Indemnifiable Tax, and the Payee could not terminate the Transaction
+because a Tax Event is triggered off of a Change in Tax Law occurring on or
+after the Transaction has been entered into.  We think this risk is
+reciprocal in cross-border transactions. The Indemnifiable Tax revision
+simply shifts this incremental risk from the Payee to Payor.  I can also
+provide alternative language whereby we maintain the same gross-up
+provisions as in the standard ISDA Master, but extend the "notice" period
+to sixty days prior to the date a Transaction is entered into (rather than
+on the date in which a Transaction is entered into), thus providing a
+window for learning of legislation in other jurisdictions.
+
+On other open issues, I believe you are to check on (i) CEUM, (ii) the
+Event of Default, (iii)  Payment Netting, (iv) Securities Act Reps (v)
+Transfer language, and (vi) Arbitration. I need to review your comments on
+(i) the Guarantee and (ii) your new L/C Agreement.
+
+I look forward to hearing from you soon.
+
+Regards,
+
+Steve
+
+(See attached file: enron schedule.doc)(See attached file: ENRON PARAGRAPH
+13.doc)
+
+ - enron schedule.doc
+ - ENRON PARAGRAPH 13.doc
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040201070000030800050400--
+
+--------------030500040107060101030003
+Content-Type: application/msword; name="enron schedule.doc"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="enron schedule.doc"
+
+QXR0YWNobWVudCBDOlxFbnJvbiBEYXRhXGF0dGFjaFxDU1RDTEFJUl9ERUMyMDAwMVwwMDAwMDAw
+MDg2QjkyNjNDQTREN0Q2MTE4MjYzMDAwNjVCNUU4RDMyNDQzQTIxMDAuIzEuZW5yb24gc2NoZWR1
+bGUuZG9jIG5vdCBmb3VuZCE=
+
+--------------030500040107060101030003
+Content-Type: application/msword; name="ENRON PARAGRAPH 13.doc"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	 filename="ENRON PARAGRAPH 13.doc"
+
+QXR0YWNobWVudCBDOlxFbnJvbiBEYXRhXGF0dGFjaFxDU1RDTEFJUl9ERUMyMDAwMVwwMDAwMDAw
+MDg2QjkyNjNDQTREN0Q2MTE4MjYzMDAwNjVCNUU4RDMyNDQzQTIxMDAuIzIuRU5ST04gUEFSQUdS
+QVBIIDEzLmRvYyBub3QgZm91bmQh
+
+--------------030500040107060101030003--

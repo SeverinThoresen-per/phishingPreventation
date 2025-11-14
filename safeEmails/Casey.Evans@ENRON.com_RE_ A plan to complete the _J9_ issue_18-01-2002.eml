@@ -1,0 +1,84 @@
+MIME-Version: 1.0
+Message-ID: <32EA24655F9FC9C586DD740A738F576045A0A643@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: WhiteStaceyW.
+To: "Zheng" <Min>, "Lee" <Norman>, Yang
+From: Casey.Evans@ENRON.com
+Return-Path: Casey.Evans@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------070308060808010504000406"
+Subject: RE_ A plan to complete the _J9_ issue
+Date: Fri, 18 Jan 2002 23:58:27 +0200
+
+This is a multi-part message in MIME format.
+
+--------------070308060808010504000406
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Can you guys meet Tuesday mid-morning to discuss placement of the j9 issue i=
+nto the rolls?!
+=20
+Thanks!
+Casey
+
+-----Original Message-----
+From: Zheng, Min=20
+Sent: Wednesday, January 16, 2002 12:19 AM
+To: Evans, Casey; Evans, Casey
+Subject: A plan to complete the "J9" issue
+
+
+Casey,
+=20
+A plan to complete the "J9" issue has been reached.
+=20
+Basically, the solution is based on the following key point:
+The number that is used to correct "J9" is from "Swap Liq.xls". =20
+=20
+Swap Liq.xls procedures and functions are:=20
+1: manually Via PortCol to ftp two files to local PC=20
+2 gets a comparison result between a pare of swap liq under the same region/=
+book based on the two files
+=20
+The design for this project is:
+1: to save time, AUTOMATICALLY/DIRECTLY AND  WITHOUT Via PortCol  to ftp all=
+ files to a M Folder. The files are belonged to a giving portfolio and date=20
+2. compare Swap Liq for all pair files (for every pair,  the comparison resu=
+lt  just is exact as current "Swap Liq.xls")
+3. if a difference is found from a pair files,  then value in "J9" in the de=
+sk tab and the region roll file will be changhed to "J9 minus the number" an=
+d the number also will be put in the column based on the date
+4. the partially or all of above procedures may with or separate from DprAut=
+omation if there is necessary
+=20
+I need confirm with you about EXACTLY PROCEDURE about HOW TO GET THE NUMBER =
+FROM "Swap Liq.xls" to  correct "J9". One of the macros will basically funct=
+ions the way you give to me.
+=20
+Also what is the title for new column in roll file for Swap Liq.=20
+=20
+The short term goal for this project is to try to make J9 work at the correc=
+t way under acceptable time period (in 20 minutes for a portfolio) before Ne=
+tco starts trading. Long term goal will be speed and better interface or eve=
+n reach a solution to take care this once for all from AdHoc database table.=
+=20
+=20
+Please let me know when you have chance to guide me through/or e-mail the pr=
+ocedure about how to get the number to correct J9.
+=20
+Please let me know if there is any concern.=20
+=20
+Thank you very much!
+=20
+Min Zheng
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------070308060808010504000406--

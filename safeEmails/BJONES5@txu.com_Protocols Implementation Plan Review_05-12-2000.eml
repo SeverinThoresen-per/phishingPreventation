@@ -1,0 +1,71 @@
+MIME-Version: 1.0
+Message-ID: <78D1D9EA77CE81A7C2DBCCDAAEF6D80B85DA6215@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: isonp@ercot.com
+From: BJONES5@txu.com
+Return-Path: BJONES5@txu.com
+Content-Type: multipart/alternative;
+	 boundary="------------010401020302060806040307"
+Subject: Protocols Implementation Plan Review
+Date: Tue, 05 Dec 2000 02:18:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------010401020302060806040307
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+As part of your preparation for the RUG meeting on Wednesday and Thursday,
+please conduct an individual review of the Protocols Implementation Plan ite=
+ms
+e-mailed by Vikki Gates on Sunday.  We will begin our review of the PIP on t=
+he
+afternoon of the 6th .  In particular, the list below identifies PIP items=20
+that
+require a review by RUG because of a potentially significant change in=20
+Protocol
+language.
+
+Item 103 - Default QSE
+Item 107 - Uninstructed Deviation Tolerance Limit
+Proposal by Floyd Trefny
+Item 108 - Sub QSE (payment process, invoicing, and liability)
+Proposal by C. Moseley
+Item 109 - DC Tie (Oklaunion exclusion)
+Proposal by Richard Ross
+Item 120 - Local Balancing Energy Premium
+Proposals by Don Blackburn and Manny Munoz
+Item 126 - Plant vs. Resource Specific Output in OOME
+Items 144 and 200 - LSE/QSE allocation of AS
+Proposal by B. Jones
+Item 146 - Notification vs. Posting of Loss Factors
+Item 187 - TX SET Concurrent Processing Approach
+Proposal by B. White
+Item 204 - EPS Meter Data Transmittal
+Proposal by J Cohea
+
+In addition to to these items, the Protocols may have been changed to correc=
+t
+unclear language or an inconsistency in the Protocols in an effort to=20
+reconcile
+a gap.  These changes were identified in the PIP Master List as refinements=20
+and
+carried a criticality assessment of 1.  I recommend your attention to these
+items as well.
+
+As there are about 100 PIP Items, we will not specifically address each one.
+However, all parties are encouraged to raise questions or challenge any of t=
+he
+reconciliation documents at the RUG meeting.
+
+-- Brad
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------010401020302060806040307--

@@ -1,0 +1,62 @@
+MIME-Version: 1.0
+Message-ID: <67551C7FE6304DD8681B825209848093B4348840@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: ZipperAndy
+From: Chris.Bowling@ENRON.com
+Return-Path: Chris.Bowling@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------020507080001050003040803"
+Subject: RE_ HoustonStreet
+Date: Wed, 21 Feb 2001 21:54:48 +0200
+
+This is a multi-part message in MIME format.
+
+--------------020507080001050003040803
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Andy,=20
+
+Testing process began approx Feb 7th after the link was in:
+They are able to login, get an weblogic session id, Request Prices, I have y=
+et to see a Post Price request or Attempt Transaction.
+Basically they are testing on receiving data back from us from their browser=
+ or their scripted programs.
+
+
+One issue on going is making a connection to their server, which would cause=
+ an issue on Posting prices to their server.   We just received their server=
+ connection info (IP address, ports etc..) yesterday, thus we should be able=
+ to post prices to them once we complete our setup today.
+
+ The product control group was very responsive with regards to answering bus=
+iness questions from Linda Bradley@Houstonstreet.=20
+
+If you need more detail let me know.  Hope this helps.
+
+-cb
+
+
+
+
+ -----Original Message-----
+From: 	Zipper, Andy =20
+Sent:	Tuesday, February 20, 2001 2:56 PM
+To:	Bowling, Chris
+Subject:	HoustonStreet
+
+Can I please get a status report on where the HoustonStreet project is. Of p=
+articular interest to me is where each party is on it's responsibilities.
+
+Thanks,
+Andy Zipper
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------020507080001050003040803--

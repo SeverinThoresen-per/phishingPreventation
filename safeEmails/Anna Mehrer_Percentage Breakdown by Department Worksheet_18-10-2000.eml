@@ -1,0 +1,62 @@
+MIME-Version: 1.0
+Message-ID: <755B9628C3D666E93796136608DA1CE13BFF2EFC@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: "Debra" <Davidson>, "Mollie" <Gustafson>, "Jessica" <Burry>, "Grace" <Rodriguez>, "Teri" <Whitcomb>
+From: "Anna" <Mehrer>
+Return-Path: Mehrer
+Subject: Percentage Breakdown by Department Worksheet
+Date: Wed, 18 Oct 2000 00:09:00 +0200
+Content-Type: multipart/mixed;
+	 boundary="------------050203080101050301080600"
+
+This is a multi-part message in MIME format.
+
+--------------050203080101050301080600
+Content-Type: multipart/alternative;
+	 boundary="------------000808010600010405040208"
+
+This is a multi-part message in MIME format.
+
+--------------000808010600010405040208
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Hello everyone,
+
+Sometimes it is necessary to figure out how certain costs can be distributed=
+=20
+evenly and fairly among our groups here at the Portland West Desk.  Below yo=
+u=20
+will find an attachment that will automatically calculate the percentage=20
+breakdown for each group, after entering the total amount in the space=20
+provided.  The cell above "enter bill total here" is the sum of the column t=
+o=20
+its left.  It should equal the bill total.
+
+Please let me know if you have any questions.
+
+Kind regards,
+Anna
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000808010600010405040208--
+
+--------------050203080101050301080600
+Content-Type: application/vnd.ms-excel;
+	 name="Department % brkdwn.xls"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	 filename="Department % brkdwn.xls"
+
+QXR0YWNobWVudCBDOlxFbnJvbiBEYXRhXGF0dGFjaFxTeW1lc1wwMDAwMDAwMEE1RjMzN0EyRThB
+RTQwNDQ5MTlDMTE4RTExNzc2NEI3MjQxQjI1MDAuIzEuRGVwYXJ0bWVudCAlIGJya2R3bi54bHMg
+bm90IGZvdW5kIQ==
+
+--------------050203080101050301080600--

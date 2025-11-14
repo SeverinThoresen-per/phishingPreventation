@@ -1,0 +1,59 @@
+MIME-Version: 1.0
+Message-ID: <2FA4AFD48B6FCBDBA6B80BA3CD572A3C0BEB86CE@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: VinceJKaminski
+From: "Alex" <Huang>
+Return-Path: Huang
+Content-Type: multipart/alternative;
+	 boundary="------------030508030203060501000104"
+Subject: Recent Projects
+Date: Mon, 09 Oct 2000 22:43:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------030508030203060501000104
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Hi Vince,
+I have been working on and/or planning to work on the following projects:
+1.  Finished a gas daily swing option model for commodity structuring=20
+group (Sanjeev Khanna).  The model uses American Monte Carlo=20
+Simulation and dynamic programming techniques.=20
+
+2. Continue working on PSIM model. This includes reading power generation
+and operation books as well as thinking about ways to model power plant and
+its operation. The standard approach (i.e. turn the plant on if power=20
+price>total
+generation cost, else turn the plant off) is not particularly good if the=20
+regional
+demand is very high and the plant still has some un-utilized generation=20
+capacity.
+That is, the generation criteria is quite different depending on we model=20
+power=20
+plant from regional point view or from plant point of view.  Plan to have=20
+meetings
+with Tom and Lance.=20
+
+3.  Started working on stochastic process parameter estimation.  I will=20
+concentrate
+on four processes: GBM, mean reverting, jump diffusion, and jump diffusion=20
+with
+mean reverting.  I have looked at Tanya's earlier  work and decided to=20
+discretize
+the processes slightly differently.  It is hoped that this will give a more=20
+stable
+estimation.=20
+
+Best,
+Alex
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------030508030203060501000104--

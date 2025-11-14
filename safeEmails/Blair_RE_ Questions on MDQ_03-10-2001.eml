@@ -1,0 +1,83 @@
+MIME-Version: 1.0
+Message-ID: <B799A60AA88B3A56EB6D54CD396E50BD877DA3EF@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: Paladino, Ranelle, Kowalke, Terry
+From: Blair
+Return-Path: Blair
+Content-Type: multipart/alternative;
+	 boundary="------------040000040800060402020403"
+Subject: RE_ Questions on MDQ
+Date: Wed, 03 Oct 2001 06:00:32 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040000040800060402020403
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+	Terry, can you send Ranelle July.  Ranelle, Terry is working on October
+	and should have that ready tomorrow.  Thanks. Lynn
+
+ -----Original Message-----
+From: 	Paladino, Ranelle =20
+Sent:	Tuesday, October 02, 2001 2:58 PM
+To:	Blair, Lynn
+Subject:	RE: Questions on MDQ=20
+
+Lynn,
+Any luck getting a copy of that July Bushton report for me?  It was the one =
+that showed who was scheduled at Bushton with Rate Schedule data so we could=
+ see who was flowing interruptible either from a receipt point to the inlet =
+to Bushton or from the outlet to Demarc.
+Ranelle
+
+ -----Original Message-----
+From: 	Blair, Lynn =20
+Sent:	Friday, September 21, 2001 4:41 PM
+To:	Pritchard, John; Paladino, Ranelle; Winckowski, Michele
+Cc:	Kowalke, Terry; Buchanan, John; Blair, Lynn; Darveaux, Mary
+Subject:	Questions on MDQ=20
+
+	Ranelle, John and Michelle,  thought I would send this statement to you and=
+ see if this
+	helps simplify our answer to your question. =20
+
+	The question is:  How is MDQ used in the nomination system to ensure we do =
+not
+	double up on MDQ volumes when we have split paths (i.e. nom on same contrac=
+t
+	from (1) Mid 15 to Bushton Inlet and from (2) Bushton Outlet to Demac)
+
+	For Nominating purposes:
+
+	MDQ of contract =3D Primary Firm + Alternate Firm up to the MDQ.=20
+	Anything over the MDQ will be Overrun and charged at the IT rate.
+
+	Point MDQ needs to be considered when allocating a receipt point.
+
+	EXAMPLE:
+
+	If the Field MDQ is 10,000, then we will  (1) total the reciepts nominated =
+on the
+	contract; (2) compare the total nominated to the Contract MDQ.  Then the sh=
+ipper
+	will get firm (primary and alternate) up to their contract MDQ.  Anything o=
+ver will be=20
+	overrun at IT rate.
+
+	If anyone has any other questions, please let me know.  Thanks. Lynn
+
+=09
+
+=09
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040000040800060402020403--

@@ -1,0 +1,108 @@
+MIME-Version: 1.0
+Message-ID: <F35D2EFD4B6A4A923033B4C29A4825A5D8143E4D@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: Hotte, Steve
+To: Abshire, Scott
+From: Blair
+Return-Path: Blair
+Content-Type: multipart/alternative;
+	 boundary="------------030003080602070800040707"
+Subject: RE_ Infrastructure Prevents...
+Date: Thu, 27 Sep 2001 21:04:31 +0200
+
+This is a multi-part message in MIME format.
+
+--------------030003080602070800040707
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+	Scott, I appreicate your feedback and closure on these items.  It helps us =
+to build
+	that confidence that the systems are working correctly instead of being lef=
+t in
+	"limbo" and coming up with your own conclusions.  Thanks. Lynn
+
+ -----Original Message-----
+From: 	Abshire, Scott =20
+Sent:	Tuesday, September 25, 2001 3:36 PM
+To:	Hotte, Steve; Corman, Shelley; Holmes, Bradley; Dietz, Rick; January, St=
+even; Blair, Lynn; Nacey, Sheila; Bryant, Mike; Scott, Donna; Taylor, Gina; =
+Kenagy, Gary; Tombaugh, Elaine; Osburn, Frank; Gigliotti, Mark; Mayer, Tony;=
+ Rahn, Nick; Sawyer, Lisa; Sullivan, Michael
+Cc:	McAuliffe, Bob; Rub, Jenny; Ritter, Steve; Gearhart, Jim; Azore, Derica =
+; Becker, Diane; Borger, Fawn; Brown, Edward; Bunch, Dan; Cantu, Lupita; Cer=
+noch, Sandra; Cooper, Dori; Cowley, Mark; Daze, Don; Dennis, Patti; Dunten, =
+Deborah; Estes, Brandon; Hollan, Celestine; Ignjatic, Vladimir; Jakovljevic,=
+ Dejan; Juarez, Francisca; King, Bruce; Krumpholz, Chad; Love, Chris; Lukken=
+, Randy; Lutz, Sheila; Maze, Gene; McFarland, Jean; Mitchell, Russell; Nguye=
+n, Quy Si; O'Gorman, Karon; Palik, Joe; Parchem, Matthew; Patnaik, Anoop; Pe=
+rez, Kim; Pursell, Glenn; Rasmussen, Michael; Ryzinski Jr., Stan; Sampson, T=
+om; Sims, Ronnie; Smith, Chris A.; Sroka, Thomas; Stephens, Susan; Steward, =
+Larry; Stiles, Lewis; Stovall, Glenn; Strader, Kelly; Sumpter, James; Temple=
+, Arlena; Theobald, Tyler; Vollmer, Mary; Wagner, Glenda; Wendt, Richard; Wi=
+lhelm, John; Wilkins, Tony; Wojcik Jr., Ed
+Subject:	Infrastructure Prevents...
+
+
+All,
+
+Recent events have had us reporting virus outbreaks and outages which have i=
+mpacted business and communications.  With these incidents, we have had seve=
+ral meetings to discuss communications in times of crisis to ensure consiste=
+nt, validated content and appropriate mediums to use for that content.  All =
+to ensure everyone impacted is notified timely with accurate status.
+
+Since Friday (09/21), there have been three (3) incidents that have confront=
+ed our environment which did not impact our business due to our fault tolera=
+nce, pro-active measures and relationship with Enron Networks.  All of these=
+ incidents could have had a serious impact to our business, so I thought it =
+important to communicate these incidents and how they were handled which pre=
+vented any business impact.
+
+09/24 - 25:  W32.Vote.A@mm virus
+Working with Enron Networks, we were able to patch all servers and workstati=
+ons in ETS Houston and Omaha, ETS Field Operations, Azurix and EOTT.  Below =
+is a URL which conveys the damage potential this virus has which we avoided.=
+  Teams had to work through the night, but the end result was no business im=
+pact.
+
+http://securityresponse.symantec.com/avcenter/venc/data/w32.vote.a@mm.html
+
+09/22:  Power hit at Ardmore Data Center Facility
+
+During the morning of Saturday, lighting struck near the Ardmore data center=
+ facility knocking out all power.  The battery backup systems assumed the sy=
+stem load while the generators came on-line.  The Ardmore facility ran on ge=
+nerators through the day until power was re-established with Reliant.  ETS' =
+production SAN and the majority of our production database servers reside at=
+ Ardmore.  No systems were affected.
+
+09/21 SAN Drive Errors
+
+On Friday morning, one of the production drives on our Hitachi SAN reported =
+drive errors.  The SAN phoned home for support, a support technician was dis=
+patched and the drive reporting errors was replaced within 1 hour, 20 minute=
+s.  Upon the detection of drive errors, the SAN engaged an on-line hot spare=
+ as a replacement which assumed the function of the drive with errors.  The =
+drive was replaced, data replicated back over, and we were back live in our =
+original configuration.  It is important to note that new devices have an in=
+fant mortality rate for initial errors detected after shipping.  This rate u=
+sually occurs within 60 days of production go-live.  Impact to the business:=
+  None.
+
+These are 3 examples where our infrastructure withstood incidents.  I believ=
+e this communication is just as important as the communication we all desire=
+ in times of crisis.
+
+Thanks,
+-Scott.
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------030003080602070800040707--

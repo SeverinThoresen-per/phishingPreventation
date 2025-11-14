@@ -1,0 +1,178 @@
+MIME-Version: 1.0
+Message-ID: <02801A108AA632A67884590BF1FBEACEB55D5CC7@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Leslie" <Reeves>, "Melissa K" <Ratnala>, "Lisa" <Valderrama>, "Kristen J" <Hanson>, "Audrey" <Cook>
+To: SallyBeck
+From: "Bryce" <Baxter>
+Return-Path: Baxter
+Content-Type: multipart/alternative;
+	 boundary="------------030808000001070200050405"
+Subject: Re_ Perry Gas -SAP Override issue
+Date: Sat, 23 Sep 2000 03:41:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------030808000001070200050405
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+The cause of this was the timing of when SAP went down.  SAP had a major=20
+system crash the day Willie finaled his supply verification in Unify.  Befor=
+e=20
+Willie went into SAP to net the payable (same day), SAP crashed.  By the tim=
+e=20
+SAP came up, the treasury run had already picked up the payable and wired th=
+e=20
+cash.  When we issued the recall, the money was already out the door.
+
+As a result, we put a policy in place that all supply verifications for=20
+netout customers must be overridden as soon as they are finaled in Unify. =20
+This causes them to be blocked in SAP and not picked up by treasury until th=
+e=20
+payment block is removed.  This policy went into effect at the beginning of=20
+September. =20
+
+However, this still relies on human intervention to ensure the procedure=20
+works.  To ensure we don't "accidentally" release cash, I have asked Unify I=
+T=20
+to change the interface to send all purchases for ENA to SAP blocked, which=20
+will require the coordinator to release funds.  This is an added step, but i=
+s=20
+worth it considering the stakes.  This change will go into effect on Monday,=
+=20
+9/25.  If you have any questions, please let me know.
+
+Bryce
+
+
+  =20
+	Enron North America Corp.
+=09
+	From:  Sally Beck                           09/22/2000 04:33 PM
+=09
+
+To: Bryce Baxter/HOU/ECT@ECT, Leslie Reeves/HOU/ECT@ECT
+cc: =20
+Subject: Re: Perry Gas -SAP Override issue
+
+I have read this series of e:mails but I am not sure that I fully understand=
+=20
+the issue.  Did Willie not do his job?  Are there problems with how SAP=20
+works?  Are both of these an issue?  Please let me know if we have a far=20
+reaching problem with SAP and netting.  Thanks.  --Sally=20
+---------------------- Forwarded by Sally Beck/HOU/ECT on 09/22/2000 04:29 P=
+M=20
+---------------------------
+  =20
+=09
+=09
+	From:  William S Bradford                           09/22/2000 04:04 PM
+=09
+
+To: Sally Beck/HOU/ECT@ECT
+cc: Debbie R Brackett/HOU/ECT@ECT=20
+Subject: Re: Perry Gas -SAP Override issue
+
+Sally,
+
+Are you aware of the problems with SAP?  This error caused an incremental=20
+$600,000 credit loss to Perry Gas Companies that could have been prevented.
+
+Let me know if you have any questions.
+
+Bill
+
+---------------------- Forwarded by William S Bradford/HOU/ECT on 09/22/2000=
+=20
+04:02 PM ---------------------------
+  =20
+
+
+From:  Russell Diamond                                                      =
+ =20
+     09/22/2000 03:01 PM=09
+=09
+=09
+	                          =20
+=09
+
+To: William S Bradford/HOU/ECT@ECT, Debbie R Brackett/HOU/ECT@ECT
+cc: =20
+Subject: Re: Perry Gas -SAP Override issue
+
+FYI-
+
+---------------------- Forwarded by Russell Diamond/HOU/ECT on 09/22/2000=20
+03:01 PM ---------------------------
+  =20
+=09
+=09
+	From:  Bryce Baxter                           09/22/2000 02:47 PM
+=09
+
+To: Russell Diamond/HOU/ECT@ECT
+cc: =20
+Subject: Re: Perry Gas -SAP Override issue =20
+
+Russell - as I remember, Willie finaled the Supply Verification and it was=20
+interfaced to SAP.  This is fine, and then Willie was going to net the A/P=20
+and A/R.  SAP went down after the statement was interfaced, but before Willi=
+e=20
+was able to block or net the payment.  When SAP came back up the next day,=20
+the payment had already gone out and we were unable to recall the wire.  If=20
+you have any further questions about this, call me.  Thanks.
+
+
+  =20
+
+
+From:  Russell Diamond                                                      =
+ =20
+     09/22/2000 01:46 PM=09
+=09
+=09
+	                          =20
+=09
+
+To: Willie Stewart/HOU/ECT@ECT
+cc: Audrey Cook/HOU/ECT@ECT, Bryce Baxter/HOU/ECT@ECT=20
+Subject: Perry Gas -SAP Override issue
+
+Willie,
+
+Per our earlier conversation, can you or Audrey or Bryce, please give furthe=
+r=20
+explain to me as to why the funds were wired to Perry Gas for purchases from=
+=20
+the counterparty instead on netting the amounts between purchases and sales.=
+ =20
+You mentioned to me the process of overriding the counterparty's that net on=
+=20
+SAP, although because of timing, the override did not take place.
+
+Thank you,
+
+Russell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------030808000001070200050405--

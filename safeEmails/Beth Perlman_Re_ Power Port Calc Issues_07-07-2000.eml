@@ -1,0 +1,216 @@
+MIME-Version: 1.0
+Message-ID: <AFD782257C325DAF2088021C01CF8D26F99FD7BC@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "David W" <Delainey>, "Randy" <Matson>, "Sally" <Beck>, "Zhiyong" <Wei>, "Philippe A" <Bibi>
+To: "John J" <Lavorato>, "Kevin M" <Presto>, "Kristin" <Albrecht>, "Tim" <Belden>
+From: "Beth" <Perlman>
+Return-Path: Perlman
+Content-Type: multipart/alternative;
+	 boundary="------------080202080702010605050701"
+Subject: Re_ Power Port Calc Issues
+Date: Fri, 07 Jul 2000 17:29:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------080202080702010605050701
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+John,
+
+As of Wednesday, we have a resource from Sun Microsystems that is helping  u=
+s=20
+isolate the problems we're having with the UNIX operating system and our=20
+code.  This resource has requested that we bring on an additional applicatio=
+n=20
+specialist from SUN.  This has been authorized and the additional resource i=
+s=20
+scheduled to be on site next week.  I also have my resources and the UNIX=20
+administrators working along side the Sun resources.
+
+As an aside, we are also experiencing performance problems with the gas side=
+=20
+of the business.  I met with Sally Beck's controllers yesterday and we are=20
+putting a plan in place.  The increased trading volumes have seriously=20
+impacted our through put and we now have a 'blitz' on to correct the issues.
+
+These problems have not gone unnoticed.  I assure you that IT has been very=20
+diligent in following through on these problems.  We're investing heavily in=
+=20
+additional hardware, bringing in contractors and hiring additional resources=
+=20
+at an average of 5 - 8 per week.  I will keep you posted as we continue to=20
+enhance our existing systems.
+
+Beth
+
+
+
+
+
+
+	John J Lavorato@ENRON
+	07/06/2000 07:46 PM
+		=20
+		 To: Beth Perlman/HOU/ECT@ECT, David W Delainey/HOU/ECT@ECT
+		 cc:=20
+		 Subject: Power Port Calc Issues
+
+Beth=20
+
+Please respond with a plan to solve these problems.
+
+Thanks John
+---------------------- Forwarded by John J Lavorato/Corp/Enron on 07/06/2000=
+=20
+07:42 PM ---------------------------
+  =20
+=09
+=09
+	From:  Kevin M Presto @ ECT                           07/05/2000 07:39 PM
+=09
+
+To: John Lavorato
+cc: David W Delainey/HOU/ECT@ECT, Kristin Albrecht/HOU/ECT@ECT, Beth=20
+Perlman/HOU/ECT@ECT=20
+
+Subject: Power Port Calc Issues
+
+Guys,
+This Enpower calc issue is a joke.   How can we be the most Innovative=20
+Company in the world and cannot fix a risk book calculation problem. =20
+Furthermore, how can we effectively grow our volumes and complexity of our=20
+power transactions when our back office (risk books, position management,=20
+settlements) is so unreliable from an IT standpoint.
+
+In addition, we will start losing all of our key people in this area because=
+=20
+they are here until 8:30-9:00 every night and 4:00 pm on "holidays".  This=20
+whole issue is a significant business risk for Enron and needs to be dealt=20
+with accordingly.
+
+Please advise.  Thank you.
+---------------------- Forwarded by Kevin M Presto/HOU/ECT on 07/05/2000=20
+07:27 PM ---------------------------
+  =20
+	Enron North America Corp.
+=09
+	From:  Kristin Albrecht                           07/05/2000 11:30 AM
+=09
+
+To: Beth Perlman/HOU/ECT@ECT, Randy Matson/Corp/Enron@ENRON, Jarod=20
+Jenson/HOU/ECT@ECT, Christine Nguyen/HOU/ECT@ECT, Zhiyong Wei/HOU/ECT@ECT,=20
+Ravi Ramachandran/HOU/ECT@ECT, Stacey W White/HOU/ECT@ECT, Jenny=20
+Latham/HOU/ECT@ECT, Jenny Rub/GPGFIN/Enron@Enron
+cc: Sally Beck/HOU/ECT@ECT, Kevin M Presto/HOU/ECT@ECT, Tim=20
+Belden/HOU/ECT@ECT=20
+Subject: Power Port Calc Issues
+
+The Power risk group continues to experience severe instability with the=20
+power port calc.  The same memory allocation issue which I discussed in the=20
+message below is not resolved (we have had this problem for about four month=
+s=20
+now).  Due to business reasons, we calculated the east power books on Monday=
+=20
+(Enron holiday).  We received all of the required data to calc by 9:30 AM an=
+d=20
+should have been completely done by 11:30.  However, the calc crashed six=20
+times and finally completed on the seventh try.  We were able to leave by=20
+4:00.  The point I am trying to make is that I feel that we are at such a=20
+state that there is risk that we could not provide positions to the traders=20
+by the start of the next business day.  This could have a financial impact o=
+n=20
+our company.  Once again, I am urgently and desperately asking for resolutio=
+n=20
+of this problem.
+Furthermore, it came to my attention on Friday that EES is now using EnPower=
+=20
+and the power port calc and they too are using the same server that we are. =
+=20
+I question this decision since we cannot seem to support the existing=20
+business that is using that server.  Per discussion with Kevin Presto, the=20
+agreement made regarding EES's use of EnPower was there would be no expense=20
+or degradation to ENA's business process.  I think they need to move to=20
+another server.
+Please call to discuss when this will be resolved.  Thank You.
+Kristin Albrecht
+3-4763
+
+
+---------------------- Forwarded by Kristin Albrecht/HOU/ECT on 07/05/2000=20
+09:35 AM ---------------------------
+  =20
+	Enron North America Corp.
+=09
+	From:  Kristin Albrecht                           05/15/2000 09:48 AM
+=09
+
+To: Beth Perlman/HOU/ECT@ECT, Randy Matson/Corp/Enron@ENRON, Jarod=20
+Jenson/HOU/ECT@ECT, Christine Nguyen/HOU/ECT@ECT, Zhiyong Wei/HOU/ECT@ECT,=20
+Ravi Ramachandran/HOU/ECT@ECT, Stacey W White/HOU/ECT@ECT, Jenny=20
+Latham/HOU/ECT@ECT
+cc: =20
+Subject: athena vs quark
+
+With regards to the message below, we must have athena (server) to run our=20
+nightly risk books for the power group.  We run one of our three east power=20
+calcs on this machine (the second largest one).  Since an acceptable solutio=
+n=20
+for the big power calc has not been provided to us, athena CANNOT be taken=20
+away from us.  The east power calc crashed 3 out of 5 days last week.  We=20
+usually start calcing at about 4:00.  The calc time is now running at 1.5=20
+hours and we have about 1.5 hours' worth of work after the calc's successful=
+=20
+completion.  So you do the math on what time my group leaves the building=20
+when the calc crashes at 4:30.
+Furthermore, the West power calc has crashed 3 out of 5 nights weekly for th=
+e=20
+last 3 weeks.  This is not acceptable.
+We are about to enter the busiest and most volatile time of the year and our=
+=20
+system is not stable.  I feel like we have been very patient at the expense=20
+of many late nights.  I am going to speak to Kevin Presto and Tim Belden=20
+today about these problems.=20
+I think we need to meet immediately about this problem and I am exhausted=20
+with the finger pointing between different IT groups.
+Thanks.
+Kristin Albrecht
+---------------------- Forwarded by Kristin Albrecht/HOU/ECT on 05/15/2000=20
+09:27 AM ---------------------------
+  =20
+
+
+Christine Nguyen
+05/12/2000 01:01 PM
+To: Ravi Ramachandran/HOU/ECT@ECT
+cc: Randy Matson/Corp/Enron@ENRON=20
+Subject: athena vs quark
+
+Ravi,
+       Please advise your users that athena will be completely unavailable=20
+starting
+Wednesday17May2000.  The production server is quark (12gb RAMx18procs).
+quark is configured to our standard for your use.
+Thanks,
+-Christine
+
+
+
+
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------080202080702010605050701--

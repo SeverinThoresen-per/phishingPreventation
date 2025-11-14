@@ -1,0 +1,83 @@
+MIME-Version: 1.0
+Message-ID: <6C05C3B790A5B73AF84C9719284C333F8E357CE2@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: SmithWill
+To: SempergerCara
+From: Corry.Bentley@ENRON.com
+Return-Path: Corry.Bentley@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------060808060707050600000707"
+Subject: RE_ Testing June 22
+Date: Mon, 23 Jul 2001 16:13:55 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060808060707050600000707
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Cara,
+I was out Friday, but totally agree on segregation of East and West Confirma=
+tions.  Also, I agree that there needs to be a method to delete confirmation=
+ records (either for mistakes on date, path changes requiring it, etc).  I d=
+idn't get any records to go to the confirmation table on Thursday, so I'll l=
+ook at the information on the transmission cells uploaded today.
+
+I don't think repeating some of the errors we find is too big of a problem.
+
+CB
+
+ -----Original Message-----
+From: 	Semperger, Cara =20
+Sent:	Friday, July 20, 2001 4:07 PM
+To:	Bentley, Corry; Poston, David; Smith, Will; Venkataswami, Vishwanatha
+Subject:	Testing June 22
+
+Good Afternoon Everyone
+
+
+PreSchedule Workspace:
+
+I started uploading schedules last evening from the PSW to the Path Confirm =
+Dbase.  The COB sheet took 1 hour and 12 minutes to run 40 lines, still arou=
+nd 2 minutes per line.  This is an improvement, still slow for usefulness in=
+ production.
+
+I experimented with putting the transmission in the E column, to see if it w=
+ill represent in the path or if it will blow up the app. The result of that =
+was that it ran the lines and totally ignored anything extra in the E cell.=20
+
+
+
+Path Confirmation:
+
+We will need to automatically make sure that only East users see East Schedu=
+les and West users see West Schedules.  I cannot comprehend the nightmare of=
+ problems we will run into if we are not completely segregated.
+
+If I run lines into the wrong date, or for some other reason need to delete =
+entire records, how do I do that? I assure you this will happen.
+
+*Something seems to have changed in the transmission cell uploading, Any inf=
+ormation I put in the first set of Transmission cells is ignored. (Trans1 Na=
+me, Trans1 deal, Trans 1 oasis).
+
+
+That's all I am going to do for now,  we can pick things up again on Monday.=
+  Do you think it would be good to do a quick rundown of what has been ident=
+ified and what has been corrected ? I am worried that my testing might have =
+to be repeated on some of the same items due to the volume of e-mails.
+
+Thanks,
+
+Cara
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060808060707050600000707--

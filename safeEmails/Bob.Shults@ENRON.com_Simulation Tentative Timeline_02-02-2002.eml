@@ -1,0 +1,81 @@
+MIME-Version: 1.0
+Message-ID: <AB295AE1FCA371251D05098B4FBC4DA60FFE02D5@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Forster" <David>, beth.barrett@ubsw.com, "Beck" <Sally>
+To: "White  Stacey" <W.>, "Gossett  Jeffrey" <C.>
+From: Bob.Shults@ENRON.com
+Return-Path: Bob.Shults@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------010006070807040701030105"
+Subject: Simulation Tentative Timeline
+Date: Sat, 02 Feb 2002 01:55:32 +0200
+
+This is a multi-part message in MIME format.
+
+--------------010006070807040701030105
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+
+As a follow up to our meeting yesterday, here is a proposed timeline for the=
+ simulation which is scheduled for Thursday February 7th between 9:00 am and=
+ 11:00 am (Houston time):
+
+Monday February 4th:
+Complete preparation of Simulation Events and scripts
+
+Tuesday February 5th:
+Credit will provide a list of priority counterparties (anticipated to be app=
+roved for launch date)
+Online Operations activates all counterparties on priority list in database =
+and inactivates all other counterparties
+Credit uses Profile Manager to provide profiles for approved counterparties
+RAC inputs Sigma Factors into the database for all active Product Types
+Online Operations will issue new application and website User ID's and Passw=
+ords to Traders
+Online Operations confirms Product Types and Products are in the database
+Online Operations confirms Online Contracts are in the database
+
+Wednesday February 6th
+Online Operations completes desktop check-ups for all application and websit=
+e user
+Traders access applications and review products and stack relationships
+Counterparty User ID's and Passwords will be issued to role players
+Credit rolls headroom into online database (evening)
+Online Operations confirms database is set to Simulation scripts
+
+Thursday February 7th
+Simulation Trading 9:00 to 11:00 (Houston time)
+11:00 Emergency shut down of transaction system
+11:00 Simulation feedback
+11:00 - 3:00 process simulation transactions through mid and back office sys=
+tems
+3:00 - 8:00 Shut down all systems to purge transactions
+Credit rolls headroom into online database
+
+Please contact me if you have any questions or concerns on this.  Please not=
+ify me if any of these tasks are not or will not be completed on the day sug=
+gested.  Thanks
+
+
+
+
+Bob Shults
+EnronOnline LLC
+Houston, Texas 77002-7361
+713 853-0397
+713 825-6372 cell
+713 646-2126 fax
+713 467-6174 home
+bob.shults@enron.com
+rshults@houston.rr.com
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------010006070807040701030105--

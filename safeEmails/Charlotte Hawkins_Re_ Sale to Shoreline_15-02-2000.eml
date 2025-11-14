@@ -1,0 +1,134 @@
+MIME-Version: 1.0
+Message-ID: <B51187A7E4F9E06959610894BF180FFE0DA9000D@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Stella L" <Morris>, "Pat" <Clynes>
+To: DarenJFarmer
+From: "Charlotte" <Hawkins>
+Return-Path: Hawkins
+Content-Type: multipart/alternative;
+	 boundary="------------030008050108060400000107"
+Subject: Re_ Sale to Shoreline
+Date: Tue, 15 Feb 2000 03:51:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------030008050108060400000107
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Daren you are correct in that this was only in MOPS for the 26th.  It was=20
+edi'd over to POPS from the 25th through the 31st populating all days with=20
+the 16,700 nom.  The nom was never -0- out in POPS therefore the change=20
+notification process in POPS did not pick up a change at this meter.  This=20
+meter is pathed by Kim and confirmed by me - it is extremely odd that this=20
+was missed in MOPS.  The record would have been out of balance and someone,=20
+if not several people, normally would make a comment on this.   Also  -  all=
+=20
+of my records indicate that the 16,700 was good through the 31st except the=20
+MOPS entry.  My confirmations with Koch didn't reflect the -0- ;  the last=20
+report I have from Koch indicated the 16,700 stayed on, there was no record=20
+of a phone call indicating anything other than 16,700.  It is very odd for=20
+this many checks and balances to fail.  Also, the volumes were being sent=20
+back to MOPS which no one caught.  =20
+
+I have spoken with Koch today and they agree that the 16,700 should have gon=
+e=20
+to -0- therefore I have removed the nom from POPS confirmed volumes and=20
+re-allocated the meter.  The OBA has taken the hit and I am working off the=20
+imbalance now.
+
+Daren, I am sorry that you had to look into this when you feel this is my=20
+responsibility.  Stella was trying to help me out in clearing up errors=20
+because I was buried in current activity, thus the e-mail to you asking for=20
+your help. =20
+
+If this doesn't answer all the questions, just give me a call.
+
+Thanks,
+
+Charlotte
+
+
+
+
+
+Daren J Farmer
+02/14/2000 12:50 PM
+To: Stella L Morris/HOU/ECT@ECT, Charlotte Hawkins/HOU/ECT@ECT
+cc: Pat Clynes/Corp/Enron@ENRON=20
+Subject: Re: Sale to Shoreline =20
+
+Stella and Charlotte,=20
+
+I looked into this deal.  We sold this gas for one day only.  In MOPS, the=20
+path was nominated for 1/26 only.  However, in POPS the path was nominated=20
+and confirmed for 1/26-1/31.  This should have been showing up as a=20
+bridgeback error during the month.  Also, someone should have identified tha=
+t=20
+the path/nom in MOPS wasn't the same as the nom in POPS.  This discrepancy=20
+should have been found before we closed out January.
+
+I researched this problem by reviewing both systems (looking at the path id=20
+in POPS, finding it in MOPS, and checking the audit on the path in MOPS). =20
+This type of issue should be researched and solved by the logistics group,=20
+who has all the necessary tools to find the problem.  The resolution, not th=
+e=20
+problem, should have been presented to myself or the marketer, with an=20
+explanation of what happened.  Some one still needs to find out how the gas=20
+was confirmed for the 27th-31st.
+
+Since the gas apparently flowed, we will have to apply the overflow to the=20
+OBA.  Unless you can find a missing transport contract.
+
+D
+
+
+  =20
+=09
+=09
+	From:  Stella L Morris                           02/10/2000 02:26 PM
+=09
+
+To: Daren J Farmer/HOU/ECT@ECT
+cc: Charlotte Hawkins/HOU/ECT@ECT=20
+Subject: Sale to Shoreline
+
+FYI
+---------------------- Forwarded by Stella L Morris/HOU/ECT on 02/10/2000=20
+02:25 PM ---------------------------
+  =20
+=09
+=09
+	From:  Sherlyn Schumack                           02/10/2000 02:21 PM
+=09
+
+To: Joanie H Ngo/HOU/ECT@ECT, Katherine Herrera/Corp/Enron@ENRON
+cc: Stella L Morris/HOU/ECT@ECT=20
+Subject: Sale to Shoreline
+
+Joanie,
+
+Logistics is waiting to hear from Daren on this issue.  He will either need=20
+to extend the deal or maybe there should be another deal in place.   This=20
+deal 155118 is valid on 1/26/00 only, but the rest of the volume you are=20
+looking for is scheduled on days 1/27 - 1/31.    I am sure there is no=20
+pricing on those days. =20
+
+I will let you know as soon as I hear from them.
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------030008050108060400000107--

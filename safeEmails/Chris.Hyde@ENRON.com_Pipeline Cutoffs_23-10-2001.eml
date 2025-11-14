@@ -1,0 +1,51 @@
+MIME-Version: 1.0
+Message-ID: <DE9C3BE6A07A7296995E6B40EB4FD1560754AB06@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Dronet" <David>, "Grigsby" <Mike>
+To: "Pena" <Matt>, "Shim" <Elizabeth>
+From: Chris.Hyde@ENRON.com
+Return-Path: Chris.Hyde@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------050800040105060006040607"
+Subject: Pipeline Cutoffs
+Date: Tue, 23 Oct 2001 23:15:10 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050800040105060006040607
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Just an update, to keep everyone current on the progress of this initiative:
+
+We (Matt (from Unify), Liz, Dave, and myself) met today and attempted to fin=
+d ways to directly relate the Passport information (from El Paso) to the cor=
+responding prices etc. in Unify.  Unfortunately, we discovered that there is=
+ no direct "fool-proof" way to accomplish this.  However, we have come up wi=
+th a couple of things to try:
+
+Liz is going to contact El Paso directly, and see if there is any other info=
+rmation they can provide in the Passport file that better uniquely identifie=
+s each deal / cut.  Hopefully, this will be something that makes relating th=
+e data to Unify much easier.
+Matt is going to take a look at the format / content of the "scheduled quant=
+ity" file that comes in currently through the EDI Hub.  It's possible that t=
+his file contains cut information itself, which would possibly alleviate the=
+ need to use the Passport file altogether.
+
+I believe that succinctly recaps the results of our meeting today.  If I hav=
+e misrepresented anything, please let me know.  Also, feel free to contact m=
+e with any questions or concerns.
+
+Thanks,
+Chris
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050800040105060006040607--

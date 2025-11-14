@@ -1,0 +1,248 @@
+MIME-Version: 1.0
+Message-ID: <FD4AC331C99DC1ECB7A234D6D885D7E8D0E1EEE8@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: JudyTownsend
+To: "David" <Oliver>, "Crystal" <Hyde>, "Imelda" <Frayre>, "Tricia" <Bowen>, "Christina" <Sanchez>
+From: "Chris" <Germany>
+Return-Path: Germany
+Content-Type: multipart/alternative;
+	 boundary="------------050203050204080205070308"
+Subject: Re_ Sea Robin Well Head Curve
+Date: Mon, 08 May 2000 23:56:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050203050204080205070308
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Hi gang.  We still need to make some changes to Sea Robin.
+
+I believe we need 2 pricing zones, Mainline Pool and Offshore.  The new Sea=20
+Robin curve will be used to value the Offshore zone and we will use CGLF/La=20
+curve to value everything else.  Per my discussion with Christine, the=20
+following meters should be moved/mapped to the Offshore zone;
+
+Meter
+4743
+4747
+4741
+4754
+4771
+4753
+4794
+4728
+4700
+4749
+4751
+9740
+6335
+6333
+4794
+4700
+4850
+ISRP84
+FSRP3
+2SRP9
+
+
+Please let me know what I need to do or if anyone has any questions.
+
+
+  =20
+=09
+=09
+	From:  David Oliver                           05/08/2000 01:42 PM
+=09
+
+To: Chris Germany/HOU/ECT@ECT
+cc: =20
+Subject: Re: Sea Robin Well Head Curve
+
+
+Chris,
+
+Here is the thread on the Sea Robin Curve
+
+Dave
+
+---------------------- Forwarded by David Oliver/HOU/ECT on 05/08/2000 01:41=
+=20
+PM ---------------------------
+From: David Oliver on 05/03/2000 08:19 AM
+To: Imelda Frayre/HOU/ECT@ECT
+cc: William Kelly/HOU/ECT@ECT=20
+Subject: Re: Sea Robin Well Head Curve =20
+
+
+I think the best thing to do would be to create a separate zone for all of=20
+those ISRP meters.  The traders typically take deals from ISRP to the Pool=20
+and incur transport.  Therefore having two zone would more accurately=20
+represent what is actually happening.
+
+I am in London helping Brent Price with some audit work that he is doing.
+
+David
+
+
+
+
+Imelda Frayre
+
+05/03/2000 08:07 AM
+To: David Oliver/HOU/ECT@ECT
+cc: William Kelly/HOU/ECT@ECT=20
+Subject: Re: Sea Robin Well Head Curve
+
+Well, whenever we map specific meters on a zone to curves that are different=
+=20
+than what the entire zone is mapped to, we create an alternative facility=20
+mapping for each specific meter that you want mapped differently.  Currently=
+,=20
+there are 137 active meters on the Sea Robin Pool zone with a prefix of=20
+ISRP.  That would mean I would have to create 137 alternative facility=20
+mappings.  Another alternative would be to have all of those meters moved to=
+=20
+their own zone and then just create one mapping for that whole zone. =20
+However, this will also take a great deal of time, since Global Facilities=20
+would have to change the zone on every single facility record.  Plus, we=20
+would have to see what type of activity is on all of these meters and we=20
+would have to update the zone on all of these deals after Global Facilities=20
+made it's change.  So, let me know what your thoughts are.  What are you=20
+doing in London???
+
+Imelda
+---------------------- Forwarded by Imelda Frayre/HOU/ECT on 05/03/2000 07:5=
+8=20
+AM ---------------------------
+From: David Oliver on 05/03/2000 07:54 AM
+To: Imelda Frayre/HOU/ECT@ECT
+cc: William Kelly/HOU/ECT@ECT=20
+Subject: Re: Sea Robin Well Head Curve =20
+
+
+Imelda,
+
+I am in London right now, and dont' have access to a phone.  The only part o=
+f=20
+Sea robin that should be moved are the meters with a prefix of ISRP.  I'm=20
+sorry if that wasn't clear.  Please let me know if that will be a problem to=
+=20
+fix.
+
+David
+
+
+
+
+Imelda Frayre
+
+05/03/2000 07:47 AM
+To: William Kelly/HOU/ECT@ECT, David Oliver/HOU/ECT@ECT
+cc: Karie Hastings/HOU/ECT@ECT=20
+Subject: Re: Sea Robin Well Head Curve
+
+David, Sea Robin Pool is a zone on the Sea Robin Pipeline (SEAR).  The Sea=20
+Robin Pool zone includes many different meters some of which do have a prefi=
+x=20
+of ISRP.  However, there are also other meters in that zone that have the=20
+following prefixes: LSRP, FSRP and PSRP.  I mapped the entire zone to the ne=
+w=20
+curves you sent us.  Given your message it seems like things might not be=20
+peachy after all if you only wanted the ISRP meters mapped that way.  Please=
+=20
+call me as soon as you get a chance.
+
+Imelda Frayre
+x35423
+---------------------- Forwarded by Imelda Frayre/HOU/ECT on 05/03/2000 07:3=
+8=20
+AM ---------------------------
+From: David Oliver on 05/03/2000 02:40 AM
+To: William Kelly/HOU/ECT@ECT, Imelda Frayre/HOU/ECT@ECT, Karie=20
+Hastings/HOU/ECT@ECT
+cc: =20
+Subject: Re: Sea Robin Well Head Curve =20
+
+
+I am not sure if Searobin ISRP is a meter level location or Zone level, but=20
+as long as only Sea Robin Pool ISRP locations are mapped to the new curve,=20
+then everything will be peachy.
+
+David
+
+
+To: David Oliver/HOU/ECT
+cc: =20
+Subject: Re: Sea Robin Well Head Curve =20
+
+Dave - they called me on this to see if it was a meter mapping or a zone=20
+mapping.  I said zone.....
+
+
+
+
+
+
+KARIE HASTINGS
+05/02/2000 05:31 PM
+To: William Kelly/HOU/ECT@ECT
+cc: =20
+Subject: Sea Robin Well Head Curve
+
+
+---------------------- Forwarded by Karie Hastings/HOU/ECT on 05/02/2000=20
+05:29 PM ---------------------------
+  =20
+=09
+=09
+	From:  David Oliver                           04/28/2000 04:10 PM
+=09
+
+To: Imelda Frayre/HOU/ECT@ECT, Karie Hastings/HOU/ECT@ECT
+cc: Alicia Perkins/HOU/ECT@ECT, Crystal Hyde/HOU/ECT@ECT=20
+Subject: Sea Robin Well Head Curve
+
+
+Imelda and Karie,
+
+The East desk traders have asked me to set up a new curve for the Sear/Sea=20
+Robin Pool/ISRP zone.  The curve is already set up in Erms.  Please do your=20
+sitara voodoo to map the above location to this new curve.
+
+Pipe Zone   Intramonth  Mid  Gas Daily
+SEAR Sea Robin Pool/ISRP      IF-Searobinwh IF-Colgulf/LA       =20
+GDC-Searobinwh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050203050204080205070308--

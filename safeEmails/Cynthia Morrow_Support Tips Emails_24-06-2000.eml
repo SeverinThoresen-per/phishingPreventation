@@ -1,0 +1,71 @@
+MIME-Version: 1.0
+Message-ID: <B1F625706CE3532418FE755F8C36EE494A44FE70@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: "Ken" <Choyce>, "Dian" <Chu>, "Frank" <Cernosek>, "Paula" <Harris>, "Larry Joe" <Hunter>, "Lisa" <King>
+From: "Cynthia" <Morrow>
+Return-Path: Morrow
+Content-Type: multipart/alternative;
+	 boundary="------------010803010700080704010403"
+Subject: Support Tips Emails
+Date: Sat, 24 Jun 2000 01:19:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------010803010700080704010403
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+A helpful hint of the day.
+---------------------- Forwarded by Cynthia Morrow/Corp/Enron on 06/23/2000=20
+05:19 PM ---------------------------
+  =20
+=09
+=09
+	From:  SAP Security                           06/23/2000 04:14 PM
+=09
+
+Sent by: Danette Campbell
+To: Enron Apollo & Beyond X Key Site Contacts, ENRON APOLLO AND BEYOND ALL=20
+PROJECT TEAM, Enron SAP COE Team - Houston Only
+cc: Betsey Tufano/Corp/Enron@ENRON=20
+
+Subject: Support Tips Emails
+
+And you thought that it couldn't get any better.....but it does!!  Keep=20
+looking for the Support Tipemails coming soon to LotusNotes everywhere.
+
+So I got my eHROnline ID.....but what's my SAP GUI id???
+The SAP ID that should have been received by users this week was for BOTH eH=
+R
+Online AND the SAP GUI.=20
+Also remember that although several people may have been working with alpha=20
+IDs (rsmith) for the past several months, these IDs WILL BE TURNED OFF by=20
+JULY 15, 2000.  Users are STRONGLY encouraged to begin using their Pid for=20
+their GUI transactions, and MUST use their Pid for any time entry on eHR
+Online.
+ =20
+What about the passwords?
+The passwords are synchronized, so this means that when a user logs on onlin=
+e=20
+and changes their initial password from their birthday to one of their=20
+choosing it is changed in ALL INSTANCES OF SAP; PR1, PR2 and all online=20
+sessions (the online sessions are just an extension of PR1 and PR2).  This=20
+new password is now good IN ALL PRODUCTION BOXES, ie. PR1 and PR2.  The user=
+s=20
+should NOT try and log on to the GUI with their birthday if they have alread=
+y=20
+changed their password online or viceversa.
+
+If you have questions, please contact Betsey Tufano, SAP Security support at=
+=20
+X57488.
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------010803010700080704010403--

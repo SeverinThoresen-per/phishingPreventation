@@ -1,0 +1,146 @@
+MIME-Version: 1.0
+Message-ID: <371FB245A392EF237A61D2BC2A29A20C1E2F057C@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: JackieYoung
+From: "Daren J" <Farmer>
+Return-Path: Farmer
+Content-Type: multipart/alternative;
+	 boundary="------------040302080006080702050802"
+Subject: Re_ Meter 984132 for 1_16_99
+Date: Tue, 05 Sep 2000 21:06:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040302080006080702050802
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+10,000 should be allocated to Adonis #51862 on the 5th only.  Nothing should=
+=20
+be allocated or confirmed for Adonis on the 16th.  Additionally, it looks=20
+like 5000 was confirmed as a receipt from Mitchell (Track ID 3167) on the=20
+16th.  This should be -0- also.  By taking the conf/allocation for Adonis=20
+(Track ID 6155) and Mitchell (Track ID 3167) to zero on the 16th, the meter=20
+balance remains the same and the bridge errors will be cleared.
+
+D
+
+
+
+
+Jackie Young
+08/24/2000 08:33 AM
+To: Karen Lindley/Corp/Enron@ENRON, Sherlyn Schumack/HOU/ECT@ECT
+cc: Daren J Farmer/HOU/ECT@ECT=20
+Subject: Re: Meter 984132 for 1/16/99
+
+Karen/Sherlyn,
+
+Gary has placed this in Daren's lap.  Please read the below information that=
+=20
+was requested of me from Daren.=20
+
+This is the latest.
+
+I'll get back as soon as I hear from Daren again about my response to him.
+
+-Jackie-
+3-9497
+---------------------- Forwarded by Jackie Young/HOU/ECT on 08/24/2000 08:32=
+=20
+AM ---------------------------
+
+
+Jackie Young
+08/23/2000 04:27 PM
+To: Daren J Farmer/HOU/ECT@ECT
+cc: =20
+Subject: Re: Meter 984132 for 1/16/99 =20
+
+On day 5 in MOPS (HPL/ENA) there is a delivery nom of 10.0 pathed to the ENA=
+=20
+201 K.  On day 16 in MOPS (HPL/ENA) there is not a deal (which is strange=20
+because day 16 in POPS references Adonis).  The deal on the 5th was a swing=20
+deal.=20
+
+
+
+Daren J Farmer
+08/23/2000 12:59 PM
+To: Jackie Young/HOU/ECT@ECT
+cc: =20
+Subject: Meter 984132 for 1/16/99
+
+Jackie,=20
+
+What does MOPS show for the days in question?  It would be incorrect to add=20
+any days to the Adonis ticket mentioned below.  It sounds as if the meter wa=
+s=20
+allocated incorrectly in POPS and/or a deal was not pathed correctly in=20
+MOPS.  Let me know what you find in MOPS.
+
+D
+---------------------- Forwarded by Daren J Farmer/HOU/ECT on 08/23/2000=20
+12:54 PM ---------------------------
+  =20
+	Enron North America Corp.
+=09
+	From:  Gary W Lamphier                           08/22/2000 02:51 PM
+=09
+
+To: Daren J Farmer/HOU/ECT@ECT
+cc: =20
+Subject: Meter 984132 for 1/16/99
+
+
+---------------------- Forwarded by Gary W Lamphier/HOU/ECT on 08/22/2000=20
+02:51 PM ---------------------------
+  =20
+=09
+=09
+	From:  Sherlyn Schumack                           08/22/2000 02:07 PM
+=09
+
+To: Jackie Young/HOU/ECT@ECT, Karen Lindley/Corp/Enron@ENRON
+cc: Gary W Lamphier/HOU/ECT@ECT=20
+Subject: Meter 984132 for 1/16/99
+
+Here is the issue for 1/16/99 at meter 984132.  =20
+
+20,000 mmbtu were confirmed for Adonis in POPS.   10,000 mmbtu on day 5 and=20
+day 16.   Day 16 is not valid for deal 51862 (track id 6155), which is where=
+=20
+10,000 was confirmed.   The  actual sale to Adonis was 10,000 which was=20
+invoiced and paid by Adonis.  We are trying to clear the feedback error=20
+report.   My question is why was 10,000 confirmed on 1/16/99 if the date is=20
+not valid for the deal?
+
+When Karen allocates the actual 10,000 it is prorating 5,000 for each day=20
+that is confirmed (the 5th and 16th). =20
+
+Should the whole 10,000 be allocated to the 5th or should 5,000 be allocated=
+=20
+to each day?   If 5,000 should be allocated to each day, the 16th needs to b=
+e=20
+added to the deal.
+
+
+
+
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040302080006080702050802--

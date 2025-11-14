@@ -1,0 +1,155 @@
+MIME-Version: 1.0
+Message-ID: <A73582AEE819ACC4916BD6B135E04AEE5A52D03C@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: SallyBeck
+From: "Brent A" <Price>
+Return-Path: Price
+Content-Type: multipart/alternative;
+	 boundary="------------000501000608030404010106"
+Subject: Re_ TAGG modification request
+Date: Thu, 29 Jun 2000 20:37:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000501000608030404010106
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Looks like we can get some help to automate the swaption notification proces=
+s=20
+going forward...
+---------------------- Forwarded by Brent A Price/HOU/ECT on 06/29/2000 11:3=
+1=20
+AM ---------------------------
+
+
+Ron Nolte
+06/29/2000 12:32 PM
+To: Souad Mahmassani/Corp/Enron@ENRON
+cc: Brent A Price/HOU/ECT@ECT, Jefferson D Sorenson/HOU/ECT@ECT, Jeff=20
+Johnson/Corp/Enron@Enron, Beth Perlman/HOU/ECT@ECT=20
+Subject: Re: TAGG modification request =20
+
+Souad,
+
+There are expiration dates for swaptions/options on the "Detail" button in=20
+TAGG Deal Capture.  Let's
+do the following.  Go into TAGG Deal Capture and check to make sure these=20
+dates are valid for swaptions/options.
+
+We will write a report that you can run that identifies deals that are =20
+expiring.
+
+Thanks, Ron
+
+
+
+
+
+Brent A Price
+06-29-2000 02:49 AM
+To: Jefferson D Sorenson/HOU/ECT@ECT, Jeff Johnson/Corp/Enron@Enron, Beth=20
+Perlman/HOU/ECT@ECT, Ron Nolte/HOU/ECT@ECT
+cc: =20
+Subject: Re: TAGG modification request =20
+
+We really need to raise the priority on getting this done.  We had a swaptio=
+n=20
+with significant value to Enron not get excersied this month due to=20
+breakdowns in the manual process.  Let me know how extensive this will be=20
+from an IT perspective.  Thanks
+
+
+  =20
+=09
+=09
+	From:  Jefferson D Sorenson                           06/28/2000 09:53 PM
+=09
+
+To: Brent A Price/HOU/ECT@ECT
+cc: =20
+Subject: Re: TAGG modification request
+
+the reason for this message and the other message addressed to Jeff Johnson=20
+is that we have system modifications that due to system resources may or may=
+=20
+not get done.  note the ClickPaper comment.
+Jeff
+---------------------- Forwarded by Jefferson D Sorenson/HOU/ECT on=20
+06/28/2000 03:50 PM ---------------------------
+
+
+Ron Nolte
+06/28/2000 03:49 PM
+To: Souad Mahmassani/Corp/Enron@ENRON
+cc: Larry Joe Hunter/HOU/ECT@ECT, Jefferson D Sorenson/HOU/ECT@ECT=20
+Subject: Re: TAGG modification request =20
+
+Souad,
+
+We can implement this - the question is "when". As I indicated to Jeff, we=20
+are currently working on ClickPaper
+but we will work on whatever is a higher priority from Enron's point of view=
+=2E
+
+Thanks, Ron
+do to get your request=20
+
+
+
+Souad Mahmassani
+06-28-2000 02:47 PM
+To: Ron Nolte/HOU/ECT@ECT
+cc: Larry Joe Hunter/HOU/ECT@ECT, Jefferson D Sorenson/HOU/ECT@ECT=20
+Subject: TAGG modification request
+
+Ron,
+
+A series of significant events took place this week where it made it more=20
+apparent that a modification in Tagg is highly needed.   Without going into =
+a=20
+lot of detail regarding the events, the modification desired is simply an=20
+Expiration Date field for certain types of transactions (Swaptions), where a=
+=20
+date is keyed by the user at the time the trade is entered into TAGG.  In=20
+addition, this feature will permit TAGG to prompt the user or users with a=20
+message box of the Expiration date and associated Deal Number at a later=20
+time, before the expiration date becomes current (i.e. a week before the=20
+expiration date becomes current). =20
+
+This request carries a lot of value for it allows ENA to avoid a variety of=20
+risks underlying missing execution of certain types of trades.  This issue=20
+was addressed in the past and I would like to raise it again.
+
+Can we implement such modification? Your prompt response is highly needed an=
+d=20
+your feedback is appreciated. =20
+
+Thanks.=20
+
+
+I work on the confirmation desk, reporting to Jeff Sorenson.  Please call me=
+=20
+if you have any questions or suggestions (X37580).=20
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000501000608030404010106--

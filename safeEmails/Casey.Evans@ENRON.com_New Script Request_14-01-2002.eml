@@ -1,0 +1,87 @@
+MIME-Version: 1.0
+Message-ID: <5A14ADE5DF8F223496B6EB3D8B9387DD1066764D@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Postlethwaite" <John>, "Chang" <Fran>
+To: "Crooks" <William>, "Kroumov" <Kroum>
+From: Casey.Evans@ENRON.com
+Return-Path: Casey.Evans@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------000207030601080006010407"
+Subject: New Script Request
+Date: Mon, 14 Jan 2002 23:39:17 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000207030601080006010407
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Guys,
+
+New task......we are going to change the primary counterparty on all of our =
+other existing counterparties in the East and West portfolios to the followi=
+ng EPMI desk names:
+
+EPMI-EAST-NPERF	(EPMI East Non Performance)
+EPMI-WEST-NPERF	(EPMI West Non Performance)
+
+Our goal is to have this done tomorrow.  I will provide you with a list of c=
+ounterparties on which we will be changing all associated deals ASAP.
+
+Let me know if you guys have any questions!
+Thanks, as always!
+Casey
+
+
+ -----Original Message-----
+From: 	Evans, Casey =20
+Sent:	Thursday, January  10, 2002 5:10 PM
+To:	Crooks, William; Smith, Will
+Subject:	FW: Customer List
+
+fyi....I will need yall's help probably Monday (once the book is set up in E=
+npower) in changing the primary counterparty name on the deals associated wi=
+th the counterparties below from the current Enron entity to the the new Enr=
+on book name of "EPMI-EAST-PERF".  Just wanted to give you a heads up so you=
+ can begin composing the script....
+
+Thanks guys!!
+Casey
+
+ -----Original Message-----
+From: 	White, Stacey W. =20
+Sent:	Thursday, January  10, 2002 4:36 PM
+To:	Postlethwaite, John; Evans, Casey
+Subject:	FW: Customer List
+
+Each of you needs to send a book request for the East & West portfolios for =
+the counterparties listed in the following spreadsheet.  The spreadsheet ide=
+ntifies those counterparties which we are still performing under the contrac=
+ts.  Please create a East-Performance and a West-Performance book.  We then =
+need to get all deals with the following counterparties moved to those books=
+=2E  I would suggest you pull the values out of AdHoc as of 12/31 for the co=
+unterparties by desk before transferring them to the new desk.  Obviously th=
+ese transactions will create prior days and the amount will run through the =
+P&L in the old and new books and flatten out.  The remaining prior day value=
+ will need to be in Schedule E.
+
+Stacey
+
+ -----Original Message-----
+From: 	Luong, Steven =20
+Sent:	Thursday, January 10, 2002 1:08 PM
+To:	White, Stacey W.
+Subject:	Customer List
+
+ << File: customers served 1-9-02.xls >>=20
+Don asked me to send you this file.
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000207030601080006010407--

@@ -1,0 +1,152 @@
+MIME-Version: 1.0
+Message-ID: <1ECD904289DAAB6FE90CEBC500874A6DFD4420BF@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: ColinPoonTip
+From: "Cooper" <Richey>
+Return-Path: Richey
+Content-Type: multipart/alternative;
+	 boundary="------------070408040300030705010506"
+Subject: RE_ smtp server
+Date: Wed, 30 May 2001 12:44:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------070408040300030705010506
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+this was Tim Heizenrader's take on the error he was having with the smtp ser=
+ver in portland.
+
+
+---------------------- Forwarded by Cooper Richey/CAL/ECT on 05/29/2001 02:3=
+9 PM ---------------------------
+From:	Tim Heizenrader/ENRON@enronXgate on 05/15/2001 10:52 AM CDT
+To:	Cooper Richey/CAL/ECT@ECT
+cc:	Dan Dietrich/ENRON@enronXgate=20
+Subject:	RE: smtp server
+
+
+The biggest thing here seems to be the issue of the reverse lookups. I don't=
+ know if transmitting the subdomain is an actual error on our part, but it's=
+ certainly something that can be eliminated by configuration on our server- =
+there's a sendmail.cf parameter specifically dedicated to set your domain id=
+entification.
+ -----Original Message-----
+From: 	Richey, Cooper =20
+Sent:	Monday, May 14, 2001 8:52 AM
+To:	Heizenrader, Timothy
+Cc:	Dietrich, Dan
+Subject:	RE: smtp server
+
+In addition, the app I'm using to send messages is still running under NT4.
+
+It may be that the problem rests with Telus up here in Calgary, but it may b=
+e=20
+internal as well. =20
+
+In answer to your previous question, no sql dbs are sending these messages o=
+ut. =20
+Basically, it's Tim H., Maria Van Houten, and myself. =20
+
+Cooper
+
+
+
+From:	Tim Heizenrader/ENRON@enronXgate on 05/15/2001 10:35 AM CDT
+To:	Dan Dietrich/ENRON@enronXgate, Cooper Richey/CAL/ECT@ECT
+cc:	=20
+Subject:	RE: smtp server
+
+All:
+
+I started having problems a couple of weeks ago, around the time of our Wind=
+ows 2000 migration. I worked on this a little yesterday, got past my own pro=
+blems, and found 3 things:
+
+	1. The command line mailer that I use for programmed email transmissions is=
+ blat, and some features weren't working under 2000- upgrading to the latest=
+ version fixed this;
+	2. mail.ect.enron.com accepts and transmits everything, but relays and rece=
+iving servers that do reverse name lookups reject the default domain name th=
+at our server transmits. In my case, this is theizen@dserv1.ect.enron.com. T=
+he problem seems to be the "dserv1.ect." part, because telling blat to trans=
+mit a specific id, e.g. theizen@enron.com, works without problems. I've adde=
+d this switch to my scripts, and they're all working.
+	3. The address that I was testing for Cooper, "4035123312@text.telus.com" i=
+s reachable, but the user seems to be unknown.
+Tim
+
+ -----Original Message-----
+From: 	Dietrich, Dan =20
+Sent:	Tuesday, May 15, 2001 8:19 AM
+To:	Richey, Cooper
+Cc:	Heizenrader, Timothy
+Subject:	RE: smtp server
+
+I'll need a little time to dig on this one. When did the bounced messages st=
+art?
+
+
+ -----Original Message-----
+From: 	Richey, Cooper =20
+Sent:	Monday, May 14, 2001 9:53 AM
+To:	Dietrich, Dan
+Cc:	Heizenrader, Timothy
+Subject:	smtp server
+
+Dan,
+
+Both Portland and Calgary Fundamentals groups use an smtp server located in =
+Houston to=20
+automatically (with a program) send out messages based on market data.  Thes=
+e messages=20
+are sent to both internal (enron.com) and external (cellphones, blackberries=
+, etc.) addresses. =20
+
+Recently, some (not all) of the external messages have bounced, and Tim Heiz=
+enrader and I are
+getting a variety of error messages and its not clear exactly what the sourc=
+e of the problem
+is (win2k, new firewall procedures, new mail server procedures, errors in sm=
+s servers on=20
+the other end).  Effectively, the problem can be in 4 areas=20
+	the apps we use to send the messages
+	the smtp server
+	the enron firewall
+	the message recipient servers
+
+As usual, it seems like it may be a combination of these things.
+
+The server we are using to send these messages out is mail.ect.enron.com (wh=
+ich resolves=20
+to dserve1.ect.enron.com).  Can you tell me if there have been any policy ch=
+anges regarding
+the smtp server (dserve1.ect.enron.com) or the firewall that would affect so=
+me but not all external=20
+messages?  (If so, we need to figure out a way to automatically send message=
+s to external addresses
+that is consistent with new policies)
+
+FYI: we have been using this server for over a year and a half, but have nev=
+er asked anyone=20
+if we could use it, etc. =20
+
+Thanks for your help
+Cooper
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------070408040300030705010506--

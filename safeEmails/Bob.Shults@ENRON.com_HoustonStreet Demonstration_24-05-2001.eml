@@ -1,0 +1,92 @@
+MIME-Version: 1.0
+Message-ID: <F631E14501BEEC356C6C5B8497DADABA515B175C@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "McCullough" <Travis>, "Edison" <Andrew>
+To: ZipperAndy
+From: Bob.Shults@ENRON.com
+Return-Path: Bob.Shults@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------000203070604080803020003"
+Subject: HoustonStreet Demonstration
+Date: Thu, 24 May 2001 00:56:07 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000203070604080803020003
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+On May 22, 2001 HoustonStreet representatives (Frank Getman, John Wyman and =
+David Cuadros) came to Enron to give us a demonstration of the gas interface=
+s.  HoustonStreet was allowed to load the required .cab files on the demonst=
+ration computers prior to the demonstration.  HoustonStreet provided us with=
+ a script to follow relative to the demonstration as well as a list of test =
+and production mappings.  During the demonstration we experienced the follow=
+ing:
+
+1 - 8 second delays between a price update on EnronOnline and a price update=
+ on HoustonStreet.  With just five products active we experienced a delay of=
+ up to 5 seconds.  Due to the delay in price updates, transaction attempts o=
+n the HoustonStreet platform resulted in a high percentage of failed transac=
+tions with Enron.
+When we activated Product ID 16612 (US Gas Basis PEPL Jun-Oct01) the product=
+ showed up on EnronOnline but did not show up on HoustonStreet.  HoustonStre=
+et provided us with a list of products which had been mapped in the test env=
+ironment and this product was included on the list.  HoustonStreet indicated=
+ that they had verified the mapping of all the products on this list.  We re=
+viewed the mapping of this product by Enron and confirmed that it was active=
+ and mapped.  Incorrect mapping of products has the potential of allowing tr=
+ansactions to occur with mismatched product types.
+When we attempted to transact on Product ID 16600 (US Gas Basis NGI Chicago =
+Jun-Oct01) we were unable to complete a transaction even when the bid and of=
+fer prices were not changing.  These transaction attempts should have result=
+ed in successful transactions.  We also experience instances where the bid a=
+nd/or offer price would disappear after a failed transaction attempt and not=
+ reappear even thought the price was still present on EnronOnline.  In many =
+cases the price would disappear for up to 30 seconds or more.  Although we d=
+id not witness any incorrect transactions, general functionality failure may=
+ or may not result in incorrect transactions.  At a minimum this type of beh=
+avior would result in frustration on the part of the counterparty when a tra=
+nsaction attempt results in a failure with no subsequent price move or a dis=
+appearing price.
+A review of the transactions we recorded versus the transactions indicated b=
+y HoustonStreet reveals some discrepancies.  In an email from John Wyman dat=
+ed 5/23 (forwarded seperately), John Wyman indicated that they had cleaned t=
+heir database just prior to 3:00 PM and gave us just the trade count beginni=
+ng at 14:58 on 5/22.  Although there has not been a deal by deal reconciliat=
+ion of the trades, we compared our total trade count beginning at 14:58.  If=
+ the deal counts do not match this would result in substantial financial exp=
+osure.  Below I have highlighted the HoustonStreet transactions by counterpa=
+rty versus the EnronOnline transaction count:
+
+			HSE	EOL
+
+	Arizona		 12	 14
+	Avista		 03	 03
+	Adams		 17	 19
+	BP		 57	 58
+=09
+	Total		 89	 94
+=09
+Based upon my review of the demonstration, I continue to believe there signi=
+ficant potential exposure associated with the HoustonStreet interfaces.
+
+
+
+Bob Shults
+EnronOnline LLC
+Houston, Texas 77002-7361
+713 853-0397
+713 825-6372 cell
+713 646-2126
+bob.shults@enron.com
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000203070604080803020003--

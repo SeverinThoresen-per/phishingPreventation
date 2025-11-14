@@ -1,0 +1,96 @@
+MIME-Version: 1.0
+Message-ID: <D90FAAD3A92C4EC68C5C5E870BA1BDFD27E2DD16@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Zimin" <Lu>, "Greg" <Couch>, "Eric" <Moon>, "Ed" <McMichael>
+To: JohnGriffith
+From: "Colleen" <Sullivan>
+Return-Path: Sullivan
+Content-Type: multipart/alternative;
+	 boundary="------------060806070704060401020800"
+Subject: Re_ Transport
+Date: Wed, 13 Dec 2000 18:31:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060806070704060401020800
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+John--
+I think you're doing the right thing by first getting with Zimin to make sur=
+e=20
+he agrees and will sign off on this change.  Next, before we just change thi=
+s=20
+in the model, I will want Greg to run "parallel" valuations to see what the=20
+impact will be on each person's book.  Then, we will get with the traders an=
+d=20
+see how they want to implement it.  Since the book runners are using the=20
+correlation to basically make the books have what they believe is a market=20
+value for capacity, I would assume that they may want to change correlation=20
+to offset the value change in the volatility; however, that decision will be=
+=20
+left to each book runner. =20
+
+Let me know what you hear back from Zimin.
+
+
+
+
+
+John Griffith@ENRON
+12/12/2000 04:57 PM
+To: Colleen Sullivan/HOU/ECT@ECT
+cc: Zimin Lu/HOU/ECT@ECT, Greg Couch/HOU/ECT@ECT, Eric Moon/HOU/ECT@ECT, Ed=20
+McMichael/HOU/ECT@ECT=20
+Subject: Transport
+
+Hey Colleen, how are thing going?  I haven't talked to you in a while.=20
+
+I was trying to tie out a transportation deal in the books with my transport=
+=20
+model.  I found that the transportation spreadsheet that the books are being=
+=20
+closed out with was valuing extrinsic value over what my model valued it.  I=
+=20
+reconciled the differences and the main difference was due to the blending o=
+f=20
+the volatilities.  I brought this problem up back in October of this year. =20
+Do you remember?   When I talked to Greg Couch today, those changes were not=
+=20
+made.  I think that it is an issue with all the transportation deals.  =20
+
+The problem is related to the number of days that is used to weight the=20
+daily/omicron volatility.  Basically, transportation is a daily spread optio=
+n=20
+and if you look at a month like November for instance, you have 30 different=
+=20
+daily options.  If you were to look at the number of days that the=20
+daily/omicron volatility should be used you would have the first option with=
+=20
+1 day of daily vol, the second with 2 days of daily vol, the third with 3=20
+days of daily vol and so on and so on.  The average number of days that=20
+should be used to weight the daily/omicron volatility is 15 or the number of=
+=20
+days in each particular month divided by 2.  The transportation spreadsheet=20
+is weighting that volatility with the total number of days in the month. =20
+This usually overstates the extrinsic value since that the daily/omicron=20
+volatility is usually higher than the monthly volatility. =20
+
+Please let me know what you would like me to do.  I have a call into Zimin t=
+o=20
+make sure that my logic is correct.  Thanks.=20
+
+John Griffith
+x.36247
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060806070704060401020800--

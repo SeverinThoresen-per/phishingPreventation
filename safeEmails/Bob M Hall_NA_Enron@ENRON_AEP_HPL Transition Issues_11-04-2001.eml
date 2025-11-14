@@ -1,0 +1,86 @@
+MIME-Version: 1.0
+Message-ID: <035490B637E70900166ACBAD0654A78E57BD7915@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: KathrynBussell
+To: "Brian" <Redmond>, "Sally" <Beck>
+From: "Bob M" <Hall/NA/Enron@ENRON>
+Return-Path: Hall/NA/Enron@ENRON
+Subject: AEP_HPL Transition Issues
+Date: Wed, 11 Apr 2001 07:08:00 +0200
+Content-Type: multipart/mixed;
+	 boundary="------------030406000501060407030405"
+
+This is a multi-part message in MIME format.
+
+--------------030406000501060407030405
+Content-Type: multipart/alternative;
+	 boundary="------------040200030200070006050300"
+
+This is a multi-part message in MIME format.
+
+--------------040200030200070006050300
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Attached is an updated transitions list.
+
+Please review and send any changes so I can update.
+
+I will update again Thursday and will include a column for status.
+
+We are in the process of drafting procedures which will have to become a for=
+mal protocol for AEP.
+
+These are:
+
+Request for New/maintenance of counterparties.  Once Web page is developed, =
+procedures will
+be completed.
+
+Request for new portfolios (books) after close.  Drafting procedures.
+
+Request for new employee security.
+
+Request to change curve mapping in ERMS/CPS.  Drafting procedures.
+
+Also, it appears the IT service agreement may have to be amended to cover th=
+e=20
+Web pages used to push operational data to customers (If AEP wants to contin=
+ue
+the service) and the Tariff filing system we just put into production.
+
+Also, we will need to resolve how we handle counterparties that Enron credit=
+ has request we suspend trading when
+AEP wants to continue trading.
+
+We have had discussions with AEP about all of these issues and procedures.
+
+
+
+
+
+=20
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040200030200070006050300--
+
+--------------030406000501060407030405
+Content-Type: application/vnd.ms-excel;
+	 name="aeptransitionissues.xls"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	 filename="aeptransitionissues.xls"
+
+QXR0YWNobWVudCBDOlxFbnJvbiBEYXRhXGF0dGFjaFxCZWNrSnVuZTIwMDFcNGU4ZGE0ZTVmZWM5
+NmI0MTlmY2MxNmU3YmYyOThmZTIxMGQ0YWJAbmFob3UtbXNtYngwM3YuY29ycC5lbnJvbi5jb20u
+IzEuYWVwdHJhbnNpdGlvbmlzc3Vlcy54bHMgbm90IGZvdW5kIQ==
+
+--------------030406000501060407030405--

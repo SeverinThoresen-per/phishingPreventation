@@ -1,0 +1,106 @@
+MIME-Version: 1.0
+Message-ID: <F1BD7B8AC8E520968F9D35FCAA338B9ACE12AA79@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Lara" <Fields>, "Edmund" <Cooper>, "Justin" <Boyd>, "Paul" <Simons>, "Amita" <Gosalia>, Louise
+To: DavidForster
+From: "Bruce" <Garner>
+Return-Path: Garner
+Content-Type: multipart/alternative;
+	 boundary="------------020203030304040007080803"
+Subject: Re_ MG
+Date: Sat, 22 Jul 2000 14:21:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------020203030304040007080803
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+I would like to add some questions to the ones Dave has raised below.
+
+1.  Would it make a difference if we were transacting Metals in a separate=20
+web site from EOL?   I would see this as EnronMetals (the new name for MG)=20
+running there own site issuing their own products.  I think we would need=20
+this because we would be unable have an EnronOnline entity issuing LME=20
+contracts with a sleeving arrangement to EnronMetals/MG.  My understanding i=
+s=20
+that only a registered entity can issue LME Contracts.
+
+2.  If we had to go to the separate site to address this issue, how would we=
+=20
+handle the links to EOL?  I assume people on EnronMetals could not trade=20
+other products (ngas) on EnronMetals site.  Could we have a click through? =20
+Would they have to sign in again?
+
+bruce
+
+
+
+
+
+
+David Forster
+07/21/2000 08:43 PM
+To: Bruce Garner/Corp/Enron@ENRON, Lara Fields/HOU/ECT@ECT, Edmund=20
+Cooper/LON/ECT@ECT, Justin Boyd/LON/ECT@ECT, Paul Simons/LON/ECT@ECT
+cc: Amita Gosalia/LON/ECT@ECT, Louise Kitchen/HOU/ECT@ECT=20
+
+Subject: MG
+
+As you know, we are looking at doing the following with MG:
+
+1) Moving the Market Maker Application into EnronOnline - effectively, by=20
+putting the same products on EnronOnline as are currently on Market Maker,=20
+then shutting down Market Maker and putting a hyperlink in to EnronOnline
+
+2) Launching financial metals products on EnronOnline, which would transacte=
+d=20
+by MG.
+
+
+I have some concerns about both of these activities.
+
+
+(1) Until today, I did not realise that the Market Maker application actuall=
+y=20
+involves the transaction of an LME contract. In other words, when a customer=
+=20
+buys from MG on the Market Maker app, they are buying LME contracts. We have=
+=20
+taken pains to distinguish between what we do on EnronOnline - which is to=20
+transact on products which might settle against a published price vs.=20
+transacting on the actual exchange contract.  As you know, Exchange contract=
+s=20
+are subject to a different set of regulations and scrutiny than currently=20
+applies to EnronOnline.
+
+
+(2) Because MG trades Exchange contracts on the floor of the exchange, they=20
+are subject to more stringent regulations than Enron. I am concerned that if=
+=20
+MG is transacting financial products on EnronOnline, that EnronOnline could=20
+come under greater scrutiny by the SFA. Paul: Can you comment on whether or=20
+not this is a risk?  If this is a risk, would it be mitigated by having=20
+another Enron company handle EnronOnline transactions (with sleeving back to=
+=20
+MG), or are we already sunk by virtue of the fact that MG is now in the Enro=
+n=20
+family?
+
+Comments from any/all recipients invited . . .
+
+Thanks,
+
+Dave
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------020203030304040007080803--

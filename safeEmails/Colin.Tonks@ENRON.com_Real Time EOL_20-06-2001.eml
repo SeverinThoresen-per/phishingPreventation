@@ -1,0 +1,796 @@
+MIME-Version: 1.0
+Message-ID: <C60F337878779133C4828E0F5FC2BBE90296DA66@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: StockStephen
+To: "Mckeel" <Richard>, "Richey" <Cooper>
+From: Colin.Tonks@ENRON.com
+Return-Path: Colin.Tonks@ENRON.com
+Subject: Real Time EOL
+Date: Wed, 20 Jun 2001 18:26:20 +0200
+Content-Type: multipart/mixed;
+	 boundary="------------000505050002060304070504"
+
+This is a multi-part message in MIME format.
+
+--------------000505050002060304070504
+Content-Type: multipart/alternative;
+	 boundary="------------060602080000040206000301"
+
+This is a multi-part message in MIME format.
+
+--------------060602080000040206000301
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Hi All, We have new real-time, HTLM based EOL plasma models. Simple XML/XSLT=
+ based configuration (see attached). Following model is presently used by th=
+e West Desk, the spread is marked against Hhub.
+
+http://plasma-fundamentals.corp.enron.com/Ticker/GetScreen.asp?name=3Dwest
+
+Also we have new Market data strips (java based). Supported by Market Data g=
+roup (Manager Danielle Marcinkowski)
+
+http://hotcs1.enron.com/fundyplasma/site/Financial.html
+
+refer to following link for all models:
+
+http://itfundy.dev.corp.enron.com/Projects/plasmaProject/default.asp
+
+NB Where there point missing on the EOL models denotes a deactivated product=
+=2E Tokenised products are cycled based on their activity status, i.e. cash =
+products generally cycle around to EOL ids, these are switched at around 11.=
+00am each trade day.
+
+The EOL models can be easily configured for any EOL product. Let me know if =
+your interested.
+
+-Colin
+
+=20
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060602080000040206000301--
+
+--------------000505050002060304070504
+Content-Type: text/xml; name="west.xml"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment; filename="west.xml"
+
+<?xml version=3D"1.0"?>
+<!--
+  EOL Trading Ticker Plasma Screen Configuration
+ =20
+  Written by RonggenPan@yahoo.com 5/16/2001
+ =20
+  product/IDsType =3D {Tokenized}
+    | {SummerStrips}
+    | {WinterStrips}
+ =20
+  product/type =3D {Cash}
+    | {GasDailyROM}
+    | {GasDailyPrompt}
+    | {PromptBasis}
+    | {TermBasis}
+-->
+<screen>
+   <debug>false</debug>
+   <name>west</name>
+   <title>EOL TRADING TICKER (WEST)</title>
+   <stylesheet>style1.xsl</stylesheet>
+   <refreshInterval>1000</refreshInterval>
+   <products>
+      <!-- West Region -->
+      <!-- Keystone -->
+      <product>
+         <screenGroup>West</screenGroup>
+         <location/>
+         <EOLLocation>Dummy</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27761,27779</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>SW</screenGroup>
+         <location>Keystone</location>
+         <EOLLocation>EPNG Keystone</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27761,27779</IDs>
+         <curveCode>GDP-ELPO/PERM2</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>SW</screenGroup>
+         <location>Keystone</location>
+         <EOLLocation>EP Permian</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28207,28310</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>SW</screenGroup>
+         <location>Keystone</location>
+         <EOLLocation>EP Permian </EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>36157,36158,45898,39120</IDs>
+         <curveCode>IF-ELPO/PERMIAN</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>SW</screenGroup>
+         <location>Keystone</location>
+         <EOLLocation>EP Permian </EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- Blanco -->
+      <product>
+         <screenGroup>SW</screenGroup>
+         <location>Blanco</location>
+         <EOLLocation>EP Blanco Avg</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>30016,30848,49639,49641</IDs>
+         <curveCode>GDP-ELPO/SANJUA</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>SW</screenGroup>
+         <location>Blanco</location>
+         <EOLLocation>EP SanJuan</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28311,28329</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>SW</screenGroup>
+         <location>Blanco</location>
+         <EOLLocation>EP SanJuan</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>36159,36160,38910,39122</IDs>
+         <curveCode>IF-ELPO/SJ</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>SW</screenGroup>
+         <location>Blanco</location>
+         <EOLLocation>EP SanJuan</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- Rockies/Opal -->
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Opal</location>
+         <EOLLocation>Opal</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27825,27873</IDs>
+         <curveCode>GDP-KERN/OPAL</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Opal</location>
+         <EOLLocation>Kern River/Opal</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28313,28252</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Opal</location>
+         <EOLLocation>NWPL RkyMtn</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>36135,36136,38936,39302</IDs>
+         <curveCode>IF-KERN/RIVER</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Opal</location>
+         <EOLLocation>NWPL RkyMtn</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- CIG -->
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>CIG</location>
+         <EOLLocation>CIG Mainline</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>33884,33891</IDs>
+         <curveCode>GDP-CIG/RKYMTN</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>CIG</location>
+         <EOLLocation>CIG(N.syst)</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>44738,44746</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>CIG</location>
+         <EOLLocation>CIG Rky Mtn</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>41283,41313,41281</IDs>
+         <curveCode>IF-CIG/RKYMTN</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>CIG</location>
+         <EOLLocation>CIG Rky Mtn</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- WIC -->
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>WIC</location>
+         <EOLLocation>WIC</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>33885,33892</IDs>
+         <curveCode>GDP-WYOMING</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <!-- Cheyenne -->
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Cheyenne</location>
+         <EOLLocation>Cheyenne Hub</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>34860,34861</IDs>
+         <curveCode>GDP-CHEYENN</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Cheyenne</location>
+         <EOLLocation>Cheyenne Hub</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>44750,44752</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Cheyenne</location>
+         <EOLLocation>Cheyenne Hub</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>99999,99999</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- NWPL/Sumas -->
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Sumas</location>
+         <EOLLocation>Sumas</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>31101,31100</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Sumas</location>
+         <EOLLocation>GD/D Sumas</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>31692,52756</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Sumas</location>
+         <EOLLocation>Sumas</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>36400,36419,52317</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>Sumas</location>
+         <EOLLocation>Sumas</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- AECO(US$) -->
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>AECO(C$)</location>
+         <EOLLocation>NIT</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>30858,30854</IDs>
+         <curveCode>CGPR-AECO/USIM</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>AECO(C$)</location>
+         <EOLLocation>EOL AECO Daily</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>45259</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>AECO(C$)</location>
+         <EOLLocation>AECO</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>36510,36511</IDs>
+         <curveCode>CGPR-AECO/BASIS</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>NW</screenGroup>
+         <location>AECO(C$)</location>
+         <EOLLocation>AECO</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- Malin -->
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>Malin</location>
+         <EOLLocation>PGT Malin</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27827,27880</IDs>
+         <curveCode>GDP-MALIN-CTYGA</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>Malin</location>
+         <EOLLocation>Malin</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28254,28314</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>Malin</location>
+         <EOLLocation>NGI Malin</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>37089,37090,39252,39254</IDs>
+         <curveCode>NGI-MALIN</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>Malin</location>
+         <EOLLocation>NGI Malin</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- PG&E CityGate -->
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>PG&amp;E Cty</location>
+         <EOLLocation>PG&amp;E CtyGte</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27765,27790</IDs>
+         <curveCode>GDP-PG&amp;E/CITIGA</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>PG&amp;E Cty</location>
+         <EOLLocation>PG&amp;E CtyGate</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28266,28317</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>PG&amp;E Cty</location>
+         <EOLLocation>PG&amp;E CtyGate</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>39256,39258,39260,39262</IDs>
+         <curveCode>NGI-PGE/CG</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>PG&amp;E Cty</location>
+         <EOLLocation>PG&amp;E CtyGate</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- PG&E Topock -->
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>PG&amp;E Top</location>
+         <EOLLocation>PG&amp;E Topock</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>51408,51410</IDs>
+         <curveCode>GDP-PG&amp;E/CITIGA</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>PG&amp;E Top</location>
+         <EOLLocation>NGI SoBord PG&amp;E Top</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>47328,47130</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>PG&amp;E Top</location>
+         <EOLLocation>NGI SoBord PG&amp;E Top</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>45390,49139</IDs>
+         <curveCode>NGI-PGE/CG</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>PG&amp;E Top</location>
+         <EOLLocation>NGI SoBord PG&amp;E Top</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- Socal Topock -->
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>SoC Top</location>
+         <EOLLocation>EPNG SoCal Topk</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27782,27762</IDs>
+         <curveCode>GDP-CAL BORDER</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>SoC Top</location>
+         <EOLLocation>SoCal</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28268,28324</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>SoC Top</location>
+         <EOLLocation>NGI SoCal</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>36213,36214,38914,39264</IDs>
+         <curveCode>NGI-SOCAL</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>SoC Top</location>
+         <EOLLocation>NGI SoCal</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- Socal EHR -->
+      <product>
+         <screenGroup>CA</screenGroup>
+         <location>SoC EHR</location>
+         <EOLLocation>SoCal EHR</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>43788,43786</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- Texas Region -->
+      <!-- HSC -->
+      <product>
+         <screenGroup>Texas</screenGroup>
+         <location>HSC</location>
+         <EOLLocation>HPL/HSCX</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27672,27673</IDs>
+         <curveCode>GDP-HPL/SHPCH</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>Texas</screenGroup>
+         <location>HSC</location>
+         <EOLLocation>HSC</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28148,28323</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>Texas</screenGroup>
+         <location>HSC</location>
+         <EOLLocation>HSC</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>36113,36119,39240,39242</IDs>
+         <curveCode>IF-HPL/SHPCHAN</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>Texas</screenGroup>
+         <location>HSC</location>
+         <EOLLocation>HSC</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- Waha -->
+      <product>
+         <screenGroup>Texas</screenGroup>
+         <location>Waha</location>
+         <EOLLocation>Waha</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27664,27665,52231,52241</IDs>
+         <curveCode>GDP-WAHA</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>Texas</screenGroup>
+         <location>Waha</location>
+         <EOLLocation>Waha</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28273,28325</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>Texas</screenGroup>
+         <location>Waha</location>
+         <EOLLocation>Waha</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>37116,39370,39372,47099</IDs>
+         <curveCode>IF-WAHA</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>Texas</screenGroup>
+         <location>Waha</location>
+         <EOLLocation>Waha</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- Central Region -->
+      <!-- Chicago -->
+      <product>
+         <screenGroup>Central</screenGroup>
+         <location>Chicago</location>
+         <EOLLocation>NGPL NICOR</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27819,27823</IDs>
+         <curveCode>GDP-CHI. GATE</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>Central</screenGroup>
+         <location>Chicago</location>
+         <EOLLocation>Chicago</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28206,28319</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>Central</screenGroup>
+         <location>Chicago</location>
+         <EOLLocation>NGI Chicago</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>36100,36101,39248,39250</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>Central</screenGroup>
+         <location>Chicago</location>
+         <EOLLocation>NGI Chicago</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <!-- East Region -->
+      <!-- HeHub -->
+      <product>
+         <screenGroup>East</screenGroup>
+         <location>HeHub</location>
+         <EOLLocation>HeHub</EOLLocation>
+         <type>Cash</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>27763,27785</IDs>
+         <curveCode>GDP-HEHUB</curveCode>
+         <curveType>SP</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>East</screenGroup>
+         <location>HeHub</location>
+         <EOLLocation>HHub</EOLLocation>
+         <type>GasDailyROM</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>28312,28251</IDs>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+      <product>
+         <screenGroup>East</screenGroup>
+         <location>HeHub</location>
+         <EOLLocation>HHub</EOLLocation>
+         <type>PromptBasis</type>
+         <IDsType>Tokenized</IDsType>
+         <IDs>37083,37084</IDs>
+         <curveCode>IF-HEHUB</curveCode>
+         <curveType>PR</curveType>
+         <bookType>D</bookType>
+      </product>
+      <product>
+         <screenGroup>East</screenGroup>
+         <location>HeHub</location>
+         <EOLLocation>HHub</EOLLocation>
+         <type>TermBasis</type>
+         <IDsType>SummerStrips</IDsType>
+         <IDs/>
+         <curveCode/>
+         <curveType/>
+         <bookType/>
+      </product>
+   </products>
+</screen>
+
+--------------000505050002060304070504--

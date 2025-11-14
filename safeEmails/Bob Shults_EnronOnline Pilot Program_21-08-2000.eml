@@ -1,0 +1,86 @@
+MIME-Version: 1.0
+Message-ID: <33CCF0A42A72B91596F9CBF90C6CA60EA0CD2DBA@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "David" <Mims@Enron>, "Andy" <Zipper>
+To: MarkTaylor
+From: "Bob" <Shults>
+Return-Path: Shults
+Subject: EnronOnline Pilot Program
+Date: Mon, 21 Aug 2000 23:20:00 +0200
+Content-Type: multipart/mixed;
+	 boundary="------------010000060600040005010205"
+
+This is a multi-part message in MIME format.
+
+--------------010000060600040005010205
+Content-Type: multipart/alternative;
+	 boundary="------------030505070008010202040503"
+
+This is a multi-part message in MIME format.
+
+--------------030505070008010202040503
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+We have finalized the terms of the EnronOnline direct connect pilot program.=
+ =20
+The following points outline the primary terms of the program.  Subject to=20
+your review we will begin implementation of the program pursuant to these=20
+terms.  Please review the terms and let me know if you have any questions or=
+=20
+comments.
+
+Direct Connect service will include the provisioning of T1 connections=20
+between Enron counterparties and various Enron PoP's.  EnronOnline specific=20
+traffic will be transported to these Enron Pop's via the Enron Intelligent=20
+Network.
+EBS will implement and manage the direct connect service on behalf of=20
+EnronOnline.  All customer support relative to the direct connect service=20
+will be managed by EBS.
+In the event of a failure of the direct connect service, the user will acces=
+s=20
+EnronOnline via an Internet connection.
+The pilot program will last for an initial term of 12 months.
+EnronOnline will pay $1750 per month for installation and monthly charges fo=
+r=20
+the local loop, all backbone and/or internetworking charges and ongoing=20
+support for any North American client that comprises at least 1% of all=20
+EnronOnline transactions (see attached list of eligible counterparties).
+Any EnronOnline customer that does not comprise at least 1% of the=20
+EnronOnline transactions may obtain a direct connect to EnronOnline through=20
+EBS for $1750 per month.
+All direct connect customers will be responsible for providing a router that=
+=20
+can accept a T-1 circuit.
+All direct connect customers will receive a Service Agreement from EBS that=20
+will specify the terms of the service.
+
+I would like to begin contacting these customers ASAP so please contact me=20
+with any issues by noon on August 21, 2000. =20
+
+Attached is a spreadsheet that outlines the EnronOnline funded participants=20
+in the pilot program.
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------030505070008010202040503--
+
+--------------010000060600040005010205
+Content-Type: application/vnd.ms-excel;
+	 name="Direct Connect 1% participants.xls"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	 filename="Direct Connect 1% participants.xls"
+
+QXR0YWNobWVudCBDOlxFbnJvbiBEYXRhXGF0dGFjaFxNVGF5bG9ySnVuMjAwMVwwMDAwMDAwMEU5
+MUJFRkIzREY3OEZFNDZCNENERjc2MjRENzFBRjVCQTQyMTIyMDAuIzEuRGlyZWN0IENvbm5lY3Qg
+MSUgcGFydGljaXBhbnRzLnhscyBub3QgZm91bmQh
+
+--------------010000060600040005010205--

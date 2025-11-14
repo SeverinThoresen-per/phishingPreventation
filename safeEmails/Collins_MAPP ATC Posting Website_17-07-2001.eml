@@ -1,0 +1,35 @@
+MIME-Version: 1.0
+Message-ID: <CB088B7389D7AB502E108B5A95F53F2B325086FF@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: "Baughman" <Jr.>, Don
+From: Collins
+Return-Path: Collins
+Content-Type: multipart/alternative;
+	 boundary="------------080308030103060305040401"
+Subject: MAPP ATC Posting Website
+Date: Tue, 17 Jul 2001 06:59:15 +0200
+
+This is a multi-part message in MIME format.
+
+--------------080308030103060305040401
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Under the heading "Flowgate ATC", select "Non-Firm ATC" to check the atc for=
+ flowgates "COOPER_S", "FTCAL_S", and "PRI-BYN".  These are the flowgates th=
+at usually cause our MAPP-F requests to be declined.
+
+You can also check the specific path (POR to POD) under the heading "Contrac=
+t Path ATC".
+
+http://toinfo.oasis.mapp.org/oac/oac2/script/atcs.html
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------080308030103060305040401--

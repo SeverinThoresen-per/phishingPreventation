@@ -1,0 +1,210 @@
+MIME-Version: 1.0
+Message-ID: <F6D1197C5A265321CE157A3960EC9F7EFE01E453@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: RobinRodrigue
+From: "Brian" <Kristjansen>
+Return-Path: Kristjansen
+Subject: TXT FIle for 07 19 2000
+Date: Thu, 20 Jul 2000 01:58:00 +0200
+Content-Type: multipart/mixed;
+	 boundary="------------010103030005060804050308"
+
+This is a multi-part message in MIME format.
+
+--------------010103030005060804050308
+Content-Type: multipart/alternative;
+	 boundary="------------000405000600000002080008"
+
+This is a multi-part message in MIME format.
+
+--------------000405000600000002080008
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Hi Robin,
+
+Here are the TXT files.
+
+
+
+Can you tell me if there are problems and where they are located. Is the=20
+source of the trouble between the sb Houston Tab and the TempRevised Tab (Th=
+e=20
+source of the TXT files.)? I have checked the links and corrected one since=20
+yesterday.=20
+
+Thanks,
+ Brian.
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000405000600000002080008--
+
+--------------010103030005060804050308
+Content-Type: text/plain; name="IMPositions_07192000.txt"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	 filename="IMPositions_07192000.txt"
+
+book_id	master_deal_id	instrument_type_cd	otc_exchange_cd	deal_nature_cd	ext=
+ernal_cp_cd	internal_cp_cd	region_cd	opt_class_cd	premium_currency_cd	refere=
+nce_dt	mtm_value_amt	expiry_dt	call_put_cd	strike_price_amt	energy_conversio=
+n_factoro	curve_cd_correlation_num	cross_gamma_qty	option_premium_amt	premiu=
+m_due_dt	price_curve_cd	sprd_2nd_curve_cd	commodity_cd	sprd_2nd_cmdty	curren=
+cy_cd	uom_cd	sprd_2nd_uomd	risk_type_cd	gross_position_qty	delta_position_qt=
+y	sprd_2nd_delta	gamma_num	sprd_2nd_gamma	curve_shift_amt	sprd_2nd_curve_shi=
+ft	peakness_cd	vega_num	sprd_2nd_vega	fixed_price_amt
+IMCAN-ERMS-XL-PHY	12	SWAP	O	M	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	NG	N/A	NG	N/A	CAD	MMBTU	N/A	M	0.00	0.00	0	0	0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-PHY	13	SWAP	O	M	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-HEHUB	N/A	NG	N/A	CAD	MMBTU	N/A	M	0.00	0.00	0	0	0	0	0	N/A	0	0=
+	0
+IMCAN-ERMS-XL-PHY	14	SWAP	O	M	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-HEHUB	N/A	NG	N/A	CAD	MMBTU	N/A	M	0.00	0.00	0	0	0	0	0	N/A	0	0=
+	0
+IMCAN-ERMS-XL-PHY	15	SWAP	O	M	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	IF-NTHWST/CANBR	N/A	NG	N/A	CAD	MMBTU	N/A	M	-249908.00	-249908.00=
+	0	0	0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-PHY	16	SWAP	O	M	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	IF-NTHWST/CANBR	N/A	NG	N/A	CAD	MMBTU	N/A	M	8500.00	8500.00	0	0	0=
+	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-PHY	17	SWAP	O	M	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-NTHWST/CANB	N/A	NG	N/A	CAD	MMBTU	N/A	M	0.00	0.00	0	0	0	0	0	N=
+/A	0	0	0
+
+--------------010103030005060804050308
+Content-Type: text/plain; name="canadaim207192000.txt"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	 filename="canadaim207192000.txt"
+
+book_id	master_deal_id	instrument_type_cd	otc_exchange_cd	deal_nature_cd	ext=
+ernal_cp_cd	internal_cp_cd	region_cd	opt_class_cd	premium_currency_cd	refere=
+nce_dt	mtm_value_amt	expiry_dt	call_put_cd	strike_price_amt	energy_conversio=
+n_factoro	curve_cd_correlation_num	cross_gamma_qty	option_premium_amt	premiu=
+m_due_dt	price_curve_cd	sprd_2nd_curve_cd	commodity_cd	sprd_2nd_cmdty	curren=
+cy_cd	uom_cd	sprd_2nd_uomd	risk_type_cd	gross_position_qty	delta_position_qt=
+y	sprd_2nd_delta	gamma_num	sprd_2nd_gamma	curve_shift_amt	sprd_2nd_curve_shi=
+ft	peakness_cd	vega_num	sprd_2nd_vega	fixed_price_amt
+IMCAN-ERMS-XL-PRC	18	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-NTHWST/CANB	N/A	NG	N/A	CAD	MMBTU	N/A	P	0.00	0.00	0	0	0	0	0	N=
+/A	0	0	0
+IMCAN-ERMS-XL-PRC	19	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	STATION2/US$	N/A	NG	N/A	CAD	MMBTU	N/A	P	-50007.77	-50007.77	0	0	=
+0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-PRC	20	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	STATION2/US$	N/A	NG	N/A	CAD	MMBTU	N/A	P	-163500.00	-163500.00	0	=
+0	0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-PRC	21	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-CHI.GATE	N/A	NG	N/A	CAD	MMBTU	N/A	P	0.00	0.00	0	0	0	0	0	N/A	=
+0	0	0
+IMCAN-ERMS-XL-PRC	22	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Sep-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-NWPL-ROCKYM	N/A	NG	N/A	CAD	MMBTU	N/A	P	440000.00	440000.00	0=
+	0	0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-PRC	23	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Sep-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-NWPL-ROCKYM	N/A	NG	N/A	CAD	MMBTU	N/A	P	0.00	0.00	0	0	0	0	0	N=
+/A	0	0	0
+IMCAN-ERMS-XL-PRC	24	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Oct-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	NGI/CHI.GATE	N/A	NG	N/A	CAD	MMBTU	N/A	P	0.00	0.00	0	0	0	0	0	N/A	=
+0	0	0
+IMCAN-ERMS-XL-PRC	25	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Oct-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	IF-NWPL-ROCK/CA	N/A	NG	N/A	CAD	MMBTU	N/A	P	155000.00	155000.00	0=
+	0	0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-PRC	26	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Nov-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	NGI-MALIN/FP	N/A	NG	N/A	CAD	MMBTU	N/A	P	0.00	0.00	0	0	0	0	0	N/A	=
+0	0	0
+IMCAN-ERMS-XL-PRC	27	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Nov-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-MALIN-CTYGA	N/A	NG	N/A	CAD	MMBTU	N/A	P	0.00	0.00	0	0	0	0	0	N=
+/A	0	0	0
+IMCAN-ERMS-XL-PRC	28	SWAP	O	P	IMCAN	ECC	DESK	N/A	N/A	1-Dec-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	GDP-ELPO/SANJUA	N/A	NG	N/A	CAD	MMBTU	N/A	P	0.00	0.00	0	0	0	0	0	N=
+/A	0	0	0
+
+--------------010103030005060804050308
+Content-Type: text/plain; name="CanadaIM07192000.txt"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment; filename="CanadaIM07192000.txt"
+
+book_id	master_deal_id	instrument_type_cd	otc_exchange_cd	deal_nature_cd	ext=
+ernal_cp_cd	internal_cp_cd	region_cd	opt_class_cd	premium_currency_cd	refere=
+nce_dt	mtm_value_amt	expiry_dt	call_put_cd	strike_price_amt	energy_conversio=
+n_factoro	curve_cd_correlation_num	cross_gamma_qty	option_premium_amt	premiu=
+m_due_dt	price_curve_cd	sprd_2nd_curve_cd	commodity_cd	sprd_2nd_cmdty	curren=
+cy_cd	uom_cd	sprd_2nd_uomd	risk_type_cd	gross_position_qty	delta_position_qt=
+y	sprd_2nd_delta	gamma_num	sprd_2nd_gamma	curve_shift_amt	sprd_2nd_curve_shi=
+ft	peakness_cd	vega_num	sprd_2nd_vega	fixed_price_amt
+IMCAN-ERMS-XL-GDL	1	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Jul-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	NGMR-AECO/C	N/A	NG	N/A	CAD	MMBTU	N/A	G	-3363854.48	-3363854.48	0	=
+0	0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-GDL	2	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Jul-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	NGMR-AECO/C	N/A	NG	N/A	CAD	MMBTU	N/A	G	2551264.49	2551264.49	0	0	=
+0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-GDL	3	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Jul-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	NGMR-AECO/C	N/A	NG	N/A	CAD	MMBTU	N/A	G	1825844.88	1825844.88	0	0	=
+0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-GDL	4	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Jul-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	NGMR-AECO/C	N/A	NG	N/A	CAD	MMBTU	N/A	G	4028669.06	4028669.06	0	0	=
+0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-GDL	5	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Jul-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	NGMR-AECO/C	N/A	NG	N/A	CAD	MMBTU	N/A	G	0.00	0.00	0	0	0	0	0	N/A	0	=
+0	0
+IMCAN-ERMS-XL-GDL	6	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Jul-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	GD-AECOUS-DAILY	N/A	NG	N/A	CAD	MMBTU	N/A	G	-52151.73	-52151.73	0	=
+0	0	0	0	N/A	0	0	0
+IMCAN-ERMS-XL-GDL	7	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Jul-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	GD-AECOUS-DAILY	N/A	NG	N/A	CAD	MMBTU	N/A	G	0.00	0.00	0	0	0	0	0	N/=
+A	0	0	0
+IMCAN-ERMS-XL-GDL	8	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	NG	N/A	NG	N/A	CAD	MMBTU	N/A	G	-1372100.00	-1372100.00	0	0	0	0	0	N=
+/A	0	0	0
+IMCAN-ERMS-XL-GDL	9	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	0=
+	0	0	0	N/A	NG	N/A	NG	N/A	CAD	MMBTU	N/A	G	-1023000.00	-1023000.00	0	0	0	0	0	N=
+/A	0	0	0
+IMCAN-ERMS-XL-GDL	10	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	NG	N/A	NG	N/A	CAD	MMBTU	N/A	G	-2577100.00	-2577100.00	0	0	0	0	0	=
+N/A	0	0	0
+IMCAN-ERMS-XL-GDL	11	SWAP	O	G	IMCAN	ECC	DESK	N/A	N/A	1-Aug-00	N/A	N/A	N/A	0	=
+0	0	0	0	N/A	NG	N/A	NG	N/A	CAD	MMBTU	N/A	G	0.00	0.00	0	0	0	0	0	N/A	0	0	0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+																												=09
+
+--------------010103030005060804050308--

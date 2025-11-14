@@ -1,0 +1,76 @@
+MIME-Version: 1.0
+Message-ID: <5750C9402A0EFB0C4B8C6D222E2ECDADF59B305E@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: YvanChaxel
+From: "Benjamin" <Rogers>
+Return-Path: Rogers
+Content-Type: multipart/alternative;
+	 boundary="------------060301060700030302070600"
+Subject: TECO
+Date: Tue, 21 Mar 2000 19:42:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060301060700030302070600
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Sorry about that, I was working on the Teco O&M costs.  Thanks
+Ben
+---------------------- Forwarded by Benjamin Rogers/HOU/ECT on 03/21/2000=20
+10:41 AM ---------------------------
+From: Christopher Smith on 03/17/2000 09:57 AM
+To: Yvan Chaxel/Corp/Enron@Enron, Benjamin Rogers/HOU/ECT@ECT
+cc: William S Bradford/HOU/ECT@ECT, Randy Petersen/HOU/ECT@ECT, Donald M- EC=
+T=20
+Origination Black/HOU/ECT@ECT=20
+Subject: TECO
+
+Please send me an excel spreadsheet which depicts the value that you see=20
+associated with the heat rate spread option.  I want to make sure that I=20
+understand exactly how you propose valuing the transaction and how this valu=
+e=20
+would be booked.  As such, please provide the following detail:
+
+Will we be valuing/booking a series of monthly call options or a series of=20
+daily call options?
+What power curve are we valuing the deal against - PJM East or West Hub?
+Please send me the current fuel curve that you are converting to $/MWh to=20
+value the deal?
+What volatilities are you using to value the options - monthly volatilities=20
+or intra-day volatilities or a blend of the two (if blending please show me=20
+what formula you using to blend the two vols)?
+What expiration date are you using, i.e.: for monthly call options the 15th=20
+of the relevant month, and for daily options?
+What correlation are you assuming, 15% flat for twenty years?
+Are you deducting all operating expenses from the value of the option?
+Are you using the "SPRDOPT" Exotic Options function to value the option?
+Are you using the $/MWh VOM dollar amount as your strike?
+Has Don provided the fixed payment stream?  This stream should be covering=20
+both P&I and not just principal.
+
+Yvan, and Ben, please provide answers to these question via written=20
+correspondence so that their is limited probability of misunderstanding. =20
+Thank you both very much for your time and help thus far.  Furthermore, I=20
+would like to reiterate that RAC's goal, prior to quoting any credit reserve=
+,=20
+is to be 100% confident that: (i) the methodology that is being employed is=20
+consistent among the internal groups; and (ii) the inherent value of the=20
+price risk management contracts matches.  This enables RAC to manage the=20
+associated risk during the life of the transaction both effectively and=20
+appropriately.
+
+Regards,
+
+Christopher
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060301060700030302070600--

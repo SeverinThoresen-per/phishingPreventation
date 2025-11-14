@@ -1,0 +1,49 @@
+MIME-Version: 1.0
+Message-ID: <1DACD99E171D99048803E33340F9E3CB2F7427D8@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: "Lee" <Norman>, "Postlethwaite" <John>
+From: Casey.Evans@ENRON.com
+Return-Path: Casey.Evans@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------060402040706000005080102"
+Subject: RE_ Food for thought
+Date: Tue, 29 Jan 2002 18:11:04 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060402040706000005080102
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+What do you guys think about this.....assuming we can put a fix in port calc=
+ that will allow us to true-up the current day (correctly), we could simply =
+recalc the books the following morning (after last day of month) after indec=
+es have been posted, then adjust the financial numbers in the vlookup accord=
+ing to the new top pages?!  =20
+
+ -----Original Message-----
+From: 	Postlethwaite, John =20
+Sent:	Monday, January  28, 2002 4:25 PM
+To:	Evans, Casey; White, Stacey W.
+Subject:	Food for thought
+
+Since 99% of the deals that we did in Calgary were financial, one of the big=
+gest problems we encountered was the last day of true ups at month end. Beca=
+use we cannot capture the last day of the month right now, as the volume of =
+financial deals grow (assuming it will), it is possible we could be dealing =
+with fairly large PMA adjustments.=20
+
+We may need to start thinking about a way that we could capture these number=
+s.
+
+John
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060402040706000005080102--

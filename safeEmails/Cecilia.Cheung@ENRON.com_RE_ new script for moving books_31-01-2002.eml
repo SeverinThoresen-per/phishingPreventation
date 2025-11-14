@@ -1,0 +1,98 @@
+MIME-Version: 1.0
+Message-ID: <C611D7F7A9F689F20180706B871D0CDFBFE83BCC@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Keiser" <Kam>, "Gossett  Jeffrey" <C.>
+To: LovePhillipM.
+From: Cecilia.Cheung@ENRON.com
+Return-Path: Cecilia.Cheung@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------080504020300060600010600"
+Subject: RE_ new script for moving books
+Date: Thu, 31 Jan 2002 01:27:52 +0200
+
+This is a multi-part message in MIME format.
+
+--------------080504020300060600010600
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Deal moves has been completed and retranslated.
+
+Cecilia
+
+
+ -----Original Message-----
+From: 	Love, Phillip M. =20
+Sent:	Wednesday, January 30, 2002 3:54 PM
+To:	Cheung, Cecilia
+Subject:	RE: new script for moving books
+
+1. move to the appropriate book based on the logic - Canadian deal needs to =
+go to CAD
+2. should only have to change deals from NG-Price to bankruptcy (deals are n=
+ot in any other book)
+3. The Canadian logic deals will probably be in GJ and the US logic should b=
+e in NG
+4. Financial only
+5. Cutoff date 1/1/2002
+
+
+
+ -----Original Message-----
+From: 	Cheung, Cecilia =20
+Sent:	Wednesday, January 30, 2002 3:48 PM
+To:	Love, Phillip M.
+Cc:	Keiser, Kam; Gossett, Jeffrey C.; Giron, Darron C.; Lim, Francis S.
+Subject:	FW: new script for moving books
+
+These are interbook deals and I need to confirm the following:
+
+1. Which Bankruptcy book you want to move the deals to? BANKRUPTCY (166660) =
+or BANKRUPTCY-CAD (166762)?
+2. Change the counterparty of the deals associated with FT-CAND-TERMIN (1667=
+64) or FT-CAND-GONE-PR (166767) from NG-PRICE(11360), ENA-FT-WT-SOCAL(108201=
+), ENA-WT-CAL(105544) to Bankruptcy (166660 or 166762)?
+3. Should we should NGGJ as the commodity instead of NG?
+4. Financial deals only
+5. Cutoff date 1-jan-2002
+
+
+
+ -----Original Message-----
+From: 	Keiser, Kam =20
+Sent:	Wednesday, January 30, 2002 3:03 PM
+To:	Cheung, Cecilia
+Subject:	FW: new script for moving books
+
+
+Those two counterparties could be currently  in NG-Price, ENA-WT-Socal, or E=
+NA-WT-Cal, not just NG-Price.
+
+Thanks
+
+
+ -----Original Message-----
+From: 	Love, Phillip M. =20
+Sent:	Wednesday, January 30, 2002 3:01 PM
+To:	Cheung, Cecilia
+Cc:	Giron, Darron C.; Gossett, Jeffrey C.; Keiser, Kam
+Subject:	new script for moving books
+
+Please move the following book to book trades with Canada from NG-Price to B=
+ankruptcy:
+FT-Cand-Termin
+Ft-Cand-Gone-PR
+
+Pleae let me know when this is done, we are waiting to calc today on this.  =
+Thanks.
+PL
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------080504020300060600010600--

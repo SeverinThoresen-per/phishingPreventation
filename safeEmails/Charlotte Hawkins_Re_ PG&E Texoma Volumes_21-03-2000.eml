@@ -1,0 +1,80 @@
+MIME-Version: 1.0
+Message-ID: <1C6AF1266069BA3E099AB7CA3605F0122AC95338@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Robert E" <Lloyd>, "Tom" <Acton>, "Daren J" <Farmer>, "Pat" <Clynes>, "Bryan" <Hull>, "Gary A" <Hanks>
+To: LauriAAllen
+From: "Charlotte" <Hawkins>
+Return-Path: Hawkins
+Content-Type: multipart/alternative;
+	 boundary="------------000705020803010600080300"
+Subject: Re_ PG&E Texoma Volumes
+Date: Tue, 21 Mar 2000 18:32:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000705020803010600080300
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Daren and Lauri:
+
+We do have a problem with some of our mirrored meters.  When MIPS receives a=
+n=20
+"incomplete" from the parent meter it sends a -0- to POPS.  Yes, this is a=20
+big problem.  Our POPS team (Romeo D'Souza) has identified this problem and=20
+notified MIPS.  However, he was told this was not a priority item.   In the=20
+mean time we are overriding the volumes in POPS with the estimated volumes.
+
+This particular meter was correct last night, the 14th rolled last night fro=
+m=20
+MIPS and overrode the BAV with a -0- from day 14 forward.
+
+This was corrected this morning and the meter re-allocated.
+
+Thanks,
+
+Charlotte
+
+
+
+
+
+Lauri A Allen
+03/21/2000 09:04 AM
+To: Robert E Lloyd/HOU/ECT@ECT, Tom Acton/Corp/Enron@ENRON, Charlotte=20
+Hawkins/HOU/ECT@ECT
+cc: Daren J Farmer/HOU/ECT@ECT, Pat Clynes/Corp/Enron@ENRON, Bryan=20
+Hull/HOU/ECT@ECT, Gary A Hanks/HOU/ECT@ECT=20
+Subject: PG&E Texoma Volumes
+
+In reviewing some of the imbalance numbers, I discovered that Valero Texoma=20
+(#71) BAV volumes have not fed into POPS since 3/14 causing an out of balanc=
+e=20
+at the meter in excess of 500,000mm month to date.  The more critical part o=
+f=20
+this problem, however, is that POPS has fed 0 volumes back to Sitara on some=
+=20
+of the HPLC deals.  This means that these purchase volumes (expenses) have=20
+not been picked up in Tom's P&L and are, instead, sitting in UA4.  To the=20
+extent that the purchase prices vary from the UA4 value, the P&L may take a=20
+hit when these actual volumes flow through.
+
+I realize that Kim is out and that you guys are stretched thin, however, a=20
+problem of this magnitude needs to be addressed as soon as it's discovered. =
+=20
+Someone needs to be overriding the 0 volumes so that Sitara is receiving=20
+correct information and the P&L is kept as accurate as possible.
+
+Please give me a call if you have any questions.
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000705020803010600080300--

@@ -1,0 +1,92 @@
+MIME-Version: 1.0
+Message-ID: <76522654BD740F8BC354F0FAC2ECC3E4A4F034D9@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: DarenJFarmer
+From: "Brenda F" <Herod>
+Return-Path: Herod
+Content-Type: multipart/alternative;
+	 boundary="------------070805060303030205070301"
+Subject: Unify performance problem on Wednesday
+Date: Fri, 05 May 2000 18:02:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------070805060303030205070301
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+FYI.
+---------------------- Forwarded by Brenda F Herod/HOU/ECT on 05/05/2000=20
+09:01 AM ---------------------------
+
+
+Rita Wynne
+05/05/2000 08:11 AM
+To: Brenda F Herod/HOU/ECT@ECT
+cc: =20
+Subject: Unify performance problem on Wednesday
+
+FYI.........
+---------------------- Forwarded by Rita Wynne/HOU/ECT on 05/05/2000 08:10 A=
+M=20
+---------------------------
+  =20
+=09
+=09
+	From:  Dave Nommensen                           05/04/2000 06:56 PM
+=09
+
+To: George Smith/HOU/ECT@ECT, Edward Terry/HOU/ECT@ECT, Tricia=20
+Bowen/HOU/ECT@ECT, Randall L Gay/HOU/ECT@ECT, Patti Sullivan/HOU/ECT@ECT, Pa=
+t=20
+Clynes/Corp/Enron@ENRON, Carlos J Rodriguez/HOU/ECT@ECT, Robert=20
+Superty/HOU/ECT@ECT, Bryce Baxter/HOU/ECT@ECT, Rita Wynne/HOU/ECT@ECT, Donna=
+=20
+Greif/HOU/ECT@ECT
+cc: Jeff Johnson/Corp/Enron@Enron, Tommy J Yanowski/HOU/ECT@ECT, Beth=20
+Perlman/HOU/ECT@ECT, Scott Williamson/HOU/ECT@ECT, Jim Ogg/HOU/ECT@ECT, Rega=
+n=20
+M Smith/HOU/ECT@ECT, Kenneth M Harmon/HOU/ECT@ECT=20
+Subject: Unify performance problem on Wednesday
+
+As you are aware, the Unify system experienced significant performance=20
+problems Wednesday from approx 9:30 am - 11:20 am.  The duration of the=20
+problem was due to a type of system behavior we had not experienced before. =
+=20
+The problem was exacerbated by a multitude of additional user logins thinkin=
+g=20
+that a fresh login might work better.  Additional logins never improve=20
+performance and generally degrade it, but that is another story.  (There was=
+=20
+actually a single user with 21 sessions!)  We had to "bounce" the server=20
+twice to bring the system back to its normal level of performance.
+
+The good news is that we found out what caused the problem.  It was not a=20
+particular user or a particular report or process.  It was actually an=20
+intentional change to a specific table that we have done numerous times in=20
+the past, but this particular change had drastic side effects.  We have=20
+contacted Sybase with this problem to see if they can help determine if the=20
+behavior is a "feature" or a bug.  In the meanwhile, we will do these types=20
+of changes at night during scheduled outages.
+
+I apologize for the frustration, anxiety, and extra work brought on by this=20
+problem and will take every precaution to see that it does not happen again.=
+ =20
+If you have any further questions or comments, please feel free to give me a=
+=20
+call.
+
+Dave N.
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------070805060303030205070301--

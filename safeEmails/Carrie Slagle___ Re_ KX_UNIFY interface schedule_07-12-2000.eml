@@ -1,0 +1,107 @@
+MIME-Version: 1.0
+Message-ID: <693E69B6213C2A14EBCCF07F90A8DC8F1AE038C2@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Molly" <Sumrow>, "John" <Coyle>, "Matt" <Pena>
+To: "Randall L" <Gay>, "George F" <Smith>, "Patti" <Sullivan>, "Robert" <Superty>, "Edward" <Terry>
+From: "Carrie" <Slagle>
+Return-Path: Slagle
+Content-Type: multipart/alternative;
+	 boundary="------------060108040406040803030703"
+Subject: __ Re_ KX_UNIFY interface schedule
+Date: Thu, 07 Dec 2000 03:55:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060108040406040803030703
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Randy/George/Patti/Bob-
+Please review the attached message and provide your feedback.  In addition,=20
+we would like to reschedule the demo with you all as soon as you are=20
+available.  I think that Heather is checking your calendars. =20
+
+Bob-
+We did not have the questions below when we met with you last week for the=20
+demo.  As such, please provide your feedback. =20
+
+Victor/Ed-
+You received this today in the demo, but here is the electronic version if=20
+you need it.
+
+We would like to get some resolution on these questions this week.  Please=20
+respond with your opinions/concerns/questions by email or phone as soon as=20
+possible.
+
+Thanks!
+Carrie
+3-9810
+
+---------------------- Forwarded by Carrie Slagle/HOU/ECT on 12/06/2000 06:4=
+4=20
+PM ---------------------------
+
+
+Carrie Slagle
+12/05/2000 07:10 PM
+To: Lisa Kinsey/HOU/ECT@ECT, Tricia Spence/HOU/ECT@ECT, Stacey J=20
+Brewer/HOU/ECT@ECT
+cc: Matt Pena/NA/Enron@Enron, Molly Sumrow/HOU/ECT@ECT, "John Coyle"=20
+<John.Coyle@diamondcluster.com>=20
+Subject: ?? Re: KX/UNIFY interface schedule
+
+Hi Ladies!
+
+As you know, we are working with Matt Pena and Dave N. re:  KX/UNIFY=20
+interfaces.  Matt and Dave proposed the following order with respect to=20
+release functionality.  Please review and let us know if anything should be=20
+in a different order. =20
+
+As you can imagine, (1)  the UNIFY team will not be able to do everything at=
+=20
+once AND (2) we want to start testing/using the system as soon as possible. =
+=20
+You will, however have some influence in changing this order if you think it=
+=20
+is appropriate.  We should target things that give you and your customer the=
+=20
+biggest bang for your buck.
+
+FYI-we will also go over this list with your managers in the demo tomorrow.
+
+1.  UNIFY sends transport contracts to KX
+2.  UNIFY sends psna's to KX
+3.  UNIFY sends upstream and downstream K# to KX
+4.  UNIFY receives upstream and downstream K# from KX
+5.  UNIFY will "undo" upstream and downstream K#
+6.  UNIFY will receive buy/sell (brokered) path instructions from KX
+7.  UNIFY will "undo" buy/sell (brokered) path instructions
+8.  UNIFY will receive psna's from KX
+9.  UNIFY will "undo" psna's from KX
+
+Thanks,
+Carrie
+
+P.S.  Could we live without #2 and #3?  This appears difficult to implement,=
+=20
+and we would like to guage the cost/benefit. =20
+
+Without #2 and #3, UNIFY only sends KX transport contracts and receives all=20
+other data.  In other words, upstreams, downstreams, and psna's would have t=
+o=20
+be entered into KX for the user to see them.  They would, however, interface=
+=20
+back to UNIFY once entered.  However, if entered only in UNIFY and not in KX=
+,=20
+then they would not show up in KX.  Give us your thoughts. . .
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060108040406040803030703--

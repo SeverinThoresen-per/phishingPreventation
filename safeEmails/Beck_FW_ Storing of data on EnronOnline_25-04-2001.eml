@@ -1,0 +1,50 @@
+MIME-Version: 1.0
+Message-ID: <697C4547E28D171DBE9389688BEC8BC74FD7E0FC@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: Reeves, Leslie
+From: Beck
+Return-Path: Beck
+Content-Type: multipart/alternative;
+	 boundary="------------040000010608040608070105"
+Subject: FW_ Storing of data on EnronOnline
+Date: Wed, 25 Apr 2001 07:48:14 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040000010608040608070105
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+
+FYI
+ -----Original Message-----
+From: 	Zipper, Andy =20
+Sent:	Tuesday, April  24, 2001 2:34 PM
+To:	Beck, Sally; Taylor, Mark; Haedicke, Mark
+Subject:	Storing of data on EnronOnline
+
+I spoke with Sally regarding the cessation of sending confirms for EnronOnli=
+ne transactions, and she mentioned that the question was raised as to how lo=
+ng we store transaction details on EnronOnline.
+
+We store all transactions on the database since inception, in order to facil=
+itate customer transaction searches. This data is the basic buy/sell, commod=
+ity, location, volume, price, customer, userid, and time info. In addition f=
+or a rolling 45 day period we store the web server info which is much more d=
+etailed and has product ID's, session ID's and so forth. At the end of 45 da=
+ys it is archived and retrievable. when you put these two together you have =
+a very complete picture of what happened to a transaction attempt.
+
+I hope this answers any questions you may have. If not let me know.
+
+Andy Zipper
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040000010608040608070105--

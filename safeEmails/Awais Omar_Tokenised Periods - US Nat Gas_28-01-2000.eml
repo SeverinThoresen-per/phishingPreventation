@@ -1,0 +1,141 @@
+MIME-Version: 1.0
+Message-ID: <BAE58D6D670CE98C172C65DA8F1BAA10E692D98C@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "John J" <Lavorato>, "Marcello" <Romano>, "Dale" <Neuner>
+To: "Jonathan" <McKay>, "Mark" <Taylor>
+From: "Awais" <Omar>
+Return-Path: Omar
+Content-Type: multipart/alternative;
+	 boundary="------------000208080001020600040503"
+Subject: Tokenised Periods - US Nat Gas
+Date: Fri, 28 Jan 2000 09:04:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000208080001020600040503
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Jonathan,  in the email below are examples of the US Natural Gas Long=20
+Descriptions we have come up with for the Tokenised Periods "Day Ahead" and=20
+"Balance of Month".  The Short Description for these products will have the=20
+specific dates in it whilst the long description will not.
+
+Thus we need toi have language that will adequately describe the tokenised=20
+period.
+
+I am not familiar with the rules and specific calendar holidays that needs t=
+o=20
+be referenced in the relevant part of the long description.
+
+Can you use the US ones we have done below as a start point come up with=20
+language to describe the:
+Day Ahead
+Balance of Month
+periods for Canadian Gas that will cover the weekend and holiday periods.
+
+Mark, are you the appropriate legal counsel to review the tokenised=20
+descriptions for Canadian Gas?
+
+
+Thanks
+
+
+Awais
+
+---------------------- Forwarded by Awais Omar/LON/ECT on 01/27/2000 11:48 P=
+M=20
+---------------------------
+
+
+Awais Omar
+01/27/2000 11:53 PM
+To: Mark Taylor/HOU/ECT@ECT, Dale Neuner/HOU/ECT@ECT
+cc: Marcello Romano/LON/ECT@ECT, Louise Kitchen/LON/ECT@ECT, David=20
+Forster/LON/ECT@ECT=20
+
+Subject: Tokemised Periods - US Nat Gas
+
+Mark,
+
+Below are the Tokenised Day Ahead and Balance of Month US Nat Gas=20
+descriptions we agreed and a complete example product for each.
+
+Please give us the final A OK for these.
+
+US Nat Gas Day Ahead
+
+The transaction is for delivery from and including the next day following th=
+e=20
+trade day to and including the next Delivery Day following the trade date;=20
+where Delivery Day is any day which is both: a) a Monday, Tuesday, Wednesday=
+,=20
+Thursday or Friday AND b) a Nymex trading day.
+
+E.G.
+US Gas PHY       ANR LA/GATH     Day Ahd     USD/MM
+
+A US Gas Transaction with Houston Pipeline Company, under which Seller shall=
+=20
+sell and Buyer shall purchase a quantity of natural gas equal to the Daily=20
+Contract Quantity at the Contract Price on a firm basis. The Contract Price=20
+shall be as submitted by Counterparty via the website.  The Period of=20
+Delivery shall be from the Effective Date through the Termination Date.
+The transaction is for delivery from and including the next day following th=
+e=20
+trade day to and including the next Delivery Day following the trade date;=20
+where Delivery Day is any day which is both: a) a Monday, Tuesday, Wednesday=
+,=20
+Thursday or Friday AND b) a Nymex trading day.
+The transaction is for ANR Louisiana, gathered.
+The price is quoted in US Dollars per unit of volume, which will be the=20
+Contractual Currency.
+The unit of measure against which the price is quoted shall be millions of=20
+British thermal units and the quantity shown shall be in millions of BTUs pe=
+r=20
+day.
+
+
+US Nat Gas Balance Of Month
+
+The transaction is for delivery from and including the next calendar day=20
+following the trade day to and including the last calendar day of such=20
+calendar month.
+
+E.G.
+US Gas PHY       ANR LA/GATH     BoM         USD/MM
+
+A US Gas Transaction with Houston Pipeline Company, under which Seller shall=
+=20
+sell and Buyer shall purchase a quantity of natural gas equal to the Daily=20
+Contract Quantity at the Contract Price on a firm basis. The Contract Price=20
+shall be as submitted by Counterparty via the website.  The Period of=20
+Delivery shall be from the Effective Date through the Termination Date.
+The transaction is for delivery from and including the next calendar day=20
+following the trade day to and including the last calendar day of such=20
+calendar month.
+The transaction is for ANR Louisiana, gathered.
+The price is quoted in US Dollars per unit of volume, which will be the=20
+Contractual Currency.
+The unit of measure against which the price is quoted shall be millions of=20
+British thermal units and the quantity shown shall be in millions of BTUs pe=
+r=20
+day.
+
+
+
+Regards
+
+Awais
+Ext 31859
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000208080001020600040503--

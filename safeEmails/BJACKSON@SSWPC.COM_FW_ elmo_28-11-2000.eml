@@ -1,0 +1,51 @@
+MIME-Version: 1.0
+Message-ID: <97397A0223987A3B6743F742D232A2924CCBD2A5@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: 'Dana.davis@enron.com', 'Lola.Willis@enron.com'
+From: BJACKSON@SSWPC.COM
+Return-Path: BJACKSON@SSWPC.COM
+Subject: FW_ elmo
+Date: Tue, 28 Nov 2000 18:33:00 +0200
+Content-Type: multipart/mixed;
+	 boundary="------------040006030704050705050203"
+
+This is a multi-part message in MIME format.
+
+--------------040006030704050705050203
+Content-Type: multipart/alternative;
+	 boundary="------------000801050308020102030001"
+
+This is a multi-part message in MIME format.
+
+--------------000801050308020102030001
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Something to do on your breaks.
+
+>  <<Elmo_1.exe>>
+
+
+ - Elmo_1.exe
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000801050308020102030001--
+
+--------------040006030704050705050203
+Content-Type: application/octet-stream;
+	 name="Elmo_1.exe"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Elmo_1.exe"
+
+QXR0YWNobWVudCBDOlxFbnJvbiBEYXRhXGF0dGFjaFxERGF2aXNEZWMyMDAwXDAwMDAwMDAwMkVG
+Nzk2OEI1MzBBODA0QUE1NzZGRkNDNUQ5QkRDQkJDNDE3MjAwMC4jMS5FbG1vXzEuZXhlIG5vdCBm
+b3VuZCE=
+
+--------------040006030704050705050203--

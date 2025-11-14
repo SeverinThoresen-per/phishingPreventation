@@ -1,0 +1,176 @@
+MIME-Version: 1.0
+Message-ID: <5B9BF9D80A6A32568E5187F24A3C64E47E0FD90A@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: TimHeizenrader
+To: RobertAnderson
+From: "Cooper" <Richey>
+Return-Path: Richey
+Content-Type: multipart/alternative;
+	 boundary="------------070707030606020205030502"
+Subject: RE_ Servers & Administration
+Date: Fri, 11 May 2001 08:28:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------070707030606020205030502
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+As far as Houston standards, they made sense to me and they seemed to have m=
+ore expertise in the matter. =20
+
+How bad did things get yesterday?
+
+
+
+
+
+From:	Robert Anderson/ENRON@enronXgate on 05/10/2001 10:51 AM CDT
+To:	Cooper Richey/CAL/ECT@ECT
+cc:	Tim Heizenrader/ENRON@enronXgate=20
+Subject:	RE: Servers & Administration
+
+=09
+Cooper -
+
+I think that the three of us should talk about this... however, unless Tim H=
+ disagrees, we should probably wait until after he has completed the schedul=
+ed meeting(s) that he has with PDX & Houston IT regarding the current policy=
+ issues. These meeting(s) should happen today or tomorrow. In the mean time,=
+ I will review this document.
+
+Clarification question: If we agree that, ideally, Houston is not going to h=
+andle administration of these servers, what is the basis of the decision to =
+follow Houston standards? Is it that you agree with their conclusions or tha=
+t you want to stay compliant? Just curious...
+
+As you point out, these issues have been long-time coming -- and if what hap=
+pened yesterday is the price that we have to pay to get things running as sm=
+oothly and reliably as possible, then I am glad that it happened. Relative t=
+o the good that can come from this, we got a bargain!
+
+Take Care,
+Bob
+
+ -----Original Message-----
+From: 	Richey, Cooper =20
+Sent:	Thursday, May 10, 2001 8:34 AM
+To:	Anderson, Robert
+Cc:	Heizenrader, Timothy
+Subject:	Re: Servers & Administration
+
+While our webserver up here hasn't been hammered yet, I've been concerned=20
+about similar issues (web hardware and administration) for awhile up here. =20
+Given that the web is our primary medium I agree with you and Tim that it's =
+been=20
+neglected. =20
+
+Administration is an ongoing issue and I'm not sure what a good solution for=
+ this is,
+but relying on Houston for this is not an option as far as I'm concerned (un=
+less they
+change their draconian policies).  At the moment Chris Wiebe is officially a=
+dministrating
+our web/file server, but I don't think this is where his interests lie, so I=
+'ve been relying
+on Colin for most day-to-day admin.  This isn't great since Colin is a contr=
+actor.  We should
+definitely team up on this one as I don't think IIS administration is even a=
+ quarter-time job,
+but it is vital.  I'm in a similar spot on SQL Server issues - Chris is the =
+admin, but he's moving
+more toward the development side of IT with each passing week. =20
+
+In terms of hardware, I've been in touch with Houston through Dan Dietrich a=
+nd spoke
+with a helpful individual who is responsible for web servers down there.  He=
+ sent me
+the following documentation standard which I hope I forwarded onto you (as i=
+t's quite
+good).  I'm pushing to move to the Houston standard for web servers which is=
+ two=20
+clustered pizza boxes (DL360s).    I just got the price quote for these and =
+it would be=20
+about 9000 US$ for the two boxes (basically dual proc PIII 930, 512 MB RAM, =
+2 9GB drives)
+
+You mentioned moving the dev environment from prod, but I'm not sure if you'=
+re interested
+in splitting the web from the file server.  I think this is a good idea (mor=
+e for file server reliability
+than anything else.)  There's some time critical data up here that we can't =
+recover if we=20
+miss it the first time, so I'm trying to make the backend as fault-tolerant =
+as possible.  plus,
+it seems like it's likely a cheap performance and fault tolerance boost for =
+the web, as well. =20
+
+Sorry to hear about your web troubles yesterday, but hopefully it will serve=
+ as a catalyst
+for us to clean things up. =20
+
+Should we set up a call to talk about this? =20
+
+Cooper
+
+
+-------------------------------------------------
+ << File: Web Operations Standards.doc >>=20
+Christopher Spann, MCSE
+Sr Specialist, Web Operations
+Enron Net Works
+713.345.4986
+------------------------------------------------
+
+
+
+From:	Robert Anderson/ENRON@enronXgate on 05/10/2001 09:35 AM CDT
+To:	Cooper Richey/CAL/ECT@ECT
+cc:	Tim Heizenrader/ENRON@enronXgate=20
+Subject:	Servers & Administration
+
+Cooper -
+
+You may or may not be aware that our production web server got hit pretty ha=
+rd yesterday. It has yet to be "officially" determined what happened, so I w=
+on't give you my opinion... however, many issues that have been festering fo=
+r some time were brought into the spot light through this ordeal.
+
+At this point, Tim H. and I have agreed on two immediate actions that will b=
+e taken.
+	1) Our development server needs to be moved to a separate physical box. Thi=
+s will serve as the back-up and fail-over server as well.
+	2) Paul Kane and I will pursue IIS administration and security training/cer=
+tification.
+
+It is our firm intention that any and all administration on either of these =
+boxes will be done by us -- not Houston. Although, this argument has yet to =
+take place.
+
+In light of the working relationship between PDX and Calgary (that we only a=
+nticipate growing stronger through this), I would like to hear what conclusi=
+ons you have come to with the research that you have done regarding hardware=
+ and software -- as well as any suggestions that you may have that we should=
+ consider. We want to make sure that, with whatever avenue is taken,  we mai=
+ntain a position of compatibility to share resources and technology with Cal=
+gary Fundies...
+
+Thanks!
+Bob
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------070707030606020205030502--

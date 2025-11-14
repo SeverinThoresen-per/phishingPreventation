@@ -1,0 +1,107 @@
+MIME-Version: 1.0
+Message-ID: <8006164C6474E8379C2F1C9178300573010E37CC@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: Sommer, Allan
+From: Beck
+Return-Path: Beck
+Content-Type: multipart/alternative;
+	 boundary="------------040505010704010500030003"
+Subject: RE_ SAP Outages
+Date: Wed, 28 Nov 2001 01:20:44 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040505010704010500030003
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Yes, I think that it makes sense to keep the system available over the weeke=
+nd for the foreseeable future.  I had operations teams accessing critical da=
+ta, available only in SAP, on Friday evening and Sunday this past weekend.  =
+It is very likely that our need to do so will continue, unlimited to weekday=
+s.  Thanks.  --Sally=20
+
+ -----Original Message-----
+From: 	Sommer, Allan =20
+Sent:	Monday, November 26, 2001 6:42 PM
+To:	Pickering, Mark; Beck, Sally; Piper, Greg
+Subject:	SAP Outages
+
+Normally, these scheduled SAP outages are planned with the major user bases =
+via a communication released 3 weeks in advance and subsequently approved.  =
+The notice you received today was a reminder notice.  This outage is due to =
+our quarterly production build schedule for SAP upgrades to the HR environme=
+nt ("hotpacks"). =20
+
+We rescheduled this weekends outage earlier today after consultation with HR=
+ and the tentative and future date will be mid-January.  At this point no ad=
+ditional outages are planned for the remainder of the year.
+
+The revised (cancelled) notification will go out tomorrow.
+
+Allan Sommer
+Enron ISC
+713-345-5291 work
+713-503-5089 cell
+877-711-4760 or 8777114760@skytel.com
+
+
+
+
+SAP System Outage Notification
+-------------------------------------------------------------
+SYSTEM OUTAGE NOTIFICATION=20
+-------------------------------------------------------------
+FOR: SPR5DB00 - BBP 2.0 Production
+Date & Time of Outage:=20
+Outage Commences: November 30, 2001 at 06:00 PM CST
+Outage Ends: December 2, 2001 at 05:00 PM CST
+Outage Abstract: System will be unavailable for Production Build Activities
+Outage Description: System will be unavailable for Production Build Activiti=
+es
+Outage Implication: No access during outage
+Contact: 713-345-7282
+Contact:	Contact Information:=09
+Basis On-Call	713-345-7282=09
+ISC Customer Care	713-345-4727=09
+-------------------------------------------------------------
+SYSTEM OUTAGE NOTIFICATION=20
+-------------------------------------------------------------
+FOR: PR2 - HR Production
+Date & Time of Outage:=20
+Outage Commences: November 30, 2001 at 06:00 PM CST
+Outage Ends: December 2, 2001 at 05:00 PM CST
+Outage Abstract: System will be unavailable for Production Build Activities
+Outage Description: System will be unavailable for Production Build Activiti=
+es
+Outage Implication: No access during outage
+Contact: 713-345-7282
+Contact:	Contact Information:=09
+Basis On-Call	713-345-7282=09
+ISC Customer Care	713-345-4727=09
+-------------------------------------------------------------
+SYSTEM OUTAGE NOTIFICATION=20
+-------------------------------------------------------------
+FOR: PR1 - Apollo Production
+Date & Time of Outage:=20
+Outage Commences: November 30, 2001 at 06:00 PM CST
+Outage Ends: December 2, 2001 at 05:00 PM CST
+Outage Abstract: System will be unavailable for Production Build Activities
+Outage Description: System will be unavailable for Production Build Activiti=
+es
+Outage Implication: No access during outage
+Contact: 713-345-7282
+Contact:	Contact Information:=09
+Basis On-Call	713-345-7282=09
+ISC Customer Care	713-345-4727=09
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040505010704010500030003--

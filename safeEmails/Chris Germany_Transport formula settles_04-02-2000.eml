@@ -1,0 +1,128 @@
+MIME-Version: 1.0
+Message-ID: <B1D346952A6E778CE034E024A79AE3FF3AAEE4B7@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: DickJenkins
+From: "Chris" <Germany>
+Return-Path: Germany
+Content-Type: multipart/alternative;
+	 boundary="------------020107010805000702060003"
+Subject: Transport formula settles
+Date: Fri, 04 Feb 2000 21:20:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------020107010805000702060003
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+---------------------- Forwarded by Chris Germany/HOU/ECT on 02/04/2000 12:2=
+0=20
+PM ---------------------------
+  =20
+=09
+=09
+	From:  Colleen Sullivan                           02/03/2000 09:03 AM
+=09
+
+To: Scott Neal/HOU/ECT@ECT
+cc: Dan Junek/HOU/ECT@ECT, Chris Germany/HOU/ECT@ECT, Judy=20
+Townsend/HOU/ECT@ECT=20
+Subject: Transport formula settles
+
+Scott--
+Something for you to consider:
+If the transport people are to have their own books, my belief is that the=20
+curve setting used for the transport values ought to be as unbiased as=20
+possible.  This means using as few "formula based" curves as possible and as=
+=20
+many Gas Daily publication postings as possible.  I'm not sure how you or=20
+your traders feel about the following postings, (how realistic they are), bu=
+t=20
+I think they bear watching to see if they could be used for calculating=20
+transport p&l.  In Gas Daily, under Citygate, Pooling Point Prices, there ar=
+e=20
+Mid Atlantic Citygates postings for both CNG and Columbia Gas.  These could=20
+potentially be used for CNG North & South Citygates and TCO citygates.  The=20
+only thing I have to confirm is how these would load since there is no index=
+=20
+posted each day--it is a range of prices instead.
+
+Historically TCO and CNG citygate postings haven't been much of an issue=20
+because we haven't held much transport on CNG and TCO, but with the CES=20
+business in our portfolio, the times have changed.  Currently we are using=20
+"formula based" curves set by the traders to calculate CNG and TCO transport=
+=20
+p&l, and there sure seems to be a huge difference between the postings and=20
+how we are marking the curves.  For example, today's Gas Daily postings=20
+compared to our curve markings are as follows:
+GAS DAILY   GAS DAILY SPREAD   SPREADS per TRADERS CURVES
+TCO pool $2.985   $1.565     $.10
+TCO citygate $4.55
+
+CNG North $3.39   $  .585     $.16
+CNG South $3.305   $  .670     $.16~
+CNG Citygate $3.975
+
+Obviously there are huge differences, so someone must be wrong.  There are=20
+two solutions that I see.  One is to switch to the Gas Daily posting, which=20
+in my mind is preferable if you believe the postings are accurate; the other=
+=20
+solution is to have the traders change their curves more often to more=20
+closely reflect the actual spreads in the marketplace.  That's up to you. =20
+Obviously if we believe the postings are completely off base and our spreads=
+=20
+are more accurate, then nothing needs to be done, but if you want to know=20
+what you're really making on your transport (and you now have a lot of it),=20
+we need to focus on it being accurate.
+
+Anyway, let me know what you decide and I'll either forget about it or work=20
+on getting the Gas Daily postings pulled into the calculations.
+
+
+ =20
+
+---------------------- Forwarded by Colleen Sullivan/HOU/ECT on 02/03/2000=20
+08:29 AM ---------------------------
+  =20
+=09
+=09
+	From:  David Oliver                           02/02/2000 12:56 PM
+=09
+
+To: Colleen Sullivan/HOU/ECT@ECT, Mark Friedman/HOU/ECT@ECT
+cc: =20
+Subject: Transport formula settles
+
+Colleen,
+
+Mark wanted me to let you know where a few city gate points are settling=20
+daily:
+
+CNG North City Gate =3D GD CNG North +.16
+CNG South City Gate =3D Settles at what the intra-month trader sets their=20
+intra-month curve at.
+TECO Citygate =3D GD CGT/App +.10
+
+Please note that CNG North City and TECO City settle prices come in at a one=
+=20
+day lag.  After we receive gas daily settles, we reload prices for any=20
+derived curves.
+If you have any questions please let me know.
+
+David
+x3-4231
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------020107010805000702060003--

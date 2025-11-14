@@ -1,0 +1,145 @@
+MIME-Version: 1.0
+Message-ID: <E206CCD83E7F34F4A4B0F85E38614659593051FA@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "David" <Poston>, "Kate" <Symes>
+To: KroumKroumov
+From: "Cara" <Semperger>
+Return-Path: Semperger
+Content-Type: multipart/alternative;
+	 boundary="------------020208000003000006020300"
+Subject: RE_ Test of Forward Obligation
+Date: Thu, 22 Mar 2001 20:51:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------020208000003000006020300
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Dave Poston got me fixed up, I ran a report and am double checking it now.
+
+
+
+
+From: Kroum Kroumov/ENRON@enronXgate on 03/22/2001 01:16 PM CST
+To: Cara Semperger/PDX/ECT@ECT
+cc: =20
+Subject: RE: Test of Forward Obligation
+
+   =20
+     Every program has two parts - Windows executable which we write in Delp=
+hi
+    and database in Oracle. We need to run the stage version of the program
+    against production data (database). The stage version of the program in=20
+TestN
+    and TestP is the same, the database (the data) is different.
+
+     I think I will give you a call.
+
+
+     Thanks,
+     Kroum
+     713 -853 - 9980
+
+
+
+ -----Original Message-----
+From:  Semperger, Cara =20
+Sent: Thursday, March 22, 2001 11:23 AM
+To: Kroumov, Kroum
+Subject: RE: Test of Forward Obligation
+
+So, I don't use the version of the report that runs against production?  I=20
+use stage?  Which one, Test P or Test N?
+
+
+
+
+From: Kroum Kroumov/ENRON@enronXgate on 03/22/2001 11:17 AM CST
+To: Cara Semperger/PDX/ECT@ECT
+cc: Duong Luu/HOU/ECT@ENRON, Kate Symes/PDX/ECT@ECT, Diana=20
+Scholtes/HOU/ECT@ECT=20
+Subject: RE: Test of Forward Obligation
+
+
+    Cara,
+
+   Thanks a lot for the detail error report.
+   Actually to me is enough to see the selection screen and the numbers of=20
+the deals
+   which are missing or are extra on the report.
+
+
+   1) I can see that you are running the older version of the report, becaus=
+e=20
+there is selection
+for Approval on the screen. Probably is our mistake. The shortcut does not=20
+update the new
+version. You need to run the STAGE Enpower launchpad with all the buttons at=
+=20
+first which
+will copy the new version of Forward Obligation from the server to your loca=
+l=20
+computer
+at first and then to run the shortcut.
+
+  2) I run the newer version here, I can see the parts of the deals 503112=20
+and 503107
+which you have highlited and the region totals were zero's. You can verify i=
+t.
+
+
+ 3) We just released a new version to stage, which should have the same=20
+reasults, but we
+did some optimizations, we intend to reduce the speed soon.
+The version number is 3.0.0.36, you can see it when you run the report or=20
+click Help-About.
+Until you don't see that number there is no use to continue testing, on any=20
+problem
+call David Poston
+
+
+    Thanks,
+    Kroum
+
+
+
+ -----Original Message-----
+From:  Semperger, Cara =20
+Sent: Thursday, March 22, 2001 10:27 AM
+To: Kroumov, Kroum
+Cc: Duong Luu/HOU/ECT@ENRON; Symes, Kate; Scholtes, Diana
+Subject: Test of Forward Obligation
+
+Good Morning,
+
+I ran the new report against production, using the shortcut provided for me.=
+=20
+My results are innacurate because some transmission deals are not showing.=20
+The strange thing is that there is no real pattern as to why some=20
+transmission deals show and some don't.
+
+I compared the forward ob to scheduling.   You might want to do that=20
+comparison for yourself there.  Also, checking the Real-Time position manage=
+r=20
+as well will help.
+
+Please see this power point document.
+
+
+ << File: fwdob_vs_sched_322.ppt >>=20
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------020208000003000006020300--

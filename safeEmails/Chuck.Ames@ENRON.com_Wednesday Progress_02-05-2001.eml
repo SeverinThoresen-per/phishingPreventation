@@ -1,0 +1,67 @@
+MIME-Version: 1.0
+Message-ID: <0F3EDDAF114E7790AD153119BC9E740AC6E639A4@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: StoreyGeoff
+From: Chuck.Ames@ENRON.com
+Return-Path: Chuck.Ames@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------050606060102000608050502"
+Subject: Wednesday Progress
+Date: Wed, 02 May 2001 23:33:28 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050606060102000608050502
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Geoff,
+
+Listing of current issues
+
+Resaving and publishing of April 30th IM curves to show June values.  The po=
+rtcalc's were bombing out because there was no prior June value in the curve=
+s.  So as of May 1, they started bombing.  I have to find a way to re-post p=
+rior day curves out into ERMS. =20
+
+All the GDI curve manager files that are pulling the physical index curves s=
+hould be ready by tonight.  I'm doing Texas as I write.  I think we should l=
+eave the issue of who and how these curves are set up to the individual desk=
+s.  For the central desk, we can use the term traders files to publish.  But=
+, we could also set aside a separate file to merely listen to the phys idx c=
+urves and publish them that way.  I'm going to release the files to the desk=
+s for them to review and get back to me for changes and revisions. =20
+
+The changes made into TDS deal evaluation are being revised today.  I guess =
+there were some problems this morning and are now being fixed.
+
+As for the position manager, there is an issue as to how we would like the N=
+ew/ Changed/ New & Changed filter placed onto the position manager.  The iss=
+ue there is that with the FX column in the positions tab, what should that p=
+ositions tab look to as a filter if we place that function on the positions =
+and cash tab.  Dave has suggested putting the filter in the menu area where =
+you can manipulate it and then tab between columns.  I agreed that that was =
+the best solution but I figure you should probably let me know ASAP whether =
+you agree.
+
+Other than that I don't know what else is new or important to add.  After I'=
+m done calcing tonight I'll go ahead and publish the GDI curves myself.  Tom=
+orrow morning I'll talk with the Risk leads and ask them if they can review =
+and load the curves from here on out.  I'll also start modifying the curve f=
+iles to include an additional month so we wont run into that problem again. =
+ That should be done for EOD tomorrow.  Give me a call if you have any quest=
+ions and/or problems.
+
+Chuck
+3-9088=20
+=20
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050606060102000608050502--

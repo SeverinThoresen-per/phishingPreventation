@@ -1,0 +1,57 @@
+MIME-Version: 1.0
+Message-ID: <A76E897141B7AF81357DD395DA06C8057E06D831@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: Bhagat, Sanjay, Blanco, Alicia
+To: Adams, Aaron, Agudelo, Ana
+From: Ambrocik
+Return-Path: Ambrocik
+Content-Type: multipart/alternative;
+	 boundary="------------040107020600060602020708"
+Subject: Solar Migration - Second Notice
+Date: Wed, 03 Oct 2001 04:30:52 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040107020600060602020708
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+
+	During the weekend of October 6 and 7, 2001 the Enterprise Storage Team wil=
+l be migrating all production users off the current hardware (Solar) that ho=
+uses their home and application directories (no production databases are eff=
+ected) to new hardware.=09
+
+	This migration requires a total system outage of approximately 4 hours.  Th=
+e outage will occur Friday night - Saturday morning between the hours of Mid=
+night to 4:00 AM.  All users will need to be logged off during this time per=
+iod.  If this is not possible, contact Adam DeRidder (x3-1428) or Carlos Uri=
+be (x5-8179) as soon as possible.
+	In order to validate the migration, production users need to test access to=
+ their home directories and applications on Saturday, October 7 and Sunday, =
+October 8, 2001.
+
+	As part of the migration plan, the Storage Team needs volunteers from the p=
+roduction community to test the new environment.  The test will only require=
+ approximately 15-30 minutes to complete.  Adam DeRidder and Carlos Uribe ha=
+ve setup a test lab on the 34th floor for this purpose.  Contact Adam to set=
+up a time.  Your involvement will help make this a successful migration.
+
+	A list of contacts will be made available on Thursday, October 5, 2001.  Pl=
+ease use this list to report issues and check the status of the migration.
+
+Bob Ambrocik
+Enterprise Storage Team
+EB 3429F
+x5-4577
+bob.ambrocik@enron.com
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040107020600060602020708--

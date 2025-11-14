@@ -1,0 +1,116 @@
+MIME-Version: 1.0
+Message-ID: <CFC4A7E4BBD5808F7C19CD698850D591E1BAEA8D@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: WhiteStaceyW.
+To: VictorioTom
+From: Casey.Evans@ENRON.com
+Return-Path: Casey.Evans@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------050402020507020104040101"
+Subject: RE_ Enpower positions
+Date: Fri, 26 Oct 2001 04:49:09 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050402020507020104040101
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Tom,
+
+The only active spreadsheet we have right now in the East is POWER-SS-R1B-PR=
+C.  The POWER-SS-R3B-PRC will be zeroed out tomorrow....the option actually =
+ended in August, but the spreadsheet was never zeroed out and re-entered int=
+o RiskTrac, so that last day's position is still sitting in RiskTrac. =20
+
+The time frame between 7 and 11 a.m. in AdHoc is irrelevant because once we =
+calc in the afternoon (which "writes" daily info to AdHoc), the AdHoc table =
+should not change until we calc the following afternoon.  You can be sure th=
+at you will only capture the previous day's historical data unless IT is doi=
+ng some sort of testing and it utilizing AdHoc.  This happens very rarely bu=
+t when it does, we will make sure to keep you in the loop.
+
+Let me know if you have further questions!
+Thanks!
+Casey
+ -----Original Message-----
+From: 	White, Stacey W. =20
+Sent:	Thursday, October  25, 2001 4:53 PM
+To:	Evans, Casey
+Subject:	FW: Enpower positions
+
+
+
+ -----Original Message-----
+From: 	Victorio, Tom =20
+Sent:	Thursday, October 25, 2001 4:51 PM
+To:	White, Stacey W.
+Subject:	RE: Enpower positions
+
+Stacey,
+
+- ALBERTADIR is in the table: Peak =3D (20,162), Off-peak =3D (20,588)
+
+- Per your last email, I'll remove RETAILEAST and RETAILWEST.
+
+- For spreadsheets, we currently see the following:
+POWER-SS-R3B-PRC
+POWER-SS-R3C-PRC
+POWER-SS-R1B-PRC
+We'll take these from RiskTrac.
+
+- For SouthAmerica positions, we can also take from RiskTrac
+
+- The numbers for EAST and WEST are off because I ran the query at around 11=
+AM. I didn't realize that Adhoc only holds the last calculated numbers, not =
+as of a certain effective date. If we run the query everyday at 7AM, can we =
+be sure we're capturing all of previous day's trading? And none of current d=
+ay's?
+
+Thanks.
+-Tom
+ -----Original Message-----
+From: 	White, Stacey W. =20
+Sent:	Thursday, October 25, 2001 3:49 PM
+To:	Victorio, Tom
+Subject:	RE: Enpower positions
+
+I was incorrect about Alberta ENA, it should be zero but where is Alberta?  =
+It should have a big position.
+
+Stacey
+
+ -----Original Message-----
+From: 	Victorio, Tom =20
+Sent:	Thursday, October 25, 2001 12:52 PM
+To:	White, Stacey W.
+Subject:	Enpower positions
+
+
+Hi Stacey.
+
+We've generated the numbers below directly from EnPower/Adhoc (effective dat=
+e 10/24). Just a couple of points I need to confirm before we can try to gen=
+erate our DPR numbers from this query --
+
+1) where can we get the spreadsheet positions from?
+2) are these all the Enpower portfolios we should be picking up for Power?
+3) do the numbers for NA look correct?=20
+4) I will be sending the numbers daily to the "contacts" listed -- any other=
+ names I should add?
+
+Thanks.
+- Tom
+
+
+ << OLE Object: Picture (Metafile) >>=20
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050402020507020104040101--

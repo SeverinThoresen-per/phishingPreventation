@@ -1,0 +1,53 @@
+MIME-Version: 1.0
+Message-ID: <2027A967624458C166C25CD95CA34524177DBF00@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Semperger" <Cara>, "Atta" <Asem>
+To: SmithWill
+From: Corry.Bentley@ENRON.com
+Return-Path: Corry.Bentley@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------020704080103010104030601"
+Subject: PSW_PSC 0910 Test
+Date: Mon, 10 Sep 2001 21:01:43 +0200
+
+This is a multi-part message in MIME format.
+
+--------------020704080103010104030601
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Will,
+I found about the same issues we had already discussed while running the PSW=
+/PSC.
+
+I ran the sheet for 6/19 since there were no "West" paths in the confirmatio=
+ns (I still see the West paths when "View: East Trading Desk" is checked).
+
+Most of the paths "routed" in Deal Scheduling except for a deal that contain=
+ed transmission with the correct Enpower number provided (Error: Capability =
+not supported: Cannot route transmission deals)
+The "Routing Detail" in Deal Scheduling did not contain a check mark for "Ph=
+ysical Route" on any of the physical paths.
+Also, in scheduling, the "Edit Strip Information" does not contain the Path =
+or comments in the Deal Scheduling Comments section as before.
+
+The physical path that did not route in scheduling also did not go the the P=
+ath Confirmations.
+
+
+Also, I found that when I chose "Edit" on the Pre-Schedule Workspace, it cre=
+ated a New Workspace.  It also occurred twice when the mouse cursor passed b=
+y the word "edit" without physically clicking on it.
+
+That's about it for today,
+Corry
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------020704080103010104030601--

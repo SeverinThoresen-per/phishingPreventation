@@ -1,0 +1,94 @@
+MIME-Version: 1.0
+Message-ID: <4D269B1E007E9ADC55A98EAE8AE05DF42790AF69@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "White  Stacey" <W.>, "Evans" <Casey>
+To: SanvidoTerry
+From: Andrea.Dahlke@ENRON.com
+Return-Path: Andrea.Dahlke@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------080203000804040601050702"
+Subject: RE_ Today's Integration Test
+Date: Fri, 11 Jan 2002 21:34:24 +0200
+
+This is a multi-part message in MIME format.
+
+--------------080203000804040601050702
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Terry-
+=20
+I have a small revision to make to our Power testing.  We will actually be t=
+esting the DPR macros for power because they will be using the application i=
+n the Estate world.  Has the specific database been determined that we will =
+need to point the macros to for Estate?  I can have our IT support (Min Zhen=
+g) work on it today for me if we have all the information determined.
+=20
+Thanks!
+=20
+Andrea
+
+-----Original Message-----
+From: Sanvido, Terry=20
+Sent: Thursday, January 10, 2002 5:09 PM
+To: Brackett, Debbie R.; Hare, Bill D.; Hayden, Frank; Jaquet, Tammy; McLaug=
+hlin Jr., Errol; Moorer, Torrey; Rodriguez, Bernice; Sweitzer, Tara; Theriot=
+, Kim S.; Winfree, O'Neal D.; Dupuy, Mark; Gillis, Brian; Heal, Kevin; McKee=
+l, Richard; Reeves, Kathy; Seib, Dianne; Vander velde, Nikole; Anderson, Dia=
+ne; Baker, Natalie; Baxter, Bryce; Bowen, Bob; Campos, Sylvia A.; Garcia, Cl=
+arissa; Hilliard, Marlene; Hunter, Larry Joe; Price, Wade R.; Richardson, St=
+acey; Schrab, Mark L.; Severson, Russ; Spears, Christopher; Sullivan, Patti;=
+ Wallumrod, Ellen; Wynne, Rita; Chitradurga, Sundar; Cinelli, Steve; Elwood,=
+ Richard; Franks, Shawn; Greig, Iain; Harmon, Kenneth M.; Hunter, Wade; John=
+son, Jeff; Nolte, Ron; Powell, John D.; Ramesh, Ganapathy; Saleem, Aftab; Sa=
+nvido, Terry; Smith, Regan M.; Allen, Thresa A.; Aucoin, Evelyn; Bentley, Co=
+rry; Clemons, Amy; Dahlke, Andrea; Denton, Rhonda L.; Evans, Casey; Murphy, =
+Melissa; Robinson, Rhonda; Stevens, Mechelle
+Subject: Today's Integration Test
+
+
+Today' s integration test went very well. During testing we identified the f=
+ollowing:
+
+additional system dependencies=20
+additional application steps=20
+problem areas related to being in a production environment
+
+We accomplished a lot this week and could not have done it without everyone'=
+s cooperation and hard work.
+
+
+=20
+Thank You!
+=20
+We will update the scripts, schedule and contact list, by end of day, to ref=
+lect any changes identified during today's  'Dry Run'. The new versions will=
+ be located in \\O:\_Dropbox\IntegrationTestScripts <file://\\O:\_Dropbox\In=
+tegrationTestScripts>
+=20
+Tomorrow we will publish a contact number and tentative schedule for Sunday'=
+s Integration Test.
+=20
+Just a reminder, for those individuals who participated in the testing, plea=
+se clean up (zero out, un-officialize, etc.), do not kill the deal, the foll=
+owing deals in Sitara, TAGG, EnPower, Unify PM, Unify VM, Unify Settlements,=
+ CAS and ?????:
+=20
+    Sitara: 1193642, 1193649
+    TAGG: YM5545.1, YM5709.1
+    EnPower: 896012, 896014, 896015
+=20
+=20
+Thank You,
+=20
+Integration Test Team
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------080203000804040601050702--

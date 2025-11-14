@@ -1,0 +1,109 @@
+MIME-Version: 1.0
+Message-ID: <1D99CB5DA5D25ECE0F25E0F68EFF0257BB1F3AD3@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: HelenZhang
+To: MichelleDCisneros
+From: "Alex" <Huang>
+Return-Path: Huang
+Content-Type: multipart/alternative;
+	 boundary="------------060503070005070201070202"
+Subject: Re_ Generation Earnings Model
+Date: Tue, 10 Apr 2001 01:33:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060503070005070201070202
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Michelle,
+I agree with you that we need to run AT LEAST 500 iterations.  But I did not
+realize that it took 16 hours to run 100 iterations. Helen and I talked=20
+earlier about
+using parallel computing technique to split the algorithm into smaller parts=
+=20
+and
+run the parts separately on different processors, then aggregate the results=
+=2E
+This procedure makes better use of computer power and saves time. Looks like
+we have to do it this way now.  Buying a more powerful computer helps but=20
+does not solve the problem.=20
+
+In addition, we might want to re-consider if writing the code in VB is=20
+optimal.
+I was assured at the very beginning that VB runs as fast (if not faster) as =
+C,
+but some re-assurance from IT group on this issue is helpful.
+
+Best,
+Alex
+
+
+  =20
+=09
+=09
+	From:  Michelle D Cisneros @ ECT                           04/09/2001 02:52=
+ PM
+=09
+
+To: Alex Huang/Corp/Enron@ENRON
+cc: Gary Hickerson, Danielle Romain=20
+
+Subject: Generation Earnings Model
+
+Hi Alex-
+
+Danielle and I were talking to David M. today regarding running the model fo=
+r=20
+purposes of back testing the results. Last week we ran Calpine using 46 days=
+=20
+of historical forward price data at 10 and 100 iterations. The 100 iteration=
+=20
+run took 16 hours to run. To run all 20 companies with the 46 days worth of=20
+data and at 100 iterations is estimated to take about 28 days. We are=20
+concerned that 100 iterations will not be sufficient and will need to be=20
+increased to at least 500 iterations.=20
+
+We are thinking that we need to use a server or something much more powerful=
+=20
+than the test computer we have been using. Do you have any suggestions as to=
+=20
+how we can improve the process?
+
+Thanks,
+Michelle
+X35435
+
+
+Hi Alex-
+
+Danielle and I were talking to David M. today regarding running the model fo=
+r=20
+purposes of back testing the results. Last week we ran Calpine using 46 days=
+=20
+of historical forward price data at 10 and 100 iterations. The 100 iteration=
+=20
+run took 16 hours to run. To run all 20 companies with the 46 days worth of=20
+data and at 100 iterations is estimated to take about 28 days. We are=20
+concerned that 100 iterations will not be sufficient and will need to be=20
+increased to at least 500 iterations.=20
+
+We are thinking that we need to use a server or something much more powerful=
+=20
+than the test computer we have been using. Do you have any suggestions as to=
+=20
+how we can improve the process?
+
+Thanks,
+Michelle
+X35435
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060503070005070201070202--

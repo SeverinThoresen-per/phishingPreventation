@@ -1,0 +1,115 @@
+MIME-Version: 1.0
+Message-ID: <C28D8C1C095FCE67151F483A8820620EC286CBB4@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Chip" <Cox>, "Diana" <Willigerod>, "Sammy" <Abu-Khalaf>, "Bruce" <Smith>, "David" <Poston>, Steve
+To: "Tim" <Belden>, "Murray P" <O'Neil>
+From: "Dan" <Dietrich>
+Return-Path: Dietrich
+Content-Type: multipart/alternative;
+	 boundary="------------050403070102040801030003"
+Subject: IT problems Sunday
+Date: Mon, 27 Nov 2000 17:34:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050403070102040801030003
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Tim and Murray,
+
+Yesterday the real-time desk experienced dropped Terminal Server (TS)=20
+sessions which impacted their productivity. Diana and Chip contacted the=20
+network team in Houston to assist with troubleshooting the problem. Keith=20
+Dziadek monitored the DS3 VPN connection between Portland and Houston and ha=
+s=20
+determined that it is the dynamic fail-over within the Enron Intelligent=20
+Network (EIN) which is causing the dropped TS sessions. This dynamic=20
+fail-over is a good thing. Our issue is that the sensitivity of the TS=20
+sessions is so high that the time of the dynamic fail-over on the EIN causes=
+=20
+them to drop while all other applications (i.e. Enpower running locally in=20
+Portland) are not affected.
+
+Keith is meeting with his team in Houston as well as staff from EBS today to=
+=20
+form an action plan. Once the action plan has been established, Keith or I=20
+will communicate what and when it will be done to you via email.
+
+You can reach me on my cel if you have any questions.
+
+Regards,
+
+Dan Dietrich
+Cel: 403-818-0815
+
+
+---------------------- Forwarded by Diana Willigerod/PDX/ECT on 11/26/2000=20
+03:33 PM ---------------------------
+  =20
+=09
+=09
+	From:  Phillip Platter                           11/26/2000 03:19 PM
+=09
+
+To: Jeff Richter/HOU/ECT@ECT, Tim Belden/HOU/ECT@ECT, John M=20
+Forney/HOU/ECT@ECT, Murray P O'Neil/HOU/ECT@ECT
+cc: Mark Guzman/PDX/ECT@ECT, Monika Causholli/PDX/ECT@ECT, Diana=20
+Willigerod/PDX/ECT@ECT, Chip Cox/PDX/ECT@ECT, Paul Kane/PDX/ECT@ECT=20
+
+Subject: IT problems Sunday
+
+Please be advised of a serious problem with Terminal Server!=20
+
+We were all kicked out of Terminal Server consistently on Sunday.  At first=20
+it happened about every half hour (9am to 10:30a.m).  Then it happened every=
+=20
+5 minutes.=20
+Communication seemed slow.  We paged and called the Portland IT Team at=20
+11:30  (Diana & Chip).  At 12noon Diana said Chip and Paul Kane were working=
+=20
+on it.   At around  12:30 Paul Kane called back and said "Vince" in Houston=20
+was working on it.  We asked for Vince's Phone number and Paul stated that=20
+Vince would call us instead. Vince called at about 1:00 and said everything=20
+was now working.  Five minutes later we were still getting kicked out.   We=20
+then paged and called Chip and he said he was trying to get ahold of=20
+Houston.  At 1:30 we called the Resolution Center. They indicated they had n=
+o=20
+clue we were having problems. At 1: 45 we called Greg Marsalis in Houston an=
+d=20
+he said he was unaware of who was working on it, but was going to look into=20
+it.
+
+Greg did look into it and said they were still not able to pinpoint the=20
+problem.  At this writing,(3:10p.m.) we are still not able to use Terminal=20
+Server  and consequently are unable to transact with the ISO or to enter=20
+deals in enpower.  This has also affected our connection to PX Trade App.  W=
+e=20
+are effectively prevented from taking advantage of market conditions in=20
+California.  Earlier I had started to initiate some congestion relief  on th=
+e=20
+Palo Verde tie .  Cong was $225 to $250 at Palo and I was confident I could=20
+take advantage by moving power out of SP.  I was unable to do anything in=20
+Caps as I was kicked out every few minutes.
+
+I feel the communication process regarding this problem has been flawed.  I'=
+m=20
+sure there is plenty of blame to go around .  I suggest we meet with IT  to=20
+define a process where we will get immediate attention and results. =20
+
+As of 3:20 we still have the same problems.=20
+
+I am hoping this problem is isolated to Sunday.=20
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050403070102040801030003--

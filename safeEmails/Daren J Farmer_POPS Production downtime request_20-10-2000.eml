@@ -1,0 +1,104 @@
+MIME-Version: 1.0
+Message-ID: <AF8360724A69BF0BA61188C9E63B74C7293B26A5@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: LizBellamy
+From: "Daren J" <Farmer>
+Return-Path: Farmer
+Content-Type: multipart/alternative;
+	 boundary="------------050303050108060306030506"
+Subject: POPS Production downtime request
+Date: Fri, 20 Oct 2000 00:10:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050303050108060306030506
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+FYI.  You may want to check with someone to see if this will affect you this=
+=20
+weekend.
+
+D
+---------------------- Forwarded by Daren J Farmer/HOU/ECT on 10/19/2000=20
+03:08 PM ---------------------------
+
+
+Romeo D'Souza
+10/19/2000 02:53 PM
+To: Pat Clynes/Corp/Enron@ENRON
+cc: Anita K Patton/HOU/ECT@ECT, Clem Cernosek/HOU/ECT@ECT, Michael=20
+Eiben/HOU/ECT@ECT, Dave Nommensen/HOU/ECT@ECT, Edward Terry/HOU/ECT@ECT, Gar=
+y=20
+A Hanks/HOU/ECT@ECT, Daren J Farmer/HOU/ECT@ECT, Neil=20
+Leininger/NA/Enron@Enron=20
+Subject: POPS Production downtime request
+
+
+
+The POPS Production database server will be down over the weekend for a 3=20
+hour period
+for memory upgrade. Please let me know if there is a preferred 3hr window, i=
+f=20
+there is
+no problem with y'all,  can we will request the maintenance  between 12-3pm=20
+Saturday 10/21/00.
+
+I'll inform y'all of the actual timeframe once its finalized, since there ar=
+e=20
+other systems
+running on that server.
+
+thanks
+Romeo
+---------------------- Forwarded by Romeo D'Souza/HOU/ECT on 10/19/2000 02:4=
+7=20
+PM ---------------------------
+From: Neil Leininger@ENRON on 10/19/2000 02:01 PM
+To: Christine Pham/HOU/ECT@ECT, Romeo D'Souza/HOU/ECT@ECT
+cc: =20
+Subject: downtime request
+
+FYI
+---------------------- Forwarded by Neil Leininger/NA/Enron on 10/19/2000=20
+02:02 PM ---------------------------
+
+
+Malcolm.Wells@enron.com on 10/19/2000 01:54:49 PM
+To: dba@enron.com
+cc: =20
+
+Subject: downtime request
+
+
+The UNIX Infrastructure team  would like to request downtime on system
+'aurora' this weekend.  The system has 2 faulty memory simms that we need
+to replace BEFORE they cause a problem.  We are requesting 3 hours to
+perform the memory replacement.  The following databases would be effected:
+
+eqtprod
+dcfprod
+popprod
+trdprod
+semprod
+sitprod2
+infprd53
+
+Please let me know if/when we can have time for this maintenance.
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050303050108060306030506--

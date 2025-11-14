@@ -1,0 +1,107 @@
+MIME-Version: 1.0
+Message-ID: <02764BBBAA2646DA8CDD65B1B5CDA2C39EB3EC41@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: JeffreyPorter
+From: "Chris" <Germany>
+Return-Path: Germany
+Content-Type: multipart/alternative;
+	 boundary="------------010701020300080200030601"
+Subject: Re_ Gas Daily stuff
+Date: Thu, 07 Dec 2000 20:24:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------010701020300080200030601
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Look at the FOM numbers.  I'm using your number from cell R40 and take a loo=
+k=20
+at how I come up with my numbers.
+
+Date JP FOM FOM Sell to ENA Buy from ENA Sell to ENA Other Purchases FOM=20
+Adjusted
+1 28498  44283 -11000  0  0  11317   44600
+2 43498  44283 -11000  15000  0  11317   48283
+3 43498  44283 -11000  15000  0  11317   48283
+4 43498  44283 -11000  15000  0  11317   48283
+5 38498  44283 -11000  15000  -5000  11317   43283
+6 38498  44283 -11000  15000  -5000  11317   43283
+
+This is a breakout of the "Other Purchases".  These are gross numbers
+1252  A06 from Dominion
+4099  Broad Run from EES
+3674  Delmont form EES
+688    Monclova from Central Desk
+1857 A06 from ENA
+
+11570  Gross =3D 11,317 delivered
+
+This is how I get your FOM for the 1st +44283-11000+11317=3D44600
+
+Let me know what you think about my voodoo.
+
+
+
+
+
+
+
+
+12/07/2000 10:07 AM
+Jeffrey Porter@EES
+Jeffrey Porter@EES
+Jeffrey Porter@EES
+12/07/2000 10:07 AM
+12/07/2000 10:07 AM
+To: Chris Germany/HOU/ECT@ECT
+cc: =20
+Subject: Re: Gas Daily stuff =20
+
+I have it a little different.
+
+12/1/00 (2,912)
+12/2/00 (4,669)
+12/3/00 (4,669)
+12/4/00 (12,907)
+12/5/00 2,169=20
+
+() is  a sale from NPC to ENA
+ we are off by 10,000 2 to 5.
+1st is ???
+
+
+
+Chris Germany@ECT
+12/07/2000 09:34 AM
+To: Jeffrey Porter/HOU/EES@EES
+cc: =20
+Subject: Gas Daily stuff
+
+This is what I'm showing as gas daily activity for the 1st thru the 5th.
+
+Date  Undertake Overtake
+1  4087=20
+2    5999
+3    5999
+4  2548
+5    12202
+
+I buy the Undertakes and sell you the Overtakes.
+
+Do these numbers look  close?
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------010701020300080200030601--

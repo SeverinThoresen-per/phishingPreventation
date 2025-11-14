@@ -1,0 +1,103 @@
+MIME-Version: 1.0
+Message-ID: <F33A40008CCD9249E038195D12C8EB489902FFC3@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "James" <New>, "Neil" <Tarling>, "Pablo" <Pissanetzky>, "Sally" <Beck>
+To: "Gregor" <Baumerich>, "Paul" <Mead>, "Joe" <Gold>
+From: "D Todd" <Hall>
+Return-Path: Hall
+Content-Type: multipart/alternative;
+	 boundary="------------060400000204060802080806"
+Subject: Book-Split Update 4_25_2000
+Date: Wed, 26 Apr 2000 01:07:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060400000204060802080806
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+As we are nearing the deadline for the Book-split project, I want to give yo=
+u=20
+a status update.
+
+BOOK-SPLIT
+
+Completed
+Separate Cash & Term books have been setup in Enpower and Global databases=20
+for every country
+Pablo Pissanetzky has written code to successfully transfer over 99% of the=20
+deals into their proper regional books
+Two dozen deals (mainly annuities) have been modified in Production to=20
+transfer according to Pablo's code
+All deals requiring manual intervention on Go Live date have been identified
+Initial position report has been developed and tested for accuracy
+
+Uncompleted
+Communication to Commercial of positions (Wed. April 26)
+Presentation of the Position Report which allows Commercial to view monthly=20
+peak/off-peak volumes by region (Wed. April 26)
+PCS by deal for each portfolio
+Separate DPRs and associated reports for the Pool and Bilateral portfolios
+Modifications necessary for the Settlements invoicing system
+
+
+TRANSMISSION
+
+We are making progress on this effort although you have not seen any hard=20
+evidence.  Zhiyong Wei is the IT Director in Houston who is responsible for=20
+Enpower development.  We are working with Pablo and Zhiyong on several=20
+possibilities.  As we have previously discussed, there is not the current=20
+capability to value the spreads as options, but we are testing the other=20
+scenarios.=20
+
+Buy/Resale
+This deal type has been disabled
+We are waiting for Zhiyong's response as to its future functionality if any
+
+Transmission
+Pablo tested in the Stage environment today after receiving minor assistance=
+=20
+from Zhiyong
+Ability to book Transmission deal without Annuity leg
+Ability to liquidate demand charge daily
+Reflects long and short positions at the appropriate regions (as Forwards no=
+t=20
+Options)
+Does not value the forward spread between the regional curves (still testing=
+)
+Variable cost treatment is still being tested
+
+Forwards
+If deep in the money, we could enter intra-desk/inter-desk deals to reflect=20
+positions and P&L=20
+
+Much time and IT development resources have been spent to make use of the=20
+Transmission functionality.  After speaking with Zhiyong, there evidently wa=
+s=20
+a big push last year for the MTM of Transmission.  The latest version has=20
+been in the test environment for some time, but no one is currently testing=20
+it.  It will take some attention to test it properly and will not be complet=
+e=20
+by the book-split deadline.
+
+As we established in our last meeting, the MTM of transmission is a separate=
+=20
+project from the book-split.  Due to the complexity and amount of data=20
+involved in the book-split project itself, it is advisable that we=20
+incorporate the transmission second.  Further testing of the transmission=20
+will continue this week and by the end of the week we should have a decision=
+=20
+on the most effective way to currently book transmission. =20
+
+Please call or come by if you have any questions,
+Todd Hall
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060400000204060802080806--

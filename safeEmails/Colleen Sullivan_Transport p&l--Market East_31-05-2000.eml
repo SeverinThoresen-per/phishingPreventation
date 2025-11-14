@@ -1,0 +1,61 @@
+MIME-Version: 1.0
+Message-ID: <A5FDC6F7816776BC54CCDDD7C853226FBA242CC6@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Judy" <Townsend>, "Dan" <Junek>, "Chris" <Germany>
+To: ScottNeal
+From: "Colleen" <Sullivan>
+Return-Path: Sullivan
+Content-Type: multipart/alternative;
+	 boundary="------------030304030207000306020806"
+Subject: Transport p&l--Market East
+Date: Wed, 31 May 2000 20:16:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------030304030207000306020806
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+This is just FYI-
+
+I think we really need to ask Dan, Judy and Chris to dedicate some time to=20
+map the market area points accurately.  (What I mean is making sure each=20
+location has the proper valuation attached to it in Sitara.)  Just so you=20
+know, when I print out the market area transport p&l, there are 85=20
+tickets/paths set up, and only 19 of those show a positive p&l.  I know that=
+=20
+we are not using that much transport that is out of the money--I'm sure this=
+=20
+is just a case of no one going in and making sure the mappings for each=20
+location in the market area are accurate.  I would just go ahead and do this=
+,=20
+but I I do not know the market area points and valuations well enough.  Ther=
+e=20
+are a few simple things I could point out that need fixing (i.e., TCO pool v=
+s=20
+TCO citygate--as prices go up and cost of fuel goes up, no one is adjusting=20
+the curves between the two points, so your transport starts out in the money=
+=20
+and ends up out of the money; another example is CNR--the gathering charge o=
+n=20
+CNR is now $.44, but we still have our curve set at TCO pool minus $.32.)
+
+Anyway, I know the market area is a bit more difficult because of valuation=20
+issues, but I have to believe we could do better than 19 out of 85.  (And on=
+=20
+some pipes, like Tennessee, the ration is 0/33).
+
+I know this is a pain to fix, but one day I do envision that we will have=20
+automatic notification of capacity being in or out of the money, but that=20
+will be meaningless if we are not set up to value points properly.
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------030304030207000306020806--

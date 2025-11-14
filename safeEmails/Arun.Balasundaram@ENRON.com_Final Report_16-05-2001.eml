@@ -1,0 +1,65 @@
+MIME-Version: 1.0
+Message-ID: <27A6ADC0B139F559D4495C58BAB45039F92B458A@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Belden" <Tim>, "Gupta" <Sanjay>
+To: "Alonso" <Tom>, "Fisher" <Mark>, Richter
+From: Arun.Balasundaram@ENRON.com
+Return-Path: Arun.Balasundaram@ENRON.com
+Content-Type: multipart/alternative;
+	 boundary="------------050302010705010405030502"
+Subject: Final Report
+Date: Wed, 16 May 2001 00:15:16 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050302010705010405030502
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Hi everyone,
+
+Thank you very much for the valuable business insight and active feedback on=
+ position manager during the past week. Based on the feedback from everyone =
+we have made lot of changes in the new version of the application, which was=
+ released last week and I think the system is working to everybody's satisfa=
+ction. I would like to take this oppurtunity to sum up the features and opti=
+ons built inside the new position manager.=20
+
+1. All the west regions and basis have been rolled out.
+2. A feature has been added to the basis screen, which enables traders to pa=
+ste the basis =20
+    points from excel.
+3. New curve types Capacity and Volatility Smiles are included.
+4. Positions can be viewed by both MWH and MW.
+5. Positions can be viewed by Delivery Points.
+
+Currently we are working on fixing some problems in getting the curve shift =
+and hopefully we will roll that out by the end of this week. We are also pla=
+nning to add this application to the Enpower Launch Pad, which will make mig=
+ration easier. I have noted down all the enhancement requests and we will tr=
+y to get all those addressed in the next release.
+
+Finally I would like to thank everyone on behalf of the entire risk team for=
+ devoting some time everyday to test this application. We are striving hard =
+to end this and migrate this application to production in the near future.
+
+If you have any questions or concerns please feel free to call any of us lis=
+ted below
+
+Arun Balasundaram (713-853-7102)
+Sivakumar Govindasamy (713-345-7926)
+Norman Lee (713-853-6976)
+
+Thanks
+
+- Arun
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050302010705010405030502--

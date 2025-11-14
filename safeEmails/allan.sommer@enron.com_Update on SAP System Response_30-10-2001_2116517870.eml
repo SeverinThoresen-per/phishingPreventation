@@ -1,0 +1,70 @@
+MIME-Version: 1.0
+Message-ID: <F52FD12A010935493A2E7B12D0C0353F2A6179C0@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: DL-ISCOrgAllGroups
+To: "DL-ISC Customer" <Accounting>, "DL-ISC" <Customer>
+From: allan.sommer@enron.com
+Return-Path: allan.sommer@enron.com
+Content-Type: multipart/alternative;
+	 boundary="------------010205030804010608060302"
+Subject: Update on SAP System Response
+Date: Tue, 30 Oct 2001 01:26:46 +0200
+
+This is a multi-part message in MIME format.
+
+--------------010205030804010608060302
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+As you may recall, the SAP system response time was slow during the Septembe=
+r Quarter-end close period. The Integrated Solutions Center (ISC) has been w=
+orking diligently to address the root causes of this issue and can report th=
+at significant progress has been made.  With the October month-end close fas=
+t approaching, we want to provide you with an update as to the progress made=
+ in identifying and addressing the root causes for slow system response.
+
+Poor Performing Programs
+The ISC has identified a number of poor performing programs.  Some program r=
+edesign has already occurred with continued efforts proceeding through year =
+end.  In addition, system and data base parameters as well as indexes have b=
+een tuned. These actions have resulted in improvements that should enable En=
+ron to realize better system response in the upcoming close.
+
+Workload Distribution
+The ISC has identified jobs, both scheduled and user submitted, that result =
+in system "bottlenecks".  We have accelerated the purchase of system hardwar=
+e to provide additional capacity and expect this upgrade to occur prior to y=
+ear-end close. In addition, the ISC has implemented a plan to provide busine=
+ss users with more information regarding efficient methods of report executi=
+on.  Workshops are currently being conducted with key "close-users" from the=
+ various business units to provide techniques that will enable more efficien=
+t report execution during the close process.=20
+
+Improved Close Monitoring
+The ISC has been working to heighten the monitoring of key close jobs in ord=
+er to more effectively identify and resolve close related issues. An initiat=
+ive is underway to improve the utilization of automated tools to better moni=
+tor, identify, and escalate close-related problems. =20
+
+Communication Strategy Implement
+The ISC has established a plan to more effectively communicate to our custom=
+ers in the event of future system performance issues.  This plan will ensure=
+ that information will be provided to users regarding system performance and=
+ resolution status in a timely manner.
+
+Please feel free to contact me if you would like additional details regardin=
+g our efforts to improve overall system performance.
+
+Allan Sommer
+Enron ISC
+713-345-5291
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------010205030804010608060302--

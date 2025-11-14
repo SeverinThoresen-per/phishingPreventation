@@ -1,0 +1,41 @@
+MIME-Version: 1.0
+Message-ID: <309FE4B74EA4D3DA254A2CDFE8B08AAC837898A3@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Diana" <Scholtes>, "Sean" <Crandall>, "Tom" <Alonso>, "Mark" <Fischer>, "Bill Williams" <III>
+To: DuongLuu
+From: "Cara" <Semperger>
+Return-Path: Semperger
+Content-Type: multipart/alternative;
+	 boundary="------------040606020601070304020302"
+Subject: A bug in Deal Blotter
+Date: Thu, 01 Mar 2001 19:33:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040606020601070304020302
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Good Morning,
+
+When a transmission deal is entered in blotter, for some reason the volume=20
+also gets put in to the loss column as well, showing us with the full volume=
+=20
+on one end of the deal, and zero volume on the other.
+
+This happened with two deals today,  deal 535344 and 535343 put into blotter=
+=20
+by Crandall.  Once the problem was identified, I went into the deal and=20
+changed the loss volume to zero.
+
+C
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040606020601070304020302--

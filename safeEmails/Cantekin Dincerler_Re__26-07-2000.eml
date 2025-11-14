@@ -1,0 +1,97 @@
+MIME-Version: 1.0
+Message-ID: <B522E541E2394B816FA5DBB5FA9840D1A161FC8E@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: VinceJKaminski
+From: "Cantekin" <Dincerler>
+Return-Path: Dincerler
+Content-Type: multipart/alternative;
+	 boundary="------------070507060708040206010801"
+Subject: Re_
+Date: Wed, 26 Jul 2000 20:58:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------070507060708040206010801
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Vince,
+Sorry for getting back a little late. I have been in touch with Kirstee to=20
+figure out how to treat positions data which is the primary cause for=20
+fluctuations. Apparently, as of 7/19, MG still has July position. This may b=
+e=20
+spot or balance of the month, or some settlement issue. This indeed is what=20
+we are trying to find out/verify (it may be an error too). Kirstee is going=20
+to get back to me on this. If it is not an error, then Anjam's latest result=
+s=20
+($5.5 million total VAR) are reasonable given all the assumptions and the=20
+missing pieces. I will keep you posted.
+Cantekin
+
+
+
+
+Vince J Kaminski
+07/26/2000 10:12 AM
+To: Cantekin Dincerler/HOU/ECT@ECT
+cc: Vince J Kaminski/HOU/ECT@ECT, Ted Murphy/HOU/ECT@ECT=20
+Subject: Re: =20
+
+Cantekin,
+
+Can you figure out the reason for cocoa beans VaR fluctuations?
+The same is true of aluminum. I assume this is the position change.
+
+
+Vince
+
+
+
+Cantekin Dincerler
+07/26/2000 09:28 AM
+To: Anjam Ahmad/LON/ECT@ECT, Kirstee Hewitt/LON/ECT@ECT
+cc: Vince J Kaminski/HOU/ECT@ECT=20
+Subject:=20
+
+Anjam and Kirstee,
+
+
+As I have suspected the position as of 6/30 vs 7/19 makes the difference. Th=
+e=20
+first table first column is my VAR number with 6/30 position and gold&silver=
+=20
+prices, the second column is your VAR with 7/19 position and dummy=20
+gold&silver prices. The second table first column is my VAR with 7/19=20
+position and 6/30 gold&silver prices, the second column is as before.
+
+I would ask you to plug the gold and silver prices and see what kind of=20
+numbers you get in order to verify we are on the same page. Please refer to=20
+MODELVAR2000.xls that I have sent you for gold & silver prices and=20
+volatilities.=20
+
+Thank you,
+Cantekin
+
+
+  TABLE 1
+
+
+
+  TABLE 2
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------070507060708040206010801--

@@ -1,0 +1,63 @@
+MIME-Version: 1.0
+Message-ID: <0C1C676E4F17FADAE3C83CC49A035F04029AA98F@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: VinceJKaminski
+From: "Clayton" <Vernon>
+Return-Path: Vernon
+Content-Type: multipart/alternative;
+	 boundary="------------070604040003000205030500"
+Subject: eol stuff
+Date: Mon, 23 Apr 2001 20:15:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------070604040003000205030500
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Vince-
+
+I spoke with Tom, and I completely agree and would like to hand all this EOL=
+=20
+stuff over to you.
+
+We need a Sun server to take over the task. As it happens Martin Lin has one=
+=20
+in his office he's not using and up to the task. His box could serve SAS to=20
+Enron, as well as handle listening in on the EOL feedds and maintaining its=20
+database.
+
+Martin's box technically belongs to EBS, but I think they are downsizing and=
+=20
+wouldn't mind giving it up.
+
+In this way, you would have complete physical and administrative custody ove=
+r=20
+the data and any work you do with it. I needn't be involved, and you can kno=
+w=20
+your work is completely confidential.
+
+I'll make SAS and the EOL software available, as well as the necessary RAM=20
+the server, at no charge. You just need to summon up some SysAdmin resources=
+=20
+to finish the job. There is a fine Unix guy named Ben Thompson who will=20
+support you, I'm sure.
+
+Task:
+
+1) Upgrade RAM on Martin's server
+2) Install newest Solaris OS on server
+3) Install Tibco and GNU software on server
+4) Install SAS on server
+
+Clayton
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------070604040003000205030500--

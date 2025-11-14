@@ -1,0 +1,157 @@
+MIME-Version: 1.0
+Message-ID: <9AAD1E9D33D58A34CA199296FAA4C470FD850B73@Felienne-Pro>
+X-Priority: 3 (Normal)
+Content-Type: multipart/alternative;
+	 boundary="------------050607000607050508020702"
+Cc: "Philippe A" <Bibi>, "Sally" <Beck>, "Jeffrey C" <Gossett>, "Stephen" <Stock>
+To: JohnJLavorato
+From: "Beth" <Perlman>
+Return-Path: Perlman
+Subject: Re_ Systems - ERMS
+Date: Wed, 18 Oct 2000 18:48:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050607000607050508020702
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="iso-8859-1"; format="flowed"
+
+John,
+
+These issues are being addressed by Steve Stock and Chris Hanz in my area as=
+=20
+well as people on the infrastructure side (in Jenny Rub's organization).  We=
+=20
+understand the significance of these problems and they have not gone=20
+unrecognised.  There are 3 components to this plan, the DBA fixes are noted=20
+below (I know it's a lot of technical terms, but this is a highly complex=20
+problem).  The other 2 pieces are the application and the hardware.  I will=20
+include these plans as soon as I receive them.
+
+My team stayed last night with Jeff Gossett and his folks.  A number of item=
+s=20
+came out of observing what transpires in risk.  We feel that there are many=20
+performance enhancements that can be made to the macros to speed up non ERMS=
+=20
+processing.   I'll keep you posted on what we find and the plans to fix them=
+=2E
+
+Beth
+
+
+
+Database Observed Problems
+
+=A3 OS - Severe I/O contention (due to 6 years old disk storage device)
+=A3 OS - Max CPU utilization (due to wait I/O contention)
+=A3 DB - Redo Log Sync (synchronization of Redo information memory with disk=
+)
+=A3 DB - Shared Pool fragmentation (due to unbound SQL )
+=A3 DB - Inefficient buffer cache utilization (due to inefficient SQL)
+
+
+Recommendation
+
+Short Term
+
+=A3 Alleviate Shared Pool contention
+- increased Shared Pool size
+- disabled MTS
+- increased session_cached_cursors
+Implemented on 10/15/2000
+
+=A3 Alleviate Redo Log Sync
+- increased redo_log_buffer
+Implemented on 10/15/2000
+
+=A3 Alleviate I/O contention for rollback segment tablespace
+- added additional tablespace with 2/3more rollback segments
+Implemented on 10/17/2000
+
+=A3 Alleviate I/O contention for redo logs
+- reorg disk storage and implement striping for Redo logs
+- turn on force direct I/O write for intensive volumes
+Under investigation =01) 2 days work
+
+=A3 Turn on Veritas tuning feature
+- expect 5% improvement
+- tested on Shemp today
+Required system reboot=20
+
+=A3 SQL Tuning=20
+Deliver Lists of expensive SQL with recommendation by 10/27/2000
+
+=A3 Reassess CPR migration to different UNIX host
+Waiting for disk storage =01) 2 to 3 weeks
+       New 10K located in Ardmore
+
+Long Term
+
+=A3 Latest storage technology
+
+=A3 Capacity planning
+
+=A3 ERMT and CPR application review
+
+=A3 Upgrade ERMT to 8I
+
+
+
+
+
+
+	John J Lavorato@ENRON
+	10/17/2000 01:31 PM
+		=20
+		 To: Beth Perlman/HOU/ECT@ECT, Philippe A Bibi/HOU/ECT@ECT
+		 cc:=20
+		 Subject: Systems - ERMS
+
+
+---------------------- Forwarded by John J Lavorato/Corp/Enron on 10/17/2000=
+=20
+01:25 PM ---------------------------
+  =20
+=09
+=09
+	From:  Jeffrey C Gossett @ ECT                           10/17/2000 09:45 A=
+M
+=09
+
+To: John J Lavorato/Corp/Enron@Enron
+cc: =20
+
+Subject: Systems - ERMS
+
+John -
+
+Again,  we are having "big time" systems issues.  While we are having the=20
+usual length of time issues (a few people were here past midnight last=20
+night), the issues that occured last night are much more serious than in the=
+=20
+past.  The system brought through totally inaccurate information on a few=20
+books.  (Positions,  value,  etc.)  Luckily, these errors were all caught=20
+last night,  but if a less experienced person had been on those books,  it=20
+could have been a disaster.  (Traders getting incorrect positions and p&l an=
+d=20
+interest rate and credit getting incorrect numbers.)  I have contacted those=
+=20
+in ERMS that need to be involved,  but I would appreciate it if you could=20
+provide additional support to this effort.
+
+Thanks,
+
+Jeff
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050607000607050508020702--

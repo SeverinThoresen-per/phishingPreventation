@@ -1,0 +1,45 @@
+MIME-Version: 1.0
+Message-ID: <63671DC442ADCA8C2988341952F1726437367EBE@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: Lowry, Jennifer, "DL-ETS TMS" <Modification>
+From: Blair
+Return-Path: Blair
+Content-Type: multipart/alternative;
+	 boundary="------------050503080403080502030105"
+Subject: RE_ Reporting replication issue is now fixed
+Date: Wed, 10 Oct 2001 02:11:18 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050503080403080502030105
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+	Jennifer, how long has this been a problem?  Is there a concern we have cau=
+sed
+	customers problems in nominating due to bad information?  Thanks. Lynn
+
+ -----Original Message-----
+From: 	Lowry, Jennifer  =20
+Sent:	Tuesday, October 09, 2001 10:11 AM
+To:	DL-ETS TMS Modification Group
+Subject:	Reporting replication issue is now fixed
+
+
+Yesterday we noticed a problem where reports were not reporting on the corre=
+ct cycle, or were not picking up information between cycles.  As it turns ou=
+t, an important table was not being replicated from the application database=
+ to the reporting database. =20
+
+I was told that this problem has been fixed, and on first inspection of the =
+tables, everything looks correct.
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050503080403080502030105--

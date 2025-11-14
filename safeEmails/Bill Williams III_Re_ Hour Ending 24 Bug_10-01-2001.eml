@@ -1,0 +1,52 @@
+MIME-Version: 1.0
+Message-ID: <C8D596BF170324EE29EE598B319817DB41A6471C@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: PortlandShift
+To: PeteDavis
+From: "Bill Williams" <III>
+Return-Path: III
+Content-Type: multipart/alternative;
+	 boundary="------------030606030608020300040606"
+Subject: Re_ Hour Ending 24 Bug
+Date: Wed, 10 Jan 2001 16:01:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------030606030608020300040606
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Pete,
+
+This "bug" initiates as we roll into the new day, as for the exact time...we=
+=20
+will have to watch closely and get back to you on that.  The bug  or false=20
+finals are an exact duplicate of the previous days finals for that schedule.=
+ =20
+If the current day has a null value for HE 24, no new final will overwrite=20
+the bug or false final.  Consequently we are left with false finals that hav=
+e=20
+absolutely no relation to anything that occurred on the current day.  Going=20
+forward, we will do our best to document the occurence of these false=20
+finals. =20
+This bug is annoying and time consuming, but if recognized it seems that our=
+=20
+best course of action is to run the report, identify the false finals as the=
+=20
+variance, and then give you a call to manually change the values in CAPS so=20
+that it will archive properly.  Any more feedback you have concerning this=20
+bug would be appreciated.
+
+Thank you for your help.
+
+Bill
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------030606030608020300040606--

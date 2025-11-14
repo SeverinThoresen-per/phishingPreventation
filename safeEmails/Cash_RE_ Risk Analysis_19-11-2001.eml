@@ -1,0 +1,62 @@
+MIME-Version: 1.0
+Message-ID: <F175847BB0D5115F1C370E5FC3D6241329B3AC81@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: Cashion, Tana, Sullivan, Kriste
+To: Skinner, Cindy
+From: Cash
+Return-Path: Cash
+Content-Type: multipart/alternative;
+	 boundary="------------050602080607060103050700"
+Subject: RE_ Risk Analysis
+Date: Mon, 19 Nov 2001 03:26:17 +0200
+
+This is a multi-part message in MIME format.
+
+--------------050602080607060103050700
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+I think this looks good.  For simplicity, I would use the ethnic codes we ha=
+ve in datamart/sap rather than creating new ones. That makes it easier to po=
+pulate.  One other field to add would be visa status. =20
+=20
+As with the other documents, I believe that the population of these document=
+s can be done now, with just the blank for "yes" or "no" for layoff waiting =
+for the rest of the process.  You probably will have to run these by the gen=
+eralist, Valeria or someone in ER team, and the attorneys for the special ri=
+sk factors column.
+=20
+Be sure and mark this document as privileged and confidential, prepared at t=
+he direction of counsel, so that we can protect the privilege of this docume=
+nt if necessary.
+=20
+Thanks.
+=20
+Michelle
+
+-----Original Message-----
+From: Skinner, Cindy=20
+Sent: Saturday, November 17, 2001 12:41 PM
+To: Cash, Michelle
+Cc: Cashion, Tana
+Subject: Risk Analysis
+
+
+I took a shot at combining the two spreadsheets.  Michelle, please provide c=
+orrect ethic codes (I just guessed).  Tana, I'll need some help formatting t=
+he "Yrs. of Svc." and "Age" columns to calculate after we input date of hire=
+ and date of birth.  Comments?
+=20
+Thanks,
+=20
+Cindy
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------050602080607060103050700--

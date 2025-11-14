@@ -1,0 +1,94 @@
+MIME-Version: 1.0
+Message-ID: <A68F06C66BB53000C7710098CC849623D6597881@Felienne-Pro>
+X-Priority: 3 (Normal)
+To: "Daren J" <Farmer>, "Mary M" <Smith>, "Pat" <Clynes>
+From: "Brenda F" <Herod>
+Return-Path: Herod
+Content-Type: multipart/alternative;
+	 boundary="------------040207010307040107080306"
+Subject: Re_ purge of old Contract_Event_Status
+Date: Mon, 20 Dec 1999 17:24:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------040207010307040107080306
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+FYI - what do you all think?
+---------------------- Forwarded by Brenda F Herod/HOU/ECT on 12/20/99 08:19=
+=20
+AM ---------------------------
+From: Dave Nommensen on 12/17/99 05:29 PM
+To: Scotty Gilbert/HOU/ECT@ECT
+cc: George Smith/HOU/ECT@ECT, Edward Terry/HOU/ECT@ECT, Katherine L=20
+Kelly/HOU/ECT@ECT, Bryce Baxter/HOU/ECT@ECT, Randall L Gay/HOU/ECT@ECT,=20
+Brenda F Herod/HOU/ECT@ECT, Richard Pinion/HOU/ECT@ECT=20
+Subject: Re: purge of old Contract_Event_Status =20
+
+Just to clarify, its not the relative age of the production date, but the ag=
+e=20
+of the event itself.
+
+d.n.
+
+
+To: George Smith, Edward Terry/HOU/ECT@ECT, Katherine L Kelly/HOU/ECT@ECT,=20
+Bryce Baxter/HOU/ECT@ECT, Randall L Gay/HOU/ECT@ECT, Brenda F=20
+Herod/HOU/ECT@ECT
+cc: Richard Pinion/HOU/ECT@ECT, Dave Nommensen/HOU/ECT@ECT=20
+Subject: Re: purge of old Contract_Event_Status =20
+
+Do any of you see a problem with limiting this to the current month or=20
+current month +1
+Need to know soon
+
+Scotty
+
+
+  =20
+=09
+=09
+	From:  Dave Nommensen                           12/17/99 03:25 PM
+=09
+
+To: Scotty Gilbert/HOU/ECT@ECT, Richard Pinion/HOU/ECT@ECT
+cc: Trisha Luong/HOU/ECT@ECT, Benedicta Tung/HOU/ECT@ECT, Diane E=20
+Niestrath/HOU/ECT@ECT, Dave McMullan/HOU/ECT@ECT=20
+Subject: purge of old Contract_Event_Status
+
+Scotty/Richard,
+
+Our DBAs would like to see what we can do to reduce the qty of rows in=20
+Contract_Event_Status.  We have over 1 Gig of data in that table.  I would=20
+like to suggest we have a nightly or weekly or monthly process to delete any=
+=20
+row with a Last_Mod_Date over a month (or two) old.  So if someone balances=20
+February 1999 this month, we will keep it around for a month (or two).
+
+Does any one else have a desire to keep this data for a shorter/longer perio=
+d=20
+of time?
+
+This is not an audit table.  This is just a "log" every nom/track/balance/ED=
+I=20
+send/Fax send/sched qty/quick response since the beginning of time.
+
+d.n.
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------040207010307040107080306--

@@ -1,0 +1,84 @@
+MIME-Version: 1.0
+Message-ID: <5CB799D3A97A5F4BFD26001B192DC58607BA2900@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: ShonaWilson
+To: "Rick" <Buy>, "Ted" <Murphy>, "Sally" <Beck>
+From: "Bjorn" <Hagelmann>
+Return-Path: Hagelmann
+Content-Type: multipart/alternative;
+	 boundary="------------060704010307060408020603"
+Subject: Weekly EOTT Update - Meeting 10_11_200
+Date: Fri, 13 Oct 2000 01:35:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------060704010307060408020603
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+As Reported by David Hultsman of EOTT:
+
+We began the meeting with a review of the progress to date.   Detail=20
+transaction flows were discussed including the very important items, Price=20
+and Volume.  Both will be required daily in groupings.  The changes by day i=
+n=20
+the positions was stated as already being in place.   We then began to=20
+discuss what we needed to have and what was already present in the current=20
+system.  Items such as  Groups, Price, Priority, Today's Position, Change in=
+=20
+Trades, etc were all mentioned as required.
+
+The following is my version of the meeting yesterday.  I hope I captured=20
+everything correctly and have the proper "to do" list included:
+
+We decided that we needed to provide contract details on Evergreen contracts=
+=20
+and that a copy of a delivery contract  needs to be provided to the team.
+
+A matrix was created which defined which barrel information was in the=20
+current system and which information was needed but not available.
+
+
+                    POSITION REPORT STATUS CURRENT
+
+
+BARREL INFORMATION IN THE REPORT           INFORMATION NOT IN THE REPORT
+
+
+Exchange Traded barrels     Evergreen
+Broker barrels (exchange contracts)   Term to Evergreen
+Spot barrels (one day lag in entry)   Lease
+Term barrels      Pipeline barrels
+OTC        Storage barrels
+Swaps        Inventory with a sale against them are
+Options       the only barrels in the report
+
+
+
+As additional tasks we stated that Tickets to Actuals need to be in the=20
+Report everyday.  To achieve this we need Right Angle ticket detail=20
+actualized daily.  We then stated that we need to develop a plan to achieve=20
+the above
+stated needs.
+
+We then agreed on the following:
+
+1.  Create the step by step plan to achieve the daily information goals.
+2.   We will define the information fields needed.  Lori and Yolanda will=20
+work with the DataBase Manager to achieve the necessary information.
+3.   We will create the plan to build the analytical data mart from which=20
+this information will be extracted and reported.
+4.  The team will consist of Bjorn Hagelmann, David Hultsman, Lori Maddox,=20
+Lawrence Clayton, Sheila Harris, Biaggio McPhee, Lisa Meyer, Jim Martel.
+alternates may be decided at a future date.  We will meet each Wednesday at=20
+730 am in conference room 5830.
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------060704010307060408020603--

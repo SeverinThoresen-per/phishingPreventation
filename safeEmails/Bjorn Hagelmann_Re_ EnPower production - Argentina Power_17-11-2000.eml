@@ -1,0 +1,195 @@
+MIME-Version: 1.0
+Message-ID: <35BD3DABAB3E5D00B807606365E89F388B34090A@Felienne-Pro>
+X-Priority: 3 (Normal)
+Cc: "Sally" <Beck>, "Ted" <Murphy>, "Cassandra" <Schultz>
+To: ShonaWilson
+From: "Bjorn" <Hagelmann>
+Return-Path: Hagelmann
+Content-Type: multipart/alternative;
+	 boundary="------------000403080404000803060007"
+Subject: Re_ EnPower production - Argentina Power
+Date: Fri, 17 Nov 2000 02:24:00 +0200
+
+This is a multi-part message in MIME format.
+
+--------------000403080404000803060007
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; format="flowed"
+
+Since this was a fix to a Doorstep finding, how do we react?
+---------------------- Forwarded by Bjorn Hagelmann/HOU/ECT on 16/11/2000=20
+17:25 ---------------------------
+  =20
+=09
+=09
+	From:  Scott Mills                           14/11/2000 13:46
+=09
+
+To: Michael Guerriero/SA/Enron@Enron, Julian Poole/SA/Enron@Enron, Remi=20
+Collonges/SA/Enron@Enron, Julie Ramos/SA/Enron@Enron
+cc: Trang Le/HOU/ECT@ECT, Martha Stevens/HOU/ECT@ECT, Sarah=20
+Smith/Corp/Enron@Enron, Laura Feldman/SA/Enron@Enron, Xochitl=20
+Figueroa/NA/Enron@Enron, Bjorn Hagelmann/HOU/ECT@ECT=20
+Subject: Re: EnPower production - Argentina Power
+
+Lavarato has stopped efforts for implementing Enpower in South America until=
+=20
+business activity increases enough to support it.
+
+Based on below, we will start looking for someone with strong Access/Excel=20
+knowledge to come up with a different solution.  Everyone will have to=20
+regroup and determine next steps and look at revised timelines.
+
+SRM (x33548)
+---------------------- Forwarded by Scott Mills/HOU/ECT on 11/14/2000 01:36=20
+PM ---------------------------
+  =20
+                        =09
+	Enron Technology
+=09
+	From:  Steve Nat @ ENRON                           11/14/2000 01:31 PM
+=09
+
+To: Duong Luu/HOU/ECT@ECT, Trang Le/HOU/ECT@ECT, Scott Mills/HOU/ECT@ECT
+cc: =20
+Subject: Re: EnPower production - Argentina Power
+
+FYI...
+
+---------------------- Forwarded by Steve Nat/Corp/Enron on 11/14/2000 01:12=
+=20
+PM ---------------------------
+Beth Perlman @ ECT   11/14/2000 11:53 AM
+
+To: Richard Burchfield/HOU/ECT@ECT, Steve Nat/Corp/Enron@ENRON
+cc: John J Lavorato/Corp/Enron@Enron=20
+
+Subject: Re: EnPower production - Argentina Power =20
+
+I discussed this with John Lavorato who is now responsible for this.  He sai=
+d=20
+don't do anything!  When their  volumes increase we can address the Enpower=20
+implementation again.
+
+Beth
+
+
+
+
+
+	Richard Burchfield
+	11/08/2000 08:17 AM
+	=09
+		 To: Steve Nat/Corp/Enron@ENRON
+		 cc: Beth Perlman/HOU/ECT@ECT
+		 Subject: Re: EnPower production - Argentina Power
+
+Steve,
+ Come by my office to discuss.
+
+Richard
+
+
+  =20
+                        =09
+	Enron Technology
+=09
+	From:  Steve Nat @ ENRON                           11/08/2000 08:07 AM
+=09
+
+To: Richard Burchfield/HOU/ECT@ECT, Beth Perlman/HOU/ECT@ECT
+cc: Trang Le/HOU/ECT@ECT, Duong Luu/HOU/ECT@ECT=20
+Subject: EnPower production - Argentina Power
+
+Richard / Beth,  We have been asked by risk to get Argentina started on=20
+EnPower.  Are you OK with us moving on this?  A couple things to consider...
+
+Our instance strategy for EnPower is determined by geographic location=20
+(bandwidth), volumes, and market similarity (functionality).  Based on this,=
+=20
+I want to set South America up on their own instance.  EnPower will have the=
+=20
+following instances long term:  EUR, US, CND, SA, AUS, JPN, IND.  We will=20
+continue to pursue a common code base and logical data model.
+
+There is additional time and cost associated with setting up a new instance,=
+=20
+however, I am concerned about continuing to pile new business units into a=20
+production environment that will eventually need to be split.
+
+Glad to discuss...  Please respond quickly, as we are waiting to pull the=20
+trigger on this...
+
+Steve
+
+
+---------------------- Forwarded by Steve Nat/Corp/Enron on 11/08/2000 07:32=
+=20
+AM ---------------------------
+From: Duong Luu@ECT on 11/07/2000 01:06 PM
+To: Steve Nat/Corp/Enron@ENRON, Richard Burchfield/HOU/ECT@ECT, Beth=20
+Perlman/HOU/ECT@ECT
+cc: =20
+
+Subject: EnPower production - Argentina Power
+
+fyi
+
+----- Forwarded by Duong Luu/HOU/ECT on 11/07/2000 01:05 PM -----
+
+	Trang Le
+	11/07/2000 12:53 PM
+		=20
+		 To: Duong Luu/HOU/ECT@ECT
+		 cc: Martha Stevens/HOU/ECT@ECT, Sarah Smith/Corp/Enron@Enron, Juana=20
+Fayett/Corp/Enron@Enron, Jana Morse/Corp/Enron@Enron, Scott=20
+Mills/HOU/ECT@ECT, Richard Elwood/HOU/ECT@ECT, Samuel Schott/HOU/ECT@ECT
+		 Subject: EnPower production - Argentina Power
+
+Duong,
+Per our phone conversation, below is the list of people that would need=20
+access to EnPower production.=20
+
+User Names:   NT ID:  Extension:
+Scott Mills   SMills  x3-3548
+Martha Stevens  MSteven x3-4742
+Sarah Smith   SSmith  x3-0997
+Juana Fayette  JFayett  x3-0992
+Jana Morse  JMorse  x6-8265
+Trang Le  TLe1  x3-6996
+
+Currently, the Argentine Power group has in total about 20 physical forward=20
+deals  which will be done under Enron Comercializadora De Energia Argentina=20
+S.A.(Co. 027W) and one financial deal which will be done under Enron North=20
+America (Co. 0364). Given the fact that we'll also have deals on ENA, I woul=
+d=20
+think that we could be on the Houston server. Just let us know. =20
+In the mean time, we'll be working with the various Global groups to have th=
+e=20
+proper desk, portfolio, facilities etc.... set up.
+
+Thanks for your help,
+Trang x3-6996
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********
+EDRM Enron Email Data Set has been produced in EML, PST and NSF format by ZL=
+ Technologies, Inc. This Data Set is licensed under a Creative Commons Attri=
+bution 3.0 United States License <http://creativecommons.org/licenses/by/3.0=
+/us/> . To provide attribution, please cite to "ZL Technologies, Inc. (http:=
+//www.zlti.com)."
+***********
+
+--------------000403080404000803060007--
