@@ -1,0 +1,144 @@
+Delivered-To: sathores@ncsu.edu
+Received: by 2002:a05:7000:7046:b0:79c:c141:6fd0 with SMTP id t6csp828117mat;
+        Tue, 4 Nov 2025 19:48:53 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVRuqx9xYsyyYt0t9WRyEj4qQ/UI3ScG2V7EkTNbyiqcXu5vdRmnb17j4qE/pGpJ+Km56jItkudcg==@ncsu.edu
+X-Received: by 2002:ac8:5fc3:0:b0:4e8:9ca2:b9ea with SMTP id d75a77b69052e-4ed726065e8mr25839221cf.56.1762314533489;
+        Tue, 04 Nov 2025 19:48:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1762314533; cv=none;
+        d=google.com; s=arc-20240605;
+        b=TSDGpt/N1hom6p/4WsJOL7Hq5k3mTDbvunVtKhTP4T1Ln8T7ccg4J7BW7GZ0Fvn9hJ
+         j94yDAoFwX3fQl7a8Pg3m/WGvMAG7Ym8+8ReU51sPWfKwJGXD4JAdwRSHqn8KL4LESsQ
+         l7aw0yKM1+C8B37wI3S8tp5A2tESNAP1SmmkMVWBqorf7DGiMdrvN+nqKw1IqzHESEJ/
+         YYqpwZnVIbM2cYlkvz6bEPEvJAcxNnNMYaCKgfgSJcX9t680v2KZTZGv/qcgKR6qhn5P
+         hJOQpx9aoGGWGsRL/xNWcSXtgkzB4SKkuNnzt8ZqQI7GK1uGjW15KzsJPmT/bkct+l4r
+         T+cQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=t1Shap/VaFBELjm7/rtY/6mcK7CcYn/D+kY4bLA/IeM=;
+        fh=AR7iy/Fa8D9+8wi+btHvCBxw3m3MrHYMnWjQ9Ie7EsA=;
+        b=jeCC3kijWvLyk4gPbDW13b7z/QPBl+BFvxBUoVr6Um+IH/8oi+tig+jOPJIWWEyeI5
+         0xiTcGkhX4lcSlCVaCNk7prifIwNnGPMwtbnuzFE2BTwM89W7XBhIk2cxkxzq7Ak1guR
+         vO+0NwDSynO++4+w6TM3gQl+QEAuwZrV9NHNBSqltF9EJPOdF0i6RT2x+pXLN9ULh8/n
+         HR7Yon+VFdVu8flCiGo1M7Lgid4gw5DvuuFF85oRzXuekIsK47yra4Uxh0B6ZuwIDfOx
+         0vYyCY6uth3A7SXPtN9cWaBDeqDTR71BFr0YNKLaeZ07rKXesaNJaYKn2rNcdl38DArw
+         jsjQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=google header.b="Q/k/PRwL";
+       spf=pass (google.com: domain of djbaile4@ncsu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=djbaile4@ncsu.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu;
+       dara=neutral header.i=@ncsu.edu
+Return-Path: <djbaile4@ncsu.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d75a77b69052e-4ed34fadec6sor58249061cf.1.2025.11.04.19.48.53
+        for <sathores@ncsu.edu>
+        (Google Transport Security);
+        Tue, 04 Nov 2025 19:48:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of djbaile4@ncsu.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=google header.b="Q/k/PRwL";
+       spf=pass (google.com: domain of djbaile4@ncsu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=djbaile4@ncsu.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu;
+       dara=neutral header.i=@ncsu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ncsu.edu; s=google; t=1762314533; x=1762919333; darn=ncsu.edu;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=t1Shap/VaFBELjm7/rtY/6mcK7CcYn/D+kY4bLA/IeM=;
+        b=Q/k/PRwLeXXJWr3m0bsB71fd11gCLViDlILreF6OPT8WNhnSMQ88gJB0UREPxcR8H1
+         UliVSGIQJgmn/g9CzzEiiaBQR+Czo2GAQtB8UoZXjF8Lewotj/TPcX/cn8cEJaiDImg4
+         IFlFsRj/VT8G8eV6l065lU7YdfF4K5MHNHwm+ATP8r4AiYDdUZtUpv2CeUQe2qeOt1A4
+         hZTyTyn4+rJb25PQHNKU+8gaVbY8ldiAAh4CC2fswEz/vva2p5925acf63EZ/SFs1jOD
+         1kHg4Gr0Vb0ai+LK5W3nFlnxiIhTwamN54VKXMTr5WFI7FqLFgyDHRwSWwAmMmUoh/dG
+         F+Hw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1762314533; x=1762919333;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=t1Shap/VaFBELjm7/rtY/6mcK7CcYn/D+kY4bLA/IeM=;
+        b=MnomUALcVcslzl5uWrwmRhPnvcC+o4OFMwVO45IyqT2HwvOq0pMfAAekavdHFobJUt
+         M01VpdWjdBKFhYcnzUivB7Xcg3XSxI2fHs01gt96RGoWglTfpykhqaw8SpHIsEaBt1+E
+         VqwR5kXg+VrLzRR+rwQ7n6g2vPG8HKOPPARz6yYl0BBvGOIA3gTbhD0VBC8Ik4KVOTSy
+         gEj/aNQyrKpyzAsAc1lOM+rsX5Kh2gdYz7fW3cQBE+ioc5eGO9cRWi/lvbGXIC+R4NP0
+         2dgeTarJobEWECC9PKIZzHl6p3cHQT1ru5Xnl9/ppfSFMsv56iq+xzmYOy1Qv8RwM56Y
+         7kiA==
+X-Forwarded-Encrypted: i=1; AJvYcCWiLY+jNElmU3kE6uvs84kIfJA38btxNuQbhJzD7y8Rgp5YOF8/NDUko8agOFGVairWCjx+jXHL2A==@ncsu.edu
+X-Gm-Message-State: AOJu0Yzf2eZgITnHd13Xa71g61xITxDZQKwG4KjjZIALflkHOqg6xVjg
+	05PtTdis1z1OqcL8G2YJCOjlSDBj9ZgToFnHWp2ZSJu1Hkla5AZHv9L1/xD33+qBllVWLyKC8kN
+	AwxmXdl3Y/2XVnpVM4gnFnVXE+RtcAz7TAsfPr/BzQMc=
+X-Gm-Gg: ASbGncu8UeSjA/IyIbQoxtS2pc+tLhoP2yMLos2SYo9qZ+u9SJbi0mTJZ3Dj0zM6OAw
+	e88mayKaqEZhUBThk2Q0Z3Skvoh/RhX7BB23ifoo6eMTEqXJ5Pm5u/EK8EWbWvmPA918qQAzd98
+	viKPH40IBzTS45v1G2Xt2E0Dt4DjrsCx+O06MN4M87kNsWm5l72235Ya3eMK6AvOV7SIIq9jHOT
+	In7/A8JpzFHqa18JoneCzQIypcDv8GNjYSg3KjDB3aOJG94NEoZKcuhV0EB
+X-Google-Smtp-Source: AGHT+IF4aMJe9pD3KX5qw+IuH+glWvmBHrF3SPYm3K6IxokZvsjh4mxpuDiAEy6sGDI2nSmHxcctgfTEJyfYqpUh608=
+X-Received: by 2002:ac8:7c46:0:b0:4eb:be61:54a0 with SMTP id
+ d75a77b69052e-4ed725e79cdmr22598571cf.49.1762314532772; Tue, 04 Nov 2025
+ 19:48:52 -0800 (PST)
+MIME-Version: 1.0
+From: Daniel Bailey <djbaile4@ncsu.edu>
+Date: Tue, 4 Nov 2025 22:48:41 -0500
+X-Gm-Features: AWmQ_bl4gL_3I-A5FrFhngR5rTCZA9R5YWQqoD3E_KgDosPEf5pzPIAdTLZVq8c
+Message-ID: <CAA3Jiof-dS8NUMiyJtbZhTjimNWUbOjruOk2K_kb=zsQ8B4OvA@mail.gmail.com>
+Subject: Slideshow from the meeting
+To: Katty Yang <gkyang@ncsu.edu>, "T'Niya Robinson" <tdrobin2@ncsu.edu>, 
+	Madelynn Pearson <mfpearso@ncsu.edu>, Raeanne Newby <rjnewby2@ncsu.edu>, Andrew Hoque <ajhoque@ncsu.edu>, 
+	Lucas Burke <laburke3@ncsu.edu>, Liv Olechowski <osolecho@ncsu.edu>, Evan Root <eroot2@ncsu.edu>, 
+	Severin Thoresen <sathores@ncsu.edu>, Pisithypong Ouk <pouk@ncsu.edu>, Vix Mahaney <lsmahane@ncsu.edu>, 
+	Jacklyn Brown <jabrow44@ncsu.edu>, AnnMarie Tolson <actolson@ncsu.edu>, 
+	Abril Mena Martinez <asmenama@ncsu.edu>, Asher Lundell <ajlundel@ncsu.edu>, Nicholas Hawa <nrhawa@ncsu.edu>, 
+	Lila White <lcwhite4@ncsu.edu>, Saylor Seufert <seseufer@ncsu.edu>, 
+	Mason Phillips <mlphill5@ncsu.edu>, Shail Londhe <shlondhe@ncsu.edu>, 
+	John Thomas Anderson <jtande24@ncsu.edu>, Gannon Johnson <gtjohns2@ncsu.edu>, Shriya Kovvali <skovval@ncsu.edu>, 
+	Zahra Batool <zbatool@ncsu.edu>, Daniel Bailey <djbaile4@ncsu.edu>, Spencer Conrad <saconrad@ncsu.edu>, 
+	Julianne Eckstein <jjeckste@ncsu.edu>, Turner Stuckey <tdstucke@ncsu.edu>, Tyson Foster <tkfoster@ncsu.edu>, 
+	Cara Herock <caherock@ncsu.edu>, Kelly Kelson <kmkelson@ncsu.edu>, Ian Richards <inrichar@ncsu.edu>, 
+	Ryan Bartlett <rnbartle@ncsu.edu>, Deepthi Selvaraj <dselvar3@ncsu.edu>, Alex Hinkle <ashinkle@ncsu.edu>, 
+	Connor Hunt <cthunt2@ncsu.edu>, Ethan Zuege <emzuege@ncsu.edu>, Lenah Handoush <lohandou@ncsu.edu>, 
+	Jenna Dahir <jndahir@ncsu.edu>, Brady Bonney <bsbonney@ncsu.edu>, Ryan Nash <rhnash@ncsu.edu>, 
+	Daysy Vasquez Sanjuan <divasque@ncsu.edu>, Kelis Brown <knbrown7@ncsu.edu>
+Content-Type: multipart/alternative; boundary="000000000000b571dd0642d0d30e"
+
+--000000000000b571dd0642d0d30e
+Content-Type: text/plain; charset="UTF-8"
+
+Hey everyone! Here is the slideshow from today's meeting. If you weren't
+able to make the meeting, please look through it so you have all the
+information you need for winter break!
+
+ Winter Break Meeting
+<https://drive.google.com/open?id=1o5BViR0UiDSCRQzIUbDx8nF92cqPJqpYtmR90DayVz8>
+
+
+-- 
+*Daniel Bailey*
+(he/him)
+NC State Class of 2027
+College of Humanities and Social Sciences, Psychology
+Resident Advisor - University Towers
+
+--000000000000b571dd0642d0d30e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Hey everyone! Here is the slideshow from today&#39;s=
+=C2=A0meeting. If you weren&#39;t able to make the=C2=A0meeting, please loo=
+k through it so you have all the information you need for winter break! </d=
+iv><br><div class=3D"gmail_chip gmail_drive_chip" style=3D"width:386px;heig=
+ht:20px;max-height:20px;background-color:#f5f5f5;margin:6px 0;padding:10px;=
+color:#222;font:normal 400 14px/20px &#39;Google Sans&#39;,sans-serif;borde=
+r:1px solid #ddd"><a href=3D"https://drive.google.com/open?id=3D1o5BViR0UiD=
+SCRQzIUbDx8nF92cqPJqpYtmR90DayVz8" target=3D"_blank" style=3D"color:rgb(32,=
+33,36);display:inline-block;overflow:hidden;text-overflow:ellipsis;white-sp=
+ace:nowrap;text-decoration:none;border:none;width:100%" aria-label=3D"Winte=
+r Break Meeting"><img style=3D"vertical-align: text-bottom; border: none; p=
+adding-right: 10px; height: 20px;" alt=3D"" src=3D"https://drive-thirdparty=
+.googleusercontent.com/32/type/application/vnd.google-apps.presentation">=
+=C2=A0<span dir=3D"ltr" style=3D"vertical-align:bottom">Winter Break Meetin=
+g</span></a></div><br><div><br></div><span class=3D"gmail_signature_prefix"=
+>-- </span><br><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D=
+"gmail_signature"><div dir=3D"ltr"><b>Daniel Bailey</b><div>(he/him)</div><=
+div>NC State Class of 2027</div><div>College of Humanities and Social Scien=
+ces, Psychology</div><div>Resident Advisor - University Towers</div></div><=
+/div></div>
+
+--000000000000b571dd0642d0d30e--
