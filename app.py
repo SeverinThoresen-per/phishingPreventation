@@ -71,7 +71,7 @@ def upload_eml():
     #print(msg.get_all("To", []))
     #print(msg.get_all("CC", []))
 
-    judgement = judge(msg, file_bytes)
+    judgement = judge(msg, file_bytes, suspicious_domains)
 
     points = 0
     if "Phishing email" in judgement:
@@ -84,6 +84,8 @@ def upload_eml():
         points += 30
     if "Failed dkim" in judgement:
         points += 30
+    if len(suspicious_domains) > 0:
+        points += 20 + (10 * len(suspicious_domains))
     if points >= 100:
         print("///// Judgement /////")
         print(judgement)
@@ -116,7 +118,7 @@ def upload_eml():
         "judgement": judgement
     }
 
-def judge(msg, bytes):
+def judge(msg, bytes, suspicious_domains):
     redFlags = []
     for url in extract_urls(str(msg)):
         if scan_url(url) == True:
@@ -129,6 +131,8 @@ def judge(msg, bytes):
         redFlags.append("Failed dmarc")
     if "dkim=fail" in msg.get("Authentication-Results", ""):
         redFlags.append("Failed dkim")
+    if len(suspicious_domains) > 0:
+        redFlags.append("Unknown domain")
     return redFlags
 
 def scan_url(url, filepath="recentPhishUrls.csv"):

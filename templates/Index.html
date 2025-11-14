@@ -73,6 +73,9 @@
       if(result.judgement.indexOf("Failed dkim") != -1){
         judgementOutput += "invalid digital signature, ";
       }
+      if(result.judgement.indexOf("Unknown domain") != -1){
+        judgementOutput += "Unknown domain, ";
+      }
       document.getElementById("output").innerHTML = judgementOutput;
       console.log('Server response:', result);
     } catch (err) {
