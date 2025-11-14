@@ -1,0 +1,1979 @@
+Delivered-To: sathores@ncsu.edu
+Received: by 2002:a05:7000:1912:b0:7b5:425f:dea1 with SMTP id g18csp1682979maz;
+        Fri, 14 Nov 2025 08:00:20 -0800 (PST)
+X-Received: by 2002:a05:7023:d05:b0:119:e55a:9bf2 with SMTP id a92af1059eb24-11b40f98271mr1139699c88.14.1763136019885;
+        Fri, 14 Nov 2025 08:00:19 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763136019; cv=none;
+        d=google.com; s=arc-20240605;
+        b=JsvhUMk/spu+kaopstaFI+q/Q27K5GY/bJABNOGl7ZJthQSQAeITU9LY8K9UKuAWmv
+         E97NeBXuA7ok3N4k8UbXyCjV/Z7T96qyDorgyVJ3ZeRcRD6tfsWoN7lLZAoL01y7ldpe
+         hDhmaZz43cO/jVImvziqoVKOkVuMLLc11jB8Hfj1qig2wpo/0UiOoD9EU/KF8VVTJHQ5
+         dKA8VF3BBvtMETnpiSEyhlCN7IoocWTDERRx6shjdTfJIdbCt0bjlYVoo4h4Zzn0WbUu
+         RkjuBknpdA2u6gJBf3wKH0XXoPskQPc4aNjwbXi9HrKIQgDICFl7yu0RdYGPwD08EPFH
+         9YEg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=56eo4efrKxKxUqERWIIdz4oAu+t2h5Bj4e68nw62ITo=;
+        fh=QXD5N8YCTWq0ttd5MFGnoNB1ftkWwrpklFYGQ8Y9b6Y=;
+        b=ReLFUDomeB5H1oM2n0HXm+0nx9Uxwtg/ukch+NvOpC/2ppKDiVNYZ7ESiQNC+dg6R8
+         2CbZo0C5MEnX4xZJc+sH/aRfc6boo2cAnYiiMUPxRbuNL6rsGGOp4/udGIvfWSjWe2hg
+         Zs5YSqGBhi+7koYUNOqvp7jNI/VBL9bQ9/GCjl0HfQsOQScYwpY0Hiacj/ZibRj+MJtN
+         /v6kXcM+UWd664G34S9SVk36+QLGEgmyKdPVJtMBj/Gd4iBFmtILPqF4XXrRES9pSjAQ
+         Wo0hr9lI3prWTwOmXfXsutPDJvPjqLCPLJry4OkrR0iAwgoO6PJwbRVr3AnsH2Ls5ZxF
+         MMzg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=google header.b=MFkyLyJh;
+       spf=pass (google.com: domain of rnazmin@ncsu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=rnazmin@ncsu.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu;
+       dara=neutral header.i=@ncsu.edu
+Return-Path: <rnazmin@ncsu.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a92af1059eb24-11b06090fb5sor1570563c88.2.2025.11.14.08.00.18
+        for <sathores@ncsu.edu>
+        (Google Transport Security);
+        Fri, 14 Nov 2025 08:00:18 -0800 (PST)
+Received-SPF: pass (google.com: domain of rnazmin@ncsu.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=google header.b=MFkyLyJh;
+       spf=pass (google.com: domain of rnazmin@ncsu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=rnazmin@ncsu.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu;
+       dara=neutral header.i=@ncsu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ncsu.edu; s=google; t=1763136018; x=1763740818; darn=ncsu.edu;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=56eo4efrKxKxUqERWIIdz4oAu+t2h5Bj4e68nw62ITo=;
+        b=MFkyLyJh5P0ppo2DLyz98sGNZi1vQ0R8PDnoVNgAlmSlXYtewP0KSkYgPCJtHjaoSX
+         18Mt4u/CQYwt7x4Lwdj5ih3ajuMHC8PzZF/DAqLxMemSdJsQChMb8MBRBATOmJN3NSm/
+         EQCL7rTy0rdvNpFv5lRorXxed48infkYWCh9Wg6X5ErIkrO8xYxFExEOQK0L+MKRmERB
+         T5iW6qQhoOyLv936cyaKsx9ofM3o/KfkNsTMNdsJIQvgpqtHIGqOL5C93aPnOnmYe41B
+         ERa+WJ4e/jahPgkbCZtx83Gq0dgTaN9nSqoZkFIVv8FjEtDAFHKwzVLKqLmd+X9zCB0C
+         jDIw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763136018; x=1763740818;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=56eo4efrKxKxUqERWIIdz4oAu+t2h5Bj4e68nw62ITo=;
+        b=Uo84tHJnOtbaLJfMNnVBbFzbRs4jWsXhUZ5Pty/t+9a6kGY3WLXzwXxypsPZGpRHXj
+         7qo7aD4hrMLzxRHGY1t1Ui+ek8aRTZkih8iaS5VTvJDcFC0Ca8+fdxJAoaHE+fp/Ppks
+         4kXsPTWyzts+NPkHOdS8JAKHX0ZPGJowMfFgwhgq0TiCwU0iGhYjuGsAUV+UX0JRvrU7
+         pGgZUpHMzoKRO8p1o/ev55rGrf3w6Rr4sAeYR5IGy3LAF22KWaGAVqXDAPNo7Cg+qd7Y
+         UrlmpkiQULOK6MHCaIrjkT7N/u1U3TgRsaQGlIkXPTNLcqr8T6aXYuDuF1/P5G9wGBo8
+         yutg==
+X-Gm-Message-State: AOJu0Yz6mQkkiMi24YCLnKIpenI85a//7SXRk4fN6q537rsI9OxG2jT2
+	STCysV+ncU1mipCEiXoifQ+dOv0dfVwjV+gi87s7osJKbku530JSaIhkx3W3tT37+LdlCXKy/ia
+	y9wjznaf+XDiTYu6DfbtKbbKbihsSrDp9KY89X/h1D3wstOCt3Vf3JwLfPTE=
+X-Gm-Gg: ASbGncvlWW7JYzBKE3QJPLspgqSbYvC+dLwZp7Qu5WF1iiI+DDsPiPxAStnNBqcG/Zv
+	t+2B0SThDpTllJrppfyqHKYGfaNTYPECsO1/RhTssTVAhoBThfAAb/L9yhCDIqqlKxVkMH86wWD
+	UZKUaphiJL5Q6q3ICnrD/v3E/KV0G1YkokAjdcMdAoQR39k4Zg2QBQ0vW5RhIz3whZwHACCT2aK
+	/4R2+N9TQPhcY4IisB+KHyt8INrk3D9zvm22BTdWYBgabO1TuoVbeDawaSVB5N4tZVRVKc=
+X-Google-Smtp-Source: AGHT+IEwEl6J/Ngbree3pITja+WV7EmcbXCNwM3w2CgH+dr1DYpCEvkgD0kWvTDAjVgl4yMGbnPg64e2PmjySxiSNQM=
+X-Received: by 2002:a05:701b:2912:b0:119:e55a:9bf5 with SMTP id
+ a92af1059eb24-11b40faba49mr1150675c88.17.1763136017078; Fri, 14 Nov 2025
+ 08:00:17 -0800 (PST)
+MIME-Version: 1.0
+References: <ab9c37f5-8d03-4a33-b436-221d39a00b9b@ind1s06mta1948.xt.local> <CAOCDnAVJD6mgU_K0T38aWpffyCVrR38ut7Vkuvn7XKGEqyW-Yw@mail.gmail.com>
+In-Reply-To: <CAOCDnAVJD6mgU_K0T38aWpffyCVrR38ut7Vkuvn7XKGEqyW-Yw@mail.gmail.com>
+From: Rifaat Nazmin <rnazmin@ncsu.edu>
+Date: Fri, 14 Nov 2025 11:00:05 -0500
+X-Gm-Features: AWmQ_blcajD-oOGmmypQwsZ9kwf6o_UtNKHU6WjtCW4njwHneHbXDZ8HZbmJGWE
+Message-ID: <CALg1WyJ94UoR37Gbj-E5zHFSsOSho75+WC_r-OpTioxiYTGJVw@mail.gmail.com>
+Subject: =?UTF-8?Q?Fwd=3A_Starts_today=21_20=25_off_=2B_=2410_off_=3D_the_best_kind?=
+	=?UTF-8?Q?_of_math_=F0=9F=92=AF?=
+To: Severin Thoresen <sathores@ncsu.edu>, Dyani Davis <dbdavis4@ncsu.edu>, 
+	Patrick Kamphongthai <pkampho@ncsu.edu>
+Content-Type: multipart/alternative; boundary="000000000000fd3ab606439017ed"
+
+--000000000000fd3ab606439017ed
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Rifaat Nazmin <rifnaz2007scimath@gmail.com>
+Date: Fri, Nov 14, 2025 at 10:59=E2=80=AFAM
+Subject: Fwd: Starts today! 20% off + $10 off =3D the best kind of math =F0=
+=9F=92=AF
+To: Rifaat Nazmin <rnazmin@ncsu.edu>
+
+
+
+
+---------- Forwarded message ---------
+From: Kohl's Rewards <kohls@s.kohls.com>
+Date: Mon, Nov 10, 2025 at 4:05=E2=80=AFAM
+Subject: Starts today! 20% off + $10 off =3D the best kind of math =F0=9F=
+=92=AF
+To: <rifnaz2007scimath@gmail.com>
+
+
+Plus, earn Kohl's Cash while you're at it.
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ecc4ac029ba156dec7f8cbdeaea8=
+bfb63cc66f4014147b280d67f77ced9974c3e0a667e4aaa9ef3f649b2e3c379021958e>
+=E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD   | View this email
+in a browser.
+<https://view.s.kohls.com/?qs=3D2870305dc1cf6b8684aca07d4874d40f90c089b5d1c=
+2edc50727a73a490a8be9aef142d8c31dab2d2372500d2c9eb23bdc5634acd2a9c66b110e42=
+87fd2be78dfaffbe4304a6553a255118f4d5f09548>
+[image: Shop Kohl's]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec167c51249b84bb7cbea26d32af=
+529f0bb43ed4eaac68b5407a3556801dc0341da66eac7485a786d68d0e84929784b961>
+[image: Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec87f4a84842462a21b10a61dc1e=
+8368c2382e9d0d0280bf41cf35150f859edf95b542d0d74d9ec3d98a8108bf1cd7e56f>
+[image:
+Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec87c89aa0ad7d1b21dcf4623f6e=
+e6fdf35e660524d734b33b9473ee0da1e454efabde75b0a49b2e333ba53360b5ec7910>
+[image:
+Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec48f1c46da2d065040ff6f2c8d2=
+9d84784210fa598a54b620366bb192511f35f7ee468f74c0985062fac33cde33a1678d>
+[image:
+Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec5b4e203cb01f1e748b0888da67=
+d0d6f35da0cf2d4901e5c52d719a35e1417cf2fd79244527e2389043649041ab323ab8>
+[image:
+Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780eccb6d8e068a9d974773469a848f=
+49fdd67889763406c92e2cbd1d7903ed8899c4403f52f0cc325a64a7772f97067f6485>
+[image: Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ecd418a060b0b73aa20dc35193d6=
+179f4ffa9e143140d7c07a4731ed099a510aae38aa89b3df9a534f1b1913477d72ad9f455f7=
+734677d4ad7>
+[image: Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec2fcc2b2fb96c3ef3288150e378=
+58950bec095a6d892fb35bfcf2d52a0a1ea2fdd4df1e83ec060d77b811891605348e9149e86=
+3353c3c0674>
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec7fc3368853570ad1bbbde5428a=
+a5fd24360b15882ba0453bbf318cb6ae05a7221154a01eeb11932cdfa7e65aedbf87c3b557d=
+a0fcd7f3e00>
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ecef09417458153b3d8e1f041b26=
+001b542715319a6781ff993d9e226f8209bf92f0618963724a60c0e7dbc52498b852830a1ee=
+4259588c97c>
+[image: you get an extra 20% off with your kohl's card. plus take an extra
+$10 off $25 with coupon.]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b816f4f4f9d30b560733f8d25cdc=
+7833be9ae777b7e0dd1b4301462eb7ae7000e4a92e93336c49987a8d2ec5f8db7f64a1>
+[image: plus, earn kohl's cash]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8e6b9d04f190fa3f1a1fcd8bf5c=
+c4c4ebbe31d368d12011b7289ba00d4dd8c6c8be0ff92241c6a359971426e93de39ca9>
+[image: active and former military personnel, veterans and their families
+receive 30% off in store only. find a store.]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b835fdd5bde877f302166f5e4b53=
+04732a46dc694876ba30383c0bc90e756c20a9df0c50499515ae8de5961e14bf53b0fc>
+[image: women]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8b8acaedbc053add6f32e9552d1=
+86a76de1a78fdb2858fb018cf2b378c3d9e27bb263db206d2c2688ad31c8ee4296b2cb>
+[image:
+men]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b879c38b16d8c62f3ce539f9ce90=
+048272e970ba11d0b9fb5ab155f322fc7ec6ee077e670d8bfa357ecc4d060ad4ee5c5a>
+[image: kids]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b87d5c66f64047a9171d1fcd5092=
+3c2d1507190528a7a1c62268b6ed4757f4c4e40ec935df69a0337da8f9ebda65ee03e2>
+[image:
+home]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b899b9bf51161750dd2d6053cefc=
+c8a771f36e4618b31e6be978feacb853f261e17b6cd3381e13e97d40ed0f9119977f63>
+[image: take an extra $10 off your $50 home purchase with coupon. shop now.=
+]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec09e54828adc3f7cd93f50f3a01=
+d0a7da1a19da710b31cb99357ebf9fc72d5ee5f5c5be091d967f2f81effb9dc68737b0>
+[image: take an extra $10 off your $50 toys purchase with coupon]
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec322b91794106ca000fc26a9eb7=
+16d473062e7dcdc836847aa79fe8cd00a1aa7de78eaa33af456b9a9de96822b5990c5c>
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ececa16fba5219895e5c5a86732e=
+65c2a5ef024695f90e9a030e76c44bc6ee8892a13976124463b852b2e137d9961b328bb9b30=
+797cd86b7d1>
+<https://click.s.kohls.com/?qs=3D50273ad3ded780eca1d0b2e40649a99bd5e61c9755=
+de792d917323d7156ba35d7c76e19f4f3f34288bd689ddfc105f1a96957d600031026d53f42=
+452a14f5856>
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ece9f6457fca4d3021b789e869fa=
+997c9f77e87c61014a5cf4b5d31ffc81ef549a544f82c6f89a490394e3f22283a636b3b7324=
+bf242878790>
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec8b86cdf41c0c3f49e9e34473ac=
+40b96b1eec1eebe10d79952f644e7c7db63b41e726a3e50f3cc8c50037e19f83acbbe88e87b=
+ba0b93d0b90>
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec501a3889221f4605da10a3aa3a=
+3e191389710a7cc119f4302ec3804ae8e2c10e29b1c22311d90de8c888827a59a9d7cffc7be=
+0ff034848a1>
+<https://click.s.kohls.com/?qs=3D50273ad3ded780ec5507d4645161647ae52c47e1de=
+585560dc1d44706af7ac19bcde4f628e6a374d991bbd288683b76d6d737ebf4e1431f974707=
+741cfdc0891>
+[image: gift shop]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b85ea408b7b2fe9fe58ec813c850=
+516953a8803427b4f52a5fcb896462769be2499423fac8ad1946e9d2b6b28352181c1e>
+[image: $24.99 cozy boots]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8ec3a3cd00ca7fb73fc27c5f1ef=
+746ba9ade0914387902e4c82d248d47b656263eabecc168ea2678660a59bff08c7e20e>
+[image: $24.99 cozy boots]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b86fdd3d6d0fc98696a841a60dd5=
+1dd11e5d13be1b045ec1bba66b60cc4075edea6811339cad632f861b4a25151a1c6cbf>
+[image:
+gifts for her]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8a83c86fb5cf86167673c04a3bf=
+63f27f2767201af634f5883d19bd9377042d9ba0c53bab3fce3cd7c3b05a3c520bd06b>
+[image: $24.99 cozy boots]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b86bd9c5982b4f880b500b22c9dc=
+325ffff279c4cc923de5e11095d3142f3e188640fd6e6c678aed2dc073cd6a1dbd363d>
+[image: $50 and under beauty for men]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8a5a8929bd12168f82807d1aa2d=
+1c4088747da12fcb7eb89efdece02103e1814c7273eba44f6b8c8c28612b5e594e798a>
+[image: gifts for him]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8486b3d8b88c3056dd18b017647=
+894c685b893f20ba0adbc7b1cc0ae65781b1da1f6586cd84793d59ddd987d1e7e4fa79>
+[image:
+$50 and under beauty for men]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8dfd0ee9be18f95ca7e819e05c8=
+fe7b0076d92e4c5e2890a9989cb783b2196ae4d50874b05c0ad638fed4d7085a4bd377>
+[image: $50 and under beauty for men]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b842246fc0b98dfbff470997df63=
+a45ea1fbf49bda808e174e773c300c15d7fc942ebc8118a39b11425e347775a7222d09>
+[image: starting at $14.99 toys. toy-coupon eligible only.]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b861b8b2a16b78533be6f0dab2f6=
+5c22b67aa6e35678d7af6827828491ec0bab481b9a7e96d6af146779d8a148d8247fb1>
+[image:
+gifts for kids]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b844b461020e8398f403af4df573=
+6995347b60686ee29c065fc2367c3b96b0ecfdb03d528f14063efc47f106b0ba12b872>
+[image: starting at $14.99 toys. toy-coupon eligible only.]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b84107c96ef062e8e5f298592cc3=
+bd52063aa44d62ec8b423dec9ba9b7d0318d95d1c9bd1abe5f177c465da5c8475243e4>
+[image: kohl's holiday quest. play now.]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8be055731ff0d62fda2810fe401=
+58b7571d20a846d47db7b1c3935f336d0aaed279d0388a4f44c640f766155009650bd7>
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b82865ee228e4a259fd859349e5a=
+5acaec42b9299d0dc474d857256bcc10b236c2e7bebb4e70d56a0590e492e48ff8b3a1>
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b86f7df24f3787cdecc2f7a55ed6=
+694a888dda95d48fb631dc3e9582b308642e1ce6a76de15724b8efc7c54022cb019c83>
+[image:
+details]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b868d693535af2692564aba63b7e=
+97c466fd99c908ba794d114dd21dd1b14612e0576402dee6f0b3c8ae815681199aefd6>
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8e72e27d878c5c2f0aada1b4386=
+76fb0b7d7c4c720b33c643103d8f20f7b8488418d5f7b0160ee2d1f1ccbc997c5f7d58>
+[image: sephora savings event]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8e29fd7f387f27caf9e10e33071=
+2bc3e530f1419a3021894ee76c3e0122925eba1d25b326d7012e91f4551778641c286c>
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b825615a28e2f13cb70d7b717704=
+dbe8903bde4fdeec67d065fe14e669275f096b08a36f8e37479d6cb8fe3baf9adc8a68>
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b80561ee795779537dbfdf0c1342=
+5e0b7d6e24b9010f937148c32b9d5b75e4188147504dfc4d12e7ef66a37ab1e601e2e1>
+[image: Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8f7bcfb7973c2b652bff55f6ea0=
+aefb74e60cac67e70c8c344e96041b20821090d8260665607226124bdf8be8fc47976f8e952=
+c858498b790>
+[image: Display images to show real-time content]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b85422a18c3ba0c8016ffb741c5e=
+c375d9896093e1aa5f3bc072835cf39042acf21d7ab80456e7f10e5222cc8b8567171e>
+[image: those savings you were eyeing? already in your kohl's wallet.]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b84108cdd95aa91b774af0e90cbe=
+5f8ffdddfbfc61c3adb64825827281fe31f05cbdc90815d185177e5fcfb390cc66f2d2>
+[image: earn more kohl's cash the more you spend. not valid on sephora at
+kohl's. shop now.]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8d0baa4c547a065ac4b2a932b01=
+0154729ca557fcd02e7018ef095e84506186d8af83b9e3bb83140f67c1d46459bf919205627=
+abe9ef4f469>
+[image: details.]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8a833639883f84d6ad3dfc8de6a=
+bafe8172eb71358a28ae1d8811a85e623580c0fcb4cbd70e8ac1f4308aac46b25a1553aa4e2=
+1fd841ce08f>
+[image: take an extra 20% off in store and online]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b838e1407189d1035db4f03837f0=
+0cdafc7e8cfe324fd92f3b958adc4389bdfa19c980d32407b16edcfe4a71f42a2be204>
+[image: take an extra 20% off in store and online]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b8fcee7a9caf729b1a9aa7e6085d=
+30c50e5dce004c4f8a422e9daa4e845f3599713a3b3aad63547f7fc65d7da1eec99a0f>
+[image:
+details]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b83404586288e420b3badabe57d9=
+349db1a7b8284e52bc1bcf190c457a363063a292999a3bf7bace6455d70d6a4931b0e6>
+[image: take $10 off when you spend a minimum of $25]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b89b077d79b1beea1c41abd34467=
+575663566e13932180ce36a394ba1ff99f7d232d317b2a4cb4c5fdfcf729d58e2ed098>
+[image: take $10 off when you spend a minimum of $25]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b897c205b9f875ae571027bd8dd9=
+4a9df8713b31a5b64049e15957459796e78a7848fa47bfeebc00d570a687383b423092>
+[image:
+details]
+<https://click.s.kohls.com/?qs=3D06ceed86541c14b863cda6a7f84f58192434368fbb=
+c5d856379c82247b53753790bde1017cfb6dacc8b9246f09442d19f989209dfb664515>
+
+--000000000000fd3ab606439017ed
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div><br><div class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" =
+class=3D"gmail_attr">---------- Forwarded message ---------<br>From: <stron=
+g class=3D"gmail_sendername" dir=3D"auto">Rifaat Nazmin</strong> <span dir=
+=3D"auto">&lt;<a href=3D"mailto:rifnaz2007scimath@gmail.com">rifnaz2007scim=
+ath@gmail.com</a>&gt;</span><br>Date: Fri, Nov 14, 2025 at 10:59=E2=80=AFAM=
+<br>Subject: Fwd: Starts today! 20% off + $10 off =3D the best kind of math=
+ =F0=9F=92=AF<br>To: Rifaat Nazmin &lt;<a href=3D"mailto:rnazmin@ncsu.edu">=
+rnazmin@ncsu.edu</a>&gt;<br></div><br><br><div><br></div><div><br><div clas=
+s=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">---------- Forwarde=
+d message ---------<br>From: <strong class=3D"gmail_sendername" dir=3D"auto=
+">Kohl&#39;s Rewards</strong> <span dir=3D"auto">&lt;<a href=3D"mailto:kohl=
+s@s.kohls.com" target=3D"_blank">kohls@s.kohls.com</a>&gt;</span><br>Date: =
+Mon, Nov 10, 2025 at 4:05=E2=80=AFAM<br>Subject: Starts today! 20% off + $1=
+0 off =3D the best kind of math =F0=9F=92=AF<br>To:  &lt;<a href=3D"mailto:=
+rifnaz2007scimath@gmail.com" target=3D"_blank">rifnaz2007scimath@gmail.com<=
+/a>&gt;<br></div><br><br><u></u>
+
+
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+    <div>
+=20
+=20
+</div>
+
+
+
+
+<div style=3D"box-sizing:border-box;margin:0px;padding:0px;width:100%;word-=
+break:break-word;font-family:Montserrat,Arial,Helvetica,sans-serif">
+    <img src=3D"https://click.chp.kohls.com/o/40bbc531-c11d-4649-978e-80ece=
+03b6696?cp_tp=3Dv3.eJyN0s9rE1EQB_C-_ZXJi2tmN7XZxgjPZIXgRYo5lB499uhBRCnspeCh=
+f0RblTbQ2vTQS7yYS6EnDyXQaqVQQYtRYqlbkRzqRWiRgogI4s_pWh8hrLu5hGG_-8m8mbdcgYI=
+N8HLj6baBas6E-mewE3CYxpTDC1n4Uh2jxwZ8qj3bNgr_got7SVh5_v5ufafqXyO-MpNB5hiFzS=
+Rs1F-8etdcOPrIbAsaAyV1VAOG7Grwa2fhNSArsc6H17nHKXhTRKUrKHtlCuZcVLuCcW-cgoqLW=
+lcw4U1QsJtHPaTHZdgBNBwmWEkZZlc4tBdMx1eEr4zy45dyf0FHfYvZQ8coERCFyFciy0wsszgC=
+sktl0XTmmZiPJcmAaETuEakxUYslXJJqD4SWnMdU6Pb9PJ4KCYbgEaApm7Ro-gNLHFiR5yJyWpJ=
+dIk1FNKN3TCQtyRKNMqWLKT2SzLiIkjycNZ1VQ6wakdNXzqMVMuQleAxon_wXwJP7psMFj1t9Rj=
+afo_M2mGhE3xadt18Sn7bS0kRLiyNn5Gf0jciaIdaiRgzIgOzyo1eSld_3z16JI7v8ItI2RDuWD=
+EryuwdyAXzA3MnB-v73It3qHRfPhtzqIHwvYr4r2GfePrMzMOniuZLWGTnTupjURxLwIY1aro-K=
+PTUoOGwVqVDh9s2RFDwoU63B-jSj4K0bBEdjNwAOVVuFdesP4uHHgw=3D=3D&amp;cp_cid=3Da=
+875633b9dd2065c" width=3D"1" height=3D"1" style=3D"font-family: Montserrat,=
+ Arial, Helvetica, sans-serif;">
+
+
+    <table width=3D"1" height=3D"1" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-size:0px;line-height:0px;font-family:Montserr=
+at,Arial,Helvetica,sans-serif">
+                <img src=3D"https://mi.kohls.com/p/up/88954bbbbcab3c0e/o.gi=
+f?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110" width=3D"1" height=3D"1" =
+alt=3D"" aria-hidden=3D"true" style=3D"font-family: Montserrat, Arial, Helv=
+etica, sans-serif;">
+            </td>
+        </tr>
+    </tbody></table>
+    <div style=3D"font-size:0px;line-height:0;font-family:Montserrat,Arial,=
+Helvetica,sans-serif">
+        <img src=3D"https://click.s.kohls.com/open.aspx?ffcb10-feb71d797d65=
+0d79-fe0b15707567077975157774-fe871272716d007473-ff8f1379-fe1b11787d6d037a7=
+61170-fef21575726d03&amp;d=3D60248&amp;bmt=3D0" width=3D"1" height=3D"1" al=
+t=3D"" style=3D"font-family: Montserrat, Arial, Helvetica, sans-serif;"><u =
+style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"></u>
+    </div>
+    <table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif=
+">
+       =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-size:0%;line-height:1px;font-family:Montserra=
+t,Arial,Helvetica,sans-serif">
+                <img height=3D"0" src=3D"https://kohls.demdex.net/event?d_s=
+id=3D13245196" style=3D"display: block; font-size: 0%; line-height: 1px; fo=
+nt-family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"0">
+            </td>
+        </tr>
+    </tbody></table>
+
+    <table width=3D"100%" align=3D"center" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"font-family:Montserrat,Arial,Helvetica,s=
+ans-serif">
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td align=3D"center" bgcolor=3D"#FFFFFF" style=3D"font-family:M=
+ontserrat,Arial,Helvetica,sans-serif">
+                <table cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" width=3D"640" style=3D"font-family:Montserrat,Arial,Helvetica,sans-se=
+rif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                        <td align=3D"left" bgcolor=3D"#FFFFFF" style=3D"fon=
+t-family:Montserrat,Arial,Helvetica,sans-serif">
+                           =20
+                               =20
+<table width=3D"640" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Arial,Helvetica,sans-serif;font-size:11px;padding-bottom:25=
+px;width:640px;display:block;color:rgb(102,102,102)">
+    	<tbody style=3D"font-family:Arial,Helvetica,sans-serif"><tr style=3D"f=
+ont-family:Arial,Helvetica,sans-serif">
+        	<td align=3D"left" style=3D"font-family:Arial,Helvetica,sans-serif=
+">
+            	<a href=3D"https://click.s.kohls.com/?qs=3D50273ad3ded780ecc4a=
+c029ba156dec7f8cbdeaea8bfb63cc66f4014147b280d67f77ced9974c3e0a667e4aaa9ef3f=
+649b2e3c379021958e" style=3D"text-decoration:underline;font-family:Arial,He=
+lvetica,sans-serif;color:rgb(102,102,102)" target=3D"_blank">
+                Plus, earn Kohl&#39;s Cash while you&#39;re at it.
+                </a>
+                </td>
+                <td style=3D"display:none;font-family:Arial,Helvetica,sans-=
+serif">=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=20
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+=C2=A0
+            </td>
+           =20
+            <td align=3D"left" style=3D"padding-left:3px;padding-right:3px;=
+font-family:Arial,Helvetica,sans-serif">
+            |
+            </td>
+        	<td align=3D"left" style=3D"font-family:Arial,Helvetica,sans-serif=
+">
+            	<a href=3D"https://view.s.kohls.com/?qs=3D2870305dc1cf6b8684ac=
+a07d4874d40f90c089b5d1c2edc50727a73a490a8be9aef142d8c31dab2d2372500d2c9eb23=
+bdc5634acd2a9c66b110e4287fd2be78dfaffbe4304a6553a255118f4d5f09548" style=3D=
+"text-decoration:underline;font-family:Arial,Helvetica,sans-serif;color:rgb=
+(102,102,102)" target=3D"_blank">
+                View this email in a browser.
+                </a>
+            </td>
+           =20
+        </tr>
+    </tbody></table>
+
+                           =20
+                               =20
+
+
+                           =20
+                               =20
+
+<table width=3D"640" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:640px;margin:auto;font-family:Montserrat,Arial,Helvetica,sans-ser=
+if" align=3D"center">
+	<tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr sty=
+le=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+    	<td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3ded780ec167c=
+51249b84bb7cbea26d32af529f0bb43ed4eaac68b5407a3556801dc0341da66eac7485a786d=
+68d0e84929784b961" style=3D"font-family:Montserrat,Arial,Helvetica,sans-ser=
+if" target=3D"_blank">
+                <img align=3D"left" src=3D"https://images.am.kohls.com/is/i=
+mage/kohlsprod/47871107_logo?scl=3D1" alt=3D"Shop Kohl&#39;s" style=3D"font=
+-family: Montserrat, Arial, Helvetica, sans-serif;">
+            </a>
+        </td>
+       =20
+       =20
+	</tr>
+</tbody></table>
+
+
+                           =20
+                               =20
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"640" style=
+=3D"display:block;width:640px;margin:auto;font-family:Montserrat,Arial,Helv=
+etica,sans-serif" align=3D"center" bgcolor=3D"#FFFFFF">
+    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr =
+style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <td style=3D"background-image:none;background-position:0% 0%;backgr=
+ound-size:auto;background-repeat:repeat;background-origin:padding-box;backg=
+round-clip:border-box;font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3ded780ec87f4=
+a84842462a21b10a61dc1e8368c2382e9d0d0280bf41cf35150f859edf95b542d0d74d9ec3d=
+98a8108bf1cd7e56f" style=3D"display:block;font-family:Montserrat,Arial,Helv=
+etica,sans-serif" target=3D"_blank">
+                <img alt=3D"Display images to show real-time content" style=
+=3D"border: 0px; display: block; font-family: Montserrat, Arial, Helvetica,=
+ sans-serif;" border=3D"0" width=3D"167" height=3D"100" src=3D"https://mi.k=
+ohls.com/p/rp/9637272308dfa8e3.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20=
+251110">
+            </a>
+        </td>
+        <td style=3D"background-image:none;background-position:0% 0%;backgr=
+ound-size:auto;background-repeat:repeat;background-origin:padding-box;backg=
+round-clip:border-box;font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3ded780ec87c8=
+9aa0ad7d1b21dcf4623f6ee6fdf35e660524d734b33b9473ee0da1e454efabde75b0a49b2e3=
+33ba53360b5ec7910" style=3D"display:block;font-family:Montserrat,Arial,Helv=
+etica,sans-serif" target=3D"_blank">
+                <img alt=3D"Display images to show real-time content" style=
+=3D"border: 0px; display: block; font-family: Montserrat, Arial, Helvetica,=
+ sans-serif;" border=3D"0" height=3D"100" width=3D"115" src=3D"https://mi.k=
+ohls.com/p/rp/23a369e0e640e910.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20=
+251110">
+            </a>
+        </td>
+        <td style=3D"background-image:none;background-position:0% 0%;backgr=
+ound-size:auto;background-repeat:repeat;background-origin:padding-box;backg=
+round-clip:border-box;font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3ded780ec48f1=
+c46da2d065040ff6f2c8d29d84784210fa598a54b620366bb192511f35f7ee468f74c098506=
+2fac33cde33a1678d" style=3D"display:block;font-family:Montserrat,Arial,Helv=
+etica,sans-serif" target=3D"_blank">
+                <img alt=3D"Display images to show real-time content" style=
+=3D"border: 0px; display: block; font-family: Montserrat, Arial, Helvetica,=
+ sans-serif;" border=3D"0" width=3D"88" height=3D"100" src=3D"https://mi.ko=
+hls.com/p/rp/15a3dac74045eee4.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_202=
+51110">
+            </a>
+        </td>
+        <td style=3D"background-image:none;background-position:0% 0%;backgr=
+ound-size:auto;background-repeat:repeat;background-origin:padding-box;backg=
+round-clip:border-box;font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3ded780ec5b4e=
+203cb01f1e748b0888da67d0d6f35da0cf2d4901e5c52d719a35e1417cf2fd79244527e2389=
+043649041ab323ab8" style=3D"display:block;font-family:Montserrat,Arial,Helv=
+etica,sans-serif" target=3D"_blank">
+                <img alt=3D"Display images to show real-time content" style=
+=3D"border: 0px; display: block; font-family: Montserrat, Arial, Helvetica,=
+ sans-serif;" border=3D"0" height=3D"100" width=3D"83" src=3D"https://mi.ko=
+hls.com/p/rp/1146496b14017900.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_202=
+51110">
+            </a>
+        </td>
+        <td style=3D"background-image:none;background-position:0% 0%;backgr=
+ound-size:auto;background-repeat:repeat;background-origin:padding-box;backg=
+round-clip:border-box;font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3ded780eccb6d=
+8e068a9d974773469a848f49fdd67889763406c92e2cbd1d7903ed8899c4403f52f0cc325a6=
+4a7772f97067f6485" style=3D"display:block;font-family:Montserrat,Arial,Helv=
+etica,sans-serif" target=3D"_blank">
+                <img alt=3D"Display images to show real-time content" style=
+=3D"border: 0px; display: block; font-family: Montserrat, Arial, Helvetica,=
+ sans-serif;" border=3D"0" width=3D"187" height=3D"100" src=3D"https://mi.k=
+ohls.com/p/rp/73bbb66f0d61d08b.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20=
+251110">
+            </a>
+        </td>
+    </tr>   =20
+</tbody></table>
+
+
+                           =20
+                               =20
+
+
+
+
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" align=3D"center" width=3D"640" bgcolor=3D"#ffffff" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+   <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr s=
+tyle=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+      <td align=3D"center" style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif">
+         <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" align=3D"center" style=3D"margin:auto;width:100%;font-family:Mo=
+ntserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <td style=3D"font-family:Montserrat,Arial,Helvetica,san=
+s-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3=
+ded780ecd418a060b0b73aa20dc35193d6179f4ffa9e143140d7c07a4731ed099a510aae38a=
+a89b3df9a534f1b1913477d72ad9f455f7734677d4ad7" style=3D"display:block;font-=
+family:Montserrat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                            <img alt=3D"Display images to show real-time co=
+ntent" style=3D"border: 0px; display: block; font-family: Montserrat, Arial=
+, Helvetica, sans-serif;" width=3D"640" border=3D"0" src=3D"https://mi.kohl=
+s.com/p/rp/c9318daa953a6500.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251=
+110&amp;llty_frst_nm=3D%25%25llty_frst_nm%25%25&amp;kc_status=3DKR_NonKC&am=
+p;earn_rate=3D%25%earn_rate%25%25">
+                        </a>
+                   </td>
+                </tr>
+                <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-se=
+rif">
+                    <td style=3D"font-family:Montserrat,Arial,Helvetica,san=
+s-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3=
+ded780ec2fcc2b2fb96c3ef3288150e37858950bec095a6d892fb35bfcf2d52a0a1ea2fdd4d=
+f1e83ec060d77b811891605348e9149e863353c3c0674" style=3D"display:block;font-=
+family:Montserrat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                            <img alt=3D"Display images to show real-time co=
+ntent" style=3D"border: 0px; display: block; font-family: Montserrat, Arial=
+, Helvetica, sans-serif;" width=3D"640" border=3D"0" src=3D"https://mi.kohl=
+s.com/p/rp/43e308c3139579d6.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251=
+110&amp;llty_frst_nm=3D%25%25llty_frst_nm%25%25&amp;kc_status=3DKR_NonKC&am=
+p;earn_rate=3D%25%earn_rate%25%25&amp;kcashtotalbalance=3D">
+                        </a>
+                   </td>
+                </tr>
+         </tbody></table>
+      </td>
+   </tr>
+</tbody></table>
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D5027=
+3ad3ded780ec7fc3368853570ad1bbbde5428aa5fd24360b15882ba0453bbf318cb6ae05a72=
+21154a01eeb11932cdfa7e65aedbf87c3b557da0fcd7f3e00" style=3D"font-family:Mon=
+tserrat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://mi.kohls.com/p/rp/2a5ad=
+c5afb647aad.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_na=
+me=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC" style=3D"border: 0px=
+; display: block; font-family: Montserrat, Arial, Helvetica, sans-serif;" w=
+idth=3D"100%" border=3D"0">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D5027=
+3ad3ded780ecef09417458153b3d8e1f041b26001b542715319a6781ff993d9e226f8209bf9=
+2f0618963724a60c0e7dbc52498b852830a1ee4259588c97c" style=3D"font-family:Mon=
+tserrat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://mi.kohls.com/p/rp/f441d=
+45d2128ae53.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_na=
+me=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC" style=3D"border: 0px=
+; display: block; font-family: Montserrat, Arial, Helvetica, sans-serif;" w=
+idth=3D"100%" border=3D"0">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+</tbody></table>
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b816f4f4f9d30b560733f8d25cdc7833be9ae777b7e0dd1b4301462eb7ae7000e=
+4a92e93336c49987a8d2ec5f8db7f64a1" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+content/kohlsprod/49509556_Promotion_CardholderEventGPO_GIF?scl=3D1" style=
+=3D"display: block; font-family: Montserrat, Arial, Helvetica, sans-serif;"=
+ width=3D"100%" border=3D"0" alt=3D"you get an extra 20% off with your kohl=
+&#39;s card. plus take an extra $10 off $25 with coupon.">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+        <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b8e6b9d04f190fa3f1a1fcd8bf5cc4c4ebbe31d368d12011b7289ba00d4dd8c6c=
+8be0ff92241c6a359971426e93de39ca9" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49509556_1_2x?scl=3D1" style=3D"display: block; font-family=
+: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" al=
+t=3D"plus, earn kohl&#39;s cash">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b835fdd5bde877f302166f5e4b5304732a46dc694876ba30383c0bc90e756c20a=
+9df0c50499515ae8de5961e14bf53b0fc" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49521767_2_2x?scl=3D1" style=3D"display: block; font-family=
+: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" al=
+t=3D"active and former military personnel, veterans and their families rece=
+ive 30% off in store only. find a store.">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b8b8acaedbc053add6f32e9552d186a76de1a78fdb2858fb018cf2b378c3d9e27=
+bb263db206d2c2688ad31c8ee4296b2cb" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49935822_roots_2x?scl=3D1" style=3D"display: block; font-fa=
+mily: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0=
+" alt=3D"women">
+                            </a>
+                        </td>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b879c38b16d8c62f3ce539f9ce90048272e970ba11d0b9fb5ab155f322fc7ec6e=
+e077e670d8bfa357ecc4d060ad4ee5c5a" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49935822_3s_2x?scl=3D1" style=3D"display: block; font-famil=
+y: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" a=
+lt=3D"men">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+        <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b87d5c66f64047a9171d1fcd50923c2d1507190528a7a1c62268b6ed4757f4c4e=
+40ec935df69a0337da8f9ebda65ee03e2" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49935822_2s_2x?scl=3D1" style=3D"display: block; font-famil=
+y: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" a=
+lt=3D"kids">
+                            </a>
+                        </td>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b899b9bf51161750dd2d6053cefcc8a771f36e4618b31e6be978feacb853f261e=
+17b6cd3381e13e97d40ed0f9119977f63" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49935822_4s_2x?scl=3D1" style=3D"display: block; font-famil=
+y: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" a=
+lt=3D"home">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D5027=
+3ad3ded780ec09e54828adc3f7cd93f50f3a01d0a7da1a19da710b31cb99357ebf9fc72d5ee=
+5f5c5be091d967f2f81effb9dc68737b0" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49917827_Animation_2x?scl=3D1" style=3D"display: block; fon=
+t-family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=
+=3D"0" alt=3D"take an extra $10 off your $50 home purchase with coupon. sho=
+p now.">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D5027=
+3ad3ded780ec322b91794106ca000fc26a9eb716d473062e7dcdc836847aa79fe8cd00a1aa7=
+de78eaa33af456b9a9de96822b5990c5c" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49917829_Animation_2x?scl=3D1" style=3D"display: block; fon=
+t-family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=
+=3D"0" alt=3D"take an extra $10 off your $50 toys purchase with coupon">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr =
+style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3=
+ded780ececa16fba5219895e5c5a86732e65c2a5ef024695f90e9a030e76c44bc6ee8892a13=
+976124463b852b2e137d9961b328bb9b30797cd86b7d1" style=3D"font-family:Montser=
+rat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://mi.kohls.com/p/rp/c2f81e9ac=
+8daee44.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_name=
+=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC" style=3D"display: bloc=
+k; font-family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" b=
+order=3D"0">
+                        </a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+    <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3=
+ded780eca1d0b2e40649a99bd5e61c9755de792d917323d7156ba35d7c76e19f4f3f34288bd=
+689ddfc105f1a96957d600031026d53f42452a14f5856" style=3D"font-family:Montser=
+rat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://mi.kohls.com/p/rp/415c8a18f=
+c2950ea.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_name=
+=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC" style=3D"display: bloc=
+k; font-family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" b=
+order=3D"0">
+                        </a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+                           =20
+                               =20
+<table width=3D"640" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr =
+style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <table style=3D"max-width:640px;font-family:Montserrat,Arial,He=
+lvetica,sans-serif" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3=
+ded780ece9f6457fca4d3021b789e869fa997c9f77e87c61014a5cf4b5d31ffc81ef549a544=
+f82c6f89a490394e3f22283a636b3b7324bf242878790" style=3D"font-family:Montser=
+rat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://mi.kohls.com/p/rp/4013a93d7=
+c23d108.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_name=
+=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC" style=3D"display: bloc=
+k; font-family: Montserrat, Arial, Helvetica, sans-serif;" border=3D"0">
+                        </a>
+                    </td>
+                </tr>
+            </tbody></table>
+            <table style=3D"max-width:640px;font-family:Montserrat,Arial,He=
+lvetica,sans-serif" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3=
+ded780ec8b86cdf41c0c3f49e9e34473ac40b96b1eec1eebe10d79952f644e7c7db63b41e72=
+6a3e50f3cc8c50037e19f83acbbe88e87bba0b93d0b90" style=3D"font-family:Montser=
+rat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://mi.kohls.com/p/rp/b21aa061c=
+6431c77.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_name=
+=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC" style=3D"display: bloc=
+k; max-width: 100%; font-family: Montserrat, Arial, Helvetica, sans-serif;"=
+ border=3D"0">
+                        </a>
+                    </td>
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3=
+ded780ec501a3889221f4605da10a3aa3a3e191389710a7cc119f4302ec3804ae8e2c10e29b=
+1c22311d90de8c888827a59a9d7cffc7be0ff034848a1" style=3D"font-family:Montser=
+rat,Arial,Helvetica,sans-serif" target=3D"_blank">=20
+                            <img src=3D"https://mi.kohls.com/p/rp/8a5c8c7d8=
+e0afec0.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_name=
+=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC" style=3D"display: bloc=
+k; max-width: 100%; font-family: Montserrat, Arial, Helvetica, sans-serif;"=
+ border=3D"0">
+                        </a>
+                    </td>
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D50273ad3=
+ded780ec5507d4645161647ae52c47e1de585560dc1d44706af7ac19bcde4f628e6a374d991=
+bbd288683b76d6d737ebf4e1431f974707741cfdc0891" style=3D"font-family:Montser=
+rat,Arial,Helvetica,sans-serif" target=3D"_blank">=20
+                            <img src=3D"https://mi.kohls.com/p/rp/f496106e1=
+e71c35e.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_name=
+=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC" style=3D"display: bloc=
+k; max-width: 100%; font-family: Montserrat, Arial, Helvetica, sans-serif;"=
+ border=3D"0">
+                        </a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr =
+style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b85ea408b7b2fe9fe58ec813c850516953a8803427b4f52a5fcb896462769be249942=
+3fac8ad1946e9d2b6b28352181c1e" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/cont=
+ent/kohlsprod/49559918_Product_HolidayGifting_EXT_GIF.gif?scl=3D1" style=3D=
+"display: block; font-family: Montserrat, Arial, Helvetica, sans-serif;" bo=
+rder=3D"0" width=3D"100%" alt=3D"gift shop">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8ec3a3cd00ca7fb73fc27c5f1ef746ba9ade0914387902e4c82d248d47b656263eab=
+ecc168ea2678660a59bff08c7e20e" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_2_2x?scl=3D1" style=3D"display: block; font-family: Mo=
+ntserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=3D=
+"$24.99 cozy boots">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b86fdd3d6d0fc98696a841a60dd51dd11e5d13be1b045ec1bba66b60cc4075edea681=
+1339cad632f861b4a25151a1c6cbf" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_3_2x?scl=3D1" style=3D"display: block; font-family: Mo=
+ntserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=3D=
+"$24.99 cozy boots">
+                        </a>
+                    </td>
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8a83c86fb5cf86167673c04a3bf63f27f2767201af634f5883d19bd9377042d9ba0c=
+53bab3fce3cd7c3b05a3c520bd06b" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_5_2x?scl=3D1" style=3D"display: block; font-family: Mo=
+ntserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=3D=
+"gifts for her">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b86bd9c5982b4f880b500b22c9dc325ffff279c4cc923de5e11095d3142f3e188640f=
+d6e6c678aed2dc073cd6a1dbd363d" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_4_2x?scl=3D1" style=3D"display: block; font-family: Mo=
+ntserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=3D=
+"$24.99 cozy boots">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8a5a8929bd12168f82807d1aa2d1c4088747da12fcb7eb89efdece02103e1814c727=
+3eba44f6b8c8c28612b5e594e798a" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_6_2x?scl=3D1" style=3D"display: block; font-family: Mo=
+ntserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=3D=
+"$50 and under beauty for men">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8486b3d8b88c3056dd18b017647894c685b893f20ba0adbc7b1cc0ae65781b1da1f6=
+586cd84793d59ddd987d1e7e4fa79" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_7_2x?scl=3D1" style=3D"display: block; font-family: Mo=
+ntserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=3D=
+"gifts for him">
+                        </a>
+                    </td>
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8dfd0ee9be18f95ca7e819e05c8fe7b0076d92e4c5e2890a9989cb783b2196ae4d50=
+874b05c0ad638fed4d7085a4bd377" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_9_2x?scl=3D1" style=3D"display: block; font-family: Mo=
+ntserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=3D=
+"$50 and under beauty for men">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b842246fc0b98dfbff470997df63a45ea1fbf49bda808e174e773c300c15d7fc942eb=
+c8118a39b11425e347775a7222d09" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_8_2x?scl=3D1" style=3D"display: block; font-family: Mo=
+ntserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=3D=
+"$50 and under beauty for men">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b861b8b2a16b78533be6f0dab2f65c22b67aa6e35678d7af6827828491ec0bab481b9=
+a7e96d6af146779d8a148d8247fb1" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_10_2x?scl=3D1" style=3D"display: block; font-family: M=
+ontserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=
+=3D"starting at $14.99 toys. toy-coupon eligible only.">
+                        </a>
+                    </td>
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b844b461020e8398f403af4df5736995347b60686ee29c065fc2367c3b96b0ecfdb03=
+d528f14063efc47f106b0ba12b872" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_12_2x?scl=3D1" style=3D"display: block; font-family: M=
+ontserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=
+=3D"gifts for kids">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b84107c96ef062e8e5f298592cc3bd52063aa44d62ec8b423dec9ba9b7d0318d95d1c=
+9bd1abe5f177c465da5c8475243e4" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522550_11_2x?scl=3D1" style=3D"display: block; font-family: M=
+ontserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=
+=3D"starting at $14.99 toys. toy-coupon eligible only.">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+        </td>
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+           =20
+        </td>
+    </tr>
+</tbody></table>
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr =
+style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8be055731ff0d62fda2810fe40158b7571d20a846d47db7b1c3935f336d0aaed279d=
+0388a4f44c640f766155009650bd7" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/cont=
+ent/kohlsprod/49522707_Product_HolidayQuest_Content_GIF?scl=3D1" style=3D"d=
+isplay: block; font-family: Montserrat, Arial, Helvetica, sans-serif;" bord=
+er=3D"0" width=3D"100%" alt=3D"kohl&#39;s holiday quest. play now.">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+        </td>
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b82865ee228e4a259fd859349e5a5acaec42b9299d0dc474d857256bcc10b236c2e7b=
+ebb4e70d56a0590e492e48ff8b3a1" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522707_1s_2x?scl=3D1" style=3D"display: block; font-family: M=
+ontserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b86f7df24f3787cdecc2f7a55ed6694a888dda95d48fb631dc3e9582b308642e1ce6a=
+76de15724b8efc7c54022cb019c83" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522707_2s_2x?scl=3D1" style=3D"display: block; font-family: M=
+ontserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%">
+                        </a>
+                    </td>
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b868d693535af2692564aba63b7e97c466fd99c908ba794d114dd21dd1b14612e0576=
+402dee6f0b3c8ae815681199aefd6" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522707_4s_2x?scl=3D1" style=3D"display: block; font-family: M=
+ontserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%" alt=
+=3D"details">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8e72e27d878c5c2f0aada1b438676fb0b7d7c4c720b33c643103d8f20f7b8488418d=
+5f7b0160ee2d1f1ccbc997c5f7d58" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://images.am.kohls.com/is/imag=
+e/kohlsprod/49522707_3s_2x?scl=3D1" style=3D"display: block; font-family: M=
+ontserrat, Arial, Helvetica, sans-serif;" border=3D"0" width=3D"100%">
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+        </td>
+    </tr>
+</tbody></table>
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr =
+style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+           =20
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                   =20
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8e29fd7f387f27caf9e10e330712bc3e530f1419a3021894ee76c3e0122925eba1d2=
+5b326d7012e91f4551778641c286c" style=3D"font-family:Montserrat,Arial,Helvet=
+ica,sans-serif" target=3D"_blank">
+                            <img src=3D"https://mi.kohls.com/p/rp/2df81d0a7=
+3294478.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;mi_bi_tier=
+=3DINSIDER" style=3D"display: block; font-family: Montserrat, Arial, Helvet=
+ica, sans-serif;" border=3D"0" width=3D"100%" alt=3D"sephora savings event"=
+>
+                        </a>
+                    </td>
+                   =20
+                </tr>
+            </tbody></table>
+           =20
+        </td>
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+           =20
+        </td>
+    </tr>
+</tbody></table>
+
+
+                           =20
+                               =20
+
+
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b825615a28e2f13cb70d7b717704dbe8903bde4fdeec67d065fe14e669275f096=
+b08a36f8e37479d6cb8fe3baf9adc8a68" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49775015_1s_2x?scl=3D1" style=3D"display: block; font-famil=
+y: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0">
+                            </a>
+                        </td>
+                   =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+        <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b80561ee795779537dbfdf0c13425e0b7d6e24b9010f937148c32b9d5b75e4188=
+147504dfc4d12e7ef66a37ab1e601e2e1" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49775015_2s_2x?scl=3D1" style=3D"display: block; font-famil=
+y: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0">
+                            </a>
+                        </td>
+                   =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"><tr =
+style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+        <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans=
+-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <td align=3D"left" valign=3D"top" style=3D"font-family:=
+Montserrat,Arial,Helvetica,sans-serif">
+                        <a href=3D"https://click.s.kohls.com/?qs=3D06ceed86=
+541c14b8f7bcfb7973c2b652bff55f6ea0aefb74e60cac67e70c8c344e96041b20821090d82=
+60665607226124bdf8be8fc47976f8e952c858498b790" style=3D"display:block;font-=
+family:Montserrat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                            <img alt=3D"Display images to show real-time co=
+ntent" style=3D"border: 0px; display: block; font-family: Montserrat, Arial=
+, Helvetica, sans-serif;" border=3D"0" src=3D"https://mi.kohls.com/p/rp/849=
+ad9d2c73789d6.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;email_=
+name=3D251110_DG_Email_LTY_Mon&amp;kc_status=3DKR_NonKC">
+                        </a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b85422a18c3ba0c8016ffb741c5ec375d9896093e1aa5f3bc072835cf39042acf=
+21d7ab80456e7f10e5222cc8b8567171e" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://mi.kohls.com/p/rp/631b4=
+8aeb11aa8c2.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110" style=3D"di=
+splay: block; font-family: Montserrat, Arial, Helvetica, sans-serif;" width=
+=3D"100%" border=3D"0" alt=3D"Display images to show real-time content">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+                           =20
+                               =20
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                       =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b84108cdd95aa91b774af0e90cbe5f8ffdddfbfc61c3adb64825827281fe31f05=
+cbdc90815d185177e5fcfb390cc66f2d2" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49917826_1_2x?scl=3D1" style=3D"display: block; font-family=
+: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" al=
+t=3D"those savings you were eyeing? already in your kohl&#39;s wallet.">
+                            </a>
+                        </td>
+                       =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+                           =20
+                               =20
+
+
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b8d0baa4c547a065ac4b2a932b010154729ca557fcd02e7018ef095e84506186d=
+8af83b9e3bb83140f67c1d46459bf919205627abe9ef4f469" style=3D"font-family:Mon=
+tserrat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://mi.kohls.com/p/rp/de2e2=
+ba5fb1fc056.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;Offer%20=
+ID=3D31961&amp;email_name=3D251110_DG_Email_LTY_Mon" style=3D"display: bloc=
+k; font-family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" b=
+order=3D"0" alt=3D"earn more kohl&#39;s cash the more you spend. not valid =
+on sephora at kohl&#39;s. shop now.">
+                            </a>
+                        </td>
+                   =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+        <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b8a833639883f84d6ad3dfc8de6abafe8172eb71358a28ae1d8811a85e623580c=
+0fcb4cbd70e8ac1f4308aac46b25a1553aa4e21fd841ce08f" style=3D"font-family:Mon=
+tserrat,Arial,Helvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://mi.kohls.com/p/rp/4a366=
+3d0615de1c4.png?mi_u=3D588977350&amp;mi_ecmp=3D998194_20251110&amp;Offer%20=
+ID=3D31961&amp;email_name=3D251110_DG_Email_LTY_Mon" style=3D"display: bloc=
+k; font-family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" b=
+order=3D"0" alt=3D"details.">
+                            </a>
+                        </td>
+                   =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+
+                           =20
+                               =20
+
+
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b838e1407189d1035db4f03837f00cdafc7e8cfe324fd92f3b958adc4389bdfa1=
+9c980d32407b16edcfe4a71f42a2be204" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49522458_1_2x?scl=3D1" style=3D"display: block; font-family=
+: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" al=
+t=3D"take an extra 20% off in store and online">
+                            </a>
+                        </td>
+                   =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+        <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b8fcee7a9caf729b1a9aa7e6085d30c50e5dce004c4f8a422e9daa4e845f35997=
+13a3b3aad63547f7fc65d7da1eec99a0f" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49522458_2_2x?scl=3D1" style=3D"display: block; font-family=
+: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" al=
+t=3D"take an extra 20% off in store and online">
+                            </a>
+                        </td>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b83404586288e420b3badabe57d9349db1a7b8284e52bc1bcf190c457a363063a=
+292999a3bf7bace6455d70d6a4931b0e6" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49522458_details_2x?scl=3D1" style=3D"display: block; font-=
+family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D=
+"0" alt=3D"details">
+                            </a>
+                        </td>
+                   =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+</tbody></table>
+
+
+
+                           =20
+                               =20
+
+
+<table align=3D"center" width=3D"640" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+   =20
+        <tbody style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">=
+<tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b89b077d79b1beea1c41abd34467575663566e13932180ce36a394ba1ff99f7d2=
+32d317b2a4cb4c5fdfcf729d58e2ed098" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49522510_1_2x?scl=3D1" style=3D"display: block; font-family=
+: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" al=
+t=3D"take $10 off when you spend a minimum of $25">
+                            </a>
+                        </td>
+                   =20
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+   =20
+        <tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+            <td style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif">
+                    <tbody style=3D"font-family:Montserrat,Arial,Helvetica,=
+sans-serif"><tr style=3D"font-family:Montserrat,Arial,Helvetica,sans-serif"=
+>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b897c205b9f875ae571027bd8dd94a9df8713b31a5b64049e15957459796e78a7=
+848fa47bfeebc00d570a687383b423092" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49522510_2_2x?scl=3D1" style=3D"display: block; font-family=
+: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D"0" al=
+t=3D"take $10 off when you spend a minimum of $25">
+                            </a>
+                        </td>
+                   =20
+                        <td align=3D"left" valign=3D"top" style=3D"font-fam=
+ily:Montserrat,Arial,Helvetica,sans-serif">
+                            <a href=3D"https://click.s.kohls.com/?qs=3D06ce=
+ed86541c14b863cda6a7f84f58192434368fbbc5d856379c82247b53753790bde1017cfb6da=
+cc8b9246f09442d19f989209dfb664515" style=3D"font-family:Montserrat,Arial,He=
+lvetica,sans-serif" target=3D"_blank">
+                                <img src=3D"https://images.am.kohls.com/is/=
+image/kohlsprod/49522510_details_2x?scl=3D1" style=3D"display: block; font-=
+family: Montserrat, Arial, Helvetica, sans-serif;" width=3D"100%" border=3D=
+"0" alt=3D"details"></a></td></tr></tbody></table></td></tr></tbody></table=
+></td></tr></tbody></table></td></tr></tbody></table></div></div></div></di=
+v></div>
+
+--000000000000fd3ab606439017ed--
