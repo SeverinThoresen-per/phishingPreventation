@@ -79,3 +79,24 @@ body{background:linear-gradient(180deg,var(--bg),#071021);color:#e6eef6}
   .topbar{flex-direction:column;align-items:flex-start;height:auto;padding:8px}
 }
 
+/* Centered judgement output box */
+.judgement-box{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:linear-gradient(180deg,#071426,#0b1220);
+  color:#e6eef6;
+  padding:18px 22px;
+  border-radius:12px;
+  box-shadow:0 20px 50px rgba(2,6,23,0.6);
+  max-width:90%;
+  width:640px;
+  z-index:1200;
+  font-size:15px;
+  line-height:1.4;
+  white-space:pre-wrap; /* preserve newlines from judgementOutput */
+}
+.judgement-box.hidden{display:none}
+
+
