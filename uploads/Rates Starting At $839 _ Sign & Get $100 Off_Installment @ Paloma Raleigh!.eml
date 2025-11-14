@@ -1,0 +1,237 @@
+Delivered-To: sathores@ncsu.edu
+Received: by 2002:a05:7000:1912:b0:7b5:425f:dea1 with SMTP id g18csp1681009maz;
+        Fri, 14 Nov 2025 07:56:56 -0800 (PST)
+X-Received: by 2002:a05:7022:f68a:b0:119:e569:f84f with SMTP id a92af1059eb24-11b033ae894mr1495199c88.6.1763135815870;
+        Fri, 14 Nov 2025 07:56:55 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763135815; cv=none;
+        d=google.com; s=arc-20240605;
+        b=KVcp3eJ6Z8s9s6+maJ0Q7uRZZAStE6+Lw5Vdpi4nkk++Zo0gHhxq4zSWXcx+mF0Ujw
+         RF3xv2bQBuay65aIkRuEYD6TslhcAMepRuJztYSPw9xK6wNaACMaR4xnTMYyeAVzv6Y0
+         NLvsXVwCxen3Isj6ugYu+XQMIlMSGeYG/jX+WaMoICr3Tt2x80vU7bX3bR6nsX8T+TrP
+         lkvX8idSHND43ThZK8WOcFxyJQhLs58ylIYuM2BQi90MTHKlTHIjjL+wnv1lmhUSun4g
+         vSc7Lo6Jj0e0tM0TtDp9o2oUOOn7QHx5Q/OiyUQ8gri62c/rv+eOClY1wo5f7W5O8E8D
+         sH5w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=VhDV6tKJz0BSpvk+FzZmiT+WkTf8krqJAqcrV0kQP0A=;
+        fh=BZ5KX9XGVmCc9F/A0D3XUoI3dvv6yKmwPgcUZ8dwTBg=;
+        b=JTs57UnHGhb5JvWbKVJGNhKckZUwgEAaWc8xHB/FQWx/0+p50wgDo6g0DK03RfSkKN
+         /BBLhHfd4Bv6CDuZ7Bxo8QpMsf2ELUApg1g6CZkmAVbm9Qaq5MJaHEXpG2c3EHPgG0eZ
+         RmTQ9pcrToo3epiKm4mg5iKh3bwDwr7C2W/ZbwK7ulJpO2RxjRjawBFpgv/K5nu56jXC
+         j1XwdeBjwEM0MGI3upMFahVvc5SoSKwMOHmfKR9qGp65ALVXtnNPlWqwXgoDRckjDgwT
+         DBvt2k1WT23MIlmZXF8aEogBuq5ExIDqbrMXKLz/TSGR1O9ks1IqtMd78O9eVTLh/pUE
+         SP+Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=google header.b="Xd/19QKL";
+       spf=pass (google.com: domain of rnazmin@ncsu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=rnazmin@ncsu.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu;
+       dara=neutral header.i=@ncsu.edu
+Return-Path: <rnazmin@ncsu.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a92af1059eb24-11b0608998bsor1564769c88.3.2025.11.14.07.56.55
+        for <sathores@ncsu.edu>
+        (Google Transport Security);
+        Fri, 14 Nov 2025 07:56:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of rnazmin@ncsu.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ncsu.edu header.s=google header.b="Xd/19QKL";
+       spf=pass (google.com: domain of rnazmin@ncsu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=rnazmin@ncsu.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ncsu.edu;
+       dara=neutral header.i=@ncsu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ncsu.edu; s=google; t=1763135814; x=1763740614; darn=ncsu.edu;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=VhDV6tKJz0BSpvk+FzZmiT+WkTf8krqJAqcrV0kQP0A=;
+        b=Xd/19QKLiEftVB6s4HgCAVEur4Zan+6Y6phskMj8DoRs4vtenXpBN1i6nrGnWgbD7Q
+         93w0l6U8eUjMdCVZP5DoyjEQl+NcRrZDt3vqiQ2hVztMZOdJ4ha92mYmgHsPdOyDJR+y
+         cFSaGp6jN63dzQI29qPQEIT/xrsfy7u6lbfCp3NKQzsQu+OG6y5KY+JyiW5gg5PaQuXt
+         G2FbSdg1EtFcnQAhtCedIyweAQ1HJu5fZiqIYcUeYqpdvV/yjHOb1a9wg01/7A2Rvp8d
+         6yL4qocr/+th81douHN9EINITU9gaKl91x+L4wwAhLpy1+adChdnCPa7b6GUJo2MUoMt
+         Obkg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763135814; x=1763740614;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=VhDV6tKJz0BSpvk+FzZmiT+WkTf8krqJAqcrV0kQP0A=;
+        b=n5IfPhBLqldwiAmDjBDMqRBtqM0rgXgydJ2Fe4nr1TsWcQtCYpUDCCRbBIaOcdlKON
+         nz2TJMEfZhTBbkxEfBWKlXgGfSqT+atat9bsO8Oh5xkuxJr3aOwYhHnw/aJq/q2YYCVT
+         8+1SY8xLyizKGAgL13CK5vJ5ZiwkiMdePwmO1gFTXhWTqQk+bXzG6myMbtXma9mTJG/E
+         17a+Y74MP7wW5HTv2jFmSs7WAVKHwuR0NvHU6iA/dIbHBAb8/0R0apgIJILPPTkkERlL
+         gcxvoiLK8pPpvYSFjSloVtVZGp3fAeXSdEIEBRqBC79DWgTD9nUw6TbTh5DeWISn9bi4
+         5P2g==
+X-Gm-Message-State: AOJu0YzFGo38hsHUZjBWSxLmLKv+FbyUzOtvnqAfhCGCZZzBqlbGsNmK
+	eOJmRTM+8aJcU23bu+kuhwILHdmmerS7r6MtHsFcaqv1aPva0MoXbqu7DvJXw7YJliOddXapGmW
+	0UqTfCEXqo4hwET4u1/mctM6eVLle69lGI/UhUiF0RolPxSvQdJ/tk76D
+X-Gm-Gg: ASbGncsD1T8K8+9Gd+2TU7MNfbjRZDsGb4rHOoItsJ9UxXxCG+zHREM1Y/RiFy+6ZXE
+	HVAsazeRNe7rP4HK2CZTmb1f0LS+bkTnnXGaJUurHSKXXfzV2BuXND7WnRNV+X31ae//l40EvO4
+	0Am2nJXYTxHtkCPQ26vF4mIUrhq6n5avA/q8Y1G0ZbcQlIAjA59nQM29UZdYWard+D0Ne+VmnQP
+	iLQmfatMHvegzUzQPv+QK2mfIN64BZJRwUta0w7DwY0MnBzG39Ne/FDP9zq
+X-Google-Smtp-Source: AGHT+IHIuFgYpEjSgrpDpH9Asr61N00Zo+yB81R0TpKJE4snJKeIKtbLKo5Ytz+hQ8t7jV0K3HNXKIIjJtxeesLGZ58=
+X-Received: by 2002:a05:7301:7305:b0:2a4:3593:ccc3 with SMTP id
+ 5a478bee46e88-2a4ab42a880mr1019840eec.10.1763135814284; Fri, 14 Nov 2025
+ 07:56:54 -0800 (PST)
+MIME-Version: 1.0
+References: <V6a_JV5iTKGXcFuon4halQ@geopod-ismtpd-1>
+In-Reply-To: <V6a_JV5iTKGXcFuon4halQ@geopod-ismtpd-1>
+From: Rifaat Nazmin <rnazmin@ncsu.edu>
+Date: Fri, 14 Nov 2025 10:56:43 -0500
+X-Gm-Features: AWmQ_bkpIrYITQyPuteBgroMftF3T1itGNA-s_0j7_00lFBblWGQ_YQjYUo5qCM
+Message-ID: <CALg1WyK8P3aju4TorAk5i+ABzSSViZhJD6feq6-jiQTDe8R9mw@mail.gmail.com>
+Subject: Fwd: Rates Starting At $839 | Sign & Get $100 Off/Installment @
+ Paloma Raleigh!
+To: Severin Thoresen <sathores@ncsu.edu>, Patrick Kamphongthai <pkampho@ncsu.edu>, Dyani Davis <dbdavis4@ncsu.edu>
+Content-Type: multipart/alternative; boundary="000000000000e6cd060643900b7f"
+
+--000000000000e6cd060643900b7f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Paloma Raleigh <palomaraleigh@peakmade.com>
+Date: Thu, Oct 30, 2025 at 11:57=E2=80=AFAM
+Subject: Rates Starting At $839 | Sign & Get $100 Off/Installment @ Paloma
+Raleigh!
+To: <rnazmin@ncsu.edu>
+
+
+Fall 2026 Leasing Starts NOW!
+Call Us Today for More Info!
+(740) 249-2493
+[image: Sign for Fall 2026 Now! Get $100 Off Per Installment - Lease Today
+@ Paloma Raleigh!]
+
+Paloma Raleigh
+
+5701 Hillsborough St., Raleigh, NC 27606
+
+Unsubscribe - Unsubscribe Preferences
+
+--000000000000e6cd060643900b7f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div><br></div><div><br><div class=3D"gmail_quote gmail_quote_container"><d=
+iv dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ---------<=
+br>From: <strong class=3D"gmail_sendername" dir=3D"auto">Paloma Raleigh</st=
+rong> <span dir=3D"auto">&lt;<a href=3D"mailto:palomaraleigh@peakmade.com">=
+palomaraleigh@peakmade.com</a>&gt;</span><br>Date: Thu, Oct 30, 2025 at 11:=
+57=E2=80=AFAM<br>Subject: Rates Starting At $839 | Sign &amp; Get $100 Off/=
+Installment @ Paloma Raleigh!<br>To:  &lt;<a href=3D"mailto:rnazmin@ncsu.ed=
+u">rnazmin@ncsu.edu</a>&gt;<br></div><br><br><u></u>
+
+ =20
+   =20
+   =20
+   =20
+   =20
+   =20
+
+   =20
+   =20
+   =20
+    =20
+ =20
+  <div>
+    <center class=3D"m_-121385595568202812wrapper">
+      <div>
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"10=
+0%" class=3D"m_-121385595568202812wrapper" bgcolor=3D"#ffffff">
+          <tbody><tr>
+            <td valign=3D"top" bgcolor=3D"#ffffff" width=3D"100%">
+              <table width=3D"100%" role=3D"content-container" align=3D"cen=
+ter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                <tbody><tr>
+                  <td width=3D"100%">
+                    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">
+                      <tbody><tr>
+                        <td>
+                         =20
+                          <table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"width:100%;max-width:600px" align=3D"center"=
+>
+                            <tbody><tr>
+                              <td role=3D"modules-container" style=3D"paddi=
+ng:0px;text-align:left;color:rgb(0,0,0)" bgcolor=3D"#ffffff" width=3D"100%"=
+ align=3D"left">
+                               =20
+    <table class=3D"m_-121385595568202812preheader" role=3D"module" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"opacity:=
+0;height:0px;width:0px;display:none!important;color:transparent">
+      <tbody><tr>
+        <td role=3D"module-content">
+          <p>Fall 2026 Leasing Starts NOW!</p>
+        </td>
+      </tr>
+    </tbody></table>
+ =20
+    <table role=3D"module" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ width=3D"100%" style=3D"table-layout:fixed">
+      <tbody><tr>
+        <td style=3D"padding:0px;line-height:22px;text-align:inherit" heigh=
+t=3D"100%" valign=3D"top" bgcolor=3D"">
+            <div style=3D"text-align:center"><span style=3D"font-family:ari=
+al,helvetica,sans-serif"><span style=3D"font-size:24px;font-family:arial,he=
+lvetica,sans-serif">Call Us Today for More Info!</span></span></div>
+
+<div style=3D"text-align:center"><span style=3D"font-size:22px"><span style=
+=3D"font-family:arial,helvetica,sans-serif"><span style=3D"font-style:norma=
+l;font-variant-ligatures:normal;font-variant-caps:normal;font-weight:400;fo=
+nt-family:arial,helvetica,sans-serif">(740) 249-2493</span></span></span></=
+div>
+        </td>
+      </tr>
+    </tbody></table>
+ =20
+    <table class=3D"m_-121385595568202812wrapper" role=3D"module" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layou=
+t:fixed">
+      <tbody><tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px" valign=3D"=
+top" align=3D"center">
+          <a><img class=3D"m_-121385595568202812max-width" border=3D"0" sty=
+le=3D"display: block; text-decoration: none; font-family: Helvetica, arial,=
+ sans-serif; font-size: 16px; width: 100%; max-width: 100% !important; heig=
+ht: auto !important; color: rgb(0, 0, 0);" alt=3D"Sign for Fall 2026 Now! G=
+et $100 Off Per Installment - Lease Today @ Paloma Raleigh!" width=3D"600">=
+</a>
+        </td>
+      </tr>
+    </tbody></table>
+  <div role=3D"module" style=3D"font-size:12px;line-height:20px;padding:16p=
+x;text-align:center;color:rgb(68,68,68)"><div><p style=3D"font-family:Arial=
+,Helvetica,sans-serif;font-size:12px;line-height:20px">Paloma Raleigh</p><p=
+ style=3D"font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height=
+:20px"><span style=3D"font-family:Arial,Helvetica,sans-serif">5701 Hillsbor=
+ough St.</span>, <span style=3D"font-family:Arial,Helvetica,sans-serif">Ral=
+eigh</span>, <span style=3D"font-family:Arial,Helvetica,sans-serif">NC</spa=
+n> <span style=3D"font-family:Arial,Helvetica,sans-serif">27606</span> </p>=
+</div><p style=3D"font-family:Arial,Helvetica,sans-serif;font-size:12px;lin=
+e-height:20px"><a style=3D"font-family:Arial,Helvetica,sans-serif">Unsubscr=
+ibe</a> - <a style=3D"font-family:Arial,Helvetica,sans-serif">Unsubscribe P=
+references</a></p></div>
+                              </td>
+                            </tr>
+                          </tbody></table>
+                         =20
+                        </td>
+                      </tr>
+                    </tbody></table>
+                  </td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+    </center>
+  <img alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height: 1px =
+!important; width: 1px !important; border-width: 0px !important; margin: 0p=
+x !important; padding: 0px !important;"></div>
+</div></div>
+
+--000000000000e6cd060643900b7f--
