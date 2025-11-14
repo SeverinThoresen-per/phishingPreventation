@@ -79,7 +79,7 @@ body{background:linear-gradient(180deg,var(--bg),#071021);color:#e6eef6}
   .topbar{flex-direction:column;align-items:flex-start;height:auto;padding:8px}
 }
 
-/* Centered judgement output box */
+
 .judgement-box{
   position:fixed;
   top:50%;
@@ -95,7 +95,7 @@ body{background:linear-gradient(180deg,var(--bg),#071021);color:#e6eef6}
   z-index:1200;
   font-size:15px;
   line-height:1.4;
-  white-space:pre-wrap; /* preserve newlines from judgementOutput */
+  white-space:pre-wrap; 
 }
 .judgement-box.hidden{display:none}
 
