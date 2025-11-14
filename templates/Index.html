@@ -35,6 +35,7 @@
             </label>
         </div>
         <div class="hint" style="color:var(--muted);font-size:13px">Accepted: .eml, .msg — upload exported messages for analysis.</div>
+        <div id="output" class="hint" style="color:var(--muted);font-size:15px"></div>
       </section>
     </main>
   </div>
@@ -56,6 +57,23 @@
     });
 
       const result = await response.json();
+      let judgementOutput = "FAULTS : \n";
+      if(result.judgement.indexOf("Mismatched addresses") != -1){
+        judgementOutput += `Return address does not match the 'from' address, `;
+      }
+      if(result.judgement.indexOf("Phishing email") != -1){
+        judgementOutput += "contains a known malicious url, ";
+      }
+      if(result.judgement.indexOf("Failed spf") != -1){
+        judgementOutput += "email did not come from a recognized sender's domain, ";
+      }
+      if(result.judgement.indexOf("Failed dmarc") != -1){
+        judgementOutput += "failed dmarc security checks, ";
+      }
+      if(result.judgement.indexOf("Failed dkim") != -1){
+        judgementOutput += "invalid digital signature, ";
+      }
+      document.getElementById("output").innerHTML = judgementOutput;
       console.log('Server response:', result);
     } catch (err) {
       console.error('Error uploading file:', err);

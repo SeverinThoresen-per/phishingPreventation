@@ -113,6 +113,7 @@ def upload_eml():
         "return path": msg.get("Return-Path"),
         "reply to": msg.get("Reply-To"),
         "date": msg.get("Date"),
+        "judgement": judgement
     }
 
 def judge(msg, bytes):
@@ -126,7 +127,7 @@ def judge(msg, bytes):
         redFlags.append("Failed spf")
     if "dmarc=fail" in msg.get("Authentication-Results", ""):
         redFlags.append("Failed dmarc")
-    if "dkim=fail" in msg.get("Authentication-Results", "") or dkim.verify(bytes) == False:
+    if "dkim=fail" in msg.get("Authentication-Results", ""):
         redFlags.append("Failed dkim")
     return redFlags
 
