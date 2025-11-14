@@ -40,6 +40,8 @@
     </main>
   </div>
 
+    <div id="judgementBox" class="judgement-box hidden" role="status" aria-live="polite"></div>
+
 
   <script type="module">
 
@@ -76,7 +78,9 @@
       if(result.judgement.indexOf("Unknown domain") != -1){
         judgementOutput += "Unknown domain, ";
       }
-      document.getElementById("output").innerHTML = judgementOutput;
+  const jb = document.getElementById("judgementBox");
+  jb.innerText = judgementOutput;
+  jb.classList.remove('hidden');
       console.log('Server response:', result);
     } catch (err) {
       console.error('Error uploading file:', err);
