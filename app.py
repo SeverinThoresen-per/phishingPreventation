@@ -19,6 +19,12 @@ CORS(app)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+def load_phish_urls(filepath="recentPhishUrls.csv"):
+    with open(filepath) as f:
+        return set(line.strip().lower() for line in f)
+    
+PHISH_URLS = load_phish_urls()
+
 def load_tranco_domains(file_path='top-1m.csv', limit=10000):
     domains = set()
     try:
@@ -58,20 +64,7 @@ def upload_eml():
     domains = extract_domains(str(msg))
     suspicious_domains = [d for d in domains if d.lower() not in TRONCO_DOMAINS]
 
-    #print(subject)
-    #print(sender)
-    #print(body)
-    #print(ip)
-    #print(urls)
-    #print(msg.get("Return-Path"))
-    #print(msg.get("Reply-To"))
-    #print(msg.get("Date"))
-    #The information below this barely works
-
-    #print(msg.get_all("To", []))
-    #print(msg.get_all("CC", []))
-
-    judgement = judge(msg, file_bytes, suspicious_domains)
+    judgement = judge(msg, urls, suspicious_domains)
 
     points = 0
     if "Phishing email" in judgement:
@@ -120,19 +113,23 @@ def upload_eml():
         "judgement": judgement
     }
 
-def judge(msg, bytes, suspicious_domains):
+def judge(msg, urls, suspicious_domains):
     redFlags = []
-    for url in extract_urls(str(msg)):
+    auth = msg.get("Authentication-Results", "")
+    for url in urls:
         if scan_url(url) == True:
             redFlags.append("Phishing email")
     if msg.get('from') != msg.get("Return-Path") and msg.get('from') != msg.get("Reply-To"):
         redFlags.append("Mismatched addresses")
-    if "spf=fail" in msg.get("Authentication-Results", ""):
-        redFlags.append("Failed spf")
-    if "dmarc=fail" in msg.get("Authentication-Results", ""):
-        redFlags.append("Failed dmarc")
-    if "dkim=fail" in msg.get("Authentication-Results", ""):
-        redFlags.append("Failed dkim")
+    if "spf" not in auth and "dkim" not in auth and "dmarc" not in auth:
+        redFlags.append("Old email")
+    elif msg['from'] != msg['to']:
+        if "spf=pass" not in auth:
+            redFlags.append("Failed spf")
+        if "dmarc=pass" not in auth:
+            redFlags.append("Failed dmarc")
+        if "dkim=pass" not in auth:
+            redFlags.append("Failed dkim")
     if len(suspicious_domains) > 0:
         redFlags.append("Unknown domain")
     return redFlags
