@@ -13,13 +13,12 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import csv
 from email.utils import parseaddr
+import requests
 
 global fileCount
 fileCount = 0
 global phishingCount
 phishingCount = 0
-global mismatchedAddresses
-mismatchedAddresses = 0
 global s
 s = 0
 global c
@@ -34,48 +33,14 @@ global ck
 ck = 0
 global sck
 sck = 0
-
-global a_s
-a_s = 0
-global a_c
-a_c = 0
-global a_k
-a_k = 0
-global a_sc
-a_sc = 0
-global a_sk
-a_sk = 0
-global a_ck
-a_ck = 0
-global a_sck
-a_sck = 0
+global count
+count = 0
+global headerMismatches
+headerMismatches = 0
 
 def get_from_domain(msg):
     from_addr = parseaddr(msg.get("From"))[1]
     return from_addr.split("@")[-1].lower()
-
-
-def extract_spf_domain(auth_results):
-    """
-    Extract 'spf' domain from Authentication-Results header.
-    Example: spf=pass smtp.mailfrom=gmail.com
-    """
-    m = re.search(r"smtp\.mailfrom=([^;\s]+)", auth_results)
-    if m:
-        return m.group(1).split("@")[-1].lower()
-    return None
-
-
-def extract_dkim_domain(auth_results):
-    """
-    Extract DKIM d= domain.
-    Example: dkim=pass (good signature) header.d=google.com
-    """
-    m = re.search(r"header\.d=([^;\s]+)", auth_results)
-    if m:
-        return m.group(1).lower()
-    return None
-
 
 def aligned(org1, org2):
     """Relaxed alignment: same organizational domain."""
@@ -108,7 +73,7 @@ def load_tranco_domains(file_path='top-1m.csv', limit=10000):
 TRONCO_DOMAINS = load_tranco_domains(limit=10000)
 
 def upload_eml(file_path):
-    global phishingCount, mismatchedAddresses, fileCount, s, c, k, sc, sk, ck, sck, a_s, a_c, a_k, a_sc, a_sk, a_ck, a_sck
+    global phishingCount, fileCount, s, c, k, sc, sk, ck, sck, headerMismatches, count
 
     try:
         with open(file_path, 'rb') as f:
@@ -124,89 +89,58 @@ def upload_eml(file_path):
         print(f"[ERROR] Failed to judge {file_path}: {e}")
         return
     fileCount += 1
+    points = 0
     if "Phishing email" in judgement:
         phishingCount += 1
-    if "Mismatched addresses" in judgement:
-        mismatchedAddresses += 1
+        points += 100
+    if headerMismatch(msg):
+        headerMismatches += 1
     if "Failed spf" in judgement and "Failed dmarc" in judgement and "Failed dkim" in judgement:
         sck += 1
+        points += 100
     elif "Failed spf" in judgement and "Failed dmarc" in judgement:
         sc += 1
+        points += 100
     elif "Failed spf" in judgement and "Failed dkim" in judgement:
         sk += 1
+        points += 100
     elif "Failed dkim" in judgement and "Failed dmarc" in judgement:
         ck += 1
+        points += 100
     elif "Failed spf" in judgement:
         s += 1
+        points += 100
     elif "Failed dmarc" in judgement:
         c += 1
+        points += 100
     elif "Failed dkim" in judgement:
         k += 1
+        points += 100
+    if (points >= 100):
+        count += 1
 
-    elif "spf not aligned" in judgement and "dmarc not aligned" in judgement and "dkim not aligned" in judgement:
-        a_sck += 1
-    elif "spf not aligned" in judgement and "dmarc not aligned" in judgement:
-        a_sc += 1
-    elif "spf not aligned" in judgement and "dkim not aligned" in judgement:
-        a_sk += 1
-    elif "dkim not aligned" in judgement and "dmarc not aligned" in judgement:
-        a_ck += 1
-    elif "spf not aligned" in judgement:
-        a_s += 1
-    elif "dmarc not aligned" in judgement:
-        a_c += 1
-    elif "dkim not aligned" in judgement:
-        a_k += 1
+def headerMismatch(msg):
+    from_addr = parseaddr(msg.get("From"))[1]
+    reply_to = parseaddr(msg.get("Reply-To") or "")[1]
+    return from_addr != reply_to
 
 def judge(msg, bytes):
     redFlags = []
     auth = msg.get("Authentication-Results", "")
-    from_domain = get_from_domain(msg)
-    spf_domain = extract_spf_domain(auth)
-    dkim_domain = extract_dkim_domain(auth)
 
     for url in extract_urls(str(msg)):
         if scan_url(url) == True:
+            print("Got one at " + str(fileCount))
             redFlags.append("Phishing email")
     if "spf" not in auth and "dkim" not in auth and "dmarc" not in auth:
         redFlags.append("Old email")
     elif msg['from'] != msg['to']:
         if "spf=pass" not in auth:
             redFlags.append("Failed spf")
-        else:
-            if not aligned(from_domain, spf_domain):
-                redFlags.append("spf not aligned")
         if "dmarc=pass" not in auth:
             redFlags.append("Failed dmarc")
-        else:
-            if not aligned(from_domain, spf_domain):
-                redFlags.append("dmarc not aligned")
         if "dkim=pass" not in auth:
             redFlags.append("Failed dkim")
-        else:
-            if not aligned(from_domain, spf_domain):
-                redFlags.append("dkim not aligned")
-
-    reply_to = msg.get("Reply-To")
-    if reply_to:
-        from_addr = parseaddr(msg.get("From"))[1].split('@')[-1]
-        reply_addr = parseaddr(reply_to)[1].split('@')[-1]
-        if from_addr != reply_addr:
-            redFlags.append("Reply-to mismatch")
-
-    try:
-        html = msg.get_body(preferencelist=('html'))
-        if html:
-            soup = BeautifulSoup(html.get_content(), 'html.parser')
-            for a in soup.find_all("a", href=True):
-                link_text = a.get_text().strip()
-                link_url = a['href']
-                
-                if link_text and link_url and link_text != link_url:
-                    redFlags.append("Link mismatch")
-                    break
-    except Exception:
-        pass
     return redFlags
 
 def scan_url(url, filepath="recentPhishUrls.csv"):
@@ -260,8 +194,10 @@ def extract_domains(text):
 
     return domains
 
-for file in os.listdir(".severin"):
-    file_path = os.path.join(".severin", file)
+filePath = "phishingEmails"
+
+for file in os.listdir(filePath):
+    file_path = os.path.join(filePath, file)
     try:
         if(fileCount % 100 == 0):
             print(fileCount)
@@ -272,16 +208,7 @@ for file in os.listdir(".severin"):
 
 print(str(fileCount) + " tested files")
 print(str(phishingCount) + " known phishing urls spotted")
-print(str(mismatchedAddresses) + " mismatched addresses")
-
-print(str(s) + " spf misaligned")
-print(str(k) + " dkim misaligned")
-print(str(c) + " dmarc misaligned")
-print(str(sc) + " misaligned spf and dmarc")
-print(str(sk) + " misaligned spf and dkim")
-print(str(ck) + " misaligned dkim and dmarc")
-print(str(sck) + " misaligned everything")
-
+print(str(headerMismatches) + " header mismatches")
 print(str(s) + " only failed spf")
 print(str(k) + " only failed dkim")
 print(str(c) + " only failed dmarc")
@@ -289,3 +216,6 @@ print(str(sc) + " failed spf and dmarc")
 print(str(sk) + " failed spf and dkim")
 print(str(ck) + " failed dkim and dmarc")
 print(str(sck) + " failed everything")
+print("/////////////////////////////////////////")
+print(str(count) + " out of " + str(fileCount) + " is predicted phishing")
+print("/////////////////////////////////////////")
