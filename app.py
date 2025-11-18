@@ -64,7 +64,7 @@ def upload_eml():
     domains = extract_domains(str(msg))
     suspicious_domains = [d for d in domains if d.lower() not in TRONCO_DOMAINS]
 
-    judgement = judge(msg, urls, suspicious_domains)
+    judgement = judge(msg, file_bytes, urls, suspicious_domains)
 
     points = 0
     if "Phishing email" in judgement:
@@ -113,7 +113,7 @@ def upload_eml():
         "judgement": judgement
     }
 
-def judge(msg, urls, suspicious_domains):
+def judge(msg, bytes, urls, suspicious_domains):
     redFlags = []
     auth = msg.get("Authentication-Results", "")
     for url in urls:
@@ -123,6 +123,8 @@ def judge(msg, urls, suspicious_domains):
         redFlags.append("Mismatched addresses")
     if "spf" not in auth and "dkim" not in auth and "dmarc" not in auth:
         redFlags.append("Old email")
+    if dkim.verify(bytes) == False:
+        redFlags.append("bad dkim")
     elif msg['from'] != msg['to']:
         if "spf=pass" not in auth:
             redFlags.append("Failed spf")

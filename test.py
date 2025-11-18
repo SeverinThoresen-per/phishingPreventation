@@ -12,6 +12,7 @@ from email.utils import getaddresses
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import csv
+import dkim
 from email.utils import parseaddr
 import requests
 
@@ -33,10 +34,10 @@ global ck
 ck = 0
 global sck
 sck = 0
+global badDkim
+badDkim = 0
 global count
 count = 0
-global headerMismatches
-headerMismatches = 0
 
 def get_from_domain(msg):
     from_addr = parseaddr(msg.get("From"))[1]
@@ -73,7 +74,7 @@ def load_tranco_domains(file_path='top-1m.csv', limit=10000):
 TRONCO_DOMAINS = load_tranco_domains(limit=10000)
 
 def upload_eml(file_path):
-    global phishingCount, fileCount, s, c, k, sc, sk, ck, sck, headerMismatches, count
+    global phishingCount, count, fileCount, s, c, k, sc, sk, ck, sck, badDkim
 
     try:
         with open(file_path, 'rb') as f:
@@ -92,12 +93,10 @@ def upload_eml(file_path):
     points = 0
     if "Phishing email" in judgement:
         phishingCount += 1
-        points += 100
-    if headerMismatch(msg):
-        headerMismatches += 1
+    if "Mismatched addresses" in judgement:
+        mismatchedAddresses += 1
     if "Failed spf" in judgement and "Failed dmarc" in judgement and "Failed dkim" in judgement:
         sck += 1
-        points += 100
     elif "Failed spf" in judgement and "Failed dmarc" in judgement:
         sc += 1
         points += 100
@@ -115,25 +114,20 @@ def upload_eml(file_path):
         points += 100
     elif "Failed dkim" in judgement:
         k += 1
-        points += 100
-    if (points >= 100):
-        count += 1
 
-def headerMismatch(msg):
-    from_addr = parseaddr(msg.get("From"))[1]
-    reply_to = parseaddr(msg.get("Reply-To") or "")[1]
-    return from_addr != reply_to
-
-def judge(msg, bytes):
+def judge(msg, bytes, urls, suspicious_domains):
     redFlags = []
     auth = msg.get("Authentication-Results", "")
-
-    for url in extract_urls(str(msg)):
+    for url in urls:
         if scan_url(url) == True:
             print("Got one at " + str(fileCount))
             redFlags.append("Phishing email")
+    if msg.get('from') != msg.get("Return-Path") and msg.get('from') != msg.get("Reply-To"):
+        redFlags.append("Mismatched addresses")
     if "spf" not in auth and "dkim" not in auth and "dmarc" not in auth:
         redFlags.append("Old email")
+    if dkim.verify(bytes) == False:
+        redFlags.append("bad dkim")
     elif msg['from'] != msg['to']:
         if "spf=pass" not in auth:
             redFlags.append("Failed spf")
@@ -207,8 +201,8 @@ for file in os.listdir(filePath):
         continue
 
 print(str(fileCount) + " tested files")
-print(str(phishingCount) + " known phishing urls spotted")
-print(str(headerMismatches) + " header mismatches")
+print(str(badDkim) + " bad dkims")
+
 print(str(s) + " only failed spf")
 print(str(k) + " only failed dkim")
 print(str(c) + " only failed dmarc")
